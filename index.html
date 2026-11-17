@@ -119,6 +119,53 @@
   .pager a:hover{border-color:var(--moon)}
   .empty{color:var(--mist);padding:2rem 0}
 
+
+  /* Exam / quiz */
+  .acc .mini.yr{display:grid;place-items:center;aspect-ratio:16/9;font-family:var(--serif);font-size:1.9rem;color:#fff;background:linear-gradient(135deg,rgba(236,235,228,.12),rgba(236,235,228,.02))}
+  .qz{display:flex;flex-direction:column;gap:1.1rem}
+  .q{background:rgba(23,23,26,.92);border:1px solid rgba(236,235,228,.08);padding:1.1rem 1.2rem}
+  .q.hide{display:none}
+  .q .qh{display:flex;align-items:center;gap:.7rem;margin-bottom:.6rem;flex-wrap:wrap}
+  .q .qn{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mist)}
+  .q .st{font-size:.68rem;letter-spacing:.12em;padding:.1rem .5rem;border:1px solid var(--smoke);color:var(--mist)}
+  .q .st.ok{border-color:#6fbf8a;color:#9fdcb2}.q .st.no{border-color:#d7837b;color:#f0aaa3}
+  .q .qs{color:#e6e5de;font-size:1rem;line-height:1.7;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  .q figure{margin:.9rem 0 0;max-width:520px}
+  .q figure img{width:100%;display:block;border:1px solid var(--smoke);cursor:zoom-in;background:#fff}
+  .qt{border-collapse:collapse;margin:.8rem 0 0;font-size:.9rem}
+  .qt th,.qt td{border:1px solid var(--smoke);padding:.3rem .7rem;text-align:center}
+  .q .opts{list-style:none;display:flex;flex-direction:column;gap:.45rem;margin-top:.9rem}
+  .q .opts button{width:100%;display:flex;gap:.7rem;align-items:flex-start;text-align:left;background:rgba(13,13,14,.6);border:1px solid var(--smoke);color:#e6e5de;font:inherit;font-size:.95rem;line-height:1.5;padding:.6rem .8rem;cursor:pointer;transition:border-color .2s,background .2s}
+  .q .opts button:hover:not(:disabled){border-color:var(--moon)}
+  .q .opts button:disabled{cursor:default}
+  .q .opts .k{flex:0 0 1.6rem;height:1.6rem;display:grid;place-items:center;border:1px solid var(--smoke);font-size:.8rem;text-transform:uppercase}
+  .q .opts button.right{border-color:#6fbf8a;background:rgba(60,140,90,.18)}
+  .q .opts button.right .k{background:#6fbf8a;border-color:#6fbf8a;color:#0d0d0e}
+  .q .opts button.wrong{border-color:#d7837b;background:rgba(170,70,60,.2)}
+  .q .opts button.wrong .k{background:#d7837b;border-color:#d7837b;color:#0d0d0e}
+  .q .opts button.picked{border-color:var(--moon)}
+  .q .peek{margin-top:.7rem;background:none;border:none;color:var(--mist);font:inherit;font-size:.8rem;letter-spacing:.06em;text-decoration:underline;cursor:pointer;padding:0}
+  .q .res{margin-top:1rem;padding:1rem 1.1rem;border-left:2px solid var(--moon);background:rgba(13,13,14,.55);color:#d6d5ce;font-size:.94rem;line-height:1.7;display:grid;gap:.45rem;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  .q .res .verdict{font-weight:600;color:#fff}
+  .q .res .verdict,.q .res .hd{text-align:left}
+  .q .res .verdict.ok{color:#9fdcb2}.q .res .verdict.no{color:#f0aaa3}
+  .q .res .lb{color:var(--mist);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;margin-right:.35rem}
+  .q .res b{color:#fff;font-weight:600}
+  .q .res .note{border-top:1px dashed var(--smoke);padding-top:.45rem}
+  .q .res .kj.diff{color:#f3d08a}
+  .bar .score{font-size:.85rem;color:var(--moon);letter-spacing:.04em}
+  .bar button{background:none;border:1px solid var(--smoke);color:var(--moon);padding:.55rem .9rem;font:inherit;font-size:.82rem;cursor:pointer}
+  .bar button:hover{border-color:var(--moon)}
+  .keytbl{margin-top:2rem;border:1px solid rgba(236,235,228,.1);background:rgba(23,23,26,.9)}
+  .keytbl>summary{cursor:pointer;padding:.8rem 1rem;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mist);list-style:none}
+  .keytbl>summary::-webkit-details-marker{display:none}
+  .keytbl .kwrap{padding:0 1rem 1rem;overflow-x:auto}
+  .keytbl table{border-collapse:collapse;font-size:.85rem;min-width:280px}
+  .keytbl th,.keytbl td{border:1px solid var(--smoke);padding:.3rem .65rem;text-align:left}
+  .keytbl td a{color:var(--moon)}
+  .keytbl .cols{columns:3 200px;column-gap:1.4rem}
+  .keytbl .cols table{width:100%;break-inside:avoid;margin-bottom:.8rem}
+  .keytbl ul{margin:.4rem 0 0 1.1rem;display:grid;gap:.3rem;font-size:.88rem;color:#d6d5ce}
   .viewer{position:fixed;inset:0;z-index:50;background:rgba(5,5,6,.94);display:none;align-items:center;justify-content:center;padding:2rem;cursor:zoom-out}
   .viewer.open{display:flex}
   .viewer .vbox{max-width:100%;box-shadow:0 0 60px rgba(0,0,0,.6)}
@@ -170,7 +217,9 @@
     </details>
     <details class="group" id="grp-ujian-sumatif-1">
       <summary class="eyebrow">Ujian Sumatif 1 <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
-      <p class="empty">Belum ada isi.</p>
+      <h2>Soal <em>Sumatif 1</em></h2>
+      <p class="sub">Soal sumatif 1 Modul Kardiovaskular tahun 2018 sampai 2023. Ketuk satu pilihan: jawabanmu langsung dikoreksi (hijau benar, merah salah) dan pembahasannya muncul. Skor tersimpan di perangkat ini.</p>
+      <div class="acc-list" id="exam-list-1"></div>
     </details>
     <details class="group" id="grp-ujian-sumatif-1-formatif">
       <summary class="eyebrow">Ujian Sumatif 1 + Formatif <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
@@ -319,15 +368,154 @@
   function show(){
     const h = location.hash.slice(1);
     const lect = DATA.find(d => d.id === h);
-    const id = lect ? lect._set.page : (pages.includes(h) ? h : 'sumatif-1');
+    const exam = EXAMS.find(e => e.id === h);
+    const id = lect ? lect._set.page : exam ? exam._set.page : (pages.includes(h) ? h : 'sumatif-1');
     document.querySelectorAll('.page').forEach(s => s.classList.toggle('active', s.id === 'p-' + id));
     nav.querySelectorAll('a').forEach(a => a.getAttribute('href') === '#' + id ? a.setAttribute('aria-current','page') : a.removeAttribute('aria-current'));
     document.title = labels[id] + ' · Langit Malam';
     nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false');
     document.getElementById('viewer').classList.remove('open');
     if (lect) { document.getElementById(lect._set.grp).open = true; const det = document.getElementById('acc-' + lect.id); det.open = true; fillLecture(det); setTimeout(() => det.scrollIntoView({block:'start'}), 50); }
+    else if (exam) { document.getElementById(exam._set.grp).open = true; const det = document.getElementById('acc-' + exam.id); det.open = true; fillExam(det); setTimeout(() => det.scrollIntoView({block:'start'}), 50); }
     else window.scrollTo(0,0);
   }
+
+  // ---------- Ujian (kuis dengan koreksi otomatis) ----------
+  const EXAMS = [];
+  const CONF = {T:'Tinggi', S:'Sedang', R:'Rendah'};
+  const store = {
+    get(k){ try { return JSON.parse(localStorage.getItem(k) || '{}'); } catch(e){ return {}; } },
+    set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
+  };
+  const otherHtml = t => esc(t).replace(/(^|;\s*)([a-e](?:\/[a-e])*):/g, '$1<b>$2:</b>');
+  function renderExams(set, list){
+    const box = document.getElementById(set.list);
+    box.innerHTML = list.map(x => `
+      <details class="acc" id="acc-${x.id}" data-exam="${x.id}">
+        <summary>
+          <span class="mini yr">${x.year}</span>
+          <span class="info">
+            <span class="code">${esc(set.code)} · ${x.year}</span>
+            <strong>${esc(x.label)}</strong>
+            <span class="meta">${x.q.length} soal · <span class="sc-${x.id}"></span></span>
+          </span>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="acc-body"></div>
+      </details>`).join('');
+    list.forEach(x => { x._set = set; EXAMS.push(x); updateMeta(x); });
+    box.querySelectorAll('details.acc').forEach(det => det.addEventListener('toggle', () => { if (det.open) fillExam(det); }));
+  }
+  function scoreOf(x){
+    const st = store.get('lm-' + x.id); let ok = 0, done = 0;
+    x.q.forEach(q => { const c = st[q.n]; if (c && c !== 'peek' && q.ans !== '-') { done++; if (c === q.ans) ok++; } });
+    return {ok, done, total: x.q.filter(q => q.ans !== '-').length};
+  }
+  function updateMeta(x){
+    const s = scoreOf(x), t = s.done ? `skor ${s.ok}/${s.done} dijawab` : 'belum dikerjakan';
+    document.querySelectorAll('.sc-' + x.id).forEach(el => el.textContent = t);
+    const b = document.querySelector(`#acc-${x.id} .score`);
+    if (b) b.textContent = `Benar ${s.ok} · Salah ${s.done - s.ok} · Dijawab ${s.done}/${s.total}`;
+  }
+  function resHtml(x, q, chosen){
+    const opt = q.ans === '-' ? null : q.o[q.ans];
+    let v = '';
+    if (chosen && chosen !== 'peek' && q.ans !== '-') v = chosen === q.ans
+      ? `<p class="verdict ok">✓ Benar.</p>`
+      : `<p class="verdict no">✗ Salah — kamu memilih ${chosen.toUpperCase()}. Jawaban yang benar: ${q.ans.toUpperCase()}.</p>`;
+    const head = q.ans === '-'
+      ? `<p class="hd"><b>No. ${q.n} — Jawaban: tidak ada pilihan yang benar.</b></p>`
+      : `<p class="hd"><b>No. ${q.n} — Jawaban: ${q.ans}. ${esc(opt)}</b></p>`;
+    let kj = '';
+    if (q.key) kj = `<p class="kj ${q.key === q.ans ? '' : 'diff'}"><span class="lb">Kunci file</span>${q.key.toUpperCase()}${q.key === q.ans ? ' (sama)' : ' — berbeda dari pembahasan ini, lihat catatan'}</p>`;
+    return v + head +
+      `<p><span class="lb">Alasan</span>${esc(q.why)}</p>` +
+      `<p><span class="lb">Pilihan lain salah karena</span>${otherHtml(q.other)}</p>` +
+      `<p><span class="lb">Keyakinan</span>${CONF[q.conf]}</p>` + kj +
+      (q.note ? `<p class="note"><span class="lb">Catatan</span>${esc(q.note)}</p>` : '');
+  }
+  function paintQ(x, art, q, chosen){
+    const btns = art.querySelectorAll('.opts button'), res = art.querySelector('.res'), st = art.querySelector('.st');
+    btns.forEach(b => { b.classList.remove('right','wrong','picked'); b.disabled = false; });
+    if (!chosen){ res.hidden = true; res.innerHTML = ''; st.textContent = 'belum dijawab'; st.className = 'st'; art.querySelector('.peek').hidden = false; return; }
+    btns.forEach(b => {
+      const k = b.dataset.k; b.disabled = true;
+      if (k === q.ans) b.classList.add('right');
+      else if (k === chosen) b.classList.add(q.ans === '-' ? 'picked' : 'wrong');
+    });
+    art.querySelector('.peek').hidden = true;
+    res.hidden = false; res.innerHTML = resHtml(x, q, chosen);
+    if (chosen === 'peek' || q.ans === '-'){ st.textContent = 'pembahasan dibuka'; st.className = 'st'; }
+    else if (chosen === q.ans){ st.textContent = '✓ benar'; st.className = 'st ok'; }
+    else { st.textContent = '✗ salah'; st.className = 'st no'; }
+  }
+  function fillExam(det){
+    const body = det.querySelector('.acc-body');
+    if (body.dataset.ready) return;
+    body.dataset.ready = '1';
+    const x = EXAMS.find(e => e.id === det.dataset.exam), P = x.id + '-q-';
+    const qs = x.q.map(q => `
+      <article class="q" id="${P}${q.n}" data-n="${q.n}">
+        <div class="qh"><span class="qn">Soal ${q.n}</span><span class="st">belum dijawab</span></div>
+        <div class="qs">${q.s.includes('<table') ? q.s : esc(q.s)}</div>
+        ${q.img.map(src => `<figure><img src="${src}" alt="Gambar soal ${q.n}" loading="lazy" data-img="${src}"></figure>`).join('')}
+        <ol class="opts">${Object.entries(q.o).map(([k, t]) => `<li><button type="button" data-k="${k}"><span class="k">${k}</span><span>${esc(t)}</span></button></li>`).join('')}</ol>
+        <button class="peek" type="button">Lihat jawaban &amp; pembahasan tanpa menjawab</button>
+        <div class="res" hidden></div>
+      </article>`).join('');
+    const rows = x.q.map(q => `<tr><td><a href="#${P}${q.n}" data-jump="${q.n}">${q.n}</a></td><td>${q.ans === '-' ? '—' : q.ans.toUpperCase()}</td><td>${CONF[q.conf]}</td></tr>`);
+    const chunk = []; for (let i = 0; i < rows.length; i += 20) chunk.push(`<table><thead><tr><th>No.</th><th>Jawaban</th><th>Keyakinan</th></tr></thead><tbody>${rows.slice(i, i + 20).join('')}</tbody></table>`);
+    const check = x.q.filter(q => q.conf !== 'T');
+    body.innerHTML = `
+      <div class="bar">
+        <select class="jump" aria-label="Lompat ke soal"><option value="">Lompat ke soal…</option>${x.q.map(q => `<option value="${q.n}">Soal ${q.n}</option>`).join('')}</select>
+        <select class="flt" aria-label="Saring soal">
+          <option value="all">Semua soal</option><option value="todo">Belum dijawab</option><option value="wrong">Yang salah</option><option value="check">Keyakinan sedang/rendah</option>
+        </select>
+        <span class="score"></span>
+        <button type="button" class="reset">Ulangi dari awal</button>
+        <button class="close-acc" type="button">Tutup ▲</button>
+      </div>
+      <div class="qz">${qs}</div>
+      <details class="keytbl"><summary>Tabel kunci jawaban (${x.q.length} soal)</summary><div class="kwrap cols">${chunk.join('')}</div></details>
+      <details class="keytbl"><summary>Perlu dicek ulang ke sumber (${check.length} soal)</summary><div class="kwrap"><ul>${check.map(q => `<li><a href="#${P}${q.n}" data-jump="${q.n}">No. ${q.n}</a> — keyakinan ${CONF[q.conf].toLowerCase()}${q.key && q.key !== q.ans ? '; berbeda dengan kunci file' : ''}</li>`).join('')}</ul></div></details>
+      <button class="close-acc bottom" type="button">Tutup ${esc(x.label)} ▲</button>`;
+    const key = 'lm-' + x.id; let st = store.get(key);
+    body.querySelectorAll('.q').forEach(art => {
+      const q = x.q.find(z => z.n === +art.dataset.n);
+      paintQ(x, art, q, st[q.n]);
+      art.querySelectorAll('.opts button').forEach(b => b.addEventListener('click', () => {
+        st[q.n] = b.dataset.k; store.set(key, st); paintQ(x, art, q, st[q.n]); updateMeta(x); applyFilter();
+      }));
+      art.querySelector('.peek').addEventListener('click', () => { st[q.n] = 'peek'; store.set(key, st); paintQ(x, art, q, 'peek'); applyFilter(); });
+    });
+    const flt = body.querySelector('.flt');
+    function applyFilter(){
+      const v = flt.value;
+      body.querySelectorAll('.q').forEach(art => {
+        const q = x.q.find(z => z.n === +art.dataset.n), c = st[q.n];
+        const show = v === 'all' || (v === 'todo' && !c) || (v === 'wrong' && c && c !== 'peek' && q.ans !== '-' && c !== q.ans) || (v === 'check' && q.conf !== 'T');
+        art.classList.toggle('hide', !show);
+      });
+    }
+    flt.addEventListener('change', applyFilter);
+    const goto = n => { const el = document.getElementById(P + n); if (!el) return; if (el.classList.contains('hide')) { flt.value = 'all'; applyFilter(); } el.scrollIntoView({behavior:'smooth'}); };
+    body.querySelector('.jump').addEventListener('change', ev => { if (ev.target.value) goto(ev.target.value); ev.target.value = ''; });
+    body.querySelectorAll('[data-jump]').forEach(a => a.addEventListener('click', ev => { ev.preventDefault(); goto(a.dataset.jump); }));
+    body.querySelector('.reset').addEventListener('click', () => {
+      if (!confirm('Hapus semua jawabanmu untuk ' + x.label + '?')) return;
+      st = {}; store.set(key, st);
+      body.querySelectorAll('.q').forEach(art => paintQ(x, art, x.q.find(z => z.n === +art.dataset.n), null));
+      updateMeta(x); applyFilter();
+    });
+    body.querySelectorAll('.close-acc').forEach(btn => btn.addEventListener('click', () => { det.open = false; det.querySelector('summary').scrollIntoView({behavior:'smooth', block:'start'}); }));
+    updateMeta(x);
+  }
+  const EXAM_SETS = [{file:'ujian1.json', page:'sumatif-1', grp:'grp-ujian-sumatif-1', list:'exam-list-1', code:'Ujian Sumatif 1'}];
+  EXAM_SETS.forEach(set => fetch(set.file).then(r => r.json()).then(j => {
+      renderExams(set, j);
+      if (EXAMS.find(e => e.id === location.hash.slice(1))) show();
+    }).catch(() => { document.getElementById(set.list).innerHTML = '<p class="empty">Soal gagal dimuat. Coba muat ulang halaman.</p>'; }));
   window.addEventListener('hashchange', show);
   menuBtn.addEventListener('click', () => { const o = nav.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', o); });
 
