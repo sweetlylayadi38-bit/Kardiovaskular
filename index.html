@@ -139,6 +139,11 @@
   .q .opts button:hover:not(:disabled){border-color:var(--moon)}
   .q .opts button:disabled{cursor:default}
   .q .opts .k{flex:0 0 1.6rem;height:1.6rem;display:grid;place-items:center;border:1px solid var(--smoke);font-size:.8rem;text-transform:uppercase}
+  .q .opts button>span:last-child{flex:1;text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+  .q .res p,.q .res .sup{text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
+  .q .res .sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.7rem;margin-top:.5rem}
+  .q .res .ss{margin:0;border:1px solid var(--smoke);background:#fff;cursor:zoom-in}
+  .q .res .ss figcaption{background:rgba(13,13,14,.92);color:var(--mist);font-size:.74rem;letter-spacing:.04em;padding:.35rem .55rem;text-align:justify}
   .q .opts button.right{border-color:#6fbf8a;background:rgba(60,140,90,.18)}
   .q .opts button.right .k{background:#6fbf8a;border-color:#6fbf8a;color:#0d0d0e}
   .q .opts button.wrong{border-color:#d7837b;background:rgba(170,70,60,.2)}
@@ -147,7 +152,6 @@
   .q .peek{margin-top:.7rem;background:none;border:none;color:var(--mist);font:inherit;font-size:.8rem;letter-spacing:.06em;text-decoration:underline;cursor:pointer;padding:0}
   .q .res{margin-top:1rem;padding:1rem 1.1rem;border-left:2px solid var(--moon);background:rgba(13,13,14,.55);color:#d6d5ce;font-size:.94rem;line-height:1.7;display:grid;gap:.45rem;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
   .q .res .verdict{font-weight:600;color:#fff}
-  .q .res .verdict,.q .res .hd{text-align:left}
   .q .res .verdict.ok{color:#9fdcb2}.q .res .verdict.no{color:#f0aaa3}
   .q .res .lb{color:var(--mist);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;margin-right:.35rem}
   .q .res b{color:#fff;font-weight:600}
@@ -432,7 +436,16 @@
       `<p><span class="lb">Alasan</span>${esc(q.why)}</p>` +
       `<p><span class="lb">Pilihan lain salah karena</span>${otherHtml(q.other)}</p>` +
       `<p><span class="lb">Keyakinan</span>${CONF[q.conf]}</p>` + kj +
-      (q.note ? `<p class="note"><span class="lb">Catatan</span>${esc(q.note)}</p>` : '');
+      (q.note ? `<p class="note"><span class="lb">Catatan</span>${esc(q.note)}</p>` : '') + supHtml(q);
+  }
+  function supHtml(q){
+    if (!q.sl || !q.sl.length) return '';
+    const figs = q.sl.map(([id, n]) => {
+      const d = DATA.find(z => z.id === id);
+      const cap = `${d ? esc(lectLabel(d)) + ' — ' + esc(d.title) : id.toUpperCase()} · slide ${n}`;
+      return d ? `<figure class="ss" data-zoom="${id}|${n}">${sl(d, n, 'Slide ' + n)}<figcaption>${cap}</figcaption></figure>` : `<p>${cap}</p>`;
+    }).join('');
+    return `<div class="sup"><span class="lb">Slide kuliah pendukung (ketuk untuk memperbesar)</span><div class="sgrid">${figs}</div></div>`;
   }
   function paintQ(x, art, q, chosen){
     const btns = art.querySelectorAll('.opts button'), res = art.querySelector('.res'), st = art.querySelector('.st');
@@ -444,7 +457,7 @@
       else if (k === chosen) b.classList.add(q.ans === '-' ? 'picked' : 'wrong');
     });
     art.querySelector('.peek').hidden = true;
-    res.hidden = false; res.innerHTML = resHtml(x, q, chosen);
+    res.hidden = false; res.innerHTML = resHtml(x, q, chosen); lazy(res);
     if (chosen === 'peek' || q.ans === '-'){ st.textContent = 'pembahasan dibuka'; st.className = 'st'; }
     else if (chosen === q.ans){ st.textContent = '✓ benar'; st.className = 'st ok'; }
     else { st.textContent = '✗ salah'; st.className = 'st no'; }
