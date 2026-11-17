@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Langit Malam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Karla:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0d0d0e; --ash:#17171a; --smoke:#2a2a2d; --mist:#9a9aa0;
+    --moon:#ecebe4; --glow:rgba(236,235,228,.14);
+    --serif:'Cormorant Garamond',Georgia,serif; --sans:'Karla',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-padding-top:190px}
+  html,body{background:var(--ink);color:var(--moon);font-family:var(--sans);font-weight:300;line-height:1.65}
+  body{min-height:100vh;position:relative;overflow-x:hidden}
+  .sky{position:fixed;inset:0;background:url(bg.jpg) center/cover;opacity:.32;z-index:0;pointer-events:none;animation:drift 90s ease-in-out infinite alternate}
+  .sky::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,transparent 0,rgba(13,13,14,.55) 55%,rgba(13,13,14,.92) 100%)}
+  @keyframes drift{from{transform:scale(1.05) translateX(0)}to{transform:scale(1.12) translateX(-2%)}}
+  @media (prefers-reduced-motion:reduce){.sky{animation:none}}
+
+  header{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;
+         padding:1.1rem clamp(1.2rem,4vw,3rem);backdrop-filter:blur(10px);background:rgba(13,13,14,.7);border-bottom:1px solid rgba(236,235,228,.08)}
+  .logo{font-family:var(--serif);font-size:1.5rem;letter-spacing:.04em;color:var(--moon);text-decoration:none;display:flex;align-items:center;gap:.55rem}
+  .logo svg{width:22px;height:22px}
+  nav{display:flex;gap:clamp(.8rem,2.5vw,2rem)}
+  nav a{color:var(--mist);text-decoration:none;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;padding:.3rem 0;border-bottom:1px solid transparent;transition:color .25s,border-color .25s}
+  nav a:hover,nav a:focus-visible{color:var(--moon)}
+  nav a[aria-current="page"]{color:var(--moon);border-color:var(--moon)}
+  .menu-btn{display:none;background:none;border:1px solid var(--smoke);color:var(--moon);padding:.4rem .7rem;font:inherit;font-size:.8rem;letter-spacing:.15em;cursor:pointer}
+
+  main{position:relative;z-index:1}
+  section.page{display:none;min-height:calc(100vh - 160px);padding:clamp(2.5rem,6vw,4.5rem) clamp(1.2rem,4vw,3rem) 5rem;max-width:1200px;margin:0 auto;animation:rise .5s ease both}
+  section.page.active{display:block}
+  @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+  .eyebrow{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--mist);margin-bottom:1rem;display:flex;align-items:center;gap:.8rem}
+  .eyebrow::before{content:"✦";color:var(--moon)}
+  .eyebrow a{color:var(--mist);text-decoration:none}
+  .eyebrow a:hover{color:var(--moon)}
+  h2{font-family:var(--serif);font-weight:400;line-height:1.05;font-size:clamp(2.2rem,5.5vw,3.8rem);margin-bottom:.6rem}
+  h2 em{font-style:italic;color:#fff;text-shadow:0 0 40px var(--glow)}
+  .sub{color:#bdbcb5;max-width:60ch}
+
+  /* Lecture list */
+  .lect-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.2rem;margin-top:2.5rem}
+  .lect{display:flex;flex-direction:column;text-decoration:none;color:inherit;background:rgba(23,23,26,.88);border:1px solid rgba(236,235,228,.09);transition:transform .3s,border-color .3s}
+  .lect:hover,.lect:focus-visible{transform:translateY(-4px);border-color:rgba(236,235,228,.4)}
+  .lect .thumb{aspect-ratio:16/9;overflow:hidden;background:#111;border-bottom:1px solid rgba(236,235,228,.08)}
+  .lect .thumb .sl{height:100%;opacity:.88;transition:opacity .3s}
+  .lect:hover .thumb .sl{opacity:1}
+  .lect .body{padding:1.1rem 1.2rem 1.3rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+  .lect .code{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--mist)}
+  .lect strong{font-family:var(--serif);font-size:1.45rem;font-weight:600;line-height:1.15}
+  .lect .meta{margin-top:auto;padding-top:.6rem;font-size:.8rem;color:var(--mist)}
+
+  /* Collapsible group (Kuliah Sumatif 1) */
+  .group>summary{list-style:none;cursor:pointer;user-select:none;width:100%;border:1px solid var(--smoke);padding:.8rem 1.1rem;transition:color .25s,border-color .25s}
+  .group>summary .ghint{margin-left:auto}
+  .group>summary::-webkit-details-marker{display:none}
+  .group>summary:hover,.group>summary:focus-visible{color:var(--moon)}
+  .gchev{display:inline-block;width:8px;height:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-3px) rotate(45deg);transition:transform .3s;margin-left:.2rem}
+  .group[open]>summary .gchev{transform:translateY(1px) rotate(225deg)}
+  .ghint{font-size:.62rem;letter-spacing:.2em;border:1px solid var(--smoke);padding:.1rem .45rem;margin-left:.2rem}
+  .group:not([open])>summary{border:1px solid var(--smoke);padding:.8rem 1.1rem}
+  .group+.group{margin-top:1.6rem}
+  .group .empty{padding:1rem 0 0}
+  /* Justified body text */
+  .sub,.slide .exp .txt,.klarif p,.klarif li{text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+  /* Accordion list */
+  .acc-list{display:flex;flex-direction:column;gap:.8rem;margin-top:2.2rem}
+  .acc{background:rgba(23,23,26,.9);border:1px solid rgba(236,235,228,.1);transition:border-color .3s}
+  .acc[open]{border-color:rgba(236,235,228,.35)}
+  .acc summary{list-style:none;display:flex;align-items:center;gap:1rem;padding:.8rem 1rem;cursor:pointer;position:sticky;top:69px;z-index:5;background:rgba(18,18,20,.96);backdrop-filter:blur(8px)}
+  .acc summary::-webkit-details-marker{display:none}
+  .acc summary:hover .chev,.acc summary:focus-visible .chev{border-color:var(--moon)}
+  .acc .mini{flex:0 0 132px;border:1px solid rgba(236,235,228,.1)}
+  .acc .info{display:flex;flex-direction:column;gap:.15rem;min-width:0;flex:1}
+  .acc .code{font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--mist)}
+  .acc strong{font-family:var(--serif);font-size:1.35rem;font-weight:600;line-height:1.15}
+  .acc .meta{font-size:.78rem;color:var(--mist)}
+  .chev{flex:0 0 auto;width:34px;height:34px;border:1px solid var(--smoke);display:grid;place-items:center;transition:transform .3s,border-color .3s}
+  .chev::before{content:"";width:9px;height:9px;border-right:1.5px solid var(--moon);border-bottom:1.5px solid var(--moon);transform:translateY(-2px) rotate(45deg)}
+  .acc[open] .chev{transform:rotate(180deg)}
+  .acc-body{padding:0 1rem 1.2rem}
+  .acc-body .by{font-size:.9rem;margin-top:.4rem}
+  .acc-body .bar{top:auto;position:relative;margin:1rem 0 1.4rem}
+  .close-acc{background:none;border:1px solid var(--smoke);color:var(--moon);padding:.55rem .9rem;font:inherit;font-size:.82rem;letter-spacing:.06em;cursor:pointer}
+  .close-acc:hover{border-color:var(--moon)}
+  .close-acc.bottom{display:block;width:100%;margin-top:1.4rem;padding:.9rem}
+  /* Lecture view */
+  .bar{position:sticky;top:69px;z-index:10;display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;margin:1.6rem 0 2rem;padding:.8rem;background:rgba(13,13,14,.85);backdrop-filter:blur(8px);border:1px solid rgba(236,235,228,.09)}
+  .bar select,.bar input{background:rgba(26,26,28,.95);border:1px solid var(--smoke);color:var(--moon);padding:.55rem .8rem;font:inherit;font-size:.9rem}
+  .bar input{flex:1;min-width:180px}
+  .bar select:focus,.bar input:focus{outline:none;border-color:var(--moon)}
+  .bar .count{font-size:.8rem;color:var(--mist);margin-left:auto}
+  .slides{display:flex;flex-direction:column;gap:1.4rem}
+  .slide{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:0;background:rgba(23,23,26,.9);border:1px solid rgba(236,235,228,.08)}
+  .slide figure{position:relative;background:#fff;cursor:zoom-in;display:flex;align-items:center}
+  .sl{width:100%;background-color:#fff;background-repeat:no-repeat;background-size:100% 400%;display:block}
+  .slide .no{position:absolute;top:.5rem;left:.5rem;background:rgba(13,13,14,.85);color:var(--moon);font-size:.72rem;letter-spacing:.15em;padding:.2rem .55rem}
+  .slide .exp{padding:1.2rem 1.4rem;color:#d6d5ce;font-size:.98rem;line-height:1.7}
+  .slide .exp b{color:#fff;font-weight:600}
+  .slide .exp i{color:#e6e5de}
+  .slide .exp .lbl{display:block;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--mist);margin-bottom:.5rem}
+  .slide.hide,.klarif.hide{display:none}
+  mark{background:rgba(236,235,228,.85);color:var(--ink);padding:0 .1em}
+  .klarif{border:1px solid var(--moon);background:rgba(30,30,26,.95);padding:1.4rem 1.6rem;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:1.6rem;align-items:start}
+  .klarif ul{margin:.6rem 0 0 1.1rem;display:grid;gap:.45rem;color:#d6d5ce}
+  .klarif p{color:#d6d5ce}
+  .klarif b{color:#fff}
+  .klarif .src{margin-top:.9rem;font-size:.82rem;color:var(--mist)}
+  .klarif a{color:var(--moon)}
+  .klarif img{width:100%;max-width:280px;border:1px solid var(--smoke);display:block;margin-left:auto;cursor:zoom-in}
+  .pager{display:flex;justify-content:space-between;gap:1rem;margin-top:3rem;flex-wrap:wrap}
+  .pager a{color:var(--moon);text-decoration:none;border:1px solid var(--smoke);padding:.8rem 1.2rem;font-size:.85rem;letter-spacing:.08em;transition:border-color .25s}
+  .pager a:hover{border-color:var(--moon)}
+  .empty{color:var(--mist);padding:2rem 0}
+
+  .viewer{position:fixed;inset:0;z-index:50;background:rgba(5,5,6,.94);display:none;align-items:center;justify-content:center;padding:2rem;cursor:zoom-out}
+  .viewer.open{display:flex}
+  .viewer .vbox{max-width:100%;box-shadow:0 0 60px rgba(0,0,0,.6)}
+  .viewer button{position:absolute;top:1rem;right:1.4rem;background:none;border:none;color:var(--moon);font-size:2.2rem;cursor:pointer;line-height:1}
+
+  footer{position:relative;z-index:1;text-align:center;padding:2.5rem 1rem;font-size:.75rem;letter-spacing:.2em;color:var(--mist);border-top:1px solid rgba(236,235,228,.06)}
+
+  @media (max-width:860px){
+    .slide,.klarif{grid-template-columns:1fr}
+    .klarif img{margin:0 auto}
+    .menu-btn{display:block}
+    nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:rgba(13,13,14,.97);border-bottom:1px solid var(--smoke);display:none}
+    nav.open{display:flex}
+    nav a{padding:1rem clamp(1.2rem,4vw,3rem);border-bottom:1px solid rgba(236,235,228,.06)}
+    nav a[aria-current="page"]{border-color:rgba(236,235,228,.06);background:rgba(236,235,228,.05)}
+    .bar{top:64px}
+    .bar .count{margin-left:0}
+    .acc summary{top:64px;gap:.7rem;padding:.7rem}
+    .acc .mini{flex-basis:84px}
+    .acc strong{font-size:1.1rem}
+    .acc-body{padding:0 .6rem 1rem}
+  }
+</style>
+</head>
+<body>
+<div class="sky" aria-hidden="true"></div>
+
+<header>
+  <a class="logo" href="#sumatif-1">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3a9 9 0 1 0 6 15.5A8 8 0 0 1 15 3z" fill="#ecebe4"/></svg>
+    Langit Malam
+  </a>
+  <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav">
+    <a href="#sumatif-1">Sumatif 1</a>
+    <a href="#sumatif-2">Sumatif 2</a>
+    <a href="#sumatif-anatomi">Sumatif Anatomi</a>
+    <a href="#sumatif-integrasi">Sumatif Integrasi</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page" id="p-sumatif-1">
+    <details class="group" id="grp-sumatif-1" open>
+      <summary class="eyebrow">Kuliah Sumatif 1 <span class="gchev" aria-hidden="true"></span><span class="ghint">tutup</span></summary>
+      <h2>Modul <em>Kardiovaskular</em></h2>
+      <p class="sub">Kuliah K1 sampai K8. Ketuk satu kuliah untuk membuka semua slide dan penjelasannya; ketuk lagi untuk menutup.</p>
+      <div class="acc-list" id="lect-grid"></div>
+    </details>
+    <details class="group" id="grp-ujian-sumatif-1">
+      <summary class="eyebrow">Ujian Sumatif 1 <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
+      <p class="empty">Belum ada isi.</p>
+    </details>
+    <details class="group" id="grp-ujian-sumatif-1-formatif">
+      <summary class="eyebrow">Ujian Sumatif 1 + Formatif <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
+      <p class="empty">Belum ada isi.</p>
+    </details>
+  </section>
+  <section class="page" id="p-sumatif-2">
+    <details class="group" id="grp-sumatif-2">
+      <summary class="eyebrow">Kuliah Sumatif 2 <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
+      <h2>Modul <em>Kardiovaskular</em></h2>
+      <p class="sub">Kuliah K9 sampai K19. Ketuk satu kuliah untuk membuka semua slide dan penjelasannya; ketuk lagi untuk menutup.</p>
+      <div class="acc-list" id="lect-grid-2"></div>
+    </details>
+    <details class="group" id="grp-ujian-sumatif-2">
+      <summary class="eyebrow">Ujian Sumatif 2 <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
+      <p class="empty">Belum ada isi.</p>
+    </details>
+    <details class="group" id="grp-ujian-sumatif-2-formatif">
+      <summary class="eyebrow">Ujian Sumatif 2 + Formatif <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
+      <p class="empty">Belum ada isi.</p>
+    </details>
+  </section>
+  <section class="page" id="p-sumatif-anatomi"><div class="eyebrow">Sumatif Anatomi</div></section>
+  <section class="page" id="p-sumatif-integrasi"><div class="eyebrow">Sumatif Integrasi</div></section>
+</main>
+
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Gambar slide">
+  <button aria-label="Tutup">&times;</button>
+  <div class="vbox"></div>
+</div>
+
+<footer>✦ LANGIT MALAM · DIBUAT SAAT TERJAGA ✦</footer>
+
+<script>
+(() => {
+  const pages = ['sumatif-1','sumatif-2','sumatif-anatomi','sumatif-integrasi'];
+  const labels = {'sumatif-1':'Sumatif 1','sumatif-2':'Sumatif 2','sumatif-anatomi':'Sumatif Anatomi','sumatif-integrasi':'Sumatif Integrasi'};
+  const nav = document.getElementById('nav'), menuBtn = document.querySelector('.menu-btn');
+  let DATA = [];
+
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  // Slides are packed 4 per image file (p/<id>/<sheet>.jpg); show one slide by background position.
+  const sl = (d, n, label) => {
+    const sheet = Math.floor((n - 1) / 4), row = (n - 1) % 4;
+    return `<span class="sl" role="img" aria-label="${label || ''}" style="aspect-ratio:${d.ar};background-position:0 ${row * 100 / 3}%" data-bg="p/${d.id}/${sheet}.jpg"></span>`;
+  };
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { const t = e.target; t.style.backgroundImage = `url(${t.dataset.bg})`; io.unobserve(t); }
+  }), {rootMargin: '600px'}) : null;
+  const lazy = root => root.querySelectorAll('.sl[data-bg]').forEach(el => io ? io.observe(el) : (el.style.backgroundImage = `url(${el.dataset.bg})`));
+  const SUB = {k5a:' · Jantung', k5b:' · Pembuluh Darah', k10a:' · Antiaritmia', k10b:' · Gagal Jantung'};
+  const lectLabel = d => d.code + (SUB[d.id] || '');
+  // which page / group / list each lecture set lives in
+  const SETS = [{file:'kuliah.json', page:'sumatif-1', grp:'grp-sumatif-1', list:'lect-grid'},
+                {file:'kuliah2.json', page:'sumatif-2', grp:'grp-sumatif-2', list:'lect-grid-2'}];
+
+  function renderList(set, items){
+    const grid = document.getElementById(set.list);
+    grid.innerHTML = items.map(d => `
+      <details class="acc" id="acc-${d.id}" data-id="${d.id}">
+        <summary>
+          <span class="mini">${sl(d, 1)}</span>
+          <span class="info">
+            <span class="code">${esc(lectLabel(d))}</span>
+            <strong>${esc(d.title)}</strong>
+            <span class="meta">${d.n} slide · ${esc(d.by.split(' — ')[0])}</span>
+          </span>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="acc-body"></div>
+      </details>`).join('');
+    lazy(grid);
+    grid.querySelectorAll('details.acc').forEach(det => det.addEventListener('toggle', () => {
+      if (det.open) fillLecture(det);
+    }));
+  }
+
+  function fillLecture(det){
+    const body = det.querySelector('.acc-body');
+    if (body.dataset.ready) return;
+    body.dataset.ready = '1';
+    const d = DATA.find(x => x.id === det.dataset.id), k = d.klarif, P = d.id + '-';
+    const rows = d.slides.map((e, j) => {
+      const n = j + 1;
+      let html = `<article class="slide" id="${P}s-${n}">
+        <figure data-zoom="${d.id}|${n}">${sl(d, n, 'Slide ' + n)}<span class="no">SLIDE ${n}</span></figure>
+        <div class="exp"><span class="lbl">Penjelasan</span><div class="txt">${e}</div></div>
+      </article>`;
+      if (k && k.after === n) html += `<aside class="klarif" id="${P}klarif"><div>${k.html}</div><img src="${k.img}" alt="Tangkapan layar tentang profilaksis endokarditis" data-img="${k.img}"></aside>`;
+      return html;
+    }).join('');
+    body.innerHTML = `
+      <p class="sub by">${esc(d.by)}</p>
+      <div class="bar">
+        <select class="jump" aria-label="Lompat ke slide"><option value="">Lompat ke slide…</option>${d.slides.map((_, j) => `<option value="${j+1}">Slide ${j+1}</option>`).join('')}${k ? '<option value="klarif">Klarifikasi profilaksis</option>' : ''}</select>
+        <input class="find" type="search" placeholder="Cari kata di penjelasan (mis. troponin)" aria-label="Cari di penjelasan">
+        <span class="count">${d.n} slide</span>
+        <button class="close-acc" type="button">Tutup ▲</button>
+      </div>
+      <div class="slides">${rows}</div>
+      <button class="close-acc bottom" type="button">Tutup ${esc(lectLabel(d))} ▲</button>`;
+    lazy(body);
+
+    const find = body.querySelector('.find'), count = body.querySelector('.count');
+    const originals = [...body.querySelectorAll('.slide .txt')].map(t => t.innerHTML);
+    function filter(q){
+      q = q.trim().toLowerCase(); let shown = 0;
+      body.querySelectorAll('.slide').forEach((s, j) => {
+        const t = s.querySelector('.txt'); t.innerHTML = originals[j];
+        const hit = !q || t.textContent.toLowerCase().includes(q);
+        s.classList.toggle('hide', !hit); if (hit) shown++;
+        if (q && hit) highlight(t, q);
+      });
+      const kl = body.querySelector('.klarif');
+      if (kl) kl.classList.toggle('hide', !!q && !kl.textContent.toLowerCase().includes(q));
+      count.textContent = q ? `${shown} dari ${d.n} slide cocok` : `${d.n} slide`;
+    }
+    find.addEventListener('input', () => filter(find.value));
+    body.querySelector('.jump').addEventListener('change', ev => {
+      const v = ev.target.value; if (!v) return;
+      const el = document.getElementById(P + (v === 'klarif' ? 'klarif' : 's-' + v));
+      if (el) { if (el.classList.contains('hide')) { find.value = ''; filter(''); } el.scrollIntoView({behavior:'smooth'}); }
+      ev.target.value = '';
+    });
+    body.querySelectorAll('.close-acc').forEach(btn => btn.addEventListener('click', () => {
+      det.open = false;
+      det.querySelector('summary').scrollIntoView({behavior:'smooth', block:'start'});
+    }));
+  }
+
+  function highlight(root, q){
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const nodes = []; while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(n => {
+      const low = n.nodeValue.toLowerCase(); let idx = low.indexOf(q); if (idx < 0) return;
+      const frag = document.createDocumentFragment(); let last = 0;
+      while (idx >= 0) {
+        frag.append(n.nodeValue.slice(last, idx));
+        const m = document.createElement('mark'); m.textContent = n.nodeValue.slice(idx, idx + q.length); frag.append(m);
+        last = idx + q.length; idx = low.indexOf(q, last);
+      }
+      frag.append(n.nodeValue.slice(last)); n.replaceWith(frag);
+    });
+  }
+
+  function show(){
+    const h = location.hash.slice(1);
+    const lect = DATA.find(d => d.id === h);
+    const id = lect ? lect._set.page : (pages.includes(h) ? h : 'sumatif-1');
+    document.querySelectorAll('.page').forEach(s => s.classList.toggle('active', s.id === 'p-' + id));
+    nav.querySelectorAll('a').forEach(a => a.getAttribute('href') === '#' + id ? a.setAttribute('aria-current','page') : a.removeAttribute('aria-current'));
+    document.title = labels[id] + ' · Langit Malam';
+    nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false');
+    document.getElementById('viewer').classList.remove('open');
+    if (lect) { document.getElementById(lect._set.grp).open = true; const det = document.getElementById('acc-' + lect.id); det.open = true; fillLecture(det); setTimeout(() => det.scrollIntoView({block:'start'}), 50); }
+    else window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange', show);
+  menuBtn.addEventListener('click', () => { const o = nav.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', o); });
+
+  // image viewer
+  const viewer = document.getElementById('viewer'), vbox = viewer.querySelector('.vbox');
+  document.addEventListener('click', e => {
+    const z = e.target.closest('[data-zoom]'), im = e.target.closest('[data-img]');
+    if (!z && !im) return;
+    if (z) {
+      const [id, n] = z.dataset.zoom.split('|'), d = DATA.find(x => x.id === id);
+      vbox.innerHTML = sl(d, +n, 'Slide ' + n);
+      const el = vbox.firstChild; el.style.backgroundImage = `url(${el.dataset.bg})`;
+      vbox.style.setProperty('--ar', d.ar.replace('/', ' / '));
+      vbox.style.width = `min(100%, calc((100vh - 4rem) * ${d.ar.split('/')[0] / d.ar.split('/')[1]}))`;
+    } else {
+      vbox.innerHTML = `<img src="${im.dataset.img}" alt="" style="max-width:100%;max-height:calc(100vh - 4rem);display:block">`;
+      vbox.style.width = '';
+    }
+    viewer.classList.add('open'); viewer.querySelector('button').focus();
+  });
+  const closeV = () => viewer.classList.remove('open');
+  viewer.addEventListener('click', closeV);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeV(); });
+
+  document.querySelectorAll('details.group').forEach(grp => {
+    const hint = grp.querySelector('.ghint'), setHint = () => hint.textContent = grp.open ? 'tutup' : 'buka';
+    grp.addEventListener('toggle', setHint); setHint();
+  });
+  SETS.forEach(set => fetch(set.file).then(r => r.json()).then(j => {
+      j.forEach(d => d._set = set); DATA.push(...j); renderList(set, j);
+      if (DATA.find(d => d.id === location.hash.slice(1) && d._set === set)) show();
+    }).catch(() => { document.getElementById(set.list).innerHTML = '<p class="empty">Materi kuliah gagal dimuat. Coba muat ulang halaman.</p>'; }));
+  show();
+})();
+</script>
+</body>
+</html>
