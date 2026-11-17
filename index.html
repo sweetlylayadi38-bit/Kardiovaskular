@@ -121,6 +121,7 @@
 
 
   /* Exam / quiz */
+  .acc .mini.yr.sm{font-size:1.1rem}
   .acc .mini.yr{display:grid;place-items:center;aspect-ratio:16/9;font-family:var(--serif);font-size:1.9rem;color:#fff;background:linear-gradient(135deg,rgba(236,235,228,.12),rgba(236,235,228,.02))}
   .qz{display:flex;flex-direction:column;gap:1.1rem}
   .q{background:rgba(23,23,26,.92);border:1px solid rgba(236,235,228,.08);padding:1.1rem 1.2rem}
@@ -246,7 +247,9 @@
     </details>
     <details class="group" id="grp-ujian-sumatif-2-formatif">
       <summary class="eyebrow">Ujian Sumatif 2 + Formatif <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
-      <p class="empty">Belum ada isi.</p>
+      <h2>Formatif &amp; <em>prediksi</em></h2>
+      <p class="sub">Dua set. Pertama, 85 soal formatif Sumatif 2 (Benar/Salah) dengan kunci resmi. Kedua, 85 soal pilihan ganda gaya sumatif yang dibuat dari konsep yang sama persis dengan setiap soal formatif — nomornya sejajar, jadi soal prediksi no. 12 menguji konsep formatif no. 12. Jawaban langsung dikoreksi dan dilengkapi slide kuliah pendukung.</p>
+      <div class="acc-list" id="exam-list-2f"></div>
     </details>
   </section>
   <section class="page" id="p-sumatif-anatomi"><div class="eyebrow">Sumatif Anatomi</div></section>
@@ -400,7 +403,7 @@
     box.innerHTML = list.map(x => `
       <details class="acc" id="acc-${x.id}" data-exam="${x.id}">
         <summary>
-          <span class="mini yr">${x.year}</span>
+          <span class="mini yr${x.year.length > 4 ? ' sm' : ''}">${x.year}</span>
           <span class="info">
             <span class="code">${esc(set.code)} · ${x.year}</span>
             <strong>${esc(x.label)}</strong>
@@ -528,7 +531,8 @@
     updateMeta(x);
   }
   const EXAM_SETS = [{file:'ujian1.json', page:'sumatif-1', grp:'grp-ujian-sumatif-1', list:'exam-list-1', code:'Ujian Sumatif 1'},
-                     {file:'ujian2.json', page:'sumatif-2', grp:'grp-ujian-sumatif-2', list:'exam-list-2', code:'Ujian Sumatif 2'}];
+                     {file:'ujian2.json', page:'sumatif-2', grp:'grp-ujian-sumatif-2', list:'exam-list-2', code:'Ujian Sumatif 2'},
+                     {file:'ujian2f.json', page:'sumatif-2', grp:'grp-ujian-sumatif-2-formatif', list:'exam-list-2f', code:'Sumatif 2 + Formatif'}];
   EXAM_SETS.forEach(set => fetch(set.file).then(r => r.json()).then(j => {
       renderExams(set, j);
       if (EXAMS.find(e => e.id === location.hash.slice(1))) show();
