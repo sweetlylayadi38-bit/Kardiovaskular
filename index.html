@@ -151,6 +151,25 @@
   .q .opts button.wrong .k{background:#d7837b;border-color:#d7837b;color:#0d0d0e}
   .q .opts button.picked{border-color:var(--moon)}
   .q .peek{margin-top:.7rem;background:none;border:none;color:var(--mist);font:inherit;font-size:.8rem;letter-spacing:.06em;text-decoration:underline;cursor:pointer;padding:0}
+  .peta-bar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:1rem 0;color:var(--mist);font-size:.85rem}
+  .peta-bar select{background:var(--ash);color:var(--moon);border:1px solid var(--smoke);padding:.4rem .5rem;font:inherit}
+  .peta{display:grid;gap:.5rem}
+  .peta details{border:1px solid var(--smoke);background:rgba(23,23,26,.7)}
+  .peta summary{list-style:none;cursor:pointer;padding:.8rem 1rem;display:grid;gap:.35rem}
+  .peta summary::-webkit-details-marker{display:none}
+  .peta .ph{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mist)}
+  .peta .ph b{color:var(--moon);font-weight:500}
+  .peta .cnt{border:1px solid var(--smoke);padding:.1rem .5rem;color:var(--moon)}
+  .peta .cnt.zero{color:var(--mist)}
+  .peta .kf{color:#9fd3a9}.peta .kf.s{color:#e7a3a3}
+  .peta .ps{text-align:justify;hyphens:auto;-webkit-hyphens:auto;font-size:.95rem}
+  .peta ol{margin:0;padding:0 1rem 1rem 2.2rem;display:grid;gap:.8rem}
+  .peta li{text-align:justify;hyphens:auto;-webkit-hyphens:auto;font-size:.9rem;color:#d6d5ce}
+  .peta li .src{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mist);margin-bottom:.2rem}
+  .peta li .jw{display:block;margin-top:.3rem;color:var(--moon)}
+  .peta li button{margin-top:.4rem;background:none;border:1px solid var(--smoke);color:var(--moon);padding:.25rem .6rem;font:inherit;font-size:.78rem;cursor:pointer}
+  .peta .none{padding:0 1rem 1rem;color:var(--mist);font-size:.88rem;text-align:justify}
+  .peta-h{font-family:var(--serif);font-weight:400;font-size:1.4rem;margin:1.8rem 0 .6rem}
   .q .res[hidden]{display:none}
   .q .res{margin-top:1rem;padding:1rem 1.1rem;border-left:2px solid var(--moon);background:rgba(13,13,14,.55);color:#d6d5ce;font-size:.94rem;line-height:1.7;display:grid;gap:.45rem;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
   .q .res .verdict{font-weight:600;color:#fff}
@@ -247,8 +266,11 @@
     </details>
     <details class="group" id="grp-ujian-sumatif-2-formatif">
       <summary class="eyebrow">Ujian Sumatif 2 + Formatif <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
-      <h2>Formatif &amp; <em>prediksi</em></h2>
-      <p class="sub">Set pertama disusun per soal formatif: setiap soal formatif (Benar/Salah, kunci resmi) langsung diikuti semua soal Sumatif 2 tahun 2023–2018 yang sama atau satu konsep dengannya, dan catatannya menyebut berapa kali konsep itu keluar. Set kedua berisi 85 soal prediksi buatan yang nomornya sejajar dengan nomor formatif.</p>
+      <h2>Formatif &amp; <em>soal sumatif sekonsep</em></h2>
+      <p class="sub">Daftar 85 soal formatif sesuai nomornya. Di bawah setiap soal formatif tertulis berapa soal Sumatif 2 (2023–2018) yang sama atau satu konsep dengannya, beserta soal-soalnya. Ketuk satu soal formatif untuk membuka daftarnya; ketuk "Kerjakan" untuk langsung mengerjakan soal sumatif itu.</p>
+      <div class="peta-bar"><select id="peta-flt" aria-label="Saring"><option value="all">Semua soal formatif</option><option value="ada">Yang keluar di sumatif</option><option value="tidak">Yang belum pernah keluar</option></select><span id="peta-sum"></span></div>
+      <div id="peta-2f" class="peta"></div>
+      <h3 class="peta-h">Latihan</h3>
       <div class="acc-list" id="exam-list-2f"></div>
     </details>
   </section>
@@ -537,6 +559,29 @@
       renderExams(set, j);
       if (EXAMS.find(e => e.id === location.hash.slice(1))) show();
     }).catch(() => { document.getElementById(set.list).innerHTML = '<p class="empty">Soal gagal dimuat. Coba muat ulang halaman.</p>'; }));
+  // peta formatif -> sumatif
+  fetch('peta2f.json').then(r => r.json()).then(P => {
+    const box = document.getElementById('peta-2f'), flt = document.getElementById('peta-flt');
+    const tot = P.reduce((a, f) => a + f.m.length, 0), ada = P.filter(f => f.m.length).length;
+    document.getElementById('peta-sum').textContent = `${ada} dari ${P.length} soal formatif keluar di sumatif · total ${tot} soal sumatif`;
+    box.innerHTML = P.map(f => `
+      <details data-c="${f.m.length}">
+        <summary>
+          <span class="ph"><b>Formatif no. ${f.n}</b><span>${esc(f.code)}</span><span class="kf ${f.k === 'B' ? '' : 's'}">Kunci: ${f.k === 'B' ? 'Benar' : 'Salah'}</span><span class="cnt ${f.m.length ? '' : 'zero'}">${f.m.length} soal sumatif sama/1 konsep</span></span>
+          <span class="ps">${esc(f.s)}</span>
+        </summary>
+        ${f.m.length ? `<ol>${f.m.map(q => `<li><span class="src">Sumatif 2 ${q.y} · no. ${q.n}</span>${esc(q.s)}<span class="jw">Jawaban: ${q.a === '-' ? '—' : q.a + '. ' + esc(q.t)}</span><button type="button" data-go="s2-${q.y}|${q.n}">Kerjakan soal ini ›</button></li>`).join('')}</ol>`
+          : `<p class="none">Belum ada soal Sumatif 2 tahun 2018–2023 yang sama atau satu konsep. Latihan konsep ini ada di set prediksi buatan nomor ${f.n}.</p>`}
+      </details>`).join('');
+    flt.addEventListener('change', () => box.querySelectorAll('details').forEach(d => {
+      const c = +d.dataset.c; d.hidden = flt.value === 'ada' ? !c : flt.value === 'tidak' ? !!c : false; }));
+    box.addEventListener('click', e => {
+      const b = e.target.closest('[data-go]'); if (!b) return;
+      const [id, n] = b.dataset.go.split('|');
+      location.hash = '#' + id;
+      setTimeout(() => { const el = document.getElementById(`${id}-q-${n}`); if (el) el.scrollIntoView({behavior:'smooth', block:'start'}); }, 450);
+    });
+  }).catch(() => { document.getElementById('peta-2f').innerHTML = '<p class="empty">Daftar gagal dimuat. Coba muat ulang halaman.</p>'; });
   window.addEventListener('hashchange', show);
   menuBtn.addEventListener('click', () => { const o = nav.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', o); });
 
