@@ -163,11 +163,7 @@
   .peta .cnt.zero{color:var(--mist)}
   .peta .kf{color:#9fd3a9}.peta .kf.s{color:#e7a3a3}
   .peta .ps{text-align:justify;hyphens:auto;-webkit-hyphens:auto;font-size:.95rem}
-  .peta ol{margin:0;padding:0 1rem 1rem 2.2rem;display:grid;gap:.8rem}
-  .peta li{text-align:justify;hyphens:auto;-webkit-hyphens:auto;font-size:.9rem;color:#d6d5ce}
-  .peta li .src{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mist);margin-bottom:.2rem}
-  .peta li .jw{display:block;margin-top:.3rem;color:var(--moon)}
-  .peta li button{margin-top:.4rem;background:none;border:1px solid var(--smoke);color:var(--moon);padding:.25rem .6rem;font:inherit;font-size:.78rem;cursor:pointer}
+  .peta .pq{padding:0 .8rem .8rem;display:grid;gap:1rem}
   .peta .none{padding:0 1rem 1rem;color:var(--mist);font-size:.88rem;text-align:justify}
   .peta-h{font-family:var(--serif);font-weight:400;font-size:1.4rem;margin:1.8rem 0 .6rem}
   .q .res[hidden]{display:none}
@@ -267,11 +263,9 @@
     <details class="group" id="grp-ujian-sumatif-2-formatif">
       <summary class="eyebrow">Ujian Sumatif 2 + Formatif <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
       <h2>Formatif &amp; <em>soal sumatif sekonsep</em></h2>
-      <p class="sub">Daftar 85 soal formatif sesuai nomornya. Di bawah setiap soal formatif tertulis berapa soal Sumatif 2 (2023–2018) yang sama atau satu konsep dengannya, beserta soal-soalnya. Ketuk satu soal formatif untuk membuka daftarnya; ketuk "Kerjakan" untuk langsung mengerjakan soal sumatif itu.</p>
+      <p class="sub">Daftar 85 soal formatif sesuai nomornya. Di bawah setiap soal formatif tertulis berapa soal Sumatif 2 (2023–2018) yang sama atau satu konsep dengannya, beserta soal-soalnya. Ketuk satu soal formatif untuk membuka soal-soal sumatifnya dan langsung kerjakan di situ: jawabanmu dikoreksi otomatis dan pembahasannya muncul di bawah soal.</p>
       <div class="peta-bar"><select id="peta-flt" aria-label="Saring"><option value="all">Semua soal formatif</option><option value="ada">Yang keluar di sumatif</option><option value="tidak">Yang belum pernah keluar</option></select><span id="peta-sum"></span></div>
       <div id="peta-2f" class="peta"></div>
-      <h3 class="peta-h">Latihan</h3>
-      <div class="acc-list" id="exam-list-2f"></div>
     </details>
   </section>
   <section class="page" id="p-sumatif-anatomi"><div class="eyebrow">Sumatif Anatomi</div></section>
@@ -553,8 +547,7 @@
     updateMeta(x);
   }
   const EXAM_SETS = [{file:'ujian1.json', page:'sumatif-1', grp:'grp-ujian-sumatif-1', list:'exam-list-1', code:'Ujian Sumatif 1'},
-                     {file:'ujian2.json', page:'sumatif-2', grp:'grp-ujian-sumatif-2', list:'exam-list-2', code:'Ujian Sumatif 2'},
-                     {file:'ujian2f.json', page:'sumatif-2', grp:'grp-ujian-sumatif-2-formatif', list:'exam-list-2f', code:'Sumatif 2 + Formatif'}];
+                     {file:'ujian2.json', page:'sumatif-2', grp:'grp-ujian-sumatif-2', list:'exam-list-2', code:'Ujian Sumatif 2'}];
   EXAM_SETS.forEach(set => fetch(set.file).then(r => r.json()).then(j => {
       renderExams(set, j);
       if (EXAMS.find(e => e.id === location.hash.slice(1))) show();
@@ -570,17 +563,34 @@
           <span class="ph"><b>Formatif no. ${f.n}</b><span>${esc(f.code)}</span><span class="kf ${f.k === 'B' ? '' : 's'}">Kunci: ${f.k === 'B' ? 'Benar' : 'Salah'}</span><span class="cnt ${f.m.length ? '' : 'zero'}">${f.m.length} soal sumatif sama/1 konsep</span></span>
           <span class="ps">${esc(f.s)}</span>
         </summary>
-        ${f.m.length ? `<ol>${f.m.map(q => `<li><span class="src">Sumatif 2 ${q.y} · no. ${q.n}</span>${esc(q.s)}<span class="jw">Jawaban: ${q.a === '-' ? '—' : q.a + '. ' + esc(q.t)}</span><button type="button" data-go="s2-${q.y}|${q.n}">Kerjakan soal ini ›</button></li>`).join('')}</ol>`
-          : `<p class="none">Belum ada soal Sumatif 2 tahun 2018–2023 yang sama atau satu konsep. Latihan konsep ini ada di set prediksi buatan nomor ${f.n}.</p>`}
+        ${f.m.length ? `<div class="pq" data-f="${f.n}"></div>`
+          : `<p class="none">Belum ada soal Sumatif 2 tahun 2018–2023 yang sama atau satu konsep.</p>`}
       </details>`).join('');
     flt.addEventListener('change', () => box.querySelectorAll('details').forEach(d => {
       const c = +d.dataset.c; d.hidden = flt.value === 'ada' ? !c : flt.value === 'tidak' ? !!c : false; }));
-    box.addEventListener('click', e => {
-      const b = e.target.closest('[data-go]'); if (!b) return;
-      const [id, n] = b.dataset.go.split('|');
-      location.hash = '#' + id;
-      setTimeout(() => { const el = document.getElementById(`${id}-q-${n}`); if (el) el.scrollIntoView({behavior:'smooth', block:'start'}); }, 450);
-    });
+    box.querySelectorAll('details').forEach(d => d.addEventListener('toggle', () => {
+      const w = d.querySelector('.pq'); if (!d.open || !w || w.dataset.ready) return;
+      const f = P.find(z => z.n === +w.dataset.f); w.dataset.ready = '1';
+      w.innerHTML = f.m.map((m, i) => {
+        const x = EXAMS.find(e => e.id === 's2-' + m.y), q = x && x.q.find(z => z.n === m.n);
+        if (!q) return '';
+        return `<article class="q" data-x="${x.id}" data-n="${q.n}">
+          <div class="qh"><span class="qn">${i + 1}/${f.m.length} · Sumatif 2 ${m.y} no. ${q.n}</span><span class="st">belum dijawab</span></div>
+          <div class="qs">${q.s.includes('<table') ? q.s : esc(q.s)}</div>
+          ${q.img.map(src => `<figure><img src="${src}" alt="Gambar soal" loading="lazy" data-img="${src}"></figure>`).join('')}
+          <ol class="opts">${Object.entries(q.o).map(([k, t]) => `<li><button type="button" data-k="${k}"><span class="k">${k}</span><span>${esc(t)}</span></button></li>`).join('')}</ol>
+          <button class="peek" type="button">Lihat jawaban &amp; pembahasan tanpa menjawab</button>
+          <div class="res" hidden></div>
+        </article>`;
+      }).join('');
+      w.querySelectorAll('article.q').forEach(art => {
+        const x = EXAMS.find(e => e.id === art.dataset.x), q = x.q.find(z => z.n === +art.dataset.n), key = 'lm-' + x.id;
+        paintQ(x, art, q, store.get(key)[q.n]);
+        const pick = k => { const st = store.get(key); st[q.n] = k; store.set(key, st); paintQ(x, art, q, k); if (k !== 'peek') updateMeta(x); };
+        art.querySelectorAll('.opts button').forEach(b => b.addEventListener('click', () => pick(b.dataset.k)));
+        art.querySelector('.peek').addEventListener('click', () => pick('peek'));
+      });
+    }));
   }).catch(() => { document.getElementById('peta-2f').innerHTML = '<p class="empty">Daftar gagal dimuat. Coba muat ulang halaman.</p>'; });
   window.addEventListener('hashchange', show);
   menuBtn.addEventListener('click', () => { const o = nav.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', o); });
