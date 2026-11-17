@@ -262,9 +262,9 @@
     </details>
     <details class="group" id="grp-ujian-sumatif-2-formatif">
       <summary class="eyebrow">Ujian Sumatif 2 + Formatif <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
-      <h2>Formatif &amp; <em>soal sumatif sekonsep</em></h2>
-      <p class="sub">Daftar 85 soal formatif sesuai nomornya. Di bawah setiap soal formatif tertulis berapa soal Sumatif 2 (2023–2018) yang sama atau satu konsep dengannya, beserta soal-soalnya. Ketuk satu soal formatif untuk membuka soal-soal sumatifnya dan langsung kerjakan di situ: jawabanmu dikoreksi otomatis dan pembahasannya muncul di bawah soal.</p>
-      <div class="peta-bar"><select id="peta-flt" aria-label="Saring"><option value="all">Semua soal formatif</option><option value="ada">Yang keluar di sumatif</option><option value="tidak">Yang belum pernah keluar</option></select><span id="peta-sum"></span></div>
+      <h2>Formatif 2023 &amp; <em>soal sumatif sekonsep</em></h2>
+      <p class="sub">Daftar 85 soal formatif Sumatif 2 tahun 2023 sesuai nomornya. Di bawah setiap soal formatif tertulis berapa soal Sumatif 2 (2023–2018) yang sama atau satu konsep dengannya, beserta soal-soalnya. Ketuk satu soal formatif untuk membuka soal-soal sumatifnya dan langsung kerjakan di situ: jawabanmu dikoreksi otomatis dan pembahasannya muncul di bawah soal.</p>
+      <div class="peta-bar"><select id="peta-flt" aria-label="Saring"><option value="all">Semua soal formatif 2023</option><option value="ada">Yang keluar di sumatif</option><option value="tidak">Yang belum pernah keluar</option></select><span id="peta-sum"></span></div>
       <div id="peta-2f" class="peta"></div>
     </details>
   </section>
@@ -556,11 +556,11 @@
   fetch('peta2f.json').then(r => r.json()).then(P => {
     const box = document.getElementById('peta-2f'), flt = document.getElementById('peta-flt');
     const tot = P.reduce((a, f) => a + f.m.length, 0), ada = P.filter(f => f.m.length).length;
-    document.getElementById('peta-sum').textContent = `${ada} dari ${P.length} soal formatif keluar di sumatif · total ${tot} soal sumatif`;
+    document.getElementById('peta-sum').textContent = `${ada} dari ${P.length} soal formatif 2023 keluar di sumatif · total ${tot} soal sumatif`;
     box.innerHTML = P.map(f => `
       <details data-c="${f.m.length}">
         <summary>
-          <span class="ph"><b>Formatif no. ${f.n}</b><span>${esc(f.code)}</span><span class="kf ${f.k === 'B' ? '' : 's'}">Kunci: ${f.k === 'B' ? 'Benar' : 'Salah'}</span><span class="cnt ${f.m.length ? '' : 'zero'}">${f.m.length} soal sumatif sama/1 konsep</span></span>
+          <span class="ph"><b>Formatif 2023 no. ${f.n}</b><span>${esc(f.code)}</span><span class="kf ${f.k === 'B' ? '' : 's'}">Kunci: ${f.k === 'B' ? 'Benar' : 'Salah'}</span><span class="cnt ${f.m.length ? '' : 'zero'}">${f.m.length} soal sumatif sama/1 konsep</span></span>
           <span class="ps">${esc(f.s)}</span>
         </summary>
         ${f.m.length ? `<div class="pq" data-f="${f.n}"></div>`
