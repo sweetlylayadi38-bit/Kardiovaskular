@@ -150,6 +150,7 @@
   .q .opts button.wrong .k{background:#d7837b;border-color:#d7837b;color:#0d0d0e}
   .q .opts button.picked{border-color:var(--moon)}
   .q .peek{margin-top:.7rem;background:none;border:none;color:var(--mist);font:inherit;font-size:.8rem;letter-spacing:.06em;text-decoration:underline;cursor:pointer;padding:0}
+  .q .res[hidden]{display:none}
   .q .res{margin-top:1rem;padding:1rem 1.1rem;border-left:2px solid var(--moon);background:rgba(13,13,14,.55);color:#d6d5ce;font-size:.94rem;line-height:1.7;display:grid;gap:.45rem;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
   .q .res .verdict{font-weight:600;color:#fff}
   .q .res .verdict.ok{color:#9fdcb2}.q .res .verdict.no{color:#f0aaa3}
@@ -239,7 +240,9 @@
     </details>
     <details class="group" id="grp-ujian-sumatif-2">
       <summary class="eyebrow">Ujian Sumatif 2 <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
-      <p class="empty">Belum ada isi.</p>
+      <h2>Soal <em>Sumatif 2</em></h2>
+      <p class="sub">Soal sumatif 2 Modul Kardiovaskular tahun 2018 sampai 2023. Ketuk satu pilihan: jawabanmu langsung dikoreksi (hijau benar, merah salah) dan pembahasannya muncul bersama slide kuliah K9–K19 yang mendukung. Skor tersimpan di perangkat ini.</p>
+      <div class="acc-list" id="exam-list-2"></div>
     </details>
     <details class="group" id="grp-ujian-sumatif-2-formatif">
       <summary class="eyebrow">Ujian Sumatif 2 + Formatif <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
@@ -428,7 +431,7 @@
       ? `<p class="verdict ok">✓ Benar.</p>`
       : `<p class="verdict no">✗ Salah — kamu memilih ${chosen.toUpperCase()}. Jawaban yang benar: ${q.ans.toUpperCase()}.</p>`;
     const head = q.ans === '-'
-      ? `<p class="hd"><b>No. ${q.n} — Jawaban: tidak ada pilihan yang benar.</b></p>`
+      ? `<p class="hd"><b>No. ${q.n} — Jawaban: ${Object.keys(q.o).length ? 'tidak ada pilihan yang benar.' : 'soal tanpa pilihan, lihat alasan.'}</b></p>`
       : `<p class="hd"><b>No. ${q.n} — Jawaban: ${q.ans}. ${esc(opt)}</b></p>`;
     let kj = '';
     if (q.key) kj = `<p class="kj ${q.key === q.ans ? '' : 'diff'}"><span class="lb">Kunci file</span>${q.key.toUpperCase()}${q.key === q.ans ? ' (sama)' : ' — berbeda dari pembahasan ini, lihat catatan'}</p>`;
@@ -524,7 +527,8 @@
     body.querySelectorAll('.close-acc').forEach(btn => btn.addEventListener('click', () => { det.open = false; det.querySelector('summary').scrollIntoView({behavior:'smooth', block:'start'}); }));
     updateMeta(x);
   }
-  const EXAM_SETS = [{file:'ujian1.json', page:'sumatif-1', grp:'grp-ujian-sumatif-1', list:'exam-list-1', code:'Ujian Sumatif 1'}];
+  const EXAM_SETS = [{file:'ujian1.json', page:'sumatif-1', grp:'grp-ujian-sumatif-1', list:'exam-list-1', code:'Ujian Sumatif 1'},
+                     {file:'ujian2.json', page:'sumatif-2', grp:'grp-ujian-sumatif-2', list:'exam-list-2', code:'Ujian Sumatif 2'}];
   EXAM_SETS.forEach(set => fetch(set.file).then(r => r.json()).then(j => {
       renderExams(set, j);
       if (EXAMS.find(e => e.id === location.hash.slice(1))) show();
