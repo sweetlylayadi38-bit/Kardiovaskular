@@ -277,7 +277,9 @@
     </details>
     <details class="group" id="grp-latihan-sumatif-anatomi">
       <summary class="eyebrow">Latihan Sumatif Anatomi <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
-      <p class="empty">Belum ada isi.</p>
+      <h2>Latihan <em>spot anatomi</em></h2>
+      <p class="sub">Gambar dari Cardiovascular Anatomy Pocket Book dengan label struktur yang ditutup. Tentukan struktur yang ditunjuk kotak kuning bertanda "?". Jawabanmu langsung dikoreksi, lalu halaman buku saku dengan label aslinya muncul sebagai pembahasan. Ketuk gambar untuk memperbesar.</p>
+      <div class="acc-list" id="exam-list-an"></div>
     </details>
   </section>
   <section class="page" id="p-sumatif-integrasi"><div class="eyebrow">Sumatif Integrasi</div></section>
@@ -559,7 +561,8 @@
     updateMeta(x);
   }
   const EXAM_SETS = [{file:'ujian1.json', page:'sumatif-1', grp:'grp-ujian-sumatif-1', list:'exam-list-1', code:'Ujian Sumatif 1'},
-                     {file:'ujian2.json', page:'sumatif-2', grp:'grp-ujian-sumatif-2', list:'exam-list-2', code:'Ujian Sumatif 2'}];
+                     {file:'ujian2.json', page:'sumatif-2', grp:'grp-ujian-sumatif-2', list:'exam-list-2', code:'Ujian Sumatif 2'},
+                     {file:'latanat.json', page:'sumatif-anatomi', grp:'grp-latihan-sumatif-anatomi', list:'exam-list-an', code:'Latihan Sumatif Anatomi'}];
   EXAM_SETS.forEach(set => fetch(set.file).then(r => r.json()).then(j => {
       renderExams(set, j);
       if (EXAMS.find(e => e.id === location.hash.slice(1))) show();
