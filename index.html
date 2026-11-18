@@ -11,11 +11,12 @@
     --ink:#0d0d0e; --ash:#17171a; --smoke:#2a2a2d; --mist:#9a9aa0;
     --moon:#ecebe4; --glow:rgba(236,235,228,.14);
     --serif:'Cormorant Garamond',Georgia,serif; --sans:'Karla',system-ui,sans-serif;
+    --hdr:69px; /* tinggi header, diperbarui dari JS */
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-padding-top:190px}
+  html{scroll-padding-top:calc(var(--hdr) + 120px)}
   html,body{background:var(--ink);color:var(--moon);font-family:var(--sans);font-weight:300;line-height:1.65}
-  body{min-height:100vh;position:relative;overflow-x:hidden}
+  body{min-height:100vh;min-height:100dvh;position:relative;overflow-x:hidden}
   .sky{position:fixed;inset:0;background:url(bg.jpg) center/cover;opacity:.32;z-index:0;pointer-events:none;animation:drift 90s ease-in-out infinite alternate}
   .sky::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,transparent 0,rgba(13,13,14,.55) 55%,rgba(13,13,14,.92) 100%)}
   @keyframes drift{from{transform:scale(1.05) translateX(0)}to{transform:scale(1.12) translateX(-2%)}}
@@ -32,7 +33,7 @@
   .menu-btn{display:none;background:none;border:1px solid var(--smoke);color:var(--moon);padding:.4rem .7rem;font:inherit;font-size:.8rem;letter-spacing:.15em;cursor:pointer}
 
   main{position:relative;z-index:1}
-  section.page{display:none;min-height:calc(100vh - 160px);padding:clamp(2.5rem,6vw,4.5rem) clamp(1.2rem,4vw,3rem) 5rem;max-width:1200px;margin:0 auto;animation:rise .5s ease both}
+  section.page{display:none;min-height:calc(100vh - 160px);min-height:calc(100dvh - 160px);padding:clamp(2.5rem,6vw,4.5rem) clamp(1.2rem,4vw,3rem) 5rem;max-width:1200px;margin:0 auto;animation:rise .5s ease both}
   section.page.active{display:block}
   @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 
@@ -73,7 +74,7 @@
   .acc-list{display:flex;flex-direction:column;gap:.8rem;margin-top:2.2rem}
   .acc{background:rgba(23,23,26,.9);border:1px solid rgba(236,235,228,.1);transition:border-color .3s}
   .acc[open]{border-color:rgba(236,235,228,.35)}
-  .acc summary{list-style:none;display:flex;align-items:center;gap:1rem;padding:.8rem 1rem;cursor:pointer;position:sticky;top:69px;z-index:5;background:rgba(18,18,20,.96);backdrop-filter:blur(8px)}
+  .acc summary{list-style:none;display:flex;align-items:center;gap:1rem;padding:.8rem 1rem;cursor:pointer;position:sticky;top:var(--hdr);z-index:5;background:rgba(18,18,20,.96);backdrop-filter:blur(8px)}
   .acc summary::-webkit-details-marker{display:none}
   .acc summary:hover .chev,.acc summary:focus-visible .chev{border-color:var(--moon)}
   .acc .mini{flex:0 0 132px;border:1px solid rgba(236,235,228,.1)}
@@ -91,7 +92,7 @@
   .close-acc:hover{border-color:var(--moon)}
   .close-acc.bottom{display:block;width:100%;margin-top:1.4rem;padding:.9rem}
   /* Lecture view */
-  .bar{position:sticky;top:69px;z-index:10;display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;margin:1.6rem 0 2rem;padding:.8rem;background:rgba(13,13,14,.85);backdrop-filter:blur(8px);border:1px solid rgba(236,235,228,.09)}
+  .bar{position:sticky;top:var(--hdr);z-index:10;display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;margin:1.6rem 0 2rem;padding:.8rem;background:rgba(13,13,14,.85);backdrop-filter:blur(8px);border:1px solid rgba(236,235,228,.09)}
   .bar select,.bar input{background:rgba(26,26,28,.95);border:1px solid var(--smoke);color:var(--moon);padding:.55rem .8rem;font:inherit;font-size:.9rem}
   .bar input{flex:1;min-width:180px}
   .bar select:focus,.bar input:focus{outline:none;border-color:var(--moon)}
@@ -194,10 +195,23 @@
   .keytbl .cols{columns:3 200px;column-gap:1.4rem}
   .keytbl .cols table{width:100%;break-inside:avoid;margin-bottom:.8rem}
   .keytbl ul{margin:.4rem 0 0 1.1rem;display:grid;gap:.3rem;font-size:.88rem;color:#d6d5ce}
-  .viewer{position:fixed;inset:0;z-index:50;background:rgba(5,5,6,.94);display:none;align-items:center;justify-content:center;padding:2rem;cursor:zoom-out}
-  .viewer.open{display:flex}
+  /* Native <dialog>: top layer, Esc/back gesture, focus return handled by the browser */
+  dialog{color:var(--moon)}
+  dialog::backdrop{overflow:hidden;overscroll-behavior:contain}
+  dialog:modal{overscroll-behavior:contain}
+  .viewer{max-width:100dvw;max-height:100dvh;width:100dvw;height:100dvh;margin:0;padding:2rem;border:0;background:transparent;cursor:zoom-out}
+  .viewer[open]{display:flex;align-items:center;justify-content:center}
+  .viewer::backdrop{background:rgba(5,5,6,.94)}
   .viewer .vbox{max-width:100%;box-shadow:0 0 60px rgba(0,0,0,.6)}
   .viewer button{position:absolute;top:1rem;right:1.4rem;background:none;border:none;color:var(--moon);font-size:2.2rem;cursor:pointer;line-height:1}
+  .confirm{max-width:min(26rem,calc(100dvw - 2rem));border:1px solid var(--smoke);background:var(--ash);padding:1.4rem 1.5rem}
+  .confirm::backdrop{background:rgba(5,5,6,.75)}
+  .confirm h3{font-family:var(--serif);font-weight:400;font-size:1.5rem;margin-bottom:.5rem}
+  .confirm p{color:#d6d5ce;font-size:.95rem}
+  .confirm form{display:flex;gap:.6rem;justify-content:flex-end;margin-top:1.2rem}
+  .confirm button{background:none;border:1px solid var(--smoke);color:var(--moon);padding:.55rem 1rem;font:inherit;font-size:.88rem;cursor:pointer}
+  .confirm button:hover,.confirm button:focus-visible{border-color:var(--moon)}
+  .confirm button[value="ok"]{border-color:#d7837b;color:#f0aaa3}
 
   footer{position:relative;z-index:1;text-align:center;padding:2.5rem 1rem;font-size:.75rem;letter-spacing:.2em;color:var(--mist);border-top:1px solid rgba(236,235,228,.06)}
 
@@ -209,9 +223,8 @@
     nav.open{display:flex}
     nav a{padding:1rem clamp(1.2rem,4vw,3rem);border-bottom:1px solid rgba(236,235,228,.06)}
     nav a[aria-current="page"]{border-color:rgba(236,235,228,.06);background:rgba(236,235,228,.05)}
-    .bar{top:64px}
     .bar .count{margin-left:0}
-    .acc summary{top:64px;gap:.7rem;padding:.7rem}
+    .acc summary{gap:.7rem;padding:.7rem}
     .acc .mini{flex-basis:84px}
     .acc strong{font-size:1.1rem}
     .acc-body{padding:0 .6rem 1rem}
@@ -292,10 +305,19 @@
   <section class="page" id="p-sumatif-integrasi"><div class="eyebrow">Sumatif Integrasi</div></section>
 </main>
 
-<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Gambar slide">
-  <button aria-label="Tutup">&times;</button>
+<dialog class="viewer" id="viewer" closedby="any" aria-label="Gambar diperbesar">
+  <button type="button" aria-label="Tutup">&times;</button>
   <div class="vbox"></div>
-</div>
+</dialog>
+
+<dialog class="confirm" id="confirm" aria-labelledby="confirm-title" aria-describedby="confirm-msg">
+  <h3 id="confirm-title">Ulangi dari awal?</h3>
+  <p id="confirm-msg"></p>
+  <form method="dialog">
+    <button value="ok">Hapus jawaban</button>
+    <button value="cancel" autofocus>Batal</button>
+  </form>
+</dialog>
 
 <footer>✦ LANGIT MALAM · DIBUAT SAAT TERJAGA ✦</footer>
 
@@ -422,7 +444,7 @@
     nav.querySelectorAll('a').forEach(a => a.getAttribute('href') === '#' + id ? a.setAttribute('aria-current','page') : a.removeAttribute('aria-current'));
     document.title = labels[id] + ' · Langit Malam';
     nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false');
-    document.getElementById('viewer').classList.remove('open');
+    closeV();
     if (lect) { document.getElementById(lect._set.grp).open = true; const det = document.getElementById('acc-' + lect.id); det.open = true; fillLecture(det); setTimeout(() => det.scrollIntoView({block:'start'}), 50); }
     else if (exam) { document.getElementById(exam._set.grp).open = true; const det = document.getElementById('acc-' + exam.id); det.open = true; fillExam(det); setTimeout(() => det.scrollIntoView({block:'start'}), 50); }
     else window.scrollTo(0,0);
@@ -430,6 +452,8 @@
 
   // ---------- Ujian (kuis dengan koreksi otomatis) ----------
   const EXAMS = [];
+  const viewer = document.getElementById('viewer'), vbox = viewer.querySelector('.vbox');
+  const closeV = () => { if (viewer.open) viewer.close(); };
   const CONF = {T:'Tinggi', S:'Sedang', R:'Rendah'};
   const store = {
     get(k){ try { return JSON.parse(localStorage.getItem(k) || '{}'); } catch(e){ return {}; } },
@@ -595,8 +619,8 @@
     const goto = n => { const el = document.getElementById(P + n); if (!el) return; if (el.classList.contains('hide')) { flt.value = 'all'; applyFilter(); } el.scrollIntoView({behavior:'smooth'}); };
     body.querySelector('.jump').addEventListener('change', ev => { if (ev.target.value) goto(ev.target.value); ev.target.value = ''; });
     body.querySelectorAll('[data-jump]').forEach(a => a.addEventListener('click', ev => { ev.preventDefault(); goto(a.dataset.jump); }));
-    body.querySelector('.reset').addEventListener('click', () => {
-      if (!confirm('Hapus semua jawabanmu untuk ' + x.label + '?')) return;
+    body.querySelector('.reset').addEventListener('click', async () => {
+      if (!await ask('Semua jawabanmu untuk ' + x.label + ' akan dihapus dari perangkat ini.')) return;
       st = {}; store.set(key, st);
       body.querySelectorAll('.q').forEach(art => paintQ(x, art, x.q.find(z => z.n === +art.dataset.n), null));
       updateMeta(x); applyFilter();
@@ -657,7 +681,6 @@
   menuBtn.addEventListener('click', () => { const o = nav.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', o); });
 
   // image viewer
-  const viewer = document.getElementById('viewer'), vbox = viewer.querySelector('.vbox');
   document.addEventListener('click', e => {
     const z = e.target.closest('[data-zoom]'), im = e.target.closest('[data-img]');
     if (!z && !im) return;
@@ -671,11 +694,25 @@
       vbox.innerHTML = `<img src="${im.dataset.img}" alt="" style="max-width:100%;max-height:calc(100vh - 4rem);display:block">`;
       vbox.style.width = '';
     }
-    viewer.classList.add('open'); viewer.querySelector('button').focus();
+    if (!viewer.open) viewer.showModal();
   });
-  const closeV = () => viewer.classList.remove('open');
-  viewer.addEventListener('click', closeV);
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeV(); });
+  // The whole viewer is "zoom-out": any click on the image, backdrop or × closes it.
+  // This also covers light dismiss where <dialog closedby> is unsupported (Safari).
+  viewer.addEventListener('click', () => viewer.close());
+
+  // Confirmation dialog (replaces window.confirm); resolves true only for the "ok" button.
+  const confirmDlg = document.getElementById('confirm');
+  const ask = msg => new Promise(res => {
+    confirmDlg.querySelector('#confirm-msg').textContent = msg;
+    confirmDlg.returnValue = '';
+    confirmDlg.addEventListener('close', () => { const ok = confirmDlg.returnValue === 'ok'; confirmDlg.returnValue = ''; res(ok); }, {once: true});
+    confirmDlg.showModal();
+  });
+
+  // Keep sticky offsets in sync with the real header height (fonts, wrapping, mobile).
+  const hdr = document.querySelector('header');
+  const setHdr = () => document.documentElement.style.setProperty('--hdr', hdr.offsetHeight + 'px');
+  if ('ResizeObserver' in window) new ResizeObserver(setHdr).observe(hdr); setHdr();
 
   document.querySelectorAll('details.group').forEach(grp => {
     const hint = grp.querySelector('.ghint'), setHint = () => hint.textContent = grp.open ? 'tutup' : 'buka';
