@@ -132,6 +132,7 @@
   .q .st.ok{border-color:#6fbf8a;color:#9fdcb2}.q .st.no{border-color:#d7837b;color:#f0aaa3}
   .q .qs{color:#e6e5de;font-size:1rem;line-height:1.7;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
   .q figure{margin:.9rem 0 0;max-width:520px}
+  .q figure.spot{border:1px solid var(--smoke);cursor:zoom-in;margin:0}
   .q figure img{width:100%;display:block;border:1px solid var(--smoke);cursor:zoom-in;background:#fff}
   .qt{border-collapse:collapse;margin:.8rem 0 0;font-size:.9rem}
   .qt th,.qt td{border:1px solid var(--smoke);padding:.3rem .7rem;text-align:center}
@@ -297,7 +298,8 @@
   const pages = ['sumatif-1','sumatif-2','sumatif-anatomi','sumatif-integrasi'];
   const labels = {'sumatif-1':'Sumatif 1','sumatif-2':'Sumatif 2','sumatif-anatomi':'Sumatif Anatomi','sumatif-integrasi':'Sumatif Integrasi'};
   const nav = document.getElementById('nav'), menuBtn = document.querySelector('.menu-btn');
-  let DATA = [];
+  let DATA = [{id:'spot', ar:'1100/620', title:'Gambar latihan spot', code:'SPOT', n:138, slides:[]}];
+  const qimg = (src, n) => src.startsWith('spot|') ? `<figure class="spot" data-zoom="${src}">${sl(DATA[0], +src.split('|')[1], 'Gambar soal')}</figure>` : `<figure><img src="${src}" alt="Gambar soal ${n}" loading="lazy" data-img="${src}"></figure>`;
 
   const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   // Slides are packed 4 per image file (p/<id>/<sheet>.jpg); show one slide by background position.
@@ -501,13 +503,13 @@
   function fillExam(det){
     const body = det.querySelector('.acc-body');
     if (body.dataset.ready) return;
-    body.dataset.ready = '1';
+    body.dataset.ready = '1'; setTimeout(() => lazy(body));
     const x = EXAMS.find(e => e.id === det.dataset.exam), P = x.id + '-q-';
     const qs = x.q.map(q => `
       <article class="q" id="${P}${q.n}" data-n="${q.n}">
         <div class="qh"><span class="qn">Soal ${q.n}</span><span class="st">belum dijawab</span></div>
         <div class="qs">${q.s.includes('<table') ? q.s : esc(q.s)}</div>
-        ${q.img.map(src => `<figure><img src="${src}" alt="Gambar soal ${q.n}" loading="lazy" data-img="${src}"></figure>`).join('')}
+        ${q.img.map(src => qimg(src, q.n)).join('')}
         <ol class="opts">${Object.entries(q.o).map(([k, t]) => `<li><button type="button" data-k="${k}"><span class="k">${k}</span><span>${esc(t)}</span></button></li>`).join('')}</ol>
         <button class="peek" type="button">Lihat jawaban &amp; pembahasan tanpa menjawab</button>
         <div class="res" hidden></div>
@@ -592,12 +594,13 @@
         return `<article class="q" data-x="${x.id}" data-n="${q.n}">
           <div class="qh"><span class="qn">${i + 1}/${f.m.length} · Sumatif 2 ${m.y} no. ${q.n}</span><span class="st">belum dijawab</span></div>
           <div class="qs">${q.s.includes('<table') ? q.s : esc(q.s)}</div>
-          ${q.img.map(src => `<figure><img src="${src}" alt="Gambar soal" loading="lazy" data-img="${src}"></figure>`).join('')}
+          ${q.img.map(src => qimg(src, q.n)).join('')}
           <ol class="opts">${Object.entries(q.o).map(([k, t]) => `<li><button type="button" data-k="${k}"><span class="k">${k}</span><span>${esc(t)}</span></button></li>`).join('')}</ol>
           <button class="peek" type="button">Lihat jawaban &amp; pembahasan tanpa menjawab</button>
           <div class="res" hidden></div>
         </article>`;
       }).join('');
+      lazy(w);
       w.querySelectorAll('article.q').forEach(art => {
         const x = EXAMS.find(e => e.id === art.dataset.x), q = x.q.find(z => z.n === +art.dataset.n), key = 'lm-' + x.id;
         paintQ(x, art, q, store.get(key)[q.n]);
