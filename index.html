@@ -268,7 +268,18 @@
       <div id="peta-2f" class="peta"></div>
     </details>
   </section>
-  <section class="page" id="p-sumatif-anatomi"><div class="eyebrow">Sumatif Anatomi</div></section>
+  <section class="page" id="p-sumatif-anatomi">
+    <details class="group" id="grp-sumatif-anatomi">
+      <summary class="eyebrow">Sumatif Anatomi <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
+      <h2>Anatomi <em>Kardiovaskular</em></h2>
+      <p class="sub">Buku saku anatomi kardiovaskular: jantung, pembuluh darah leher, ekstremitas atas, dan ekstremitas bawah. Ketuk untuk membuka semua halaman beserta penjelasannya; ketuk gambar untuk memperbesar.</p>
+      <div class="acc-list" id="lect-grid-an"></div>
+    </details>
+    <details class="group" id="grp-latihan-sumatif-anatomi">
+      <summary class="eyebrow">Latihan Sumatif Anatomi <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
+      <p class="empty">Belum ada isi.</p>
+    </details>
+  </section>
   <section class="page" id="p-sumatif-integrasi"><div class="eyebrow">Sumatif Integrasi</div></section>
 </main>
 
@@ -300,7 +311,8 @@
   const lectLabel = d => d.code + (SUB[d.id] || '');
   // which page / group / list each lecture set lives in
   const SETS = [{file:'kuliah.json', page:'sumatif-1', grp:'grp-sumatif-1', list:'lect-grid'},
-                {file:'kuliah2.json', page:'sumatif-2', grp:'grp-sumatif-2', list:'lect-grid-2'}];
+                {file:'kuliah2.json', page:'sumatif-2', grp:'grp-sumatif-2', list:'lect-grid-2'},
+                {file:'anatomi.json', page:'sumatif-anatomi', grp:'grp-sumatif-anatomi', list:'lect-grid-an'}];
 
   function renderList(set, items){
     const grid = document.getElementById(set.list);
