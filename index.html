@@ -169,6 +169,15 @@
   .q .opts button.wrong{border-color:#d7837b;background:rgba(170,70,60,.2)}
   .q .opts button.wrong .k{background:#d7837b;border-color:#d7837b;color:#0d0d0e}
   .q .opts button.picked{border-color:var(--moon)}
+  .q .esai{display:flex;flex-direction:column;gap:.5rem;margin:1rem 0 .3rem}
+  .q .esai textarea{width:100%;background:var(--ash);color:var(--moon);border:1px solid var(--smoke);padding:.7rem .8rem;font:inherit;font-size:.95rem;line-height:1.55;resize:vertical}
+  .q .esai textarea:focus{outline:none;border-color:var(--moon)}
+  .q .esai .reveal{align-self:flex-start;background:var(--moon);color:var(--ink);border:0;padding:.6rem 1rem;font:inherit;font-weight:600;cursor:pointer}
+  .q .res .self{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;border-top:1px dashed var(--smoke);padding-top:.6rem}
+  .q .res .self button{background:none;border:1px solid var(--smoke);color:var(--moon);padding:.5rem .9rem;font:inherit;font-size:.88rem;cursor:pointer}
+  .q .res .self button[data-g="E1"]:hover{border-color:#6fbf8a;color:#9fdcb2}
+  .q .res .self button[data-g="E0"]:hover{border-color:#d7837b;color:#f0aaa3}
+  .bar select.sec{background:rgba(26,26,28,.95);border:1px solid var(--smoke);color:var(--moon);padding:.55rem .8rem;font:inherit;font-size:.9rem}
   .q .peek{margin-top:.7rem;background:none;border:none;color:var(--mist);font:inherit;font-size:.8rem;letter-spacing:.06em;text-decoration:underline;cursor:pointer;padding:0}
   .peta-bar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:1rem 0;color:var(--mist);font-size:.85rem}
   .peta-bar select{background:var(--ash);color:var(--moon);border:1px solid var(--smoke);padding:.4rem .5rem;font:inherit}
@@ -323,7 +332,9 @@
     </details>
     <details class="group" id="grp-sitasi-integrasi">
       <summary class="eyebrow">Sitasi Integrasi <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
-      <p class="empty">Belum ada isi.</p>
+      <h2>Soal <em>praktikum integrasi</em></h2>
+      <p class="sub">Kumpulan soal ujian praktikum integrasi Modul Kardiovaskular tahun 2023 sampai 2018 (Histologi, Patologi Anatomi, Fisiologi, Patologi Klinik, Farmakologi). Jawaban disusun dari materi praktikum dan kuliah yang ada di web ini, dan slide pendukungnya ditampilkan di bawah pembahasan. Soal pilihan ganda langsung dikoreksi. Untuk soal isian, tulis jawabanmu, buka pembahasan, lalu nilai sendiri benar atau salah. Jawaban versi file sitasi asli tetap ditampilkan sebagai pembanding. Skor tersimpan di perangkat ini.</p>
+      <div class="acc-list" id="exam-list-si"></div>
     </details>
   </section>
 </main>
@@ -505,7 +516,7 @@
   }
   function scoreOf(x){
     const st = store.get('lm-' + x.id); let ok = 0, done = 0;
-    x.q.forEach(q => { const c = st[q.n]; if (c && c !== 'peek' && q.ans !== '-') { done++; if (isRight(q, c)) ok++; } });
+    x.q.forEach(q => { const c = st[q.n]; if (c && c !== 'peek' && c !== 'R' && q.ans !== '-') { done++; if (isRight(q, c)) ok++; } });
     return {ok, done, total: x.q.filter(q => q.ans !== '-').length};
   }
   function updateMeta(x){
@@ -515,6 +526,15 @@
     if (b) b.textContent = `Benar ${s.ok} · Salah ${s.done - s.ok} · Dijawab ${s.done}/${s.total}`;
   }
   function resHtml(x, q, chosen){
+    if (q.type === 'esai'){
+      const v = chosen === 'E1' ? `<p class="verdict ok">✓ Kamu menilai jawabanmu benar.</p>` : chosen === 'E0' ? `<p class="verdict no">✗ Kamu menilai jawabanmu salah.</p>` : '';
+      return v + `<p class="hd"><b>No. ${q.n} — Jawaban: ${esc(q.answer)}</b></p>` +
+        (q.why ? `<p><span class="lb">Penjelasan</span>${esc(q.why)}</p>` : '') +
+        (q.kf ? `<p><span class="lb">Jawaban di file sitasi</span>${esc(q.kf)}</p>` : '') +
+        `<p><span class="lb">Keyakinan</span>${CONF[q.conf]}</p>` +
+        (q.note ? `<p class="note"><span class="lb">Catatan</span>${esc(q.note)}</p>` : '') + supHtml(q) +
+        (chosen === 'R' ? `<div class="self"><span class="lb">Nilai jawabanmu sendiri</span><button type="button" data-g="E1">✓ Jawabanku benar</button><button type="button" data-g="E0">✗ Jawabanku salah</button></div>` : '');
+    }
     if (q.type === 'isian'){
       let v = '';
       if (chosen && chosen !== 'peek') v = isRight(q, chosen) ? `<p class="verdict ok">✓ Benar.</p>` : `<p class="verdict no">✗ Salah — jawabanmu "${esc(chosen.slice(2))}". Jawaban yang benar: ${esc(q.answer)}.</p>`;
@@ -554,6 +574,7 @@
   const PFX = /^(a|v|n|r|m) /;
   function isRight(q, c){
     if (!c || c === 'peek') return false;
+    if (q.type === 'esai') return c === 'E1';
     if (q.type !== 'isian') return c === q.ans;
     const u = normA(c.slice(2)); if (!u) return false;
     return q.acc.some(acc => { const t = normA(acc);
@@ -565,6 +586,15 @@
   }
   function paintQ(x, art, q, chosen){
     const btns = art.querySelectorAll('.opts button'), res = art.querySelector('.res'), st = art.querySelector('.st');
+    if (q.type === 'esai'){
+      const rv = art.querySelector('.esai .reveal');
+      if (!chosen){ rv.hidden = false; res.hidden = true; res.innerHTML = ''; st.textContent = 'belum dijawab'; st.className = 'st'; return; }
+      rv.hidden = true; res.hidden = false; res.innerHTML = resHtml(x, q, chosen); lazy(res);
+      if (chosen === 'E1'){ st.textContent = '✓ benar'; st.className = 'st ok'; }
+      else if (chosen === 'E0'){ st.textContent = '✗ salah'; st.className = 'st no'; }
+      else { st.textContent = 'pembahasan dibuka'; st.className = 'st'; }
+      return;
+    }
     if (q.type === 'isian'){
       const inp = art.querySelector('.isi input'), btn = art.querySelector('.isi button');
       if (!chosen){ inp.disabled = false; btn.disabled = false; inp.className = ''; inp.value = ''; res.hidden = true; res.innerHTML = ''; st.textContent = 'belum dijawab'; st.className = 'st'; art.querySelector('.peek').hidden = false; return; }
@@ -596,22 +626,24 @@
     const x = EXAMS.find(e => e.id === det.dataset.exam), P = x.id + '-q-';
     const qs = x.q.map(q => `
       <article class="q" id="${P}${q.n}" data-n="${q.n}">
-        <div class="qh"><span class="qn">Soal ${q.n}</span><span class="st">belum dijawab</span></div>
+        <div class="qh"><span class="qn">Soal ${q.n}${q.sec ? ' · ' + esc(q.sec) : ''}</span><span class="st">belum dijawab</span></div>
         <div class="qs">${q.s.includes('<table') ? q.s : esc(q.s)}</div>
         ${q.img.map(src => qimg(src, q.n)).join('')}
-        ${q.type === 'isian' ? `<form class="isi"><input type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Ketik nama struktur…" aria-label="Jawaban"><button type="submit">Periksa</button></form>` : `<ol class="opts">${Object.entries(q.o).map(([k, t]) => `<li><button type="button" data-k="${k}"><span class="k">${k}</span><span>${esc(t)}</span></button></li>`).join('')}</ol>`}
-        <button class="peek" type="button">Lihat jawaban &amp; pembahasan tanpa menjawab</button>
+        ${q.type === 'esai' ? `<div class="esai"><textarea rows="2" placeholder="Tulis jawabanmu dulu (opsional), lalu buka pembahasan…" aria-label="Jawabanmu"></textarea><button class="reveal" type="button">Lihat jawaban &amp; pembahasan</button></div>` : q.type === 'isian' ? `<form class="isi"><input type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Ketik nama struktur…" aria-label="Jawaban"><button type="submit">Periksa</button></form>` : `<ol class="opts">${Object.entries(q.o).map(([k, t]) => `<li><button type="button" data-k="${k}"><span class="k">${k}</span><span>${esc(t)}</span></button></li>`).join('')}</ol>`}
+        ${q.type === 'esai' ? '' : `<button class="peek" type="button">Lihat jawaban &amp; pembahasan tanpa menjawab</button>`}
         <div class="res" hidden></div>
       </article>`).join('');
-    const rows = x.q.map(q => `<tr><td><a href="#${P}${q.n}" data-jump="${q.n}">${q.n}</a></td><td>${q.type === 'isian' ? esc(q.answer) : q.ans === '-' ? '—' : q.ans.toUpperCase()}</td><td>${CONF[q.conf]}</td></tr>`);
+    const rows = x.q.map(q => `<tr><td><a href="#${P}${q.n}" data-jump="${q.n}">${q.n}</a></td><td>${q.type === 'isian' ? esc(q.answer) : q.type === 'esai' ? esc(q.answer.length > 70 ? q.answer.slice(0, 68) + '…' : q.answer) : q.ans === '-' ? '—' : q.ans.toUpperCase()}</td><td>${CONF[q.conf]}</td></tr>`);
     const chunk = []; for (let i = 0; i < rows.length; i += 20) chunk.push(`<table><thead><tr><th>No.</th><th>Jawaban</th><th>Keyakinan</th></tr></thead><tbody>${rows.slice(i, i + 20).join('')}</tbody></table>`);
     const check = x.q.filter(q => q.conf !== 'T');
+    const secs = [...new Set(x.q.map(q => q.sec).filter(Boolean))];
     body.innerHTML = `
       <div class="bar">
         <select class="jump" aria-label="Lompat ke soal"><option value="">Lompat ke soal…</option>${x.q.map(q => `<option value="${q.n}">Soal ${q.n}</option>`).join('')}</select>
         <select class="flt" aria-label="Saring soal">
           <option value="all">Semua soal</option><option value="todo">Belum dijawab</option><option value="wrong">Yang salah</option><option value="check">Keyakinan sedang/rendah</option>
         </select>
+        ${secs.length > 1 ? `<select class="sec" aria-label="Saring bagian"><option value="">Semua bagian</option>${secs.map(z => `<option>${esc(z)}</option>`).join('')}</select>` : ''}
         <span class="score"></span>
         <button type="button" class="reset">Ulangi dari awal</button>
         <button class="close-acc" type="button">Tutup ▲</button>
@@ -627,26 +659,37 @@
       art.querySelectorAll('.opts button').forEach(b => b.addEventListener('click', () => {
         st[q.n] = b.dataset.k; store.set(key, st); paintQ(x, art, q, st[q.n]); updateMeta(x); applyFilter();
       }));
-      art.querySelector('.peek').addEventListener('click', () => { st[q.n] = 'peek'; store.set(key, st); paintQ(x, art, q, 'peek'); applyFilter(); });
+      const pk = art.querySelector('.peek'); if (pk) pk.addEventListener('click', () => { st[q.n] = 'peek'; store.set(key, st); paintQ(x, art, q, 'peek'); applyFilter(); });
+      const es = art.querySelector('.esai');
+      if (es){
+        const ta = es.querySelector('textarea'), tk = key + '-txt', tx = store.get(tk);
+        if (tx[q.n]) ta.value = tx[q.n];
+        ta.addEventListener('input', () => { const t = store.get(tk); t[q.n] = ta.value; store.set(tk, t); });
+        es.querySelector('.reveal').addEventListener('click', () => { st[q.n] = 'R'; store.set(key, st); paintQ(x, art, q, 'R'); applyFilter(); });
+        art.querySelector('.res').addEventListener('click', ev => { const g = ev.target.closest('[data-g]'); if (!g) return;
+          st[q.n] = g.dataset.g; store.set(key, st); paintQ(x, art, q, st[q.n]); updateMeta(x); applyFilter(); });
+      }
       const fm = art.querySelector('.isi'); if (fm) fm.addEventListener('submit', ev => { ev.preventDefault(); const v = fm.querySelector('input').value.trim(); if (!v) return;
         st[q.n] = 'T:' + v; store.set(key, st); paintQ(x, art, q, st[q.n]); updateMeta(x); applyFilter(); });
     });
-    const flt = body.querySelector('.flt');
+    const flt = body.querySelector('.flt'), secSel = body.querySelector('.sec');
+    if (secSel) secSel.addEventListener('change', () => applyFilter());
     function applyFilter(){
       const v = flt.value;
       body.querySelectorAll('.q').forEach(art => {
         const q = x.q.find(z => z.n === +art.dataset.n), c = st[q.n];
-        const show = v === 'all' || (v === 'todo' && !c) || (v === 'wrong' && c && c !== 'peek' && q.ans !== '-' && !isRight(q, c)) || (v === 'check' && q.conf !== 'T');
+        const sv = secSel ? secSel.value : '';
+        const show = (v === 'all' || (v === 'todo' && !c) || (v === 'wrong' && c && c !== 'peek' && c !== 'R' && q.ans !== '-' && !isRight(q, c)) || (v === 'check' && q.conf !== 'T')) && (!sv || q.sec === sv);
         art.classList.toggle('hide', !show);
       });
     }
     flt.addEventListener('change', applyFilter);
-    const goto = n => { const el = document.getElementById(P + n); if (!el) return; if (el.classList.contains('hide')) { flt.value = 'all'; applyFilter(); } el.scrollIntoView({behavior:'smooth'}); };
+    const goto = n => { const el = document.getElementById(P + n); if (!el) return; if (el.classList.contains('hide')) { flt.value = 'all'; if (secSel) secSel.value = ''; applyFilter(); } el.scrollIntoView({behavior:'smooth'}); };
     body.querySelector('.jump').addEventListener('change', ev => { if (ev.target.value) goto(ev.target.value); ev.target.value = ''; });
     body.querySelectorAll('[data-jump]').forEach(a => a.addEventListener('click', ev => { ev.preventDefault(); goto(a.dataset.jump); }));
     body.querySelector('.reset').addEventListener('click', async () => {
       if (!await ask('Semua jawabanmu untuk ' + x.label + ' akan dihapus dari perangkat ini.')) return;
-      st = {}; store.set(key, st);
+      st = {}; store.set(key, st); store.set(key + '-txt', {}); body.querySelectorAll('.esai textarea').forEach(t => t.value = '');
       body.querySelectorAll('.q').forEach(art => paintQ(x, art, x.q.find(z => z.n === +art.dataset.n), null));
       updateMeta(x); applyFilter();
     });
@@ -655,7 +698,8 @@
   }
   const EXAM_SETS = [{file:'ujian1.json', page:'sumatif-1', grp:'grp-ujian-sumatif-1', list:'exam-list-1', code:'Ujian Sumatif 1'},
                      {file:'ujian2.json', page:'sumatif-2', grp:'grp-ujian-sumatif-2', list:'exam-list-2', code:'Ujian Sumatif 2'},
-                     {file:'latanat.json', page:'sumatif-anatomi', grp:'grp-latihan-sumatif-anatomi', list:'exam-list-an', code:'Latihan Sumatif Anatomi'}];
+                     {file:'latanat.json', page:'sumatif-anatomi', grp:'grp-latihan-sumatif-anatomi', list:'exam-list-an', code:'Latihan Sumatif Anatomi'},
+                     {file:'sitasi.json', page:'sumatif-integrasi', grp:'grp-sitasi-integrasi', list:'exam-list-si', code:'Sitasi Integrasi'}];
   EXAM_SETS.forEach(set => fetch(set.file).then(r => r.json()).then(j => {
       renderExams(set, j);
       if (EXAMS.find(e => e.id === location.hash.slice(1))) show();

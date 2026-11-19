@@ -5,6 +5,7 @@ Web belajar Modul Kardiovaskular: slide kuliah beserta penjelasan tiap slide.
 - **Sumatif 1** — Kuliah K1–K8 (`kuliah.json`)
 - **Sumatif 2** — Kuliah K9–K19 (`kuliah2.json`)
 - **Sumatif Integrasi** — Materi praktikum PA, Histologi, Patologi Klinik, Fisiologi (`integrasi.json`)
+- **Sitasi Integrasi** — Soal praktikum integrasi 2018–2023 dengan jawaban dan slide pendukung (`sitasi.json`, gambar di `u/si/`)
 
 Buka `index.html` lewat server statis (mis. GitHub Pages atau `python3 -m http.server`); file JSON dimuat dengan `fetch`, jadi tidak bisa dibuka langsung sebagai `file://`.
 
