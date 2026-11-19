@@ -77,7 +77,7 @@
   .acc summary{list-style:none;display:flex;align-items:center;gap:1rem;padding:.8rem 1rem;cursor:pointer;position:sticky;top:var(--hdr);z-index:5;background:rgba(18,18,20,.96);backdrop-filter:blur(8px)}
   .acc summary::-webkit-details-marker{display:none}
   .acc summary:hover .chev,.acc summary:focus-visible .chev{border-color:var(--moon)}
-  .acc .mini{flex:0 0 132px;border:1px solid rgba(236,235,228,.1)}
+  .acc .mini{flex:0 0 132px;border:1px solid rgba(236,235,228,.1);aspect-ratio:16/9;overflow:hidden;background:#fff}
   .acc .info{display:flex;flex-direction:column;gap:.15rem;min-width:0;flex:1}
   .acc .code{font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--mist)}
   .acc strong{font-family:var(--serif);font-size:1.35rem;font-weight:600;line-height:1.15}
@@ -302,7 +302,14 @@
       <div class="acc-list" id="exam-list-an"></div>
     </details>
   </section>
-  <section class="page" id="p-sumatif-integrasi"><div class="eyebrow">Sumatif Integrasi</div></section>
+  <section class="page" id="p-sumatif-integrasi">
+    <details class="group" id="grp-sumatif-integrasi" open>
+      <summary class="eyebrow">Praktikum Sumatif Integrasi <span class="gchev" aria-hidden="true"></span><span class="ghint">tutup</span></summary>
+      <h2>Praktikum <em>Kardiovaskular</em></h2>
+      <p class="sub">Materi praktikum Patologi Anatomik, Histologi, Patologi Klinik, dan Fisiologi. Ketuk satu materi untuk membuka semua slide atau halamannya beserta penjelasan; ketuk gambar untuk memperbesar.</p>
+      <div class="acc-list" id="lect-grid-int"></div>
+    </details>
+  </section>
 </main>
 
 <dialog class="viewer" id="viewer" closedby="any" aria-label="Gambar diperbesar">
@@ -344,7 +351,9 @@
   // which page / group / list each lecture set lives in
   const SETS = [{file:'kuliah.json', page:'sumatif-1', grp:'grp-sumatif-1', list:'lect-grid'},
                 {file:'kuliah2.json', page:'sumatif-2', grp:'grp-sumatif-2', list:'lect-grid-2'},
-                {file:'anatomi.json', page:'sumatif-anatomi', grp:'grp-sumatif-anatomi', list:'lect-grid-an'}];
+                {file:'anatomi.json', page:'sumatif-anatomi', grp:'grp-sumatif-anatomi', list:'lect-grid-an'},
+                {file:'integrasi.json', page:'sumatif-integrasi', grp:'grp-sumatif-integrasi', list:'lect-grid-int'}];
+  const unit = d => d.unit || 'slide', Unit = d => unit(d)[0].toUpperCase() + unit(d).slice(1);
 
   function renderList(set, items){
     const grid = document.getElementById(set.list);
@@ -355,7 +364,7 @@
           <span class="info">
             <span class="code">${esc(lectLabel(d))}</span>
             <strong>${esc(d.title)}</strong>
-            <span class="meta">${d.n} slide · ${esc(d.by.split(' — ')[0])}</span>
+            <span class="meta">${d.n} ${unit(d)} · ${esc(d.by.split(' — ')[0])}</span>
           </span>
           <span class="chev" aria-hidden="true"></span>
         </summary>
@@ -375,7 +384,7 @@
     const rows = d.slides.map((e, j) => {
       const n = j + 1;
       let html = `<article class="slide" id="${P}s-${n}">
-        <figure data-zoom="${d.id}|${n}">${sl(d, n, 'Slide ' + n)}<span class="no">SLIDE ${n}</span></figure>
+        <figure data-zoom="${d.id}|${n}">${sl(d, n, Unit(d) + ' ' + n)}<span class="no">${unit(d).toUpperCase()} ${n}</span></figure>
         <div class="exp"><span class="lbl">Penjelasan</span><div class="txt">${e}</div></div>
       </article>`;
       if (k && k.after === n) html += `<aside class="klarif" id="${P}klarif"><div>${k.html}</div><img src="${k.img}" alt="Tangkapan layar tentang profilaksis endokarditis" data-img="${k.img}"></aside>`;
@@ -384,9 +393,9 @@
     body.innerHTML = `
       <p class="sub by">${esc(d.by)}</p>
       <div class="bar">
-        <select class="jump" aria-label="Lompat ke slide"><option value="">Lompat ke slide…</option>${d.slides.map((_, j) => `<option value="${j+1}">Slide ${j+1}</option>`).join('')}${k ? '<option value="klarif">Klarifikasi profilaksis</option>' : ''}</select>
+        <select class="jump" aria-label="Lompat ke ${unit(d)}"><option value="">Lompat ke ${unit(d)}…</option>${d.slides.map((_, j) => `<option value="${j+1}">${Unit(d)} ${j+1}</option>`).join('')}${k ? '<option value="klarif">Klarifikasi profilaksis</option>' : ''}</select>
         <input class="find" type="search" placeholder="Cari kata di penjelasan (mis. troponin)" aria-label="Cari di penjelasan">
-        <span class="count">${d.n} slide</span>
+        <span class="count">${d.n} ${unit(d)}</span>
         <button class="close-acc" type="button">Tutup ▲</button>
       </div>
       <div class="slides">${rows}</div>
@@ -405,7 +414,7 @@
       });
       const kl = body.querySelector('.klarif');
       if (kl) kl.classList.toggle('hide', !!q && !kl.textContent.toLowerCase().includes(q));
-      count.textContent = q ? `${shown} dari ${d.n} slide cocok` : `${d.n} slide`;
+      count.textContent = q ? `${shown} dari ${d.n} ${unit(d)} cocok` : `${d.n} ${unit(d)}`;
     }
     find.addEventListener('input', () => filter(find.value));
     body.querySelector('.jump').addEventListener('change', ev => {
