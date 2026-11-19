@@ -107,6 +107,17 @@
   .slide .exp i{color:#e6e5de}
   .slide .exp .lbl{display:block;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--mist);margin-bottom:.5rem}
   .slide.hide,.klarif.hide{display:none}
+  /* Penjelasan bergaya kuliah (materi praktikum) */
+  .slide.long figure{align-self:start;position:sticky;top:calc(var(--hdr) + 104px)}
+  .slide .exp .txt h4{font-family:var(--serif);font-weight:600;font-size:1.32rem;line-height:1.2;color:#fff;margin:0 0 .55rem}
+  .slide .exp .txt p+p,.slide .exp .txt p+ul,.slide .exp .txt ul+p,.slide .exp .txt ol+p,.slide .exp .txt p+ol,.slide .exp .txt ul+ul{margin-top:.65rem}
+  .slide .exp .txt ul,.slide .exp .txt ol{margin-left:1.15rem;display:grid;gap:.35rem}
+  .slide .exp .txt li{text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto;padding-left:.15rem}
+  .slide .exp .txt li::marker{color:var(--mist)}
+  .slide .exp .txt ol+ul,.slide .exp .txt ul+ol{margin-left:2.3rem;margin-top:.35rem}
+  .slide .exp .txt ol+ul+ol{margin-left:1.15rem}
+  .slide .exp .txt .tip{margin-top:.8rem;padding:.6rem .8rem;border-left:2px solid var(--moon);background:rgba(236,235,228,.06);font-size:.94rem}
+  .slide .exp .txt h5{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mist);font-weight:600;margin:.9rem 0 .35rem}
   mark{background:rgba(236,235,228,.85);color:var(--ink);padding:0 .1em}
   .klarif{border:1px solid var(--moon);background:rgba(30,30,26,.95);padding:1.4rem 1.6rem;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:1.6rem;align-items:start}
   .klarif ul{margin:.6rem 0 0 1.1rem;display:grid;gap:.45rem;color:#d6d5ce}
@@ -217,6 +228,7 @@
 
   @media (max-width:860px){
     .slide,.klarif{grid-template-columns:1fr}
+    .slide.long figure{position:static}
     .klarif img{margin:0 auto}
     .menu-btn{display:block}
     nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:rgba(13,13,14,.97);border-bottom:1px solid var(--smoke);display:none}
@@ -387,7 +399,7 @@
     const d = DATA.find(x => x.id === det.dataset.id), k = d.klarif, P = d.id + '-';
     const rows = d.slides.map((e, j) => {
       const n = j + 1;
-      let html = `<article class="slide" id="${P}s-${n}">
+      let html = `<article class="slide${d.long ? ' long' : ''}" id="${P}s-${n}">
         <figure data-zoom="${d.id}|${n}">${sl(d, n, Unit(d) + ' ' + n)}<span class="no">${unit(d).toUpperCase()} ${n}</span></figure>
         <div class="exp"><span class="lbl">Penjelasan</span><div class="txt">${e}</div></div>
       </article>`;
