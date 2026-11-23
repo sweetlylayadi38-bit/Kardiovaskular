@@ -32,7 +32,7 @@
   .visually-hidden:where(:not(:focus-within,:active)){position:absolute!important;clip-path:inset(50%)!important;overflow:hidden!important;width:1px!important;height:1px!important;margin:-1px!important;padding:0!important;border:0!important;white-space:nowrap!important}
   .sr-only{position:absolute;clip-path:inset(50%);overflow:hidden;width:1px;height:1px;margin:-1px;white-space:nowrap}
   .skip{position:fixed;top:.6rem;left:.6rem;z-index:50;background:var(--moon);color:var(--ink);padding:.6rem 1rem;font-weight:600;text-decoration:none}
-  .sky{position:fixed;inset:0;background:url(bg.webp) center/cover;opacity:.32;z-index:0;pointer-events:none;transform:scale(1.05)}
+  .sky{position:fixed;inset:0;background:url(bg.jpg) center/cover;opacity:.32;z-index:0;pointer-events:none;transform:scale(1.05)}
   @media (prefers-reduced-motion:no-preference){.sky{animation:drift 90s ease-in-out infinite alternate}}
   .sky::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,transparent 0,rgba(13,13,14,.55) 55%,rgba(13,13,14,.92) 100%)}
   @keyframes drift{from{transform:scale(1.05) translateX(0)}to{transform:scale(1.12) translateX(-2%)}}
@@ -416,11 +416,11 @@ if (!('popover' in HTMLElement.prototype)) {
   const qimg = (src, n) => src.startsWith('spot|') ? `<figure class="spot"><button type="button" class="zoom" data-zoom="${src}" aria-label="Perbesar gambar soal ${n}">${sl(DATA[0], +src.split('|')[1])}</button></figure>` : `<figure><button type="button" class="zoom" data-img="${src}" aria-label="Perbesar gambar soal ${n}"><img src="${src}" alt="Gambar soal ${n}" loading="lazy"></button></figure>`;
 
   const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-  // Slides are packed 4 per image file (p/<id>/<sheet>.webp); show one slide by background position.
+  // Slides are packed 4 per image file (p/<id>/<sheet>.jpg); show one slide by background position.
   const sl = (d, n, label) => {
     const sheet = Math.floor((n - 1) / 4), row = (n - 1) % 4;
     const a11y = label ? `role="img" aria-label="${label}"` : 'aria-hidden="true"';
-    return `<span class="sl" ${a11y} style="aspect-ratio:${d.ar};background-position:0 ${row * 100 / 3}%" data-bg="p/${d.id}/${sheet}.webp"></span>`;
+    return `<span class="sl" ${a11y} style="aspect-ratio:${d.ar};background-position:0 ${row * 100 / 3}%" data-bg="p/${d.id}/${sheet}.jpg"></span>`;
   };
   const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) { const t = e.target; t.style.backgroundImage = `url(${t.dataset.bg})`; io.unobserve(t); }
