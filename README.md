@@ -9,4 +9,4 @@ Web belajar Modul Kardiovaskular: slide kuliah beserta penjelasan tiap slide.
 
 Buka `index.html` lewat server statis (mis. GitHub Pages atau `python3 -m http.server`); file JSON dimuat dengan `fetch`, jadi tidak bisa dibuka langsung sebagai `file://`.
 
-Gambar slide ada di `p/<id>/<n>.jpg`, tiap file berisi 4 slide bertumpuk.
+Gambar slide ada di `p/<id>/<n>.webp`, tiap file berisi 4 slide bertumpuk.
