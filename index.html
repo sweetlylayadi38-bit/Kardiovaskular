@@ -312,7 +312,7 @@
     <details class="group" id="grp-sumatif-1" open>
       <summary class="eyebrow">Kuliah Sumatif 1 <span class="gchev" aria-hidden="true"></span><span class="ghint">tutup</span></summary>
       <h2>Modul <em>Kardiovaskular</em></h2>
-      <p class="sub">Kuliah K1 sampai K8. Ketuk satu kuliah untuk membuka semua slide dan penjelasannya; ketuk lagi untuk menutup.</p>
+      <p class="sub">Kuliah K1 sampai K8, ditambah K9 (Obat PJK dan Dislipidemia) dan K10 (Obat Antiaritmia). Ketuk satu kuliah untuk membuka semua slide dan penjelasannya; ketuk lagi untuk menutup.</p>
       <div class="acc-list" id="lect-grid"></div>
     </details>
     <details class="group" id="grp-ujian-sumatif-1">
@@ -420,13 +420,13 @@ if (!('popover' in HTMLElement.prototype)) {
   const sl = (d, n, label) => {
     const sheet = Math.floor((n - 1) / 4), row = (n - 1) % 4;
     const a11y = label ? `role="img" aria-label="${label}"` : 'aria-hidden="true"';
-    return `<span class="sl" ${a11y} style="aspect-ratio:${d.ar};background-position:0 ${row * 100 / 3}%" data-bg="p/${d.id}/${sheet}.jpg"></span>`;
+    return `<span class="sl" ${a11y} style="aspect-ratio:${d.ar};background-position:0 ${row * 100 / 3}%" data-bg="p/${d.img || d.id}/${sheet}.jpg"></span>`;
   };
   const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) { const t = e.target; t.style.backgroundImage = `url(${t.dataset.bg})`; io.unobserve(t); }
   }), {rootMargin: '600px'}) : null;
   const lazy = root => root.querySelectorAll('.sl[data-bg]').forEach(el => io ? io.observe(el) : (el.style.backgroundImage = `url(${el.dataset.bg})`));
-  const SUB = {k5a:' · Jantung', k5b:' · Pembuluh Darah', k10a:' · Antiaritmia', k10b:' · Gagal Jantung'};
+  const SUB = {k5a:' · Jantung', k5b:' · Pembuluh Darah', k10a:' · Antiaritmia', 's1-k10a':' · Antiaritmia', k10b:' · Gagal Jantung'};
   const lectLabel = d => d.code + (SUB[d.id] || '');
   // which page / group / list each lecture set lives in
   const SETS = [{file:'kuliah.json', page:'sumatif-1', grp:'grp-sumatif-1', list:'lect-grid'},
