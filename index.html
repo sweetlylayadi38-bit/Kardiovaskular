@@ -153,6 +153,37 @@
   .slide .exp .txt ol+ul+ol{margin-left:1.15rem}
   .slide .exp .txt .tip{margin-top:.8rem;padding:.6rem .8rem;border-left:2px solid var(--moon);background:rgba(236,235,228,.06);font-size:.94rem}
   .slide .exp .txt h5{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mist);font-weight:600;margin:.9rem 0 .35rem}
+  /* Latihan pemahaman */
+  .bar .lat-tg{background:none;border:1px solid var(--smoke);color:var(--moon);padding:.55rem .9rem;font:inherit;font-size:.82rem;letter-spacing:.06em;cursor:pointer}
+  .bar .lat-tg[aria-pressed="true"]{background:var(--moon);color:var(--ink);border-color:var(--moon);font-weight:600}
+  .bar .lat-sum{flex-basis:100%;font-size:.82rem;color:var(--mist);display:flex;flex-wrap:wrap;gap:.4rem 1rem;align-items:center}
+  .bar .lat-sum b{color:var(--moon);font-weight:600}
+  .bar .lat-sum .good{color:#9fdcb2}.bar .lat-sum .bad{color:#f0aaa3}
+  .bar .lat-sum button{background:none;border:0;color:var(--mist);text-decoration:underline;font:inherit;font-size:.8rem;cursor:pointer;padding:0}
+  .lat-flt{background:rgba(26,26,28,.95);border:1px solid var(--field);color:var(--moon);padding:.35rem .5rem;font:inherit;font-size:.8rem}
+  .slides:not(.practice) .lat{display:none}
+  .slides.practice .exp:not(.shown) .ans{display:none}
+  .slides.practice .exp.shown .lat{border-bottom:1px solid var(--smoke);padding-bottom:1rem;margin-bottom:1rem}
+  .lat .lbl{display:block;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--mist);margin-bottom:.5rem}
+  .lat textarea{width:100%;background:var(--ash);color:var(--moon);border:1px solid var(--field);padding:.7rem .8rem;font:inherit;font-size:.95rem;line-height:1.55;resize:vertical;min-height:6.5rem}
+  .lat textarea:focus-visible{border-color:var(--moon)}
+  .lat-act{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.6rem}
+  .lat-act button{font:inherit;font-size:.85rem;padding:.5rem .9rem;cursor:pointer;border:1px solid var(--smoke);background:none;color:var(--moon)}
+  .lat-act .cek{background:var(--moon);color:var(--ink);border-color:var(--moon);font-weight:600}
+  .lat-act button:hover{border-color:var(--moon)}
+  .lat-res{margin-top:.8rem;font-size:.9rem;line-height:1.55;display:grid;gap:.45rem}
+  .lat-res:empty{display:none}
+  .lat-res .verdict{font-weight:600;font-size:1rem;padding:.35rem .6rem;border:1px solid;justify-self:start}
+  .lat-res .verdict.good{border-color:#6fbf8a;color:#9fdcb2}.lat-res .verdict.bad{border-color:#d7837b;color:#f0aaa3}
+  .lat-res .chips{display:flex;flex-wrap:wrap;gap:.3rem}
+  .lat-res .chips span{font-size:.78rem;padding:.1rem .45rem;border:1px solid var(--smoke)}
+  .lat-res .chips.hit span{border-color:#4f8a63;color:#bfe8cc}.lat-res .chips.miss span{border-color:#8a5550;color:#f3c3bd}
+  .lat-res .k{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mist)}
+  .lat-res .contra{color:#f0aaa3}
+  .lat-res .ovr{font-size:.8rem;color:var(--mist)}
+  .lat-res .ovr button{background:none;border:0;color:var(--moon);text-decoration:underline;font:inherit;font-size:.8rem;cursor:pointer;padding:0}
+  .lat.skip{font-size:.8rem;color:var(--mist)}
+  .slide.lat-ok{border-color:rgba(111,191,138,.45)}.slide.lat-no{border-color:rgba(215,131,123,.45)}
   mark{background:rgba(236,235,228,.85);color:var(--ink);padding:0 .1em}
   .klarif{border:1px solid var(--moon);background:rgba(30,30,26,.95);padding:1.4rem 1.6rem;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:1.6rem;align-items:start}
   .klarif ul{margin:.6rem 0 0 1.1rem;display:grid;gap:.45rem;color:#d6d5ce}
@@ -435,6 +466,80 @@ if (!('popover' in HTMLElement.prototype)) {
                 {file:'integrasi.json', page:'sumatif-integrasi', grp:'grp-sumatif-integrasi', list:'lect-grid-int'}];
   const unit = d => d.unit || 'slide', Unit = d => unit(d)[0].toUpperCase() + unit(d).slice(1);
 
+  // ===== Latihan pemahaman: penilai otomatis berbasis konsep kunci =====
+  const {grade, keyConcepts} = (() => {
+  const STOP = new Set(('yang dan di ke dari pada untuk dengan adalah ini itu atau juga karena oleh dalam akan bisa dapat lebih sangat saat jika bila maka sehingga seperti yaitu yakni serta sebagai ada para tiap setiap semua hanya sudah telah masih belum agar supaya namun tetapi tapi bahwa lalu kemudian jadi slide gambar kuliah berikut berikutnya sebelumnya lihat catatan menunjukkan tampak disebut merupakan terjadi satu dua tiga empat beberapa banyak antara hal cara bagian jenis sama lain lainnya misalnya contoh utama terutama kunci penting dipakai digunakan memakai menggunakan kita kamu anda pun saja begitu apa bagaimana mengapa kenapa ialah tersebut secara sendiri tanpa hingga sampai sejak selama setelah sebelum ketika sedangkan sementara yakni dll dsb mis vs per atas bawah kiri kanan dua pula kali biasanya umumnya juga perlu harus boleh penyebab penyebabnya tanda penentu faktor prinsip memahami seluruh keduanya bekerja dipengaruhi mempengaruhi memengaruhi menjadi membuat paling makin semakin tentang mengenai terhadap melalui lewat berupa bentuk the of and in to for with is are a an by on as or be at from this that'.split(' ')));
+  const GREEK = {'α':'alfa','β':'beta','γ':'gama','δ':'delta','κ':'kapa','μ':'mikro','₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','⁺':'','⁻':'','²':'2','³':'3'};
+  const SYN = [['oksigen','o2'],['karbondioksida','co2'],['jantung','miokard','kardiak','kardio','cardiac','heart'],['darah','blood'],['pembuluh','vaskular','vessel'],['frekuensi','laju','rate'],['tekanan','pressure'],['penyekat','blocker','penghambat','inhibitor','antagonis'],['menurunkan','turun','berkurang','menurun','rendah','reduksi','penurunan'],['menaikkan','naik','meningkat','meningkatkan','tinggi','peningkatan','bertambah'],['vasodilatasi','vasodilator','pelebaran','dilatasi'],['vasokonstriksi','penyempitan','konstriksi','stenosis'],['infark','nekrosis'],['kontraksi','kontraktilitas'],['ventrikel','bilik'],['atrium','serambi'],['aritmia','disritmia']];
+  const norm = t => t.toLowerCase().replace(/[αβγδκμ₀-₄⁺⁻²³]/g, c => GREEK[c]).normalize('NFD').replace(/[̀-ͯ]/g, '');
+  function stem(w){
+    w = w.replace(/(nya|lah|kah)$/, '');
+    if (w.length > 6) w = w.replace(/(kan|an)$/, '');
+    return w.replace(/^(meng|meny|mem|men|me|peng|peny|pem|pen|ber|ter|di)(?=[a-z]{4,})/, '');
+  }
+  const OPPRE = ['para','anti','non','an','de','re','hiper','hipo'];
+  // pasangan istilah berlawanan: bila jawaban memakai satu sisi dan penjelasan hanya memakai sisi lainnya → kemungkinan keliru
+  const OPP = [['sistol','diastol'],['simpatis','parasimpatis'],['agonis','antagonis'],['vasodilatasi','vasokonstriksi'],['depolarisasi','repolarisasi'],['takikardia','bradikardia'],['hiperkalemia','hipokalemia'],['hipertensi','hipotensi'],['aerob','anaerob'],['influks','efluks'],['hipertrofi','atrofi'],['eksitasi','inhibisi'],['stenosis','regurgitasi'],['inotropik positif','inotropik negatif'],['lipofilik','hidrofilik']];
+  const SYNMAP = new Map(); SYN.forEach((g, i) => g.forEach(w => SYNMAP.set(stem(w), 's' + i)));
+  const toks = t => (norm(t).match(/[a-z0-9]+/g) || []);
+  const keep = (w, raw) => !STOP.has(w) && !/^\d$/.test(w) && (w.length >= 4 || /\d/.test(w) || raw);
+  function contentStems(text){
+    // abbreviations (ATP, SKA, HR) are kept even when short
+    const abbr = new Set((text.match(/\b[A-Z][A-Z0-9]{1,5}\b/g) || []).map(a => a.toLowerCase()));
+    const out = [];
+    toks(text).forEach(w => { if (keep(w, abbr.has(w))) { const s = stem(w); if (!out.includes(s)) out.push(s); } });
+    return out;
+  }
+  function lev(a, b){
+    if (Math.abs(a.length - b.length) > 2) return 9;
+    let p = [...Array(b.length + 1).keys()];
+    for (let i = 1; i <= a.length; i++){ const c = [i]; for (let j = 1; j <= b.length; j++) c[j] = Math.min(p[j] + 1, c[j-1] + 1, p[j-1] + (a[i-1] === b[j-1] ? 0 : 1)); p = c; }
+    return p[b.length];
+  }
+  function same(a, b){
+    if (a === b) return true;
+    const sa = SYNMAP.get(a); if (sa && sa === SYNMAP.get(b)) return true;
+    const s = a.length < b.length ? a : b, l = a.length < b.length ? b : a;
+    if (s.length < 4) return false;
+    if (OPPRE.some(p => l === p + s)) return false; // parasimpatis ≠ simpatis, anaerob ≠ aerob
+    if (s.length >= 5 && l.includes(s)) return true;
+    const d = lev(a, b); return d <= (s.length >= 8 ? 2 : s.length >= 5 ? 1 : 0);
+  }
+  function keyConcepts(html){
+    const bold = [...html.matchAll(/<b>(.*?)<\/b>/g)].map(m => m[1].replace(/<[^>]+>/g, ''));
+    const plain = html.replace(/<[^>]+>/g, ' ').replace(/&[a-z]+;/g, ' ');
+    const C = [], used = new Set();
+    bold.forEach(b => { const st = contentStems(b); if (st.length) { C.push({label: b, st, w: 3}); st.forEach(s => used.add(s)); } });
+    contentStems(plain).forEach(s => { if (!used.has(s)) C.push({label: s, st: [s], w: 1}); });
+    // nicer label for plain words: first original word with that stem
+    const words = plain.split(/[^\p{L}\p{N}αβγδ₂]+/u);
+    C.forEach(c => { if (c.w === 1){ const o = words.find(w => w && stem(norm(w).replace(/[^a-z0-9]/g, '')) === c.st[0]); if (o) c.label = o; } });
+    return C;
+  }
+  const CAP = 14, PASS = 0.3;
+  function grade(html, answer){
+    const C = keyConcepts(html), A = contentStems(answer);
+    let got = 0, tot = 0, bg = 0, bt = 0; const hit = [], miss = [];
+    C.forEach(c => {
+      const m = c.st.filter(s => A.some(a => same(a, s))).length;
+      const ok = m >= Math.ceil(c.st.length * 0.6);
+      tot += c.w; if (ok) { got += c.w; hit.push(c); } else miss.push(c);
+      if (c.w > 1) { bt += c.w; if (ok) bg += c.w; }
+    });
+    const E = contentStems(html.replace(/<[^>]+>/g, ' ')), has = (L, w) => L.some(x => x === stem(w) || x.startsWith(stem(w)));
+    const contra = [];
+    OPP.forEach(([a, b]) => [[a, b], [b, a]].forEach(([x, y]) => {
+      const xs = x.split(' ').pop(), ys = y.split(' ').pop();
+      if (x.includes(' ')) { const nA = norm(answer), nE = norm(html); if (nA.includes(x) && !nE.includes(x) && nE.includes(y)) contra.push([x, y]); }
+      else if (has(A, xs) && !has(E, xs) && has(E, ys)) contra.push([x, y]);
+    }));
+    const den = Math.min(tot, CAP), score = den ? Math.min(1, got / den) : 0;
+    // benar bila cakupan ≥30%, atau ≥ separuh konsep utama (yang ditebalkan) tersebut dengan cakupan ≥20%
+    const main = bt > 0 && bg / bt >= 0.5 && score >= 0.2;
+    return {score, main, ok: (score >= PASS || main) && !contra.length, hit, miss, contra, words: A.length};
+  }
+  return {grade, keyConcepts};
+  })();
   function renderList(set, items){
     const grid = document.getElementById(set.list);
     grid.innerHTML = items.map(d => `
@@ -461,11 +566,12 @@ if (!('popover' in HTMLElement.prototype)) {
     if (body.dataset.ready) return;
     body.dataset.ready = '1';
     const d = DATA.find(x => x.id === det.dataset.id), k = d.klarif, P = d.id + '-';
+    const LAT = d._set && /^sumatif-[12]$/.test(d._set.page);
     const rows = d.slides.map((e, j) => {
       const n = j + 1;
       let html = `<article class="slide${d.long ? ' long' : ''}" id="${P}s-${n}">
         <figure><button type="button" class="zoom" data-zoom="${d.id}|${n}" aria-label="Perbesar ${unit(d)} ${n}">${sl(d, n)}</button><span class="no" aria-hidden="true">${unit(d).toUpperCase()} ${n}</span></figure>
-        <div class="exp"><span class="lbl">Penjelasan</span><div class="txt">${e}</div></div>
+        <div class="exp">${LAT ? latBox(e, n) : ''}<div class="ans"><span class="lbl">Penjelasan</span><div class="txt">${e}</div></div></div>
       </article>`;
       if (k && k.after === n) html += `<aside class="klarif" id="${P}klarif"><div>${k.html}</div><button type="button" class="zoom" data-img="${k.img}"><img src="${k.img}" alt="Perbesar tangkapan layar tentang profilaksis endokarditis"></button></aside>`;
       return html;
@@ -476,11 +582,14 @@ if (!('popover' in HTMLElement.prototype)) {
         <select class="jump" aria-label="Lompat ke ${unit(d)}"><option value="">Lompat ke ${unit(d)}…</option>${d.slides.map((_, j) => `<option value="${j+1}">${Unit(d)} ${j+1}</option>`).join('')}${k ? '<option value="klarif">Klarifikasi profilaksis</option>' : ''}</select>
         <input class="find" type="search" placeholder="Cari kata di penjelasan (mis. troponin)" aria-label="Cari di penjelasan">
         <span class="count">${d.n} ${unit(d)}</span>
+        ${LAT ? `<button class="lat-tg" type="button" aria-pressed="false">Mode latihan</button>` : ''}
         <button class="close-acc" type="button">Tutup<span class="sr-only"> ${esc(lectLabel(d))}</span> <span aria-hidden="true">▲</span></button>
       </div>
+      ${LAT ? `<p class="sub lat-help" hidden>Mode latihan: penjelasan disembunyikan. Tulis penjelasan slide dengan kata-katamu sendiri lalu ketuk <b>Periksa</b>. Penilaian otomatis mencocokkan konsep kunci dari penjelasan web (istilah, sinonim umum, salah ketik ringan). Jawaban dinilai benar bila cukup banyak konsep kuncinya tersebut (≥30%, atau ≥20% bila separuh konsep utama yang ditebalkan sudah disebut) dan tidak ada istilah yang bertolak belakang, misalnya sistol vs diastol. Penilai ini tidak memahami kalimat utuh, jadi bila menurutmu penilaiannya keliru, ubah sendiri lewat tombol di bawah hasil. Progres tersimpan di perangkat ini.</p>` : ''}
       <div class="slides">${rows}</div>
       <button class="close-acc bottom" type="button">Tutup ${esc(lectLabel(d))} <span aria-hidden="true">▲</span></button>`;
     lazy(body);
+    if (LAT) initLat(body, d);
 
     const find = body.querySelector('.find'), count = body.querySelector('.count');
     const originals = [...body.querySelectorAll('.slide .txt')].map(t => t.innerHTML);
@@ -507,6 +616,98 @@ if (!('popover' in HTMLElement.prototype)) {
       det.open = false;
       const sm = det.querySelector('summary'); sm.focus({preventScroll:true}); sm.scrollIntoView({behavior:smooth(), block:'start'});
     }));
+  }
+
+  // Kotak latihan per slide (slide judul/pembatas/penutup dilewati karena hampir tanpa konsep)
+  const latW = e => keyConcepts(e).reduce((a, c) => a + c.w, 0);
+  function latBox(e, n){
+    if (latW(e) < 5) return `<p class="lat skip">Slide judul/pembatas, tidak perlu dijelaskan.</p>`;
+    return `<div class="lat" data-n="${n}">
+      <label class="lbl" for="lat-${n}-${Math.random().toString(36).slice(2, 7)}">Jelaskan slide ${n} dengan kata-katamu</label>
+      <textarea rows="4" placeholder="Tulis yang kamu pahami dari slide ini…"></textarea>
+      <div class="lat-act"><button class="cek" type="button">Periksa</button><button class="intip" type="button">Lihat penjelasan</button><button class="ulang" type="button" hidden>Coba lagi</button></div>
+      <div class="lat-res" aria-live="polite"></div>
+    </div>`;
+  }
+  function initLat(body, d){
+    const key = 'lp-' + d.id, slidesEl = body.querySelector('.slides'), help = body.querySelector('.lat-help');
+    const tg = body.querySelector('.lat-tg');
+    let st = store.get(key);
+    const boxes = [...body.querySelectorAll('.lat[data-n]')];
+    boxes.forEach(b => { const ta = b.querySelector('textarea'), id = b.querySelector('label').htmlFor; ta.id = id; });
+    // ringkasan skor di bar
+    const sum = document.createElement('div'); sum.className = 'lat-sum';
+    body.querySelector('.bar').append(sum);
+    const flt = () => sum.querySelector('select');
+    function renderSum(){
+      let ok = 0, no = 0; Object.values(st).forEach(v => { if (v.v === 1) ok++; else if (v.v === 0) no++; });
+      const keepF = flt() ? flt().value : '';
+      sum.innerHTML = `<span>Latihan: <b class="good">${ok} benar</b> · <b class="bad">${no} salah</b> · ${boxes.length - ok - no} belum dari ${boxes.length} slide</span>
+        <select class="lat-flt" aria-label="Saring slide latihan"><option value="">Semua slide</option><option value="belum">Belum dijawab</option><option value="no">Yang salah</option><option value="ok">Yang benar</option></select>
+        <button type="button" class="lat-reset">Ulangi latihan kuliah ini</button>`;
+      flt().value = keepF;
+      flt().addEventListener('change', applyF);
+      sum.querySelector('.lat-reset').addEventListener('click', async () => {
+        if (!await ask(`Hapus semua jawaban latihan ${lectLabel(d)} dan mulai dari awal?`)) return;
+        st = {}; store.set(key, st);
+        boxes.forEach(b => paint(b, true)); renderSum(); applyF();
+      });
+    }
+    function applyF(){
+      const f = flt() ? flt().value : '';
+      body.querySelectorAll('.slide').forEach(sl => {
+        const b = sl.querySelector('.lat[data-n]');
+        let show = true;
+        if (f) { if (!b) show = false; else { const v = (st[b.dataset.n] || {}).v; show = f === 'belum' ? v == null : f === 'ok' ? v === 1 : v === 0; } }
+        sl.classList.toggle('lat-hide', !show); sl.style.display = show ? '' : 'none';
+      });
+    }
+    const chips = (L, cls) => `<div class="chips ${cls}">${L.map(c => `<span>${esc(c.label.length > 60 ? c.label.slice(0, 58) + '…' : c.label)}</span>`).join('')}</div>`;
+    function paint(b, reset){
+      const n = b.dataset.n, rec = st[n] || {}, ta = b.querySelector('textarea'), res = b.querySelector('.lat-res');
+      const exp = b.closest('.exp'), slide = b.closest('.slide');
+      if (reset) ta.value = ''; else if (rec.t != null && !ta.value) ta.value = rec.t;
+      slide.classList.toggle('lat-ok', rec.v === 1); slide.classList.toggle('lat-no', rec.v === 0);
+      exp.classList.toggle('shown', rec.v != null || !!rec.peek);
+      b.querySelector('.ulang').hidden = rec.v == null;
+      b.querySelector('.cek').hidden = rec.v != null;
+      b.querySelector('.intip').hidden = rec.v != null || !!rec.peek;
+      ta.readOnly = rec.v != null;
+      if (rec.v == null) { res.innerHTML = ''; return; }
+      const r = grade(d.slides[n - 1], rec.t || '');
+      const miss = r.miss.sort((a, b) => b.w - a.w).slice(0, 12);
+      res.innerHTML = `<span class="verdict ${rec.v ? 'good' : 'bad'}">${rec.v ? 'Benar' : 'Salah'}${rec.o ? ' (dinilai sendiri)' : ''}</span>
+        <span>${Math.round(r.score * 100)}% konsep kunci tersebut${r.main && r.score < 0.3 ? ', termasuk konsep utama' : ''} (batas benar 30%, atau ≥20% bila konsep utama yang ditebalkan sudah tersebut).</span>
+        ${r.contra.length ? `<span class="contra">Kemungkinan keliru: kamu menulis <b>${esc(r.contra.map(c => c[0]).join(', '))}</b>, sedangkan penjelasan memakai <b>${esc(r.contra.map(c => c[1]).join(', '))}</b>.</span>` : ''}
+        ${r.hit.length ? `<span class="k">Sudah kamu sebut</span>${chips(r.hit, 'hit')}` : ''}
+        ${miss.length ? `<span class="k">Belum kamu sebut${r.miss.length > miss.length ? ` (${miss.length} dari ${r.miss.length})` : ''}</span>${chips(miss, 'miss')}` : ''}
+        <span class="ovr">Penilaian keliru? <button type="button" class="flip">Ubah jadi ${rec.v ? 'salah' : 'benar'}</button></span>`;
+      res.querySelector('.flip').addEventListener('click', () => { rec.v = rec.v ? 0 : 1; rec.o = rec.o ? 0 : 1; st[n] = rec; store.set(key, st); paint(b); renderSum(); say('Ditandai ' + (rec.v ? 'benar' : 'salah')); });
+    }
+    boxes.forEach(b => {
+      const n = b.dataset.n, ta = b.querySelector('textarea');
+      let tmr;
+      ta.addEventListener('input', () => { clearTimeout(tmr); tmr = setTimeout(() => { st[n] = Object.assign(st[n] || {}, {t: ta.value}); store.set(key, st); }, 400); });
+      b.querySelector('.cek').addEventListener('click', () => {
+        const t = ta.value.trim();
+        if (t.split(/\s+/).filter(Boolean).length < 3) { b.querySelector('.lat-res').innerHTML = '<span class="contra">Tulis minimal satu kalimat dulu.</span>'; ta.focus(); return; }
+        const r = grade(d.slides[n - 1], t);
+        st[n] = {t, v: r.ok ? 1 : 0}; store.set(key, st); paint(b); renderSum();
+        say((r.ok ? 'Benar' : 'Salah') + ', ' + Math.round(r.score * 100) + ' persen konsep kunci');
+      });
+      b.querySelector('.intip').addEventListener('click', () => { st[n] = Object.assign(st[n] || {}, {peek: 1}); store.set(key, st); paint(b); });
+      b.querySelector('.ulang').addEventListener('click', () => { st[n] = {t: ta.value}; store.set(key, st); paint(b); renderSum(); ta.focus(); });
+      paint(b);
+    });
+    renderSum();
+    const mode = store.get('lp-mode');
+    const setMode = on => {
+      slidesEl.classList.toggle('practice', on); sum.hidden = !on; help.hidden = !on;
+      tg.setAttribute('aria-pressed', on); tg.textContent = on ? 'Mode latihan: aktif' : 'Mode latihan: mati';
+      if (!on && flt()) { flt().value = ''; applyF(); }
+    };
+    setMode(mode.on !== false);
+    tg.addEventListener('click', () => { const on = !slidesEl.classList.contains('practice'); store.set('lp-mode', {on}); setMode(on); });
   }
 
   function highlight(root, q){
