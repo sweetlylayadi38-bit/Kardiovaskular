@@ -1,0 +1,7987 @@
+{
+ "model": "B",
+ "judul": "Leher dan ekstremitas atas",
+ "slide_dari": 18,
+ "slide_sampai": 32,
+ "catatan": "posisi_2d = [x, y] relatif terhadap gambar slide utuh (0–1, kiri-atas = 0,0), di ujung panah. Satu label bersama (mis. \"a/v/n. glutea superior\") dipecah menjadi beberapa struktur dengan posisi yang sama. alias = ejaan lain dari slide atau tabel.",
+ "tampilan": {
+  "18": "anterior",
+  "19": "lateral kanan",
+  "20": "anterior",
+  "21": "anterior",
+  "22": "anterior",
+  "23": "anterior",
+  "24": "anterior",
+  "25": "anterior",
+  "26": "anterior",
+  "27": "anterior",
+  "28": "anterior",
+  "29": "anterior",
+  "30": "anterior",
+  "31": "anterior",
+  "32": "anterior"
+ },
+ "struktur": [
+  {
+   "id": "B-arc",
+   "nama": "Arcus aorta",
+   "sistem": "arteri",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    18
+   ],
+   "keterangan": "Lengkung aorta di dasar leher, asal truncus brachiocephalica, a. carotis communis sinistra, dan a. subclavia sinistra.",
+   "posisi_2d": {
+    "18": [
+     0.66,
+     0.58
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "18": [
+     [
+      [
+       0.6344,
+       0.5493
+      ],
+      [
+       0.6652,
+       0.5431
+      ],
+      [
+       0.6872,
+       0.5555
+      ],
+      [
+       0.6828,
+       0.5916
+      ],
+      [
+       0.6432,
+       0.5947
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F-tbc",
+   "nama": "Truncus brachiocephalica",
+   "sistem": "arteri",
+   "induk": "B-arc",
+   "muara": null,
+   "slide": [
+    18
+   ],
+   "keterangan": "Cabang pertama arcus aorta di sisi kanan yang bercabang menjadi a. subclavia dextra dan a. carotis communis dextra.",
+   "posisi_2d": {
+    "18": [
+     0.64,
+     0.52
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "18": [
+     [
+      [
+       0.6344,
+       0.4871
+      ],
+      [
+       0.652,
+       0.4759
+      ],
+      [
+       0.6643,
+       0.4983
+      ],
+      [
+       0.6599,
+       0.5343
+      ],
+      [
+       0.6432,
+       0.5406
+      ],
+      [
+       0.6322,
+       0.5231
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F3-dx",
+   "nama": "A. carotis communis dextra",
+   "sistem": "arteri",
+   "induk": "F-tbc",
+   "muara": null,
+   "slide": [
+    18
+   ],
+   "keterangan": "Berjalan di leher kanan dalam satu selubung dengan v. jugularis interna dan n. vagus (label bersama di slide).",
+   "posisi_2d": {
+    "18": [
+     0.61,
+     0.36
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. carotis communis"
+   ],
+   "potong": {
+    "18": [
+     [
+      [
+       0.6045,
+       0.3057
+      ],
+      [
+       0.6071,
+       0.3617
+      ],
+      [
+       0.6102,
+       0.4116
+      ],
+      [
+       0.6172,
+       0.4107
+      ],
+      [
+       0.6141,
+       0.361
+      ],
+      [
+       0.6115,
+       0.305
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F3-sn",
+   "nama": "A. carotis communis sinistra",
+   "sistem": "arteri",
+   "induk": "B-arc",
+   "muara": null,
+   "slide": [
+    18,
+    21
+   ],
+   "keterangan": "Cabang langsung arcus aorta di sisi kiri; satu selubung dengan v. jugularis interna dan n. vagus. Slide 21: \"Common carotid artery\".",
+   "posisi_2d": {
+    "18": [
+     0.68,
+     0.49
+    ],
+    "21": [
+     0.734,
+     0.745
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. carotis communis",
+    "common carotid artery"
+   ],
+   "potong": {
+    "18": [
+     [
+      [
+       0.6696,
+       0.4491
+      ],
+      [
+       0.6718,
+       0.474
+      ],
+      [
+       0.674,
+       0.4989
+      ],
+      [
+       0.681,
+       0.4976
+      ],
+      [
+       0.6788,
+       0.4727
+      ],
+      [
+       0.6766,
+       0.4479
+      ]
+     ],
+     [
+      [
+       0.769,
+       0.7752
+      ],
+      [
+       0.7686,
+       0.7782
+      ],
+      [
+       0.7675,
+       0.7808
+      ],
+      [
+       0.7659,
+       0.7827
+      ],
+      [
+       0.7639,
+       0.7838
+      ],
+      [
+       0.7618,
+       0.7838
+      ],
+      [
+       0.7597,
+       0.7827
+      ],
+      [
+       0.7581,
+       0.7808
+      ],
+      [
+       0.757,
+       0.7782
+      ],
+      [
+       0.7567,
+       0.7752
+      ],
+      [
+       0.757,
+       0.7722
+      ],
+      [
+       0.7581,
+       0.7696
+      ],
+      [
+       0.7597,
+       0.7676
+      ],
+      [
+       0.7618,
+       0.7666
+      ],
+      [
+       0.7639,
+       0.7666
+      ],
+      [
+       0.7659,
+       0.7676
+      ],
+      [
+       0.7675,
+       0.7696
+      ],
+      [
+       0.7686,
+       0.7722
+      ]
+     ]
+    ],
+    "21": [
+     [
+      [
+       0.7285,
+       0.7183
+      ],
+      [
+       0.7295,
+       0.7453
+      ],
+      [
+       0.7305,
+       0.7723
+      ],
+      [
+       0.7395,
+       0.7717
+      ],
+      [
+       0.7385,
+       0.7447
+      ],
+      [
+       0.7375,
+       0.7177
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F3a",
+   "nama": "A.Carotis Interna",
+   "sistem": "arteri",
+   "induk": "F3-sn",
+   "muara": null,
+   "slide": [
+    18
+   ],
+   "keterangan": "Cabang a. carotis communis yang masuk ke kepala, ditunjuk pada foto kepala potongan lateral.",
+   "posisi_2d": {
+    "18": [
+     0.7,
+     0.7
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. carotis interna"
+   ],
+   "potong": {
+    "18": [
+     [
+      [
+       0.6999,
+       0.6943
+      ],
+      [
+       0.6995,
+       0.6973
+      ],
+      [
+       0.6985,
+       0.6999
+      ],
+      [
+       0.6968,
+       0.7018
+      ],
+      [
+       0.6948,
+       0.7029
+      ],
+      [
+       0.6927,
+       0.7029
+      ],
+      [
+       0.6907,
+       0.7018
+      ],
+      [
+       0.689,
+       0.6999
+      ],
+      [
+       0.688,
+       0.6973
+      ],
+      [
+       0.6876,
+       0.6943
+      ],
+      [
+       0.688,
+       0.6913
+      ],
+      [
+       0.689,
+       0.6887
+      ],
+      [
+       0.6907,
+       0.6867
+      ],
+      [
+       0.6927,
+       0.6857
+      ],
+      [
+       0.6948,
+       0.6857
+      ],
+      [
+       0.6968,
+       0.6867
+      ],
+      [
+       0.6985,
+       0.6887
+      ],
+      [
+       0.6995,
+       0.6913
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F3b",
+   "nama": "A.Carotis Externa",
+   "sistem": "arteri",
+   "induk": "F3-sn",
+   "muara": null,
+   "slide": [
+    18
+   ],
+   "keterangan": "Cabang a. carotis communis untuk wajah dan leher, ditunjuk pada foto kepala potongan lateral.",
+   "posisi_2d": {
+    "18": [
+     0.72,
+     0.77
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. carotis externa"
+   ],
+   "potong": {
+    "18": [
+     [
+      [
+       0.6867,
+       0.7671
+      ],
+      [
+       0.6863,
+       0.7701
+      ],
+      [
+       0.6853,
+       0.7727
+      ],
+      [
+       0.6836,
+       0.7746
+      ],
+      [
+       0.6816,
+       0.7757
+      ],
+      [
+       0.6795,
+       0.7757
+      ],
+      [
+       0.6775,
+       0.7746
+      ],
+      [
+       0.6758,
+       0.7727
+      ],
+      [
+       0.6748,
+       0.7701
+      ],
+      [
+       0.6744,
+       0.7671
+      ],
+      [
+       0.6748,
+       0.7641
+      ],
+      [
+       0.6758,
+       0.7615
+      ],
+      [
+       0.6775,
+       0.7595
+      ],
+      [
+       0.6795,
+       0.7585
+      ],
+      [
+       0.6816,
+       0.7585
+      ],
+      [
+       0.6836,
+       0.7595
+      ],
+      [
+       0.6853,
+       0.7615
+      ],
+      [
+       0.6863,
+       0.7641
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F2-dx",
+   "nama": "v. jugularis interna",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "Vsub-dx",
+   "slide": [
+    18
+   ],
+   "keterangan": "Vena leher kanan dalam satu selubung dengan a. carotis communis dan n. vagus. Muara ke v. brachiocephalica (Model A) bersama v. subclavia.",
+   "posisi_2d": {
+    "18": [
+     0.61,
+     0.36
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "V. Jugularis Interna"
+   ],
+   "potong": {
+    "18": [
+     [
+      [
+       0.5811,
+       0.3119
+      ],
+      [
+       0.5833,
+       0.3618
+      ],
+      [
+       0.5869,
+       0.4116
+      ],
+      [
+       0.5939,
+       0.4106
+      ],
+      [
+       0.5904,
+       0.361
+      ],
+      [
+       0.5882,
+       0.3113
+      ]
+     ],
+     [
+      [
+       0.4769,
+       0.6818
+      ],
+      [
+       0.4765,
+       0.6848
+      ],
+      [
+       0.4754,
+       0.6874
+      ],
+      [
+       0.4738,
+       0.6894
+      ],
+      [
+       0.4718,
+       0.6904
+      ],
+      [
+       0.4696,
+       0.6904
+      ],
+      [
+       0.4676,
+       0.6894
+      ],
+      [
+       0.466,
+       0.6874
+      ],
+      [
+       0.4649,
+       0.6848
+      ],
+      [
+       0.4645,
+       0.6818
+      ],
+      [
+       0.4649,
+       0.6788
+      ],
+      [
+       0.466,
+       0.6762
+      ],
+      [
+       0.4676,
+       0.6743
+      ],
+      [
+       0.4696,
+       0.6732
+      ],
+      [
+       0.4718,
+       0.6732
+      ],
+      [
+       0.4738,
+       0.6743
+      ],
+      [
+       0.4754,
+       0.6762
+      ],
+      [
+       0.4765,
+       0.6788
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F2-sn",
+   "nama": "v. jugularis interna",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "Vsub-sn",
+   "slide": [
+    18
+   ],
+   "keterangan": "Vena leher kiri dalam satu selubung dengan a. carotis communis sinistra dan n. vagus.",
+   "posisi_2d": {
+    "18": [
+     0.68,
+     0.49
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "V. Jugularis Interna"
+   ],
+   "potong": {
+    "18": [
+     [
+      [
+       0.6969,
+       0.437
+      ],
+      [
+       0.7013,
+       0.4682
+      ],
+      [
+       0.7057,
+       0.4932
+      ],
+      [
+       0.7126,
+       0.4908
+      ],
+      [
+       0.7082,
+       0.4661
+      ],
+      [
+       0.7038,
+       0.4351
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F1-dx",
+   "nama": "V.jugularis externa",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "Vsub-dx",
+   "slide": [
+    18
+   ],
+   "keterangan": "Vena superfisial leher kanan yang menyilang m. sternocleidomastoideus.",
+   "posisi_2d": {
+    "18": [
+     0.58,
+     0.41
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "v. jugularis externa"
+   ],
+   "potong": {
+    "18": [
+     [
+      [
+       0.565,
+       0.3751
+      ],
+      [
+       0.5716,
+       0.4094
+      ],
+      [
+       0.5782,
+       0.4406
+      ],
+      [
+       0.5849,
+       0.4377
+      ],
+      [
+       0.5784,
+       0.4067
+      ],
+      [
+       0.5718,
+       0.3725
+      ]
+     ],
+     [
+      [
+       0.4821,
+       0.7142
+      ],
+      [
+       0.4818,
+       0.7172
+      ],
+      [
+       0.4807,
+       0.7198
+      ],
+      [
+       0.4791,
+       0.7217
+      ],
+      [
+       0.477,
+       0.7228
+      ],
+      [
+       0.4749,
+       0.7228
+      ],
+      [
+       0.4729,
+       0.7217
+      ],
+      [
+       0.4713,
+       0.7198
+      ],
+      [
+       0.4702,
+       0.7172
+      ],
+      [
+       0.4698,
+       0.7142
+      ],
+      [
+       0.4702,
+       0.7112
+      ],
+      [
+       0.4713,
+       0.7086
+      ],
+      [
+       0.4729,
+       0.7066
+      ],
+      [
+       0.4749,
+       0.7056
+      ],
+      [
+       0.477,
+       0.7056
+      ],
+      [
+       0.4791,
+       0.7066
+      ],
+      [
+       0.4807,
+       0.7086
+      ],
+      [
+       0.4818,
+       0.7112
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F1-sn",
+   "nama": "V.jugularis externa",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "Vsub-sn",
+   "slide": [
+    18
+   ],
+   "keterangan": "Vena superfisial leher kiri.",
+   "posisi_2d": {
+    "18": [
+     0.73,
+     0.29
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "v. jugularis externa"
+   ],
+   "potong": {
+    "18": [
+     [
+      [
+       0.719,
+       0.257
+      ],
+      [
+       0.7255,
+       0.2878
+      ],
+      [
+       0.7299,
+       0.3248
+      ],
+      [
+       0.7368,
+       0.3232
+      ],
+      [
+       0.7324,
+       0.2856
+      ],
+      [
+       0.7257,
+       0.2541
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Nvag-dx",
+   "nama": "n. vagus",
+   "sistem": "saraf",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    18
+   ],
+   "keterangan": "Saraf kranial X di leher kanan, satu selubung dengan a. carotis communis dan v. jugularis interna.",
+   "posisi_2d": {
+    "18": [
+     0.61,
+     0.36
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "18": [
+     [
+      [
+       0.5948,
+       0.3105
+      ],
+      [
+       0.597,
+       0.3616
+      ],
+      [
+       0.5996,
+       0.4114
+      ],
+      [
+       0.604,
+       0.4109
+      ],
+      [
+       0.6014,
+       0.3611
+      ],
+      [
+       0.5992,
+       0.3101
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Nvag-sn",
+   "nama": "n. vagus",
+   "sistem": "saraf",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    18
+   ],
+   "keterangan": "Saraf kranial X di leher kiri.",
+   "posisi_2d": {
+    "18": [
+     0.68,
+     0.49
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "18": [
+     [
+      [
+       0.685,
+       0.4426
+      ],
+      [
+       0.6872,
+       0.4706
+      ],
+      [
+       0.6894,
+       0.4955
+      ],
+      [
+       0.6937,
+       0.4948
+      ],
+      [
+       0.6915,
+       0.4699
+      ],
+      [
+       0.6893,
+       0.4419
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F4-dx",
+   "nama": "A. subclavia dextra",
+   "sistem": "arteri",
+   "induk": "F-tbc",
+   "muara": null,
+   "slide": [
+    18,
+    22
+   ],
+   "keterangan": "Cabang truncus brachiocephalica; dibagi tiga bagian oleh m. scalenus anterior dan berlanjut menjadi a. axillaris (slide 22: \"a.subclavia\").",
+   "posisi_2d": {
+    "18": [
+     0.54,
+     0.48
+    ],
+    "22": [
+     0.73,
+     0.468
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. subclavia",
+    "A/v.subclavia dextra"
+   ],
+   "potong": {
+    "18": [
+     [
+      [
+       0.5318,
+       0.4786
+      ],
+      [
+       0.5498,
+       0.4881
+      ],
+      [
+       0.5722,
+       0.4926
+      ],
+      [
+       0.5733,
+       0.4815
+      ],
+      [
+       0.5517,
+       0.4773
+      ],
+      [
+       0.5346,
+       0.4681
+      ]
+     ]
+    ],
+    "22": [
+     [
+      [
+       0.697,
+       0.4849
+      ],
+      [
+       0.731,
+       0.4769
+      ],
+      [
+       0.763,
+       0.4699
+      ],
+      [
+       0.761,
+       0.4521
+      ],
+      [
+       0.729,
+       0.4591
+      ],
+      [
+       0.695,
+       0.4671
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F4-p1",
+   "nama": "1st part of subclavian artery",
+   "sistem": "arteri",
+   "induk": "F4-dx",
+   "muara": null,
+   "slide": [
+    19
+   ],
+   "keterangan": "Bagian a. subclavia medial dari m. scalenus anterior (tampak lateral kanan).",
+   "posisi_2d": {
+    "19": [
+     0.512,
+     0.49
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "19": [
+     [
+      [
+       0.4954,
+       0.4997
+      ],
+      [
+       0.5157,
+       0.4977
+      ],
+      [
+       0.5359,
+       0.4926
+      ],
+      [
+       0.5341,
+       0.4774
+      ],
+      [
+       0.5143,
+       0.4823
+      ],
+      [
+       0.4946,
+       0.4843
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F4-p2",
+   "nama": "2nd part of subclavian artery",
+   "sistem": "arteri",
+   "induk": "F4-dx",
+   "muara": null,
+   "slide": [
+    19
+   ],
+   "keterangan": "Bagian a. subclavia di belakang m. scalenus anterior.",
+   "posisi_2d": {
+    "19": [
+     0.5,
+     0.425
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "19": [
+     [
+      [
+       0.4785,
+       0.4357
+      ],
+      [
+       0.5,
+       0.4327
+      ],
+      [
+       0.5194,
+       0.4357
+      ],
+      [
+       0.5206,
+       0.4203
+      ],
+      [
+       0.5,
+       0.4173
+      ],
+      [
+       0.4775,
+       0.4203
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F4-p3",
+   "nama": "3rd part of subclavian artery",
+   "sistem": "arteri",
+   "induk": "F4-dx",
+   "muara": null,
+   "slide": [
+    19
+   ],
+   "keterangan": "Bagian a. subclavia lateral dari m. scalenus anterior sampai tepi iga 1.",
+   "posisi_2d": {
+    "19": [
+     0.445,
+     0.39
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "19": [
+     [
+      [
+       0.4273,
+       0.412
+      ],
+      [
+       0.4455,
+       0.3997
+      ],
+      [
+       0.4635,
+       0.4074
+      ],
+      [
+       0.4665,
+       0.3926
+      ],
+      [
+       0.4445,
+       0.3843
+      ],
+      [
+       0.4227,
+       0.398
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F4-sn",
+   "nama": "A. Subclavia Sinistra",
+   "sistem": "arteri",
+   "induk": "B-arc",
+   "muara": null,
+   "slide": [
+    18,
+    21
+   ],
+   "keterangan": "Cabang langsung arcus aorta di sisi kiri (slide 18: \"A/v.subclavia sinistra\"); slide 21 diagram: \"Subclavian artery\".",
+   "posisi_2d": {
+    "18": [
+     0.7,
+     0.45
+    ],
+    "21": [
+     0.507,
+     0.682
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. subclavia",
+    "subclavian artery"
+   ],
+   "potong": {
+    "18": [
+     [
+      [
+       0.7214,
+       0.4508
+      ],
+      [
+       0.7438,
+       0.4596
+      ],
+      [
+       0.7662,
+       0.4609
+      ],
+      [
+       0.7665,
+       0.451
+      ],
+      [
+       0.7449,
+       0.4498
+      ],
+      [
+       0.7233,
+       0.4412
+      ]
+     ]
+    ],
+    "21": [
+     [
+      [
+       0.4889,
+       0.6949
+      ],
+      [
+       0.508,
+       0.6909
+      ],
+      [
+       0.531,
+       0.6859
+      ],
+      [
+       0.529,
+       0.6681
+      ],
+      [
+       0.506,
+       0.6731
+      ],
+      [
+       0.4871,
+       0.6771
+      ]
+     ],
+     [
+      [
+       0.6988,
+       0.8133
+      ],
+      [
+       0.7156,
+       0.8047
+      ],
+      [
+       0.7375,
+       0.8077
+      ],
+      [
+       0.7385,
+       0.7923
+      ],
+      [
+       0.7144,
+       0.7893
+      ],
+      [
+       0.6952,
+       0.7987
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Vsub-dx",
+   "nama": "v. subclavia dextra",
+   "sistem": "vena",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    18
+   ],
+   "keterangan": "Lanjutan v. axillaris di sisi kanan (label bersama \"A/v.subclavia dextra\"); bergabung dengan v. jugularis interna menjadi v. brachiocephalica (Model A).",
+   "posisi_2d": {
+    "18": [
+     0.54,
+     0.48
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "v. subclavia"
+   ],
+   "potong": {
+    "18": [
+     [
+      [
+       0.5323,
+       0.5043
+      ],
+      [
+       0.5502,
+       0.5106
+      ],
+      [
+       0.5702,
+       0.5138
+      ],
+      [
+       0.571,
+       0.5039
+      ],
+      [
+       0.5514,
+       0.5008
+      ],
+      [
+       0.534,
+       0.4947
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Vsub-sn",
+   "nama": "v. subclavia sinistra",
+   "sistem": "vena",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    18
+   ],
+   "keterangan": "Vena subclavia kiri (label bersama \"A/v.subclavia sinistra\").",
+   "posisi_2d": {
+    "18": [
+     0.7,
+     0.45
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "v. subclavia"
+   ],
+   "potong": {
+    "18": [
+     [
+      [
+       0.7217,
+       0.4733
+      ],
+      [
+       0.7441,
+       0.4796
+      ],
+      [
+       0.7665,
+       0.4783
+      ],
+      [
+       0.7662,
+       0.4684
+      ],
+      [
+       0.7446,
+       0.4696
+      ],
+      [
+       0.723,
+       0.4635
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Msa-dx",
+   "nama": "m.scalenus anterior",
+   "sistem": "otot",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    19
+   ],
+   "keterangan": "Otot yang membagi a. subclavia menjadi tiga bagian; ditunjuk pada tampak lateral kanan dan anterior.",
+   "posisi_2d": {
+    "19": [
+     0.487,
+     0.395
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "m. scalenus anterior"
+   ],
+   "potong": {
+    "19": [
+     [
+      [
+       0.468,
+       0.37
+      ],
+      [
+       0.49,
+       0.366
+      ],
+      [
+       0.5,
+       0.405
+      ],
+      [
+       0.494,
+       0.416
+      ],
+      [
+       0.472,
+       0.41
+      ]
+     ],
+     [
+      [
+       0.4973,
+       0.718
+      ],
+      [
+       0.4968,
+       0.7215
+      ],
+      [
+       0.4956,
+       0.7246
+      ],
+      [
+       0.4936,
+       0.7269
+      ],
+      [
+       0.4913,
+       0.7281
+      ],
+      [
+       0.4887,
+       0.7281
+      ],
+      [
+       0.4864,
+       0.7269
+      ],
+      [
+       0.4844,
+       0.7246
+      ],
+      [
+       0.4832,
+       0.7215
+      ],
+      [
+       0.4827,
+       0.718
+      ],
+      [
+       0.4832,
+       0.7145
+      ],
+      [
+       0.4844,
+       0.7114
+      ],
+      [
+       0.4864,
+       0.7091
+      ],
+      [
+       0.4887,
+       0.7079
+      ],
+      [
+       0.4913,
+       0.7079
+      ],
+      [
+       0.4936,
+       0.7091
+      ],
+      [
+       0.4956,
+       0.7114
+      ],
+      [
+       0.4968,
+       0.7145
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Msa-sn",
+   "nama": "m.scalenus anterior",
+   "sistem": "otot",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    19
+   ],
+   "keterangan": "M. scalenus anterior sisi kiri pada tampak anterior.",
+   "posisi_2d": {
+    "19": [
+     0.64,
+     0.672
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "m. scalenus anterior"
+   ],
+   "potong": {
+    "19": [
+     [
+      [
+       0.625,
+       0.655
+      ],
+      [
+       0.645,
+       0.655
+      ],
+      [
+       0.655,
+       0.69
+      ],
+      [
+       0.635,
+       0.695
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F4a",
+   "nama": "a.vertebralis",
+   "sistem": "arteri",
+   "induk": "F4-sn",
+   "muara": null,
+   "slide": [
+    19,
+    20,
+    21
+   ],
+   "keterangan": "Cabang a. subclavia yang naik ke kepala (slide 20 tampak di potongan sagital); slide 21 diagram: \"Vertebral artery\".",
+   "posisi_2d": {
+    "19": [
+     0.598,
+     0.725
+    ],
+    "20": [
+     0.469,
+     0.368
+    ],
+    "21": [
+     0.706,
+     0.775
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. vertebralis",
+    "vertebral artery"
+   ],
+   "potong": {
+    "19": [
+     [
+      [
+       0.5877,
+       0.7021
+      ],
+      [
+       0.5936,
+       0.7266
+      ],
+      [
+       0.5955,
+       0.7459
+      ],
+      [
+       0.6045,
+       0.7441
+      ],
+      [
+       0.6024,
+       0.7234
+      ],
+      [
+       0.5963,
+       0.6979
+      ]
+     ]
+    ],
+    "20": [
+     [
+      [
+       0.4616,
+       0.3877
+      ],
+      [
+       0.4721,
+       0.3743
+      ],
+      [
+       0.4846,
+       0.3648
+      ],
+      [
+       0.4794,
+       0.3512
+      ],
+      [
+       0.4659,
+       0.3617
+      ],
+      [
+       0.4544,
+       0.3763
+      ]
+     ]
+    ],
+    "21": [
+     [
+      [
+       0.7134,
+       0.7915
+      ],
+      [
+       0.7105,
+       0.7741
+      ],
+      [
+       0.7095,
+       0.7545
+      ],
+      [
+       0.7005,
+       0.7555
+      ],
+      [
+       0.7015,
+       0.7759
+      ],
+      [
+       0.7046,
+       0.7945
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F4b",
+   "nama": "a.thoracica interna",
+   "sistem": "arteri",
+   "induk": "F4-dx",
+   "muara": null,
+   "slide": [
+    19,
+    20,
+    21
+   ],
+   "keterangan": "Cabang a. subclavia yang turun ke dinding dada anterior.",
+   "posisi_2d": {
+    "19": [
+     0.502,
+     0.8
+    ],
+    "20": [
+     0.718,
+     0.374
+    ],
+    "21": [
+     0.507,
+     0.352
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. thoracica interna"
+   ],
+   "potong": {
+    "19": [
+     [
+      [
+       0.4945,
+       0.7792
+      ],
+      [
+       0.4975,
+       0.8013
+      ],
+      [
+       0.5006,
+       0.8213
+      ],
+      [
+       0.5094,
+       0.8187
+      ],
+      [
+       0.5065,
+       0.7987
+      ],
+      [
+       0.5035,
+       0.7768
+      ]
+     ]
+    ],
+    "20": [
+     [
+      [
+       0.7107,
+       0.364
+      ],
+      [
+       0.7137,
+       0.3799
+      ],
+      [
+       0.7167,
+       0.3978
+      ],
+      [
+       0.7273,
+       0.3942
+      ],
+      [
+       0.7243,
+       0.3761
+      ],
+      [
+       0.7213,
+       0.36
+      ]
+     ]
+    ],
+    "21": [
+     [
+      [
+       0.4996,
+       0.3393
+      ],
+      [
+       0.5016,
+       0.3563
+      ],
+      [
+       0.5036,
+       0.3733
+      ],
+      [
+       0.5144,
+       0.3707
+      ],
+      [
+       0.5124,
+       0.3537
+      ],
+      [
+       0.5104,
+       0.3367
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F4c-dx",
+   "nama": "truncus thyrocervicalis",
+   "sistem": "arteri",
+   "induk": "F4-dx",
+   "muara": null,
+   "slide": [
+    19,
+    21
+   ],
+   "keterangan": "Batang cabang a. subclavia; tabel: bercabang a. thyroidea inferior, a. transversa cervicalis, a. suprascapularis.",
+   "posisi_2d": {
+    "19": [
+     0.51,
+     0.755
+    ],
+    "21": [
+     0.522,
+     0.293
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "truncus thyrocervicalis"
+   ],
+   "potong": {
+    "19": [
+     [
+      [
+       0.4999,
+       0.7347
+      ],
+      [
+       0.5058,
+       0.7573
+      ],
+      [
+       0.5097,
+       0.7798
+      ],
+      [
+       0.5203,
+       0.7762
+      ],
+      [
+       0.5162,
+       0.7527
+      ],
+      [
+       0.5101,
+       0.7293
+      ]
+     ]
+    ],
+    "21": [
+     [
+      [
+       0.5166,
+       0.3078
+      ],
+      [
+       0.5255,
+       0.2969
+      ],
+      [
+       0.5344,
+       0.2871
+      ],
+      [
+       0.5276,
+       0.2749
+      ],
+      [
+       0.5185,
+       0.2851
+      ],
+      [
+       0.5094,
+       0.2962
+      ]
+     ],
+     [
+      [
+       0.7584,
+       0.375
+      ],
+      [
+       0.758,
+       0.3781
+      ],
+      [
+       0.7569,
+       0.3808
+      ],
+      [
+       0.7552,
+       0.3828
+      ],
+      [
+       0.7531,
+       0.3839
+      ],
+      [
+       0.7509,
+       0.3839
+      ],
+      [
+       0.7488,
+       0.3828
+      ],
+      [
+       0.7471,
+       0.3808
+      ],
+      [
+       0.746,
+       0.3781
+      ],
+      [
+       0.7456,
+       0.375
+      ],
+      [
+       0.746,
+       0.3719
+      ],
+      [
+       0.7471,
+       0.3692
+      ],
+      [
+       0.7488,
+       0.3672
+      ],
+      [
+       0.7509,
+       0.3661
+      ],
+      [
+       0.7531,
+       0.3661
+      ],
+      [
+       0.7552,
+       0.3672
+      ],
+      [
+       0.7569,
+       0.3692
+      ],
+      [
+       0.758,
+       0.3719
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F4c-sn",
+   "nama": "truncus thyrocervicalis",
+   "sistem": "arteri",
+   "induk": "F4-sn",
+   "muara": null,
+   "slide": [
+    19
+   ],
+   "keterangan": "Truncus thyrocervicalis sisi kiri, dilabeli pada tampak anterior.",
+   "posisi_2d": {
+    "19": [
+     0.628,
+     0.78
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "truncus thyrocervicalis"
+   ],
+   "potong": {
+    "19": [
+     [
+      [
+       0.6225,
+       0.7685
+      ],
+      [
+       0.6235,
+       0.7858
+      ],
+      [
+       0.6255,
+       0.8031
+      ],
+      [
+       0.6345,
+       0.8009
+      ],
+      [
+       0.6325,
+       0.7842
+      ],
+      [
+       0.6315,
+       0.7675
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F4c1",
+   "nama": "a.thyroidea inferior",
+   "sistem": "arteri",
+   "induk": "F4c-dx",
+   "muara": null,
+   "slide": [
+    19,
+    21
+   ],
+   "keterangan": "Cabang truncus thyrocervicalis menuju kelenjar tiroid.",
+   "posisi_2d": {
+    "19": [
+     0.535,
+     0.692
+    ],
+    "21": [
+     0.751,
+     0.315
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. thyroidea inferior"
+   ],
+   "potong": {
+    "19": [
+     [
+      [
+       0.5306,
+       0.7089
+      ],
+      [
+       0.5353,
+       0.6964
+      ],
+      [
+       0.5431,
+       0.7079
+      ],
+      [
+       0.5489,
+       0.6981
+      ],
+      [
+       0.5347,
+       0.6836
+      ],
+      [
+       0.5234,
+       0.7011
+      ]
+     ]
+    ],
+    "21": [
+     [
+      [
+       0.7467,
+       0.3294
+      ],
+      [
+       0.7542,
+       0.3171
+      ],
+      [
+       0.7647,
+       0.3096
+      ],
+      [
+       0.7613,
+       0.3004
+      ],
+      [
+       0.7498,
+       0.3089
+      ],
+      [
+       0.7413,
+       0.3226
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F4c2",
+   "nama": "a.transversa cervicalis",
+   "sistem": "arteri",
+   "induk": "F4c-dx",
+   "muara": null,
+   "slide": [
+    19,
+    21
+   ],
+   "keterangan": "Cabang truncus thyrocervicalis yang berjalan ke lateral leher (slide 21: \"A. transversa colli\").",
+   "posisi_2d": {
+    "19": [
+     0.478,
+     0.727
+    ],
+    "21": [
+     0.707,
+     0.327
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. transversa cervicalis",
+    "a. transversa colli",
+    "a. transversal cervicalis"
+   ],
+   "potong": {
+    "19": [
+     [
+      [
+       0.4545,
+       0.7304
+      ],
+      [
+       0.474,
+       0.7333
+      ],
+      [
+       0.4862,
+       0.7409
+      ],
+      [
+       0.4898,
+       0.7291
+      ],
+      [
+       0.476,
+       0.7207
+      ],
+      [
+       0.4555,
+       0.7176
+      ]
+     ]
+    ],
+    "21": [
+     [
+      [
+       0.7003,
+       0.3214
+      ],
+      [
+       0.7078,
+       0.3331
+      ],
+      [
+       0.7184,
+       0.3406
+      ],
+      [
+       0.7216,
+       0.3314
+      ],
+      [
+       0.7122,
+       0.3249
+      ],
+      [
+       0.7057,
+       0.3146
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F4c3",
+   "nama": "a.suprascapularis",
+   "sistem": "arteri",
+   "induk": "F4c-dx",
+   "muara": null,
+   "slide": [
+    19,
+    21
+   ],
+   "keterangan": "Cabang truncus thyrocervicalis menuju daerah skapula.",
+   "posisi_2d": {
+    "19": [
+     0.465,
+     0.765
+    ],
+    "21": [
+     0.764,
+     0.355
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. suprascapularis"
+   ],
+   "potong": {
+    "19": [
+     [
+      [
+       0.4482,
+       0.7734
+      ],
+      [
+       0.4657,
+       0.7724
+      ],
+      [
+       0.4831,
+       0.7662
+      ],
+      [
+       0.4809,
+       0.7538
+      ],
+      [
+       0.4643,
+       0.7596
+      ],
+      [
+       0.4478,
+       0.7606
+      ]
+     ]
+    ],
+    "21": [
+     [
+      [
+       0.7564,
+       0.3657
+      ],
+      [
+       0.7662,
+       0.3599
+      ],
+      [
+       0.7769,
+       0.356
+      ],
+      [
+       0.7751,
+       0.346
+      ],
+      [
+       0.7638,
+       0.3501
+      ],
+      [
+       0.7536,
+       0.3563
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F4c4",
+   "nama": "A. cervicalis ascendens",
+   "sistem": "arteri",
+   "induk": "F4c1",
+   "muara": null,
+   "slide": [
+    21
+   ],
+   "keterangan": "Ditunjuk pada foto kecil cabang truncus thyrocervicalis. Induk mengikuti anatomi standar (dari a. thyroidea inferior), slide tidak menyebutkan.",
+   "posisi_2d": {
+    "21": [
+     0.739,
+     0.277
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "21": [
+     [
+      [
+       0.7354,
+       0.2624
+      ],
+      [
+       0.7364,
+       0.2804
+      ],
+      [
+       0.7374,
+       0.2984
+      ],
+      [
+       0.7446,
+       0.2976
+      ],
+      [
+       0.7436,
+       0.2796
+      ],
+      [
+       0.7426,
+       0.2616
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F4c5",
+   "nama": "A. cervicalis superficialis",
+   "sistem": "arteri",
+   "induk": "F4c2",
+   "muara": null,
+   "slide": [
+    21
+   ],
+   "keterangan": "Ditunjuk pada foto kecil cabang truncus thyrocervicalis. Induk mengikuti anatomi standar, slide tidak menyebutkan.",
+   "posisi_2d": {
+    "21": [
+     0.725,
+     0.374
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "21": [
+     [
+      [
+       0.722,
+       0.389
+      ],
+      [
+       0.7289,
+       0.3751
+      ],
+      [
+       0.7358,
+       0.3633
+      ],
+      [
+       0.7302,
+       0.3567
+      ],
+      [
+       0.7231,
+       0.3689
+      ],
+      [
+       0.716,
+       0.383
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Nsym",
+   "nama": "Truncus sympathicus",
+   "sistem": "saraf",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    21
+   ],
+   "keterangan": "Rantai saraf simpatis yang ditunjuk pada foto kecil daerah truncus thyrocervicalis.",
+   "posisi_2d": {
+    "21": [
+     0.753,
+     0.254
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "21": [
+     [
+      [
+       0.7475,
+       0.2355
+      ],
+      [
+       0.7485,
+       0.2555
+      ],
+      [
+       0.7495,
+       0.2755
+      ],
+      [
+       0.7585,
+       0.2745
+      ],
+      [
+       0.7575,
+       0.2545
+      ],
+      [
+       0.7565,
+       0.2345
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F4d",
+   "nama": "truncus costocervicalis",
+   "sistem": "arteri",
+   "induk": "F4-sn",
+   "muara": null,
+   "slide": [
+    19,
+    21
+   ],
+   "keterangan": "Cabang a. subclavia; tabel: bercabang superior intercostal artery dan deep cervical artery.",
+   "posisi_2d": {
+    "19": [
+     0.62,
+     0.755
+    ],
+    "21": [
+     0.533,
+     0.576
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "truncus costocervicalis",
+    "costocervical trunk"
+   ],
+   "potong": {
+    "19": [
+     [
+      [
+       0.6034,
+       0.7634
+      ],
+      [
+       0.6206,
+       0.7614
+      ],
+      [
+       0.6427,
+       0.7563
+      ],
+      [
+       0.6413,
+       0.7437
+      ],
+      [
+       0.6194,
+       0.7486
+      ],
+      [
+       0.6026,
+       0.7506
+      ]
+     ]
+    ],
+    "21": [
+     [
+      [
+       0.5331,
+       0.5907
+      ],
+      [
+       0.5379,
+       0.5763
+      ],
+      [
+       0.5446,
+       0.5639
+      ],
+      [
+       0.5374,
+       0.5561
+      ],
+      [
+       0.5301,
+       0.5697
+      ],
+      [
+       0.5249,
+       0.5853
+      ]
+     ],
+     [
+      [
+       0.6982,
+       0.7975
+      ],
+      [
+       0.6934,
+       0.7851
+      ],
+      [
+       0.6915,
+       0.7738
+      ],
+      [
+       0.6845,
+       0.7762
+      ],
+      [
+       0.6866,
+       0.7889
+      ],
+      [
+       0.6918,
+       0.8025
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F4d1",
+   "nama": "Deep cervical artery",
+   "sistem": "arteri",
+   "induk": "F4d",
+   "muara": null,
+   "slide": [
+    21
+   ],
+   "keterangan": "Cabang truncus costocervicalis ke otot leher belakang (diagram slide 21).",
+   "posisi_2d": {
+    "21": [
+     0.687,
+     0.75
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. cervicalis profunda"
+   ],
+   "potong": {
+    "21": [
+     [
+      [
+       0.6805,
+       0.7364
+      ],
+      [
+       0.6835,
+       0.7514
+      ],
+      [
+       0.6865,
+       0.7664
+      ],
+      [
+       0.6935,
+       0.7636
+      ],
+      [
+       0.6905,
+       0.7486
+      ],
+      [
+       0.6875,
+       0.7336
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "F4d2",
+   "nama": "Highest intercostal artery",
+   "sistem": "arteri",
+   "induk": "F4d",
+   "muara": null,
+   "slide": [
+    21
+   ],
+   "keterangan": "Cabang truncus costocervicalis ke sela iga atas; tabel menyebut \"Superior Intercostal artery\".",
+   "posisi_2d": {
+    "21": [
+     0.692,
+     0.81
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "superior intercostal artery",
+    "a. intercostalis suprema"
+   ],
+   "potong": {
+    "21": [
+     [
+      [
+       0.6984,
+       0.8034
+      ],
+      [
+       0.6878,
+       0.811
+      ],
+      [
+       0.6793,
+       0.8246
+      ],
+      [
+       0.6847,
+       0.8314
+      ],
+      [
+       0.6922,
+       0.819
+      ],
+      [
+       0.7016,
+       0.8126
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Rib1",
+   "nama": "1st rib",
+   "sistem": "tulang",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    21
+   ],
+   "keterangan": "Iga pertama pada diagram truncus costocervicalis.",
+   "posisi_2d": {
+    "21": [
+     0.678,
+     0.812
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "costa 1"
+   ],
+   "potong": {
+    "21": [
+     [
+      [
+       0.666,
+       0.806
+      ],
+      [
+       0.68,
+       0.8
+      ],
+      [
+       0.686,
+       0.806
+      ],
+      [
+       0.676,
+       0.82
+      ],
+      [
+       0.664,
+       0.822
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Rib2",
+   "nama": "2nd rib",
+   "sistem": "tulang",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    21
+   ],
+   "keterangan": "Iga kedua pada diagram truncus costocervicalis.",
+   "posisi_2d": {
+    "21": [
+     0.678,
+     0.835
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "costa 2"
+   ],
+   "potong": {
+    "21": [
+     [
+      [
+       0.664,
+       0.83
+      ],
+      [
+       0.684,
+       0.826
+      ],
+      [
+       0.69,
+       0.832
+      ],
+      [
+       0.678,
+       0.842
+      ],
+      [
+       0.664,
+       0.844
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "G1",
+   "nama": "a. axillaris",
+   "sistem": "arteri",
+   "induk": "F4-dx",
+   "muara": null,
+   "slide": [
+    22,
+    24
+   ],
+   "keterangan": "Lanjutan a. subclavia di ketiak (tampak anterior aksila kanan); sumber cabang G1a–G1f.",
+   "posisi_2d": {
+    "22": [
+     0.62,
+     0.465
+    ],
+    "24": [
+     0.4769,
+     0.1871
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. axillaris",
+    "A.Axillaris",
+    "axillary artery"
+   ],
+   "potong": {
+    "22": [
+     [
+      [
+       0.5737,
+       0.4809
+      ],
+      [
+       0.6207,
+       0.4739
+      ],
+      [
+       0.6657,
+       0.4669
+      ],
+      [
+       0.6643,
+       0.4491
+      ],
+      [
+       0.6193,
+       0.4561
+      ],
+      [
+       0.5723,
+       0.4631
+      ]
+     ]
+    ],
+    "24": [
+     [
+      [
+       0.4678,
+       0.1568
+      ],
+      [
+       0.4696,
+       0.1879
+      ],
+      [
+       0.4714,
+       0.2191
+      ],
+      [
+       0.4859,
+       0.2174
+      ],
+      [
+       0.4841,
+       0.1863
+      ],
+      [
+       0.4823,
+       0.1552
+      ]
+     ],
+     [
+      [
+       0.4717,
+       0.6623
+      ],
+      [
+       0.4866,
+       0.6554
+      ],
+      [
+       0.5015,
+       0.6494
+      ],
+      [
+       0.4985,
+       0.6346
+      ],
+      [
+       0.4834,
+       0.6406
+      ],
+      [
+       0.4683,
+       0.6477
+      ]
+     ],
+     [
+      [
+       0.8372,
+       0.5371
+      ],
+      [
+       0.8483,
+       0.5358
+      ],
+      [
+       0.8594,
+       0.5339
+      ],
+      [
+       0.8581,
+       0.5186
+      ],
+      [
+       0.8472,
+       0.5205
+      ],
+      [
+       0.8363,
+       0.5217
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "G1a",
+   "nama": "A.Thoracica Superior",
+   "sistem": "arteri",
+   "induk": "G1",
+   "muara": null,
+   "slide": [
+    23,
+    24
+   ],
+   "keterangan": "Cabang pertama a. axillaris (slide 23: \"a.thoracica suprema\").",
+   "posisi_2d": {
+    "23": [
+     0.5464,
+     0.4223
+    ],
+    "24": [
+     0.475,
+     0.69
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. thoracica superior",
+    "a. thoracica suprema"
+   ],
+   "potong": {
+    "23": [
+     [
+      [
+       0.5376,
+       0.4326
+      ],
+      [
+       0.5508,
+       0.4326
+      ],
+      [
+       0.5662,
+       0.4326
+      ],
+      [
+       0.5662,
+       0.4121
+      ],
+      [
+       0.5508,
+       0.4121
+      ],
+      [
+       0.5376,
+       0.4121
+      ]
+     ]
+    ],
+    "24": [
+     [
+      [
+       0.4615,
+       0.6944
+      ],
+      [
+       0.4743,
+       0.6964
+      ],
+      [
+       0.4892,
+       0.7003
+      ],
+      [
+       0.4908,
+       0.6877
+      ],
+      [
+       0.4757,
+       0.6836
+      ],
+      [
+       0.4625,
+       0.6816
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "G1b",
+   "nama": "A.Thoracica Lateralis",
+   "sistem": "arteri",
+   "induk": "G1",
+   "muara": null,
+   "slide": [
+    23,
+    24
+   ],
+   "keterangan": "Cabang a. axillaris yang turun di dinding dada lateral.",
+   "posisi_2d": {
+    "23": [
+     0.5156,
+     0.4796
+    ],
+    "24": [
+     0.48,
+     0.707
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. thoracica lateralis"
+   ],
+   "potong": {
+    "23": [
+     [
+      [
+       0.4999,
+       0.4455
+      ],
+      [
+       0.5087,
+       0.4831
+      ],
+      [
+       0.5185,
+       0.5176
+      ],
+      [
+       0.532,
+       0.51
+      ],
+      [
+       0.5224,
+       0.4761
+      ],
+      [
+       0.5137,
+       0.439
+      ]
+     ]
+    ],
+    "24": [
+     [
+      [
+       0.4644,
+       0.7114
+      ],
+      [
+       0.4792,
+       0.7143
+      ],
+      [
+       0.494,
+       0.7193
+      ],
+      [
+       0.496,
+       0.7067
+      ],
+      [
+       0.4808,
+       0.7017
+      ],
+      [
+       0.4656,
+       0.6986
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "G1c",
+   "nama": "A.Thoracoacromialis",
+   "sistem": "arteri",
+   "induk": "G1",
+   "muara": null,
+   "slide": [
+    23,
+    24
+   ],
+   "keterangan": "Cabang a. axillaris; slide 23 menunjuk ramus pectoralis-nya.",
+   "posisi_2d": {
+    "23": [
+     0.5112,
+     0.3178
+    ],
+    "24": [
+     0.505,
+     0.622
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. thoracoacromialis"
+   ],
+   "potong": {
+    "23": [
+     [
+      [
+       0.5048,
+       0.2863
+      ],
+      [
+       0.5039,
+       0.3174
+      ],
+      [
+       0.503,
+       0.3453
+      ],
+      [
+       0.5176,
+       0.3463
+      ],
+      [
+       0.5184,
+       0.3182
+      ],
+      [
+       0.5193,
+       0.2871
+      ]
+     ]
+    ],
+    "24": [
+     [
+      [
+       0.4976,
+       0.6372
+      ],
+      [
+       0.5076,
+       0.6272
+      ],
+      [
+       0.5176,
+       0.6172
+      ],
+      [
+       0.5124,
+       0.6068
+      ],
+      [
+       0.5024,
+       0.6168
+      ],
+      [
+       0.4924,
+       0.6268
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "G1d",
+   "nama": "A.Subscapularis",
+   "sistem": "arteri",
+   "induk": "G1",
+   "muara": null,
+   "slide": [
+    23,
+    24
+   ],
+   "keterangan": "Cabang terbesar a. axillaris; tabel: bercabang a. circumflexa scapulae dan a. thoracodorsalis.",
+   "posisi_2d": {
+    "23": [
+     0.4166,
+     0.4143
+    ],
+    "24": [
+     0.47,
+     0.668
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. subscapularis",
+    "subscapular artery"
+   ],
+   "potong": {
+    "23": [
+     [
+      [
+       0.4041,
+       0.4464
+      ],
+      [
+       0.4217,
+       0.4215
+      ],
+      [
+       0.4393,
+       0.3966
+      ],
+      [
+       0.429,
+       0.3821
+      ],
+      [
+       0.4114,
+       0.407
+      ],
+      [
+       0.3938,
+       0.4319
+      ]
+     ]
+    ],
+    "24": [
+     [
+      [
+       0.4558,
+       0.6783
+      ],
+      [
+       0.4706,
+       0.6744
+      ],
+      [
+       0.4854,
+       0.6724
+      ],
+      [
+       0.4846,
+       0.6596
+      ],
+      [
+       0.4694,
+       0.6616
+      ],
+      [
+       0.4542,
+       0.6657
+      ]
+     ],
+     [
+      [
+       0.8119,
+       0.5886
+      ],
+      [
+       0.8172,
+       0.598
+      ],
+      [
+       0.823,
+       0.6074
+      ],
+      [
+       0.8285,
+       0.6007
+      ],
+      [
+       0.8228,
+       0.5914
+      ],
+      [
+       0.8176,
+       0.5822
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "G1d1",
+   "nama": "a. circumflexa scapulae",
+   "sistem": "arteri",
+   "induk": "G1d",
+   "muara": null,
+   "slide": [
+    23
+   ],
+   "keterangan": "Cabang a. subscapularis yang melewati triangular space (slide 24: \"Circumflex Scapular Artery\").",
+   "posisi_2d": {
+    "23": [
+     0.4804,
+     0.4298
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "circumflex scapular artery"
+   ],
+   "potong": {
+    "23": [
+     [
+      [
+       0.4655,
+       0.3953
+      ],
+      [
+       0.4743,
+       0.4327
+      ],
+      [
+       0.4831,
+       0.47
+      ],
+      [
+       0.4952,
+       0.4643
+      ],
+      [
+       0.4864,
+       0.427
+      ],
+      [
+       0.4776,
+       0.3896
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "G1d2",
+   "nama": "a.thoracodorsalis",
+   "sistem": "arteri",
+   "induk": "G1d",
+   "muara": null,
+   "slide": [
+    23
+   ],
+   "keterangan": "Cabang a. subscapularis yang turun bersama thoracodorsal nerve.",
+   "posisi_2d": {
+    "23": [
+     0.4452,
+     0.4609
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. thoracodorsalis",
+    "thoracodorsal artery"
+   ],
+   "potong": {
+    "23": [
+     [
+      [
+       0.4366,
+       0.3991
+      ],
+      [
+       0.4388,
+       0.4615
+      ],
+      [
+       0.4419,
+       0.5238
+      ],
+      [
+       0.4546,
+       0.5225
+      ],
+      [
+       0.4515,
+       0.4604
+      ],
+      [
+       0.4493,
+       0.3982
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "G1e",
+   "nama": "a.circumflexa humeri anterior",
+   "sistem": "arteri",
+   "induk": "G1",
+   "muara": null,
+   "slide": [
+    24
+   ],
+   "keterangan": "Cabang a. axillaris yang melingkari collum humeri dari depan (aksila kiri, tampak anterior).",
+   "posisi_2d": {
+    "24": [
+     0.5222,
+     0.3601
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. circumflexa humeri anterior",
+    "anterior circumflex humeral artery"
+   ],
+   "potong": {
+    "24": [
+     [
+      [
+       0.5127,
+       0.3719
+      ],
+      [
+       0.5254,
+       0.3665
+      ],
+      [
+       0.5402,
+       0.3647
+      ],
+      [
+       0.5393,
+       0.3493
+      ],
+      [
+       0.5234,
+       0.3513
+      ],
+      [
+       0.5096,
+       0.3571
+      ]
+     ],
+     [
+      [
+       0.8423,
+       0.6655
+      ],
+      [
+       0.8467,
+       0.6779
+      ],
+      [
+       0.8511,
+       0.6904
+      ],
+      [
+       0.8576,
+       0.6858
+      ],
+      [
+       0.8532,
+       0.6733
+      ],
+      [
+       0.8488,
+       0.6609
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "G1f",
+   "nama": "a.circumflexa humeri posterior",
+   "sistem": "arteri",
+   "induk": "G1",
+   "muara": null,
+   "slide": [
+    23,
+    24
+   ],
+   "keterangan": "Cabang a. axillaris; tabel: berjalan bersama n. axillaris melalui quadrangular space.",
+   "posisi_2d": {
+    "23": [
+     0.4342,
+     0.3178
+    ],
+    "24": [
+     0.52,
+     0.3862
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. circumflexa humeri posterior",
+    "posterior circumflex humeral artery"
+   ],
+   "potong": {
+    "23": [
+     [
+      [
+       0.4193,
+       0.2833
+      ],
+      [
+       0.4272,
+       0.3174
+      ],
+      [
+       0.4338,
+       0.3484
+      ],
+      [
+       0.446,
+       0.3432
+      ],
+      [
+       0.4394,
+       0.312
+      ],
+      [
+       0.4314,
+       0.2777
+      ]
+     ]
+    ],
+    "24": [
+     [
+      [
+       0.509,
+       0.3784
+      ],
+      [
+       0.5157,
+       0.391
+      ],
+      [
+       0.5224,
+       0.4024
+      ],
+      [
+       0.5308,
+       0.3925
+      ],
+      [
+       0.5243,
+       0.3815
+      ],
+      [
+       0.5177,
+       0.3692
+      ]
+     ],
+     [
+      [
+       0.8185,
+       0.6185
+      ],
+      [
+       0.8229,
+       0.626
+      ],
+      [
+       0.8273,
+       0.6335
+      ],
+      [
+       0.8329,
+       0.6269
+      ],
+      [
+       0.8285,
+       0.6194
+      ],
+      [
+       0.8241,
+       0.612
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Nax",
+   "nama": "n.axillaris",
+   "sistem": "saraf",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    23
+   ],
+   "keterangan": "Saraf yang berjalan bersama a. circumflexa humeri posterior (slide 24: \"Axillary Nerve\").",
+   "posisi_2d": {
+    "23": [
+     0.443,
+     0.3147
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "n. axillaris",
+    "axillary nerve"
+   ],
+   "potong": {
+    "23": [
+     [
+      [
+       0.4294,
+       0.2904
+      ],
+      [
+       0.4395,
+       0.3165
+      ],
+      [
+       0.4501,
+       0.3433
+      ],
+      [
+       0.4596,
+       0.3358
+      ],
+      [
+       0.4491,
+       0.3091
+      ],
+      [
+       0.439,
+       0.283
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Ntd",
+   "nama": "Thoracodorsal Nerve",
+   "sistem": "saraf",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    24
+   ],
+   "keterangan": "Saraf yang menyertai a. thoracodorsalis (foto aksila tampak belakang).",
+   "posisi_2d": {
+    "24": [
+     0.7355,
+     0.7067
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "n. thoracodorsalis"
+   ],
+   "potong": {
+    "24": [
+     [
+      [
+       0.7255,
+       0.7028
+      ],
+      [
+       0.7334,
+       0.7109
+      ],
+      [
+       0.7413,
+       0.719
+      ],
+      [
+       0.7456,
+       0.7106
+      ],
+      [
+       0.7377,
+       0.7026
+      ],
+      [
+       0.7298,
+       0.6945
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Tri",
+   "nama": "Triangular Space",
+   "sistem": "lainnya",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    24
+   ],
+   "keterangan": "Celah otot di aksila posterior yang dilalui a. circumflexa scapulae.",
+   "posisi_2d": {
+    "24": [
+     0.799,
+     0.6675
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "24": [
+     [
+      [
+       0.8081,
+       0.6675
+      ],
+      [
+       0.8075,
+       0.6719
+      ],
+      [
+       0.806,
+       0.6758
+      ],
+      [
+       0.8035,
+       0.6786
+      ],
+      [
+       0.8006,
+       0.6802
+      ],
+      [
+       0.7974,
+       0.6802
+      ],
+      [
+       0.7945,
+       0.6786
+      ],
+      [
+       0.792,
+       0.6758
+      ],
+      [
+       0.7905,
+       0.6719
+      ],
+      [
+       0.7899,
+       0.6675
+      ],
+      [
+       0.7905,
+       0.6631
+      ],
+      [
+       0.792,
+       0.6592
+      ],
+      [
+       0.7945,
+       0.6564
+      ],
+      [
+       0.7974,
+       0.6548
+      ],
+      [
+       0.8006,
+       0.6548
+      ],
+      [
+       0.8035,
+       0.6564
+      ],
+      [
+       0.806,
+       0.6592
+      ],
+      [
+       0.8075,
+       0.6631
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Quad",
+   "nama": "Quadrangular Space",
+   "sistem": "lainnya",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    24
+   ],
+   "keterangan": "Celah otot di aksila posterior yang dilalui a. circumflexa humeri posterior dan n. axillaris.",
+   "posisi_2d": {
+    "24": [
+     0.832,
+     0.6775
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "24": [
+     [
+      [
+       0.8411,
+       0.6775
+      ],
+      [
+       0.8405,
+       0.6819
+      ],
+      [
+       0.839,
+       0.6858
+      ],
+      [
+       0.8365,
+       0.6886
+      ],
+      [
+       0.8336,
+       0.6902
+      ],
+      [
+       0.8304,
+       0.6902
+      ],
+      [
+       0.8275,
+       0.6886
+      ],
+      [
+       0.825,
+       0.6858
+      ],
+      [
+       0.8235,
+       0.6819
+      ],
+      [
+       0.8229,
+       0.6775
+      ],
+      [
+       0.8235,
+       0.6731
+      ],
+      [
+       0.825,
+       0.6692
+      ],
+      [
+       0.8275,
+       0.6664
+      ],
+      [
+       0.8304,
+       0.6648
+      ],
+      [
+       0.8336,
+       0.6648
+      ],
+      [
+       0.8365,
+       0.6664
+      ],
+      [
+       0.839,
+       0.6692
+      ],
+      [
+       0.8405,
+       0.6731
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Mpm",
+   "nama": "M. pectoralis minor",
+   "sistem": "otot",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    23
+   ],
+   "keterangan": "Otot dada yang menutupi a. axillaris pada foto kecil aksila kanan.",
+   "posisi_2d": {
+    "23": [
+     0.7663,
+     0.3458
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "m. pectoralis minor"
+   ],
+   "potong": {
+    "23": [
+     [
+      [
+       0.7223,
+       0.3315
+      ],
+      [
+       0.7839,
+       0.329
+      ],
+      [
+       0.8103,
+       0.352
+      ],
+      [
+       0.7927,
+       0.3676
+      ],
+      [
+       0.7355,
+       0.3645
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Vax",
+   "nama": "v. axillaris",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "Vsub-dx",
+   "slide": [
+    29
+   ],
+   "keterangan": "Vena ketiak yang menerima v. cephalica (tabel J1). Berlanjut menjadi v. subclavia.",
+   "posisi_2d": {
+    "29": [
+     0.4386,
+     0.3551
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "V. Axillaris"
+   ],
+   "potong": {
+    "29": [
+     [
+      [
+       0.4302,
+       0.3628
+      ],
+      [
+       0.439,
+       0.3615
+      ],
+      [
+       0.4499,
+       0.3603
+      ],
+      [
+       0.4492,
+       0.3475
+      ],
+      [
+       0.4382,
+       0.3487
+      ],
+      [
+       0.4293,
+       0.35
+      ]
+     ],
+     [
+      [
+       0.5761,
+       0.4298
+      ],
+      [
+       0.5849,
+       0.4267
+      ],
+      [
+       0.5937,
+       0.4236
+      ],
+      [
+       0.5915,
+       0.4111
+      ],
+      [
+       0.5827,
+       0.4142
+      ],
+      [
+       0.5739,
+       0.4173
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "G2",
+   "nama": "a. brachialis",
+   "sistem": "arteri",
+   "induk": "G1",
+   "muara": null,
+   "slide": [
+    22,
+    25,
+    26,
+    27
+   ],
+   "keterangan": "Lanjutan a. axillaris di lengan atas, bercabang a. profunda brachii lalu a. radialis dan a. ulnaris di fossa cubiti.",
+   "posisi_2d": {
+    "22": [
+     0.51,
+     0.528
+    ],
+    "25": [
+     0.5455,
+     0.3614
+    ],
+    "26": [
+     0.5983,
+     0.4049
+    ],
+    "27": [
+     0.4989,
+     0.2139
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "A. brachialis"
+   ],
+   "potong": {
+    "22": [
+     [
+      [
+       0.4853,
+       0.5377
+      ],
+      [
+       0.5103,
+       0.5357
+      ],
+      [
+       0.5383,
+       0.5337
+      ],
+      [
+       0.5377,
+       0.5183
+      ],
+      [
+       0.5097,
+       0.5203
+      ],
+      [
+       0.4847,
+       0.5223
+      ]
+     ]
+    ],
+    "25": [
+     [
+      [
+       0.5375,
+       0.3476
+      ],
+      [
+       0.5402,
+       0.363
+      ],
+      [
+       0.5423,
+       0.3784
+      ],
+      [
+       0.553,
+       0.3754
+      ],
+      [
+       0.5508,
+       0.3597
+      ],
+      [
+       0.5482,
+       0.344
+      ]
+     ]
+    ],
+    "26": [
+     [
+      [
+       0.694,
+       0.334
+      ],
+      [
+       0.7072,
+       0.3247
+      ],
+      [
+       0.7204,
+       0.3154
+      ],
+      [
+       0.7155,
+       0.3016
+      ],
+      [
+       0.7023,
+       0.3109
+      ],
+      [
+       0.6891,
+       0.3202
+      ]
+     ],
+     [
+      [
+       0.5883,
+       0.42
+      ],
+      [
+       0.6007,
+       0.4119
+      ],
+      [
+       0.613,
+       0.4031
+      ],
+      [
+       0.6082,
+       0.3893
+      ],
+      [
+       0.5959,
+       0.398
+      ],
+      [
+       0.5837,
+       0.406
+      ]
+     ]
+    ],
+    "27": [
+     [
+      [
+       0.4934,
+       0.1996
+      ],
+      [
+       0.4934,
+       0.2144
+      ],
+      [
+       0.4948,
+       0.2292
+      ],
+      [
+       0.5056,
+       0.2272
+      ],
+      [
+       0.5043,
+       0.2134
+      ],
+      [
+       0.5043,
+       0.1996
+      ]
+     ],
+     [
+      [
+       0.7394,
+       0.1703
+      ],
+      [
+       0.7403,
+       0.1803
+      ],
+      [
+       0.7412,
+       0.1902
+      ],
+      [
+       0.7484,
+       0.189
+      ],
+      [
+       0.7475,
+       0.179
+      ],
+      [
+       0.7466,
+       0.1691
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Vbr",
+   "nama": "v. brachialis",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "Vax",
+   "slide": [
+    27,
+    29
+   ],
+   "keterangan": "Vena pendamping a. brachialis (slide 27: \"a/v. brachialis\"); menerima v. basilica (tabel J2).",
+   "posisi_2d": {
+    "27": [
+     0.7474,
+     0.1965
+    ],
+    "29": [
+     0.4254,
+     0.3925
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "V. Brachialis"
+   ],
+   "potong": {
+    "27": [
+     [
+      [
+       0.7434,
+       0.1878
+      ],
+      [
+       0.7443,
+       0.1971
+      ],
+      [
+       0.7451,
+       0.2065
+      ],
+      [
+       0.7524,
+       0.2051
+      ],
+      [
+       0.7515,
+       0.1958
+      ],
+      [
+       0.7506,
+       0.1864
+      ]
+     ]
+    ],
+    "29": [
+     [
+      [
+       0.4226,
+       0.3795
+      ],
+      [
+       0.4218,
+       0.392
+      ],
+      [
+       0.4209,
+       0.4057
+      ],
+      [
+       0.4281,
+       0.4066
+      ],
+      [
+       0.429,
+       0.393
+      ],
+      [
+       0.4299,
+       0.3805
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "G2-1",
+   "nama": "a. profunda brachii",
+   "sistem": "arteri",
+   "induk": "G2",
+   "muara": null,
+   "slide": [
+    25,
+    26
+   ],
+   "keterangan": "Cabang a. brachialis; tabel: berjalan bersama n. radialis di lengan atas belakang.",
+   "posisi_2d": {
+    "25": [
+     0.5288,
+     0.3396
+    ],
+    "26": [
+     0.7136,
+     0.2979
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "a. profunda brachii",
+    "a. profunda branchii"
+   ],
+   "potong": {
+    "25": [
+     [
+      [
+       0.5188,
+       0.3381
+      ],
+      [
+       0.5263,
+       0.345
+      ],
+      [
+       0.5338,
+       0.3518
+      ],
+      [
+       0.5387,
+       0.341
+      ],
+      [
+       0.5312,
+       0.3342
+      ],
+      [
+       0.5238,
+       0.3273
+      ]
+     ],
+     [
+      [
+       0.8301,
+       0.3227
+      ],
+      [
+       0.8248,
+       0.3588
+      ],
+      [
+       0.82,
+       0.3911
+      ],
+      [
+       0.8289,
+       0.3938
+      ],
+      [
+       0.8337,
+       0.3614
+      ],
+      [
+       0.839,
+       0.3253
+      ]
+     ]
+    ],
+    "26": [
+     [
+      [
+       0.7069,
+       0.2816
+      ],
+      [
+       0.7091,
+       0.2989
+      ],
+      [
+       0.7108,
+       0.3156
+      ],
+      [
+       0.7198,
+       0.3137
+      ],
+      [
+       0.718,
+       0.2968
+      ],
+      [
+       0.7158,
+       0.2793
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Nrad",
+   "nama": "n. radialis",
+   "sistem": "saraf",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    25,
+    26
+   ],
+   "keterangan": "Saraf yang menyertai a. profunda brachii (slide 25 juga pada tampak posterior lengan kanan).",
+   "posisi_2d": {
+    "25": [
+     0.5345,
+     0.3253
+    ],
+    "26": [
+     0.7215,
+     0.2979
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "25": [
+     [
+      [
+       0.5249,
+       0.3148
+      ],
+      [
+       0.5306,
+       0.3286
+      ],
+      [
+       0.5359,
+       0.341
+      ],
+      [
+       0.5437,
+       0.3344
+      ],
+      [
+       0.5384,
+       0.322
+      ],
+      [
+       0.5327,
+       0.3083
+      ]
+     ],
+     [
+      [
+       0.8349,
+       0.2785
+      ],
+      [
+       0.8335,
+       0.294
+      ],
+      [
+       0.8322,
+       0.3083
+      ],
+      [
+       0.8412,
+       0.3099
+      ],
+      [
+       0.8426,
+       0.2956
+      ],
+      [
+       0.8439,
+       0.28
+      ]
+     ]
+    ],
+    "26": [
+     [
+      [
+       0.7161,
+       0.2811
+      ],
+      [
+       0.7174,
+       0.2986
+      ],
+      [
+       0.7187,
+       0.3154
+      ],
+      [
+       0.7277,
+       0.314
+      ],
+      [
+       0.7264,
+       0.2972
+      ],
+      [
+       0.7251,
+       0.2798
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Nrad-s",
+   "nama": "n. radialis r. superficialis",
+   "sistem": "saraf",
+   "induk": "Nrad",
+   "muara": null,
+   "slide": [
+    27
+   ],
+   "keterangan": "Cabang superfisial n. radialis di lengan bawah, di samping a. radialis.",
+   "posisi_2d": {
+    "27": [
+     0.7048,
+     0.3352
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "27": [
+     [
+      [
+       0.7003,
+       0.3246
+      ],
+      [
+       0.7011,
+       0.3358
+      ],
+      [
+       0.702,
+       0.347
+      ],
+      [
+       0.7092,
+       0.3459
+      ],
+      [
+       0.7084,
+       0.3347
+      ],
+      [
+       0.7075,
+       0.3235
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Nmed",
+   "nama": "n. medianus",
+   "sistem": "saraf",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    26,
+    27
+   ],
+   "keterangan": "Saraf yang berjalan di samping a. brachialis lalu ke lengan bawah.",
+   "posisi_2d": {
+    "26": [
+     0.6665,
+     0.3614
+    ],
+    "27": [
+     0.5143,
+     0.2711
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "26": [
+     [
+      [
+       0.6561,
+       0.3753
+      ],
+      [
+       0.6684,
+       0.3672
+      ],
+      [
+       0.6803,
+       0.3591
+      ],
+      [
+       0.6764,
+       0.3475
+      ],
+      [
+       0.6645,
+       0.3555
+      ],
+      [
+       0.6522,
+       0.3636
+      ]
+     ]
+    ],
+    "27": [
+     [
+      [
+       0.5089,
+       0.2593
+      ],
+      [
+       0.5097,
+       0.2719
+      ],
+      [
+       0.5111,
+       0.2845
+      ],
+      [
+       0.5201,
+       0.2826
+      ],
+      [
+       0.5188,
+       0.2703
+      ],
+      [
+       0.5179,
+       0.258
+      ]
+     ],
+     [
+      [
+       0.7416,
+       0.2061
+      ],
+      [
+       0.742,
+       0.2168
+      ],
+      [
+       0.7429,
+       0.2281
+      ],
+      [
+       0.7502,
+       0.227
+      ],
+      [
+       0.7493,
+       0.2159
+      ],
+      [
+       0.7489,
+       0.2055
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Nuln",
+   "nama": "n. ulnaris",
+   "sistem": "saraf",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    27,
+    28
+   ],
+   "keterangan": "Saraf di sisi ulnar lengan bawah dan tangan, di samping a. ulnaris.",
+   "posisi_2d": {
+    "27": [
+     0.7487,
+     0.423
+    ],
+    "28": [
+     0.4606,
+     0.4379
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "27": [
+     [
+      [
+       0.7442,
+       0.4117
+      ],
+      [
+       0.7451,
+       0.4235
+      ],
+      [
+       0.746,
+       0.4353
+      ],
+      [
+       0.7532,
+       0.4342
+      ],
+      [
+       0.7524,
+       0.4224
+      ],
+      [
+       0.7515,
+       0.4106
+      ]
+     ]
+    ],
+    "28": [
+     [
+      [
+       0.4557,
+       0.4275
+      ],
+      [
+       0.457,
+       0.4387
+      ],
+      [
+       0.4583,
+       0.4505
+      ],
+      [
+       0.4655,
+       0.4489
+      ],
+      [
+       0.4642,
+       0.4371
+      ],
+      [
+       0.4628,
+       0.4259
+      ]
+     ],
+     [
+      [
+       0.6673,
+       0.4378
+      ],
+      [
+       0.6681,
+       0.449
+      ],
+      [
+       0.669,
+       0.4602
+      ],
+      [
+       0.6762,
+       0.4591
+      ],
+      [
+       0.6754,
+       0.4479
+      ],
+      [
+       0.6745,
+       0.4367
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "H1",
+   "nama": "a. radialis",
+   "sistem": "arteri",
+   "induk": "G2",
+   "muara": null,
+   "slide": [
+    26,
+    27,
+    28
+   ],
+   "keterangan": "Cabang a. brachialis di sisi radial lengan bawah; tabel I2: membentuk arcus palmaris profundus.",
+   "posisi_2d": {
+    "26": [
+     0.4782,
+     0.4983
+    ],
+    "27": [
+     0.4901,
+     0.3078
+    ],
+    "28": [
+     0.5112,
+     0.5138
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "A.Radialis"
+   ],
+   "potong": {
+    "26": [
+     [
+      [
+       0.4696,
+       0.4885
+      ],
+      [
+       0.474,
+       0.5022
+      ],
+      [
+       0.4784,
+       0.5159
+      ],
+      [
+       0.4867,
+       0.5105
+      ],
+      [
+       0.4823,
+       0.4968
+      ],
+      [
+       0.4779,
+       0.4832
+      ]
+     ]
+    ],
+    "27": [
+     [
+      [
+       0.4847,
+       0.2967
+      ],
+      [
+       0.4855,
+       0.3086
+      ],
+      [
+       0.4869,
+       0.3218
+      ],
+      [
+       0.4959,
+       0.32
+      ],
+      [
+       0.4946,
+       0.307
+      ],
+      [
+       0.4937,
+       0.2953
+      ]
+     ],
+     [
+      [
+       0.464,
+       0.4584
+      ],
+      [
+       0.4649,
+       0.4711
+      ],
+      [
+       0.4662,
+       0.4837
+      ],
+      [
+       0.4752,
+       0.4817
+      ],
+      [
+       0.4739,
+       0.4695
+      ],
+      [
+       0.473,
+       0.4572
+      ]
+     ],
+     [
+      [
+       0.7113,
+       0.3669
+      ],
+      [
+       0.7121,
+       0.3787
+      ],
+      [
+       0.713,
+       0.3905
+      ],
+      [
+       0.7202,
+       0.3894
+      ],
+      [
+       0.7194,
+       0.3776
+      ],
+      [
+       0.7185,
+       0.3658
+      ]
+     ]
+    ],
+    "28": [
+     [
+      [
+       0.5067,
+       0.5019
+      ],
+      [
+       0.5076,
+       0.5143
+      ],
+      [
+       0.5084,
+       0.5268
+      ],
+      [
+       0.5157,
+       0.5257
+      ],
+      [
+       0.5148,
+       0.5133
+      ],
+      [
+       0.5139,
+       0.5009
+      ]
+     ],
+     [
+      [
+       0.739,
+       0.5162
+      ],
+      [
+       0.7399,
+       0.5274
+      ],
+      [
+       0.7407,
+       0.5387
+      ],
+      [
+       0.748,
+       0.5375
+      ],
+      [
+       0.7471,
+       0.5263
+      ],
+      [
+       0.7462,
+       0.5151
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "H2",
+   "nama": "a. ulnaris",
+   "sistem": "arteri",
+   "induk": "G2",
+   "muara": null,
+   "slide": [
+    26,
+    27,
+    28
+   ],
+   "keterangan": "Cabang a. brachialis di sisi ulnar lengan bawah; tabel I1: membentuk arcus palmaris superficialis.",
+   "posisi_2d": {
+    "26": [
+     0.4654,
+     0.4827
+    ],
+    "27": [
+     0.5037,
+     0.3203
+    ],
+    "28": [
+     0.465,
+     0.4908
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "A.Ulnaris"
+   ],
+   "potong": {
+    "26": [
+     [
+      [
+       0.4592,
+       0.4682
+      ],
+      [
+       0.4609,
+       0.4837
+      ],
+      [
+       0.4627,
+       0.4993
+      ],
+      [
+       0.4717,
+       0.4972
+      ],
+      [
+       0.4699,
+       0.4817
+      ],
+      [
+       0.4681,
+       0.4661
+      ]
+     ]
+    ],
+    "27": [
+     [
+      [
+       0.4987,
+       0.3088
+      ],
+      [
+       0.4992,
+       0.3208
+      ],
+      [
+       0.5001,
+       0.334
+      ],
+      [
+       0.5091,
+       0.3327
+      ],
+      [
+       0.5082,
+       0.3198
+      ],
+      [
+       0.5078,
+       0.3081
+      ]
+     ],
+     [
+      [
+       0.508,
+       0.5642
+      ],
+      [
+       0.5089,
+       0.5767
+      ],
+      [
+       0.5097,
+       0.5891
+      ],
+      [
+       0.5188,
+       0.5878
+      ],
+      [
+       0.5179,
+       0.5754
+      ],
+      [
+       0.517,
+       0.563
+      ]
+     ],
+     [
+      [
+       0.7399,
+       0.3277
+      ],
+      [
+       0.7407,
+       0.3383
+      ],
+      [
+       0.7416,
+       0.3495
+      ],
+      [
+       0.7488,
+       0.3483
+      ],
+      [
+       0.748,
+       0.3371
+      ],
+      [
+       0.7471,
+       0.3265
+      ]
+     ]
+    ],
+    "28": [
+     [
+      [
+       0.4605,
+       0.4789
+      ],
+      [
+       0.4614,
+       0.4913
+      ],
+      [
+       0.4622,
+       0.5037
+      ],
+      [
+       0.4695,
+       0.5027
+      ],
+      [
+       0.4686,
+       0.4903
+      ],
+      [
+       0.4677,
+       0.4778
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "I1",
+   "nama": "arcus palmaris superficialis",
+   "sistem": "arteri",
+   "induk": "H2",
+   "muara": null,
+   "slide": [
+    28
+   ],
+   "keterangan": "Lengkung arteri telapak tangan superfisial yang dibentuk a. ulnaris (tabel).",
+   "posisi_2d": {
+    "28": [
+     0.4751,
+     0.3564
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "Arcus Palmaris Superficialis"
+   ],
+   "potong": {
+    "28": [
+     [
+      [
+       0.4575,
+       0.3575
+      ],
+      [
+       0.475,
+       0.3653
+      ],
+      [
+       0.4941,
+       0.3582
+      ],
+      [
+       0.4913,
+       0.3433
+      ],
+      [
+       0.4752,
+       0.3499
+      ],
+      [
+       0.461,
+       0.3428
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "I2",
+   "nama": "arcus palmaris profundus",
+   "sistem": "arteri",
+   "induk": "H1",
+   "muara": null,
+   "slide": [
+    28
+   ],
+   "keterangan": "Lengkung arteri telapak tangan dalam yang dibentuk a. radialis (tabel).",
+   "posisi_2d": {
+    "28": [
+     0.7333,
+     0.4024
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "Arcus Palmaris Profundus"
+   ],
+   "potong": {
+    "28": [
+     [
+      [
+       0.7084,
+       0.4063
+      ],
+      [
+       0.7336,
+       0.4114
+      ],
+      [
+       0.7546,
+       0.4037
+      ],
+      [
+       0.7517,
+       0.3888
+      ],
+      [
+       0.7331,
+       0.396
+      ],
+      [
+       0.7099,
+       0.3911
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Mpt",
+   "nama": "m. pronator teres",
+   "sistem": "otot",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    27,
+    32
+   ],
+   "keterangan": "Otot lengan bawah di batas medial fossa cubiti; slide 32: \"PRONATOR TERES MUSCLE\".",
+   "posisi_2d": {
+    "27": [
+     0.5235,
+     0.2419
+    ],
+    "32": [
+     0.6102,
+     0.5493
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "pronator teres muscle"
+   ],
+   "potong": {
+    "27": [
+     [
+      [
+       0.5134,
+       0.2319
+      ],
+      [
+       0.5332,
+       0.2319
+      ],
+      [
+       0.5354,
+       0.2525
+      ],
+      [
+       0.5156,
+       0.2543
+      ]
+     ],
+     [
+      [
+       0.4848,
+       0.352
+      ],
+      [
+       0.4958,
+       0.352
+      ],
+      [
+       0.498,
+       0.3769
+      ],
+      [
+       0.487,
+       0.3788
+      ]
+     ]
+    ],
+    "32": [
+     [
+      [
+       0.5992,
+       0.5418
+      ],
+      [
+       0.6168,
+       0.5418
+      ],
+      [
+       0.6176,
+       0.5667
+      ],
+      [
+       0.6,
+       0.568
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Mbr",
+   "nama": "m. brachioradialis",
+   "sistem": "otot",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    27,
+    32
+   ],
+   "keterangan": "Otot lengan bawah sisi radial; slide 32: \"BRACHIORADIALIS MUSCLE\".",
+   "posisi_2d": {
+    "27": [
+     0.4557,
+     0.3937
+    ],
+    "32": [
+     0.696,
+     0.5244
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "brachioradialis muscle"
+   ],
+   "potong": {
+    "27": [
+     [
+      [
+       0.4496,
+       0.3738
+      ],
+      [
+       0.4606,
+       0.3738
+      ],
+      [
+       0.4619,
+       0.4111
+      ],
+      [
+       0.4509,
+       0.4143
+      ]
+     ]
+    ],
+    "32": [
+     [
+      [
+       0.6894,
+       0.5138
+      ],
+      [
+       0.707,
+       0.5138
+      ],
+      [
+       0.7083,
+       0.5387
+      ],
+      [
+       0.6907,
+       0.5406
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Mfds",
+   "nama": "m. flexor digitorum superficialis",
+   "sistem": "otot",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    27
+   ],
+   "keterangan": "Otot fleksor lengan bawah; foto kanan slide 27 menunjuk tendonnya yang dipotong.",
+   "posisi_2d": {
+    "27": [
+     0.4914,
+     0.4267
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "27": [
+     [
+      [
+       0.4826,
+       0.4143
+      ],
+      [
+       0.498,
+       0.4143
+      ],
+      [
+       0.4989,
+       0.4391
+      ],
+      [
+       0.4839,
+       0.441
+      ]
+     ],
+     [
+      [
+       0.5288,
+       0.3645
+      ],
+      [
+       0.542,
+       0.3645
+      ],
+      [
+       0.5429,
+       0.3862
+      ],
+      [
+       0.5297,
+       0.3875
+      ]
+     ],
+     [
+      [
+       0.7377,
+       0.4703
+      ],
+      [
+       0.7487,
+       0.4703
+      ],
+      [
+       0.7496,
+       0.4889
+      ],
+      [
+       0.7386,
+       0.4908
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Mfcu",
+   "nama": "m. fexor carpi ulnaris",
+   "sistem": "otot",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    27
+   ],
+   "keterangan": "Otot fleksor sisi ulnar (ejaan slide \"fexor\"); juga ditunjuk dalam keadaan dipotong.",
+   "posisi_2d": {
+    "27": [
+     0.5358,
+     0.5269
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "m. flexor carpi ulnaris"
+   ],
+   "potong": {
+    "27": [
+     [
+      [
+       0.5288,
+       0.5169
+      ],
+      [
+       0.5411,
+       0.5157
+      ],
+      [
+       0.5429,
+       0.5356
+      ],
+      [
+       0.531,
+       0.5387
+      ]
+     ],
+     [
+      [
+       0.7509,
+       0.2587
+      ],
+      [
+       0.7619,
+       0.2587
+      ],
+      [
+       0.7628,
+       0.2742
+      ],
+      [
+       0.7518,
+       0.2755
+      ]
+     ],
+     [
+      [
+       0.7465,
+       0.4983
+      ],
+      [
+       0.7553,
+       0.4983
+      ],
+      [
+       0.7562,
+       0.5169
+      ],
+      [
+       0.7474,
+       0.5182
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Mfcr",
+   "nama": "m. fexor carpi radialis tendon, cut",
+   "sistem": "otot",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    27
+   ],
+   "keterangan": "Tendon fleksor sisi radial yang dipotong di pergelangan tangan.",
+   "posisi_2d": {
+    "27": [
+     0.7228,
+     0.5032
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "m. flexor carpi radialis"
+   ],
+   "potong": {
+    "27": [
+     [
+      [
+       0.7179,
+       0.492
+      ],
+      [
+       0.7267,
+       0.492
+      ],
+      [
+       0.7276,
+       0.5138
+      ],
+      [
+       0.7188,
+       0.5157
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Mbb",
+   "nama": "m.biceps brachii",
+   "sistem": "otot",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    31,
+    32
+   ],
+   "keterangan": "Otot lengan atas di atas fossa cubiti; slide 32: \"BICEPS BRACHII MUSCLE\".",
+   "posisi_2d": {
+    "31": [
+     0.5816,
+     0.2431
+    ],
+    "32": [
+     0.6498,
+     0.2133
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "m. biceps brachii",
+    "biceps brachii muscle"
+   ],
+   "potong": {
+    "31": [
+     [
+      [
+       0.5684,
+       0.2307
+      ],
+      [
+       0.5926,
+       0.2276
+      ],
+      [
+       0.5948,
+       0.2556
+      ],
+      [
+       0.5706,
+       0.2587
+      ]
+     ],
+     [
+      [
+       0.7443,
+       0.296
+      ],
+      [
+       0.7773,
+       0.296
+      ],
+      [
+       0.7787,
+       0.324
+      ],
+      [
+       0.7452,
+       0.3253
+      ]
+     ]
+    ],
+    "32": [
+     [
+      [
+       0.6388,
+       0.1933
+      ],
+      [
+       0.6608,
+       0.1933
+      ],
+      [
+       0.6616,
+       0.2338
+      ],
+      [
+       0.6396,
+       0.2357
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "Nabc",
+   "nama": "Antebrachial cutaneous nerve",
+   "sistem": "saraf",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    32
+   ],
+   "keterangan": "Saraf kulit lengan bawah yang berjalan di samping vena superfisial fossa cubiti.",
+   "posisi_2d": {
+    "32": [
+     0.5802,
+     0.4684
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "n. cutaneus antebrachii"
+   ],
+   "potong": {
+    "32": [
+     [
+      [
+       0.5746,
+       0.4593
+      ],
+      [
+       0.5767,
+       0.4695
+      ],
+      [
+       0.578,
+       0.4804
+      ],
+      [
+       0.5852,
+       0.4787
+      ],
+      [
+       0.5838,
+       0.4672
+      ],
+      [
+       0.5815,
+       0.4564
+      ]
+     ],
+     [
+      [
+       0.5684,
+       0.4934
+      ],
+      [
+       0.5701,
+       0.5024
+      ],
+      [
+       0.5709,
+       0.5114
+      ],
+      [
+       0.5781,
+       0.51
+      ],
+      [
+       0.5772,
+       0.5004
+      ],
+      [
+       0.5754,
+       0.4907
+      ]
+     ],
+     [
+      [
+       0.575,
+       0.5151
+      ],
+      [
+       0.5767,
+       0.5243
+      ],
+      [
+       0.578,
+       0.5335
+      ],
+      [
+       0.5851,
+       0.5315
+      ],
+      [
+       0.5838,
+       0.522
+      ],
+      [
+       0.582,
+       0.5125
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "J1",
+   "nama": "V. cephalica",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "Vax",
+   "slide": [
+    29,
+    30,
+    31,
+    32
+   ],
+   "keterangan": "Vena superfisial sisi lateral lengan (slide 30: \"Cephalic vein in the forearm/arm\"); tabel: bermuara ke v. axillaris.",
+   "posisi_2d": {
+    "29": [
+     0.4126,
+     0.4373
+    ],
+    "30": [
+     0.4839,
+     0.268
+    ],
+    "31": [
+     0.6036,
+     0.2369
+    ],
+    "32": [
+     0.674,
+     0.2481
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "cephalic vein"
+   ],
+   "potong": {
+    "29": [
+     [
+      [
+       0.4099,
+       0.4261
+      ],
+      [
+       0.409,
+       0.4367
+      ],
+      [
+       0.4081,
+       0.4479
+      ],
+      [
+       0.4154,
+       0.449
+      ],
+      [
+       0.4162,
+       0.4379
+      ],
+      [
+       0.4171,
+       0.4273
+      ]
+     ],
+     [
+      [
+       0.4231,
+       0.5268
+      ],
+      [
+       0.42,
+       0.5342
+      ],
+      [
+       0.417,
+       0.5417
+      ],
+      [
+       0.4232,
+       0.5469
+      ],
+      [
+       0.4263,
+       0.5394
+      ],
+      [
+       0.4294,
+       0.532
+      ]
+     ],
+     [
+      [
+       0.5473,
+       0.4657
+      ],
+      [
+       0.5504,
+       0.4782
+      ],
+      [
+       0.5535,
+       0.4906
+      ],
+      [
+       0.5604,
+       0.4872
+      ],
+      [
+       0.5573,
+       0.4748
+      ],
+      [
+       0.5542,
+       0.4623
+      ]
+     ]
+    ],
+    "30": [
+     [
+      [
+       0.462,
+       0.2694
+      ],
+      [
+       0.4827,
+       0.2742
+      ],
+      [
+       0.5051,
+       0.2865
+      ],
+      [
+       0.5084,
+       0.2745
+      ],
+      [
+       0.4851,
+       0.2618
+      ],
+      [
+       0.4635,
+       0.2567
+      ]
+     ],
+     [
+      [
+       0.6348,
+       0.2589
+      ],
+      [
+       0.6647,
+       0.2545
+      ],
+      [
+       0.6963,
+       0.2514
+      ],
+      [
+       0.6956,
+       0.2386
+      ],
+      [
+       0.6639,
+       0.2417
+      ],
+      [
+       0.6339,
+       0.2461
+      ]
+     ]
+    ],
+    "31": [
+     [
+      [
+       0.5991,
+       0.225
+      ],
+      [
+       0.5999,
+       0.2374
+      ],
+      [
+       0.6008,
+       0.2499
+      ],
+      [
+       0.6081,
+       0.2488
+      ],
+      [
+       0.6072,
+       0.2364
+      ],
+      [
+       0.6063,
+       0.2239
+      ]
+     ],
+     [
+      [
+       0.6272,
+       0.3813
+      ],
+      [
+       0.6272,
+       0.3928
+      ],
+      [
+       0.6281,
+       0.4042
+      ],
+      [
+       0.6353,
+       0.4031
+      ],
+      [
+       0.6345,
+       0.3922
+      ],
+      [
+       0.6345,
+       0.3813
+      ]
+     ],
+     [
+      [
+       0.7729,
+       0.2593
+      ],
+      [
+       0.7737,
+       0.2698
+      ],
+      [
+       0.7746,
+       0.281
+      ],
+      [
+       0.7818,
+       0.2799
+      ],
+      [
+       0.781,
+       0.2687
+      ],
+      [
+       0.7801,
+       0.2581
+      ]
+     ],
+     [
+      [
+       0.7798,
+       0.3997
+      ],
+      [
+       0.7829,
+       0.4085
+      ],
+      [
+       0.786,
+       0.4172
+      ],
+      [
+       0.7925,
+       0.4126
+      ],
+      [
+       0.7894,
+       0.4039
+      ],
+      [
+       0.7863,
+       0.3952
+      ]
+     ]
+    ],
+    "32": [
+     [
+      [
+       0.6686,
+       0.2363
+      ],
+      [
+       0.6694,
+       0.2487
+      ],
+      [
+       0.6703,
+       0.2612
+      ],
+      [
+       0.6794,
+       0.2599
+      ],
+      [
+       0.6785,
+       0.2475
+      ],
+      [
+       0.6776,
+       0.235
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "J2",
+   "nama": "V. basilica",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "Vbr",
+   "slide": [
+    29,
+    30,
+    31,
+    32
+   ],
+   "keterangan": "Vena superfisial sisi medial lengan (slide 30: \"Basilic vein in the arm\"); tabel: bermuara ke v. brachialis.",
+   "posisi_2d": {
+    "29": [
+     0.4276,
+     0.4311
+    ],
+    "30": [
+     0.6344,
+     0.3414
+    ],
+    "31": [
+     0.5587,
+     0.2525
+    ],
+    "32": [
+     0.6102,
+     0.212
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "basilic vein"
+   ],
+   "potong": {
+    "29": [
+     [
+      [
+       0.4249,
+       0.4199
+      ],
+      [
+       0.424,
+       0.4305
+      ],
+      [
+       0.4231,
+       0.4417
+      ],
+      [
+       0.4303,
+       0.4428
+      ],
+      [
+       0.4312,
+       0.4316
+      ],
+      [
+       0.4321,
+       0.4211
+      ]
+     ],
+     [
+      [
+       0.4099,
+       0.5285
+      ],
+      [
+       0.4086,
+       0.5397
+      ],
+      [
+       0.4073,
+       0.5503
+      ],
+      [
+       0.4144,
+       0.552
+      ],
+      [
+       0.4158,
+       0.5414
+      ],
+      [
+       0.4171,
+       0.5302
+      ]
+     ],
+     [
+      [
+       0.523,
+       0.617
+      ],
+      [
+       0.5238,
+       0.6294
+      ],
+      [
+       0.5247,
+       0.6419
+      ],
+      [
+       0.532,
+       0.6409
+      ],
+      [
+       0.5311,
+       0.6284
+      ],
+      [
+       0.5302,
+       0.616
+      ]
+     ]
+    ],
+    "30": [
+     [
+      [
+       0.6074,
+       0.3428
+      ],
+      [
+       0.6344,
+       0.3479
+      ],
+      [
+       0.6615,
+       0.3416
+      ],
+      [
+       0.66,
+       0.3289
+      ],
+      [
+       0.6343,
+       0.335
+      ],
+      [
+       0.6086,
+       0.3301
+      ]
+     ]
+    ],
+    "31": [
+     [
+      [
+       0.5551,
+       0.2419
+      ],
+      [
+       0.5551,
+       0.2528
+      ],
+      [
+       0.556,
+       0.2636
+      ],
+      [
+       0.5632,
+       0.2624
+      ],
+      [
+       0.5623,
+       0.2522
+      ],
+      [
+       0.5623,
+       0.2419
+      ]
+     ],
+     [
+      [
+       0.5524,
+       0.3271
+      ],
+      [
+       0.5524,
+       0.338
+      ],
+      [
+       0.5533,
+       0.3495
+      ],
+      [
+       0.5605,
+       0.3483
+      ],
+      [
+       0.5597,
+       0.3374
+      ],
+      [
+       0.5597,
+       0.3271
+      ]
+     ],
+     [
+      [
+       0.7343,
+       0.279
+      ],
+      [
+       0.7365,
+       0.2883
+      ],
+      [
+       0.7387,
+       0.2976
+      ],
+      [
+       0.7456,
+       0.2944
+      ],
+      [
+       0.7434,
+       0.2851
+      ],
+      [
+       0.7412,
+       0.2757
+      ]
+     ],
+     [
+      [
+       0.7201,
+       0.3402
+      ],
+      [
+       0.7209,
+       0.3507
+      ],
+      [
+       0.7218,
+       0.3619
+      ],
+      [
+       0.729,
+       0.3608
+      ],
+      [
+       0.7282,
+       0.3496
+      ],
+      [
+       0.7273,
+       0.339
+      ]
+     ]
+    ],
+    "32": [
+     [
+      [
+       0.6036,
+       0.2011
+      ],
+      [
+       0.6057,
+       0.2133
+      ],
+      [
+       0.607,
+       0.2254
+      ],
+      [
+       0.616,
+       0.2235
+      ],
+      [
+       0.6146,
+       0.2108
+      ],
+      [
+       0.6124,
+       0.198
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "J3a",
+   "nama": "V. mediana cephalica",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "J1",
+   "slide": [
+    31,
+    32
+   ],
+   "keterangan": "Vena superfisial fossa cubiti di sisi lateral (slide 32: \"MEDIAN CEPHALIC VEIN\").",
+   "posisi_2d": {
+    "31": [
+     0.5926,
+     0.2942
+    ],
+    "32": [
+     0.6704,
+     0.38
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "median cephalic vein"
+   ],
+   "potong": {
+    "31": [
+     [
+      [
+       0.5837,
+       0.2907
+      ],
+      [
+       0.5902,
+       0.2981
+      ],
+      [
+       0.5968,
+       0.3061
+      ],
+      [
+       0.6015,
+       0.2984
+      ],
+      [
+       0.5949,
+       0.2902
+      ],
+      [
+       0.5882,
+       0.2827
+      ]
+     ]
+    ],
+    "32": [
+     [
+      [
+       0.6631,
+       0.3697
+      ],
+      [
+       0.6661,
+       0.382
+      ],
+      [
+       0.6687,
+       0.3943
+      ],
+      [
+       0.6774,
+       0.3906
+      ],
+      [
+       0.6748,
+       0.378
+      ],
+      [
+       0.6716,
+       0.3655
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "J3b",
+   "nama": "V. mediana basilica",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "J2",
+   "slide": [
+    31,
+    32
+   ],
+   "keterangan": "Vena superfisial fossa cubiti di sisi medial (slide 32: \"MEDIAN BASILIC VEIN\").",
+   "posisi_2d": {
+    "31": [
+     0.5772,
+     0.2854
+    ],
+    "32": [
+     0.6278,
+     0.3968
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "median basilic vein"
+   ],
+   "potong": {
+    "31": [
+     [
+      [
+       0.5689,
+       0.285
+      ],
+      [
+       0.5751,
+       0.2897
+      ],
+      [
+       0.5815,
+       0.2969
+      ],
+      [
+       0.586,
+       0.2889
+      ],
+      [
+       0.5792,
+       0.2812
+      ],
+      [
+       0.5723,
+       0.2759
+      ]
+     ]
+    ],
+    "32": [
+     [
+      [
+       0.6178,
+       0.3905
+      ],
+      [
+       0.6243,
+       0.4011
+      ],
+      [
+       0.63,
+       0.4104
+      ],
+      [
+       0.6369,
+       0.402
+      ],
+      [
+       0.6312,
+       0.3926
+      ],
+      [
+       0.6246,
+       0.382
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "J3c",
+   "nama": "V. mediana cubiti",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "J2",
+   "slide": [
+    30,
+    31
+   ],
+   "keterangan": "Penghubung v. cephalica dan v. basilica di fossa cubiti; tabel: tempat venipuncture.",
+   "posisi_2d": {
+    "30": [
+     0.5802,
+     0.3178
+    ],
+    "31": [
+     0.7641,
+     0.3508
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "median cubital vein"
+   ],
+   "potong": {
+    "30": [
+     [
+      [
+       0.561,
+       0.3027
+      ],
+      [
+       0.5775,
+       0.3229
+      ],
+      [
+       0.5945,
+       0.3387
+      ],
+      [
+       0.5995,
+       0.328
+      ],
+      [
+       0.583,
+       0.3127
+      ],
+      [
+       0.5669,
+       0.293
+      ]
+     ]
+    ],
+    "31": [
+     [
+      [
+       0.7558,
+       0.3503
+      ],
+      [
+       0.7624,
+       0.3553
+      ],
+      [
+       0.7689,
+       0.3608
+      ],
+      [
+       0.7726,
+       0.352
+      ],
+      [
+       0.7659,
+       0.3463
+      ],
+      [
+       0.7593,
+       0.3413
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "J3d",
+   "nama": "V. mediana antebrachii",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "J3c",
+   "slide": [
+    30,
+    31,
+    32
+   ],
+   "keterangan": "Vena superfisial di tengah lengan bawah depan. Muara mengikuti anatomi standar, slide tidak menyebutkan.",
+   "posisi_2d": {
+    "30": [
+     0.4958,
+     0.3228
+    ],
+    "31": [
+     0.6102,
+     0.4205
+    ],
+    "32": [
+     0.6806,
+     0.5449
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "median antebrachial vein"
+   ],
+   "potong": {
+    "30": [
+     [
+      [
+       0.4735,
+       0.3273
+      ],
+      [
+       0.4953,
+       0.3292
+      ],
+      [
+       0.5193,
+       0.3341
+      ],
+      [
+       0.5206,
+       0.3214
+      ],
+      [
+       0.4963,
+       0.3164
+      ],
+      [
+       0.4741,
+       0.3145
+      ]
+     ]
+    ],
+    "31": [
+     [
+      [
+       0.601,
+       0.4148
+      ],
+      [
+       0.6076,
+       0.4241
+      ],
+      [
+       0.6142,
+       0.4334
+      ],
+      [
+       0.6193,
+       0.4262
+      ],
+      [
+       0.6127,
+       0.4168
+      ],
+      [
+       0.6061,
+       0.4075
+      ]
+     ],
+     [
+      [
+       0.7516,
+       0.4314
+      ],
+      [
+       0.7581,
+       0.4356
+      ],
+      [
+       0.7646,
+       0.4406
+      ],
+      [
+       0.7681,
+       0.4315
+      ],
+      [
+       0.7614,
+       0.4265
+      ],
+      [
+       0.7547,
+       0.422
+      ]
+     ]
+    ],
+    "32": [
+     [
+      [
+       0.6734,
+       0.5383
+      ],
+      [
+       0.6763,
+       0.5473
+      ],
+      [
+       0.6793,
+       0.5595
+      ],
+      [
+       0.6879,
+       0.5553
+      ],
+      [
+       0.6848,
+       0.5425
+      ],
+      [
+       0.6816,
+       0.5329
+      ]
+     ]
+    ]
+   }
+  }
+ ],
+ "foto": {
+  "18": {
+   "area": [
+    0.345,
+    0.17,
+    0.88,
+    0.845
+   ],
+   "tutup": [
+    [
+     0.375,
+     0.334,
+     0.528,
+     0.372
+    ],
+    [
+     0.383,
+     0.398,
+     0.478,
+     0.418
+    ],
+    [
+     0.375,
+     0.471,
+     0.478,
+     0.493
+    ],
+    [
+     0.362,
+     0.508,
+     0.489,
+     0.53
+    ],
+    [
+     0.451,
+     0.572,
+     0.512,
+     0.592
+    ],
+    [
+     0.772,
+     0.268,
+     0.867,
+     0.288
+    ],
+    [
+     0.779,
+     0.423,
+     0.848,
+     0.462
+    ],
+    [
+     0.773,
+     0.479,
+     0.878,
+     0.535
+    ],
+    [
+     0.349,
+     0.632,
+     0.413,
+     0.672
+    ],
+    [
+     0.349,
+     0.698,
+     0.413,
+     0.739
+    ],
+    [
+     0.598,
+     0.646,
+     0.656,
+     0.683
+    ],
+    [
+     0.598,
+     0.749,
+     0.656,
+     0.786
+    ],
+    [
+     0.812,
+     0.711,
+     0.87,
+     0.749
+    ]
+   ]
+  },
+  "19": {
+   "area": [
+    0.345,
+    0.13,
+    0.815,
+    0.86
+   ],
+   "tutup": [
+    [
+     0.357,
+     0.289,
+     0.414,
+     0.34400000000000003
+    ],
+    [
+     0.5599999999999999,
+     0.379,
+     0.66,
+     0.402
+    ],
+    [
+     0.563,
+     0.401,
+     0.701,
+     0.426
+    ],
+    [
+     0.611,
+     0.469,
+     0.745,
+     0.495
+    ],
+    [
+     0.401,
+     0.625,
+     0.507,
+     0.649
+    ],
+    [
+     0.517,
+     0.636,
+     0.609,
+     0.658
+    ],
+    [
+     0.364,
+     0.665,
+     0.45,
+     0.687
+    ],
+    [
+     0.364,
+     0.704,
+     0.429,
+     0.742
+    ],
+    [
+     0.347,
+     0.751,
+     0.432,
+     0.773
+    ],
+    [
+     0.371,
+     0.79,
+     0.461,
+     0.8140000000000001
+    ],
+    [
+     0.694,
+     0.65,
+     0.779,
+     0.672
+    ],
+    [
+     0.745,
+     0.705,
+     0.808,
+     0.729
+    ],
+    [
+     0.735,
+     0.727,
+     0.807,
+     0.765
+    ],
+    [
+     0.602,
+     0.8099999999999999,
+     0.708,
+     0.833
+    ]
+   ]
+  },
+  "20": {
+   "area": [
+    0.355,
+    0.135,
+    0.876,
+    0.551
+   ],
+   "tutup": [
+    [
+     0.578,
+     0.227,
+     0.663,
+     0.268
+    ],
+    [
+     0.578,
+     0.331,
+     0.663,
+     0.38
+    ]
+   ]
+  },
+  "21": {
+   "area": [
+    0.34,
+    0.12,
+    0.885,
+    0.877
+   ],
+   "tutup": [
+    [
+     0.348,
+     0.196,
+     0.45,
+     0.258
+    ],
+    [
+     0.353,
+     0.341,
+     0.45,
+     0.402
+    ],
+    [
+     0.665,
+     0.25,
+     0.714,
+     0.276
+    ],
+    [
+     0.663,
+     0.285,
+     0.698,
+     0.323
+    ],
+    [
+     0.8,
+     0.235,
+     0.849,
+     0.261
+    ],
+    [
+     0.802,
+     0.278,
+     0.85,
+     0.304
+    ],
+    [
+     0.8109999999999999,
+     0.329,
+     0.852,
+     0.355
+    ],
+    [
+     0.813,
+     0.366,
+     0.852,
+     0.404
+    ],
+    [
+     0.663,
+     0.402,
+     0.711,
+     0.427
+    ],
+    [
+     0.349,
+     0.563,
+     0.427,
+     0.612
+    ],
+    [
+     0.349,
+     0.669,
+     0.442,
+     0.717
+    ],
+    [
+     0.63,
+     0.703,
+     0.675,
+     0.737
+    ],
+    [
+     0.63,
+     0.74,
+     0.675,
+     0.767
+    ],
+    [
+     0.63,
+     0.766,
+     0.675,
+     0.799
+    ],
+    [
+     0.653,
+     0.803,
+     0.671,
+     0.82
+    ],
+    [
+     0.65,
+     0.826,
+     0.672,
+     0.844
+    ],
+    [
+     0.755,
+     0.736,
+     0.788,
+     0.77
+    ],
+    [
+     0.753,
+     0.768,
+     0.786,
+     0.792
+    ],
+    [
+     0.75,
+     0.793,
+     0.783,
+     0.817
+    ]
+   ]
+  },
+  "22": {
+   "area": [
+    0.346,
+    0.248,
+    0.879,
+    0.672
+   ],
+   "tutup": [
+    [
+     0.408,
+     0.449,
+     0.46,
+     0.47000000000000003
+    ],
+    [
+     0.806,
+     0.45,
+     0.862,
+     0.47100000000000003
+    ],
+    [
+     0.383,
+     0.519,
+     0.443,
+     0.539
+    ]
+   ]
+  },
+  "23": {
+   "area": [
+    0.34619445666520016,
+    0.13422526446795272,
+    0.8785305763308402,
+    0.5635967641568139
+   ],
+   "tutup": [
+    [
+     0.3555129784425869,
+     0.1405594275046671,
+     0.44950241970963484,
+     0.17456191661481021
+    ],
+    [
+     0.4531812582490101,
+     0.13931487243310517,
+     0.5405714914210294,
+     0.17269508400746736
+    ],
+    [
+     0.6247606687197537,
+     0.4031605476042315,
+     0.6769551253849538,
+     0.43591848164281266
+    ],
+    [
+     0.3607923449186098,
+     0.4597878033602987,
+     0.4085873295204575,
+     0.4937902924704418
+    ],
+    [
+     0.4553809942806863,
+     0.47970068450528935,
+     0.5207738671359436,
+     0.5149477286869945
+    ],
+    [
+     0.4135860096788385,
+     0.5338388301182327,
+     0.4912974043114826,
+     0.5522843808338519
+    ],
+    [
+     0.5160937087549494,
+     0.5307274424393279,
+     0.56916805983282,
+     0.564729931549471
+    ],
+    [
+     0.7369472063352397,
+     0.30048475420037335,
+     0.7922212934447866,
+     0.3313758556316117
+    ]
+   ]
+  },
+  "24": {
+   "area": [
+    0.34619445666520016,
+    0.13111387678904793,
+    0.8785305763308402,
+    0.8373988799004356
+   ],
+   "tutup": [
+    [
+     0.39698812142542894,
+     0.16458369632856254,
+     0.4375037395512539,
+     0.17978469197261981
+    ],
+    [
+     0.34859392872855255,
+     0.3500224019912881,
+     0.4273849538055433,
+     0.3789135034225265
+    ],
+    [
+     0.5311720193576771,
+     0.4390080896079651,
+     0.6121627804663441,
+     0.4678991910392035
+    ],
+    [
+     0.5786863176418829,
+     0.5429284380833852,
+     0.6636366036075672,
+     0.5687081518357188
+    ],
+    [
+     0.5848455785305764,
+     0.605156191661481,
+     0.6539577650681918,
+     0.6352918481642813
+    ],
+    [
+     0.5927646282446106,
+     0.6487156191661481,
+     0.661876814782226,
+     0.6794735532047292
+    ],
+    [
+     0.5848455785305764,
+     0.6941418792781581,
+     0.6539577650681918,
+     0.7354785314250155
+    ],
+    [
+     0.5892450505939287,
+     0.7576141879278158,
+     0.6583572371315443,
+     0.7989508400746733
+    ],
+    [
+     0.7885411350637923,
+     0.516170504044804,
+     0.8176181258249009,
+     0.5413279402613566
+    ],
+    [
+     0.7797421909370875,
+     0.5472843808338519,
+     0.8202578090629125,
+     0.5730640945861855
+    ],
+    [
+     0.8224170699516058,
+     0.5541294337274424,
+     0.8721715794104707,
+     0.5917324206596142
+    ],
+    [
+     0.8435345358556974,
+     0.5989334163036714,
+     0.8721715794104707,
+     0.6259576851275669
+    ],
+    [
+     0.7533453585569732,
+     0.5958220286247666,
+     0.8079392872855258,
+     0.6234685749844431
+    ],
+    [
+     0.7049511658600968,
+     0.6095121344119477,
+     0.751626044874615,
+     0.6371586807716241
+    ],
+    [
+     0.6939524857017159,
+     0.6599166148102054,
+     0.7428271007479103,
+     0.6856963285625389
+    ],
+    [
+     0.7810620325560933,
+     0.679829495955196,
+     0.8176181258249009,
+     0.7043646546359676
+    ],
+    [
+     0.8083387593488782,
+     0.6904082140634723,
+     0.8572133743950725,
+     0.7168102053515868
+    ],
+    [
+     0.8391350637923449,
+     0.709698817672682,
+     0.8721715794104707,
+     0.7597473553204729
+    ]
+   ]
+  },
+  "25": {
+   "area": [
+    0.34619445666520016,
+    0.13111387678904793,
+    0.8785305763308402,
+    0.5604853764779092
+   ],
+   "tutup": [
+    [
+     0.47837835459744826,
+     0.21125451151213442,
+     0.5250532336119665,
+     0.2301891723708774
+    ],
+    [
+     0.45110162780466345,
+     0.27846048537647794,
+     0.5052556093268807,
+     0.311085252022402
+    ],
+    [
+     0.47969819621645404,
+     0.4589209707529558,
+     0.5338521777386713,
+     0.4766110765401369
+    ],
+    [
+     0.8237369115706115,
+     0.2579253266957063,
+     0.8704117905851299,
+     0.2774822650902302
+    ],
+    [
+     0.7423466783985921,
+     0.45767641568139394,
+     0.7956207655081391,
+     0.4896789047915371
+    ]
+   ]
+  },
+  "26": {
+   "area": [
+    0.34619445666520016,
+    0.13111387678904793,
+    0.8785305763308402,
+    0.5604853764779092
+   ],
+   "tutup": [
+    [
+     0.6376392432908051,
+     0.15524953329184815,
+     0.7252292124945007,
+     0.1860074673304294
+    ],
+    [
+     0.6807540695116585,
+     0.38549222153080276,
+     0.7353479982402111,
+     0.4038046048537648
+    ],
+    [
+     0.5742868455785306,
+     0.4726110765401369,
+     0.6284408271007479,
+     0.49092345986309893
+    ],
+    [
+     0.6376392432908051,
+     0.42407342874922216,
+     0.692673119225693,
+     0.44176353453640327
+    ],
+    [
+     0.4519815222173339,
+     0.3823808338518979,
+     0.4955767707875055,
+     0.3994486621032981
+    ],
+    [
+     0.45990057193136824,
+     0.5367056627255756,
+     0.5034958205015398,
+     0.5531512134411948
+    ]
+   ]
+  },
+  "27": {
+   "area": [
+    0.34619445666520016,
+    0.16222775357809582,
+    0.8785305763308402,
+    0.5884878655880523
+   ],
+   "tutup": [
+    [
+     0.5619683238011439,
+     0.20503173615432485,
+     0.6165622525296964,
+     0.2227218419415059
+    ],
+    [
+     0.571647162340519,
+     0.22556689483509645,
+     0.6262410910690717,
+     0.2563248288736777
+    ],
+    [
+     0.5698873735151782,
+     0.26290354698195395,
+     0.6262410910690717,
+     0.2799713752333541
+    ],
+    [
+     0.3903889133304003,
+     0.29961792159303047,
+     0.43530400351957765,
+     0.3173080273802116
+    ],
+    [
+     0.5663677958644963,
+     0.31206347230864967,
+     0.6099630444346678,
+     0.3291313005600498
+    ],
+    [
+     0.3947883853937527,
+     0.3437996266334785,
+     0.44938231412230534,
+     0.37580211574362166
+    ],
+    [
+     0.3560730312362516,
+     0.4029159925326695,
+     0.43398416190057193,
+     0.42060609831985063
+    ],
+    [
+     0.5610884293884734,
+     0.4166060983198506,
+     0.645158820941487,
+     0.44860858742999377
+    ],
+    [
+     0.37279102507699075,
+     0.46265463596764156,
+     0.4172661680598328,
+     0.47972246421904174
+    ],
+    [
+     0.5443704355477342,
+     0.5441729931549472,
+     0.6363598768147822,
+     0.5624853764779092
+    ],
+    [
+     0.5822058952925648,
+     0.5690640945861855,
+     0.6258011438627364,
+     0.5861319228375855
+    ],
+    [
+     0.7920607127144743,
+     0.1832520224019913,
+     0.8550136383633964,
+     0.20156440572495332
+    ],
+    [
+     0.7916207655081391,
+     0.20752084629744866,
+     0.8475345358556974,
+     0.22521095208462977
+    ],
+    [
+     0.7665437747470303,
+     0.28157187305538267,
+     0.8770109986801584,
+     0.29988425637834476
+    ],
+    [
+     0.630160140783106,
+     0.31828624766645924,
+     0.6838741750989881,
+     0.3490441817050405
+    ],
+    [
+     0.7740228772547294,
+     0.3282426882389546,
+     0.8176181258249009,
+     0.34593279402613564
+    ],
+    [
+     0.6442384513858337,
+     0.36993528313627877,
+     0.689153541575011,
+     0.38700311138767896
+    ],
+    [
+     0.7942604487461504,
+     0.4141169881767268,
+     0.8387355917289925,
+     0.43180709396390793
+    ],
+    [
+     0.7766625604927408,
+     0.46949968886123217,
+     0.8783308402991641,
+     0.5015021779713752
+    ],
+    [
+     0.6059630444346678,
+     0.5087031736154325,
+     0.700152221733392,
+     0.5407056627255756
+    ],
+    [
+     0.7590646722393313,
+     0.5230155569383945,
+     0.8510541135063792,
+     0.5550180460485377
+    ]
+   ]
+  },
+  "28": {
+   "area": [
+    0.34619445666520016,
+    0.1435594275046671,
+    0.8785305763308402,
+    0.5729309271935283
+   ],
+   "tutup": [
+    [
+     0.4533013638363396,
+     0.2741045426260112,
+     0.5078952925648922,
+     0.30548475420037335
+    ],
+    [
+     0.38378970523537176,
+     0.4290516490354698,
+     0.4282648482182138,
+     0.4467417548226509
+    ],
+    [
+     0.3675116586009679,
+     0.48007840696950843,
+     0.41198680158380996,
+     0.49776851275668954
+    ],
+    [
+     0.5377712274527057,
+     0.5024803982576229,
+     0.5835662120545535,
+     0.520170504044804
+    ],
+    [
+     0.7511456225252969,
+     0.3045961418792782,
+     0.8189379674439068,
+     0.3365986309894213
+    ],
+    [
+     0.5962842058952926,
+     0.4390080896079651,
+     0.6407593488781347,
+     0.4566981953951462
+    ],
+    [
+     0.7885411350637923,
+     0.516792781580585,
+     0.83433611966564,
+     0.5357274424393279
+    ]
+   ]
+  },
+  "29": {
+   "area": [
+    0.34619445666520016,
+    0.2897946484131923,
+    0.8785305763308402,
+    0.7191661481020535
+   ],
+   "tutup": [
+    [
+     0.4181055873295204,
+     0.3157971375233354,
+     0.46390057193136824,
+     0.33473179838207845
+    ],
+    [
+     0.4752987241531016,
+     0.3861144990665837,
+     0.5307725472943247,
+     0.40504915992532675
+    ],
+    [
+     0.3499137703475583,
+     0.4004268823895457,
+     0.40318785745710517,
+     0.4193615432482888
+    ],
+    [
+     0.457700835899692,
+     0.44025264467952707,
+     0.5030558732952046,
+     0.4579427504667082
+    ],
+    [
+     0.4343836339639243,
+     0.4887902924704418,
+     0.48765772107347116,
+     0.5077249533291848
+    ],
+    [
+     0.3499137703475583,
+     0.6288027380211574,
+     0.3961487021557413,
+     0.6477373988799005
+    ],
+    [
+     0.5707672679278486,
+     0.5261269446172994,
+     0.6187619885613727,
+     0.5450616054760423
+    ],
+    [
+     0.4343836339639243,
+     0.6182240199128811,
+     0.4797386713594368,
+     0.638403235843186
+    ],
+    [
+     0.5971641003079631,
+     0.6306695706285003,
+     0.6513180818301804,
+     0.6508487865588052
+    ]
+   ]
+  },
+  "30": {
+   "area": [
+    0.34619445666520016,
+    0.13235843186060983,
+    0.8785305763308402,
+    0.4901680149346609
+   ],
+   "tutup": [
+    [
+     0.4120664320281566,
+     0.15687181082762913,
+     0.5200937087549494,
+     0.2117654013690106
+    ],
+    [
+     0.5981641003079631,
+     0.15064903546981956,
+     0.706631324241091,
+     0.2042980709396391
+    ],
+    [
+     0.38039023317201937,
+     0.3945818294959552,
+     0.4848979322481302,
+     0.47187741132545113
+    ],
+    [
+     0.5268926528816542,
+     0.4008046048537648,
+     0.6138024637043554,
+     0.4556981953951462
+    ],
+    [
+     0.6337998240211175,
+     0.38213627878033607,
+     0.7202696876374836,
+     0.4370298693217175
+    ]
+   ]
+  },
+  "31": {
+   "area": [
+    0.34619445666520016,
+    0.13111387678904793,
+    0.8785305763308402,
+    0.5604853764779092
+   ],
+   "tutup": [
+    [
+     0.5704474263088429,
+     0.2016757934038581,
+     0.6076432028156621,
+     0.22856689483509646
+    ],
+    [
+     0.6236810382754069,
+     0.22843372744243934,
+     0.6749551253849538,
+     0.24536838830118232
+    ],
+    [
+     0.4982960844698636,
+     0.2439906658369633,
+     0.5416511218653761,
+     0.2609253266957063
+    ],
+    [
+     0.5070950285965684,
+     0.26577037958929683,
+     0.556169379674439,
+     0.2982619788425638
+    ],
+    [
+     0.640399032116146,
+     0.2769713752333541,
+     0.689913330400352,
+     0.30884069695084004
+    ],
+    [
+     0.4969762428508579,
+     0.32986496577473556,
+     0.5403312802463704,
+     0.3461773490976976
+    ],
+    [
+     0.6483180818301804,
+     0.38400311138767895,
+     0.7000321161460624,
+     0.4009377722464219
+    ],
+    [
+     0.6557971843378795,
+     0.4599209707529558,
+     0.7057514298284205,
+     0.4911680149346609
+    ],
+    [
+     0.7446665200175978,
+     0.2707485998755445,
+     0.7770228772547294,
+     0.295150591163659
+    ],
+    [
+     0.8040593928728553,
+     0.26079215930304916,
+     0.8553334799824021,
+     0.2777268201617922
+    ],
+    [
+     0.6641561812582489,
+     0.3391991288114499,
+     0.7075112186537615,
+     0.35613378967019294
+    ],
+    [
+     0.8172578090629125,
+     0.34168823895457373,
+     0.8658922129344478,
+     0.3729352831362788
+    ],
+    [
+     0.8185776506819181,
+     0.46614374611076537,
+     0.8694117905851299,
+     0.48307840696950843
+    ]
+   ]
+  },
+  "32": {
+   "area": [
+    0.34619445666520016,
+    0.13235843186060983,
+    0.8754509458864936,
+    0.6930304915992532
+   ],
+   "tutup": [
+    [
+     0.46442014958205013,
+     0.218477286869944,
+     0.5438508578970523,
+     0.23914561294337275
+    ],
+    [
+     0.719149582050154,
+     0.17180647168637214,
+     0.7708636163660361,
+     0.2298114499066584
+    ],
+    [
+     0.7063911130664321,
+     0.2471020535158681,
+     0.7990202375714914,
+     0.26777037958929684
+    ],
+    [
+     0.46881962164540253,
+     0.3777803360298694,
+     0.5482503299604048,
+     0.4171169881767268
+    ],
+    [
+     0.7226691597008359,
+     0.38835905413814564,
+     0.8157382314122305,
+     0.42894026135656504
+    ],
+    [
+     0.46002067751869774,
+     0.4599209707529558,
+     0.5552894852617686,
+     0.519170504044804
+    ],
+    [
+     0.7468662560492741,
+     0.47485563161169886,
+     0.8575332160140784,
+     0.5141922837585563
+    ],
+    [
+     0.4850976682798064,
+     0.5551294337274424,
+     0.5539696436427629,
+     0.6125121344119477
+    ],
+    [
+     0.7323479982402111,
+     0.5657081518357188,
+     0.8575332160140784,
+     0.6050448039825762
+    ]
+   ]
+  }
+ }
+}

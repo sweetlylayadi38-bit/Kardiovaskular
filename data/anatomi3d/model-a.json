@@ -1,0 +1,7214 @@
+{
+ "model": "A",
+ "judul": "Jantung dan pembuluh besar",
+ "slide_dari": 4,
+ "slide_sampai": 16,
+ "catatan": "posisi_2d = [x, y] relatif terhadap gambar slide utuh (0–1, kiri-atas = 0,0), di ujung panah/penanda label. B14 dan B15 hanya dilabeli di tabel slide (gambarnya adalah ruang tersebut, tanpa panah).",
+ "struktur": [
+  {
+   "id": "A1-fib",
+   "nama": "Pericardium fibrosa",
+   "sistem": "lainnya",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    4
+   ],
+   "keterangan": "Lapisan perikardium paling luar, ditunjuk pada foto jantung in situ tampak anterior di antara kedua pulmo.",
+   "posisi_2d": {
+    "4": [
+     0.709,
+     0.372
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "4": [
+     [
+      [
+       0.705,
+       0.367
+      ],
+      [
+       0.715,
+       0.36
+      ],
+      [
+       0.735,
+       0.358
+      ],
+      [
+       0.75,
+       0.363
+      ],
+      [
+       0.765,
+       0.376
+      ],
+      [
+       0.7775,
+       0.388
+      ],
+      [
+       0.7675,
+       0.389
+      ],
+      [
+       0.75,
+       0.38
+      ],
+      [
+       0.73,
+       0.373
+      ],
+      [
+       0.7125,
+       0.373
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "A1",
+   "nama": "Pericardium serosa pars parietalis",
+   "sistem": "lainnya",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    4
+   ],
+   "keterangan": "Label A1 (tabel: Pericardium parietale). Lapisan serosa yang melapisi bagian dalam pericardium fibrosa.",
+   "posisi_2d": {
+    "4": [
+     0.709,
+     0.4
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "Pericardium parietale"
+   ],
+   "potong": {
+    "4": [
+     [
+      [
+       0.6825,
+       0.386
+      ],
+      [
+       0.705,
+       0.386
+      ],
+      [
+       0.73,
+       0.377
+      ],
+      [
+       0.75,
+       0.384
+      ],
+      [
+       0.77,
+       0.393
+      ],
+      [
+       0.795,
+       0.404
+      ],
+      [
+       0.81,
+       0.411
+      ],
+      [
+       0.825,
+       0.422
+      ],
+      [
+       0.83,
+       0.439
+      ],
+      [
+       0.8175,
+       0.443
+      ],
+      [
+       0.795,
+       0.439
+      ],
+      [
+       0.77,
+       0.432
+      ],
+      [
+       0.745,
+       0.422
+      ],
+      [
+       0.72,
+       0.415
+      ],
+      [
+       0.7,
+       0.407
+      ],
+      [
+       0.6825,
+       0.4
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "A1-vis",
+   "nama": "Pericardium serosa pars visceralis (epicardium)",
+   "sistem": "lainnya",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    4
+   ],
+   "keterangan": "Lapisan serosa yang menempel pada permukaan jantung (epikardium).",
+   "posisi_2d": {
+    "4": [
+     0.7325,
+     0.458
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "4": [
+     [
+      [
+       0.68,
+       0.4145
+      ],
+      [
+       0.705,
+       0.4145
+      ],
+      [
+       0.73,
+       0.4235
+      ],
+      [
+       0.755,
+       0.432
+      ],
+      [
+       0.78,
+       0.439
+      ],
+      [
+       0.805,
+       0.447
+      ],
+      [
+       0.8275,
+       0.45
+      ],
+      [
+       0.83,
+       0.46
+      ],
+      [
+       0.8175,
+       0.471
+      ],
+      [
+       0.7925,
+       0.475
+      ],
+      [
+       0.7675,
+       0.471
+      ],
+      [
+       0.7425,
+       0.468
+      ],
+      [
+       0.72,
+       0.464
+      ],
+      [
+       0.7,
+       0.462
+      ],
+      [
+       0.6825,
+       0.453
+      ],
+      [
+       0.6775,
+       0.436
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "PUL-dx",
+   "nama": "Pulmo",
+   "sistem": "lainnya",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    4
+   ],
+   "keterangan": "Paru kanan (sisi kiri gambar tampak anterior), di lateral perikardium.",
+   "posisi_2d": {
+    "4": [
+     0.64,
+     0.32
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "4": [
+     [
+      [
+       0.59,
+       0.2625
+      ],
+      [
+       0.6025,
+       0.245
+      ],
+      [
+       0.62,
+       0.222
+      ],
+      [
+       0.64,
+       0.231
+      ],
+      [
+       0.66,
+       0.241
+      ],
+      [
+       0.68,
+       0.242
+      ],
+      [
+       0.695,
+       0.255
+      ],
+      [
+       0.7075,
+       0.277
+      ],
+      [
+       0.7075,
+       0.319
+      ],
+      [
+       0.7025,
+       0.351
+      ],
+      [
+       0.69,
+       0.361
+      ],
+      [
+       0.68,
+       0.379
+      ],
+      [
+       0.675,
+       0.407
+      ],
+      [
+       0.67,
+       0.436
+      ],
+      [
+       0.66,
+       0.46
+      ],
+      [
+       0.635,
+       0.464
+      ],
+      [
+       0.615,
+       0.471
+      ],
+      [
+       0.6,
+       0.478
+      ],
+      [
+       0.585,
+       0.489
+      ],
+      [
+       0.575,
+       0.482
+      ],
+      [
+       0.5675,
+       0.443
+      ],
+      [
+       0.5675,
+       0.372
+      ],
+      [
+       0.57,
+       0.337
+      ],
+      [
+       0.5725,
+       0.308
+      ],
+      [
+       0.58,
+       0.277
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "PUL-sn",
+   "nama": "Pulmo",
+   "sistem": "lainnya",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    4
+   ],
+   "keterangan": "Paru kiri (sisi kanan gambar tampak anterior), di lateral perikardium.",
+   "posisi_2d": {
+    "4": [
+     0.8,
+     0.32
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "4": [
+     [
+      [
+       0.7175,
+       0.252
+      ],
+      [
+       0.7375,
+       0.245
+      ],
+      [
+       0.765,
+       0.241
+      ],
+      [
+       0.785,
+       0.22
+      ],
+      [
+       0.805,
+       0.215
+      ],
+      [
+       0.825,
+       0.224
+      ],
+      [
+       0.835,
+       0.245
+      ],
+      [
+       0.8475,
+       0.27
+      ],
+      [
+       0.855,
+       0.301
+      ],
+      [
+       0.855,
+       0.337
+      ],
+      [
+       0.8575,
+       0.372
+      ],
+      [
+       0.855,
+       0.404
+      ],
+      [
+       0.84,
+       0.407
+      ],
+      [
+       0.825,
+       0.411
+      ],
+      [
+       0.81,
+       0.404
+      ],
+      [
+       0.795,
+       0.395
+      ],
+      [
+       0.78,
+       0.382
+      ],
+      [
+       0.765,
+       0.368
+      ],
+      [
+       0.755,
+       0.356
+      ],
+      [
+       0.74,
+       0.35
+      ],
+      [
+       0.7275,
+       0.34
+      ],
+      [
+       0.72,
+       0.323
+      ],
+      [
+       0.7175,
+       0.294
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "A2",
+   "nama": "N. phrenicus",
+   "sistem": "saraf",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    5
+   ],
+   "keterangan": "Saraf C3–C5 yang turun di samping v. cava superior dan jantung menuju diafragma.",
+   "posisi_2d": {
+    "5": [
+     0.6177,
+     0.3219
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "5": [
+     [
+      [
+       0.6218,
+       0.2824
+      ],
+      [
+       0.6243,
+       0.2824
+      ],
+      [
+       0.627,
+       0.3175
+      ],
+      [
+       0.6281,
+       0.3468
+      ],
+      [
+       0.6256,
+       0.3474
+      ],
+      [
+       0.6229,
+       0.3175
+      ]
+     ],
+     [
+      [
+       0.6829,
+       0.3058
+      ],
+      [
+       0.6861,
+       0.3052
+      ],
+      [
+       0.6923,
+       0.3351
+      ],
+      [
+       0.6974,
+       0.3615
+      ],
+      [
+       0.695,
+       0.3621
+      ],
+      [
+       0.6892,
+       0.3351
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "A3",
+   "nama": "Vena cava superior",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "B12",
+   "slide": [
+    5
+   ],
+   "keterangan": "Dibentuk oleh v. brachiocephalica dextra dan sinistra, lalu bermuara ke atrium kanan.",
+   "posisi_2d": {
+    "5": [
+     0.6281,
+     0.2985
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "5": [
+     [
+      [
+       0.6281,
+       0.2618
+      ],
+      [
+       0.6374,
+       0.2618
+      ],
+      [
+       0.6363,
+       0.2824
+      ],
+      [
+       0.6353,
+       0.3058
+      ],
+      [
+       0.6374,
+       0.3351
+      ],
+      [
+       0.6353,
+       0.3483
+      ],
+      [
+       0.627,
+       0.3483
+      ],
+      [
+       0.625,
+       0.3204
+      ],
+      [
+       0.6243,
+       0.2911
+      ],
+      [
+       0.626,
+       0.2706
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "A4",
+   "nama": "V. brachiocephalica dextra",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "A3",
+   "slide": [
+    5
+   ],
+   "keterangan": "Vena di sisi kanan yang bergabung dengan v. brachiocephalica sinistra membentuk v. cava superior.",
+   "posisi_2d": {
+    "5": [
+     0.6291,
+     0.2487
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "5": [
+     [
+      [
+       0.6229,
+       0.2179
+      ],
+      [
+       0.6312,
+       0.215
+      ],
+      [
+       0.6353,
+       0.2413
+      ],
+      [
+       0.6363,
+       0.2589
+      ],
+      [
+       0.6291,
+       0.2604
+      ],
+      [
+       0.625,
+       0.2413
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "A5",
+   "nama": "V. brachiocephalica sinistra",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "A3",
+   "slide": [
+    5
+   ],
+   "keterangan": "Lebih panjang dan menyilang di depan cabang arcus aorta sebelum membentuk v. cava superior.",
+   "posisi_2d": {
+    "5": [
+     0.6529,
+     0.2531
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "5": [
+     [
+      [
+       0.6368,
+       0.2554
+      ],
+      [
+       0.655,
+       0.2428
+      ],
+      [
+       0.6736,
+       0.2325
+      ],
+      [
+       0.6778,
+       0.2428
+      ],
+      [
+       0.6591,
+       0.2545
+      ],
+      [
+       0.6395,
+       0.2662
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "A6",
+   "nama": "Aorta ascendens",
+   "sistem": "arteri",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    5,
+    7
+   ],
+   "keterangan": "Bagian awal aorta dari jantung yang berlanjut menjadi arcus aorta.",
+   "posisi_2d": {
+    "5": [
+     0.6529,
+     0.3052
+    ],
+    "7": [
+     0.6036,
+     0.2761
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "Aorta ascende"
+   ],
+   "potong": {
+    "5": [
+     [
+      [
+       0.6384,
+       0.2955
+      ],
+      [
+       0.655,
+       0.2917
+      ],
+      [
+       0.6664,
+       0.2964
+      ],
+      [
+       0.6653,
+       0.3058
+      ],
+      [
+       0.6622,
+       0.3292
+      ],
+      [
+       0.655,
+       0.3468
+      ],
+      [
+       0.6426,
+       0.3497
+      ],
+      [
+       0.6384,
+       0.3322
+      ],
+      [
+       0.6374,
+       0.3117
+      ]
+     ]
+    ],
+    "7": [
+     [
+      [
+       0.578,
+       0.2867
+      ],
+      [
+       0.5939,
+       0.2767
+      ],
+      [
+       0.6102,
+       0.2829
+      ],
+      [
+       0.6115,
+       0.3041
+      ],
+      [
+       0.597,
+       0.3178
+      ],
+      [
+       0.5807,
+       0.3103
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "A7",
+   "nama": "Arcus aorta",
+   "sistem": "arteri",
+   "induk": "A6",
+   "muara": null,
+   "slide": [
+    5,
+    7
+   ],
+   "keterangan": "Lanjutan aorta ascendens yang melengkung lalu berlanjut menjadi aorta descendens; tabel menanyakan tiga cabangnya.",
+   "posisi_2d": {
+    "5": [
+     0.6612,
+     0.2906
+    ],
+    "7": [
+     0.6168,
+     0.2649
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "5": [
+     [
+      [
+       0.6405,
+       0.2765
+      ],
+      [
+       0.6508,
+       0.2677
+      ],
+      [
+       0.6653,
+       0.2677
+      ],
+      [
+       0.6778,
+       0.2765
+      ],
+      [
+       0.6798,
+       0.2941
+      ],
+      [
+       0.6674,
+       0.2941
+      ],
+      [
+       0.655,
+       0.2897
+      ],
+      [
+       0.6426,
+       0.2941
+      ]
+     ]
+    ],
+    "7": [
+     [
+      [
+       0.5948,
+       0.2493
+      ],
+      [
+       0.6168,
+       0.24
+      ],
+      [
+       0.6344,
+       0.2493
+      ],
+      [
+       0.6388,
+       0.2742
+      ],
+      [
+       0.6256,
+       0.2823
+      ],
+      [
+       0.6102,
+       0.2755
+      ],
+      [
+       0.5948,
+       0.2711
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "A8",
+   "nama": "Truncus pulmonalis",
+   "sistem": "arteri",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    5,
+    6
+   ],
+   "keterangan": "Batang arteri paru yang keluar dari ventrikel kanan. Di slide 6 tertulis \"Truncus pulmonaris\".",
+   "posisi_2d": {
+    "5": [
+     0.6757,
+     0.3292
+    ],
+    "6": [
+     0.564,
+     0.3302
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "Truncus pulmonaris"
+   ],
+   "potong": {
+    "5": [
+     [
+      [
+       0.6664,
+       0.3087
+      ],
+      [
+       0.6788,
+       0.3102
+      ],
+      [
+       0.6836,
+       0.3322
+      ],
+      [
+       0.6819,
+       0.3527
+      ],
+      [
+       0.6633,
+       0.3527
+      ],
+      [
+       0.6575,
+       0.3474
+      ],
+      [
+       0.6627,
+       0.3292
+      ]
+     ]
+    ],
+    "6": [
+     [
+      [
+       0.5297,
+       0.3147
+      ],
+      [
+       0.5662,
+       0.3103
+      ],
+      [
+       0.586,
+       0.324
+      ],
+      [
+       0.5824,
+       0.3551
+      ],
+      [
+       0.567,
+       0.3813
+      ],
+      [
+       0.5464,
+       0.375
+      ],
+      [
+       0.5305,
+       0.3477
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "A9",
+   "nama": "Ligamentum Arteriosum (Botalli)",
+   "sistem": "lainnya",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    6
+   ],
+   "keterangan": "Sisa ductus arteriosus yang menghubungkan pangkal a. pulmonalis sinistra dengan sisi bawah arcus aorta.",
+   "posisi_2d": {
+    "6": [
+     0.5068,
+     0.3147
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "6": [
+     [
+      [
+       0.4826,
+       0.2338
+      ],
+      [
+       0.5002,
+       0.2319
+      ],
+      [
+       0.5156,
+       0.2867
+      ],
+      [
+       0.5191,
+       0.319
+      ],
+      [
+       0.5033,
+       0.3228
+      ],
+      [
+       0.4936,
+       0.2805
+      ]
+     ],
+     [
+      [
+       0.7716,
+       0.3614
+      ],
+      [
+       0.7949,
+       0.357
+      ],
+      [
+       0.8024,
+       0.3831
+      ],
+      [
+       0.7936,
+       0.4093
+      ],
+      [
+       0.7773,
+       0.4062
+      ],
+      [
+       0.7681,
+       0.3862
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "A10",
+   "nama": "V. Cava inferior",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "B12",
+   "slide": [
+    7
+   ],
+   "keterangan": "Membawa darah dari tubuh bagian bawah ke atrium kanan.",
+   "posisi_2d": {
+    "7": [
+     0.5772,
+     0.4223
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "7": [
+     [
+      [
+       0.564,
+       0.4111
+      ],
+      [
+       0.586,
+       0.4093
+      ],
+      [
+       0.5912,
+       0.4298
+      ],
+      [
+       0.5816,
+       0.4454
+      ],
+      [
+       0.5662,
+       0.4423
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "A11",
+   "nama": "V. azygos",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "A3",
+   "slide": [
+    7
+   ],
+   "keterangan": "Naik di sisi kanan vertebra di dinding toraks posterior lalu bermuara ke v. cava superior; tabel menanyakan fungsi utamanya.",
+   "posisi_2d": {
+    "7": [
+     0.586,
+     0.3688
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "7": [
+     [
+      [
+       0.5838,
+       0.324
+      ],
+      [
+       0.5912,
+       0.324
+      ],
+      [
+       0.5939,
+       0.3676
+      ],
+      [
+       0.5921,
+       0.408
+      ],
+      [
+       0.5851,
+       0.408
+      ],
+      [
+       0.5824,
+       0.3676
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "A12",
+   "nama": "Aorta descendens",
+   "sistem": "arteri",
+   "induk": "A7",
+   "muara": null,
+   "slide": [
+    7
+   ],
+   "keterangan": "Lanjutan arcus aorta yang turun di toraks lalu menjadi aorta abdominalis.",
+   "posisi_2d": {
+    "7": [
+     0.63,
+     0.2792
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "7": [
+     [
+      [
+       0.6234,
+       0.2836
+      ],
+      [
+       0.6388,
+       0.2805
+      ],
+      [
+       0.6366,
+       0.3054
+      ],
+      [
+       0.6234,
+       0.324
+      ],
+      [
+       0.619,
+       0.3614
+      ],
+      [
+       0.6176,
+       0.4547
+      ],
+      [
+       0.597,
+       0.4547
+      ],
+      [
+       0.5983,
+       0.3614
+      ],
+      [
+       0.6036,
+       0.324
+      ],
+      [
+       0.6132,
+       0.3066
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "A13",
+   "nama": "Aorta abdominalis",
+   "sistem": "arteri",
+   "induk": "A12",
+   "muara": null,
+   "slide": [
+    7
+   ],
+   "keterangan": "Aorta di dinding abdomen posterior yang bercabang menjadi a. iliaca communis kanan dan kiri.",
+   "posisi_2d": {
+    "7": [
+     0.6168,
+     0.5561
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "7": [
+     [
+      [
+       0.608,
+       0.5169
+      ],
+      [
+       0.6308,
+       0.5169
+      ],
+      [
+       0.6322,
+       0.5729
+      ],
+      [
+       0.63,
+       0.6152
+      ],
+      [
+       0.6102,
+       0.6152
+      ],
+      [
+       0.608,
+       0.5729
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "A14-dx",
+   "nama": "A.Iliaca communis dextra",
+   "sistem": "arteri",
+   "induk": "A13",
+   "muara": null,
+   "slide": [
+    7
+   ],
+   "keterangan": "Cabang kanan aorta abdominalis yang membagi diri menjadi a. iliaca interna dan externa.",
+   "posisi_2d": {
+    "7": [
+     0.5992,
+     0.6339
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "7": [
+     [
+      [
+       0.6088,
+       0.6165
+      ],
+      [
+       0.6198,
+       0.6177
+      ],
+      [
+       0.608,
+       0.6476
+      ],
+      [
+       0.5939,
+       0.68
+      ],
+      [
+       0.5838,
+       0.6756
+      ],
+      [
+       0.5948,
+       0.6445
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "A14-sn",
+   "nama": "A.iliaca communis sinistra",
+   "sistem": "arteri",
+   "induk": "A13",
+   "muara": null,
+   "slide": [
+    7
+   ],
+   "keterangan": "Cabang kiri aorta abdominalis yang membagi diri menjadi a. iliaca interna dan externa.",
+   "posisi_2d": {
+    "7": [
+     0.6322,
+     0.6339
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "7": [
+     [
+      [
+       0.6207,
+       0.6177
+      ],
+      [
+       0.6308,
+       0.6165
+      ],
+      [
+       0.6432,
+       0.6414
+      ],
+      [
+       0.6564,
+       0.6675
+      ],
+      [
+       0.6476,
+       0.6756
+      ],
+      [
+       0.6344,
+       0.6476
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "A15-dx",
+   "nama": "A. iliaca interna dextra",
+   "sistem": "arteri",
+   "induk": "A14-dx",
+   "muara": null,
+   "slide": [
+    7
+   ],
+   "keterangan": "Cabang a. iliaca communis dextra yang masuk ke panggul.",
+   "posisi_2d": {
+    "7": [
+     0.586,
+     0.6943
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "7": [
+     [
+      [
+       0.5838,
+       0.68
+      ],
+      [
+       0.5939,
+       0.6825
+      ],
+      [
+       0.5904,
+       0.7161
+      ],
+      [
+       0.5816,
+       0.7472
+      ],
+      [
+       0.5728,
+       0.7441
+      ],
+      [
+       0.578,
+       0.7129
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "A15-sn",
+   "nama": "A. iliaca interna sinistra",
+   "sistem": "arteri",
+   "induk": "A14-sn",
+   "muara": null,
+   "slide": [
+    7
+   ],
+   "keterangan": "Cabang a. iliaca communis sinistra yang masuk ke panggul.",
+   "posisi_2d": {
+    "7": [
+     0.6564,
+     0.6756
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "7": [
+     [
+      [
+       0.652,
+       0.6775
+      ],
+      [
+       0.663,
+       0.6756
+      ],
+      [
+       0.6674,
+       0.6974
+      ],
+      [
+       0.6652,
+       0.7223
+      ],
+      [
+       0.6555,
+       0.7223
+      ],
+      [
+       0.652,
+       0.6974
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "A16-dx",
+   "nama": "A. iliaca externa dextra",
+   "sistem": "arteri",
+   "induk": "A14-dx",
+   "muara": null,
+   "slide": [
+    7
+   ],
+   "keterangan": "Cabang a. iliaca communis dextra yang berjalan ke lateral-bawah menuju tungkai.",
+   "posisi_2d": {
+    "7": [
+     0.5486,
+     0.7285
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "7": [
+     [
+      [
+       0.564,
+       0.6756
+      ],
+      [
+       0.5816,
+       0.6762
+      ],
+      [
+       0.5719,
+       0.6986
+      ],
+      [
+       0.5574,
+       0.7347
+      ],
+      [
+       0.553,
+       0.7658
+      ],
+      [
+       0.5442,
+       0.7627
+      ],
+      [
+       0.5464,
+       0.7285
+      ],
+      [
+       0.5574,
+       0.6912
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "A16-sn",
+   "nama": "A. iliaca externa sinistra",
+   "sistem": "arteri",
+   "induk": "A14-sn",
+   "muara": null,
+   "slide": [
+    7
+   ],
+   "keterangan": "Cabang a. iliaca communis sinistra yang berjalan ke lateral-bawah menuju tungkai.",
+   "posisi_2d": {
+    "7": [
+     0.6872,
+     0.7285
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "7": [
+     [
+      [
+       0.6696,
+       0.68
+      ],
+      [
+       0.6806,
+       0.6818
+      ],
+      [
+       0.6916,
+       0.7161
+      ],
+      [
+       0.6938,
+       0.7596
+      ],
+      [
+       0.6836,
+       0.7627
+      ],
+      [
+       0.6792,
+       0.7223
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B1",
+   "nama": "Basis cordis",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    5,
+    8
+   ],
+   "keterangan": "Facies posterior jantung (slide 5: \"Facies posterior (basis cordis)\"), dilingkari pada tampak posterior.",
+   "posisi_2d": {
+    "5": [
+     0.6136,
+     0.3659
+    ],
+    "8": [
+     0.6872,
+     0.2991
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "5": [
+     [
+      [
+       0.6229,
+       0.3541
+      ],
+      [
+       0.6343,
+       0.3541
+      ],
+      [
+       0.6363,
+       0.3937
+      ],
+      [
+       0.6322,
+       0.4347
+      ],
+      [
+       0.625,
+       0.4464
+      ],
+      [
+       0.6218,
+       0.4083
+      ]
+     ]
+    ],
+    "8": [
+     [
+      [
+       0.8706,
+       0.3116
+      ],
+      [
+       0.8674,
+       0.3462
+      ],
+      [
+       0.8579,
+       0.3785
+      ],
+      [
+       0.8429,
+       0.4062
+      ],
+      [
+       0.8233,
+       0.4274
+      ],
+      [
+       0.8005,
+       0.4408
+      ],
+      [
+       0.776,
+       0.4454
+      ],
+      [
+       0.7515,
+       0.4408
+      ],
+      [
+       0.7287,
+       0.4274
+      ],
+      [
+       0.7091,
+       0.4062
+      ],
+      [
+       0.6941,
+       0.3785
+      ],
+      [
+       0.6847,
+       0.3462
+      ],
+      [
+       0.6814,
+       0.3116
+      ],
+      [
+       0.6847,
+       0.2769
+      ],
+      [
+       0.6941,
+       0.2447
+      ],
+      [
+       0.7091,
+       0.217
+      ],
+      [
+       0.7287,
+       0.1957
+      ],
+      [
+       0.7515,
+       0.1823
+      ],
+      [
+       0.776,
+       0.1778
+      ],
+      [
+       0.8005,
+       0.1823
+      ],
+      [
+       0.8233,
+       0.1957
+      ],
+      [
+       0.8429,
+       0.217
+      ],
+      [
+       0.8579,
+       0.2447
+      ],
+      [
+       0.8674,
+       0.2769
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B2",
+   "nama": "Apex cordis",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    5,
+    8
+   ],
+   "keterangan": "Ujung jantung yang dilingkari pada tampak anterior dan posterior.",
+   "posisi_2d": {
+    "5": [
+     0.6819,
+     0.4705
+    ],
+    "8": [
+     0.5411,
+     0.5032
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "5": [
+     [
+      [
+       0.6736,
+       0.4655
+      ],
+      [
+       0.6861,
+       0.4558
+      ],
+      [
+       0.6954,
+       0.4464
+      ],
+      [
+       0.6974,
+       0.464
+      ],
+      [
+       0.6892,
+       0.4787
+      ],
+      [
+       0.6782,
+       0.4775
+      ]
+     ]
+    ],
+    "8": [
+     [
+      [
+       0.5785,
+       0.5032
+      ],
+      [
+       0.5762,
+       0.5213
+      ],
+      [
+       0.5697,
+       0.5372
+      ],
+      [
+       0.5598,
+       0.549
+      ],
+      [
+       0.5476,
+       0.5553
+      ],
+      [
+       0.5346,
+       0.5553
+      ],
+      [
+       0.5224,
+       0.549
+      ],
+      [
+       0.5124,
+       0.5372
+      ],
+      [
+       0.506,
+       0.5213
+      ],
+      [
+       0.5037,
+       0.5032
+      ],
+      [
+       0.506,
+       0.4851
+      ],
+      [
+       0.5124,
+       0.4692
+      ],
+      [
+       0.5224,
+       0.4574
+      ],
+      [
+       0.5346,
+       0.4511
+      ],
+      [
+       0.5476,
+       0.4511
+      ],
+      [
+       0.5598,
+       0.4574
+      ],
+      [
+       0.5697,
+       0.4692
+      ],
+      [
+       0.5762,
+       0.4851
+      ]
+     ],
+     [
+      [
+       0.7311,
+       0.5045
+      ],
+      [
+       0.7289,
+       0.5226
+      ],
+      [
+       0.7224,
+       0.5385
+      ],
+      [
+       0.7125,
+       0.5503
+      ],
+      [
+       0.7002,
+       0.5566
+      ],
+      [
+       0.6873,
+       0.5566
+      ],
+      [
+       0.6751,
+       0.5503
+      ],
+      [
+       0.6651,
+       0.5385
+      ],
+      [
+       0.6586,
+       0.5226
+      ],
+      [
+       0.6564,
+       0.5045
+      ],
+      [
+       0.6586,
+       0.4864
+      ],
+      [
+       0.6651,
+       0.4705
+      ],
+      [
+       0.6751,
+       0.4587
+      ],
+      [
+       0.6873,
+       0.4524
+      ],
+      [
+       0.7002,
+       0.4524
+      ],
+      [
+       0.7125,
+       0.4587
+      ],
+      [
+       0.7224,
+       0.4705
+      ],
+      [
+       0.7289,
+       0.4864
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B3",
+   "nama": "Margo acutus",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    8
+   ],
+   "keterangan": "Tepi bawah jantung yang tajam (tabel: Margo inferior cordis / acutus), digambar garis putus-putus di bawah.",
+   "posisi_2d": {
+    "8": [
+     0.4408,
+     0.5157
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "8": [
+     [
+      [
+       0.3845,
+       0.4547
+      ],
+      [
+       0.3906,
+       0.4522
+      ],
+      [
+       0.4584,
+       0.5157
+      ],
+      [
+       0.5332,
+       0.5406
+      ],
+      [
+       0.5314,
+       0.5505
+      ],
+      [
+       0.4562,
+       0.5256
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B4",
+   "nama": "Margo obtusus",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    8
+   ],
+   "keterangan": "Tepi kiri jantung yang tumpul (tabel: Margo sinister cordis / obtusus).",
+   "posisi_2d": {
+    "8": [
+     0.5574,
+     0.3769
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "8": [
+     [
+      [
+       0.5165,
+       0.2668
+      ],
+      [
+       0.5235,
+       0.2693
+      ],
+      [
+       0.5411,
+       0.324
+      ],
+      [
+       0.5618,
+       0.38
+      ],
+      [
+       0.5706,
+       0.4298
+      ],
+      [
+       0.564,
+       0.4329
+      ],
+      [
+       0.5552,
+       0.3831
+      ],
+      [
+       0.5345,
+       0.3271
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B5",
+   "nama": "Margo dexter",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    8
+   ],
+   "keterangan": "Tepi kanan jantung.",
+   "posisi_2d": {
+    "8": [
+     0.3792,
+     0.4423
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "8": [
+     [
+      [
+       0.3616,
+       0.3614
+      ],
+      [
+       0.3686,
+       0.3614
+      ],
+      [
+       0.3862,
+       0.4535
+      ],
+      [
+       0.3792,
+       0.4578
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B6",
+   "nama": "Facies anterior (sternocostalis)",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    5,
+    8
+   ],
+   "keterangan": "Permukaan depan jantung; di slide 8 kode B6 menandai foto tampak anterior.",
+   "posisi_2d": {
+    "5": [
+     0.6923,
+     0.4098
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "5": [
+     [
+      [
+       0.6343,
+       0.3541
+      ],
+      [
+       0.6633,
+       0.3541
+      ],
+      [
+       0.6819,
+       0.3541
+      ],
+      [
+       0.6964,
+       0.379
+      ],
+      [
+       0.7006,
+       0.4201
+      ],
+      [
+       0.6954,
+       0.445
+      ],
+      [
+       0.6861,
+       0.4552
+      ],
+      [
+       0.6736,
+       0.464
+      ],
+      [
+       0.655,
+       0.4655
+      ],
+      [
+       0.6384,
+       0.4538
+      ],
+      [
+       0.6322,
+       0.4347
+      ],
+      [
+       0.6363,
+       0.3937
+      ]
+     ]
+    ],
+    "8": [
+     [
+      [
+       0.3726,
+       0.1933
+      ],
+      [
+       0.41,
+       0.1871
+      ],
+      [
+       0.4452,
+       0.1933
+      ],
+      [
+       0.4804,
+       0.2182
+      ],
+      [
+       0.5068,
+       0.2493
+      ],
+      [
+       0.52,
+       0.268
+      ],
+      [
+       0.5297,
+       0.3116
+      ],
+      [
+       0.5499,
+       0.3489
+      ],
+      [
+       0.564,
+       0.3925
+      ],
+      [
+       0.5719,
+       0.4485
+      ],
+      [
+       0.5728,
+       0.4983
+      ],
+      [
+       0.5596,
+       0.5356
+      ],
+      [
+       0.5376,
+       0.548
+      ],
+      [
+       0.5068,
+       0.5356
+      ],
+      [
+       0.4672,
+       0.5231
+      ],
+      [
+       0.4276,
+       0.4983
+      ],
+      [
+       0.3968,
+       0.4734
+      ],
+      [
+       0.3792,
+       0.4485
+      ],
+      [
+       0.366,
+       0.3987
+      ],
+      [
+       0.3616,
+       0.3489
+      ],
+      [
+       0.3682,
+       0.2991
+      ],
+      [
+       0.366,
+       0.2556
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B7",
+   "nama": "Facies inferior (diaphragmatica)",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    5,
+    8
+   ],
+   "keterangan": "Permukaan bawah jantung yang menghadap diafragma; di slide 8 kode B7 menandai foto tampak posterior.",
+   "posisi_2d": {
+    "5": [
+     0.6363,
+     0.464
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "5": [
+     [
+      [
+       0.625,
+       0.4479
+      ],
+      [
+       0.6384,
+       0.4552
+      ],
+      [
+       0.655,
+       0.4669
+      ],
+      [
+       0.6736,
+       0.4669
+      ],
+      [
+       0.6778,
+       0.4781
+      ],
+      [
+       0.6674,
+       0.4831
+      ],
+      [
+       0.6426,
+       0.4801
+      ],
+      [
+       0.6301,
+       0.4728
+      ],
+      [
+       0.6229,
+       0.4582
+      ]
+     ]
+    ],
+    "8": [
+     [
+      [
+       0.7355,
+       0.1747
+      ],
+      [
+       0.7751,
+       0.1809
+      ],
+      [
+       0.8191,
+       0.2058
+      ],
+      [
+       0.8455,
+       0.2431
+      ],
+      [
+       0.8587,
+       0.2991
+      ],
+      [
+       0.8609,
+       0.38
+      ],
+      [
+       0.8587,
+       0.4485
+      ],
+      [
+       0.8455,
+       0.4983
+      ],
+      [
+       0.8059,
+       0.5294
+      ],
+      [
+       0.7619,
+       0.5356
+      ],
+      [
+       0.7223,
+       0.5418
+      ],
+      [
+       0.6784,
+       0.5356
+      ],
+      [
+       0.6608,
+       0.5107
+      ],
+      [
+       0.6564,
+       0.4485
+      ],
+      [
+       0.6652,
+       0.3925
+      ],
+      [
+       0.6828,
+       0.3489
+      ],
+      [
+       0.696,
+       0.2867
+      ],
+      [
+       0.7092,
+       0.2493
+      ],
+      [
+       0.7223,
+       0.2058
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B8",
+   "nama": "Sulcus coronarius",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    9
+   ],
+   "keterangan": "Alur yang melingkari batas atrium dan ventrikel (garis hijau). Tabel: berisi sinus coronarius, a. coronaria dextra, dan a. coronaria sinistra.",
+   "posisi_2d": {
+    "9": [
+     0.5222,
+     0.2755
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "9": [
+     [
+      [
+       0.4291,
+       0.2822
+      ],
+      [
+       0.4225,
+       0.3101
+      ],
+      [
+       0.4152,
+       0.3376
+      ],
+      [
+       0.401,
+       0.3711
+      ],
+      [
+       0.3792,
+       0.4031
+      ],
+      [
+       0.3836,
+       0.4092
+      ],
+      [
+       0.4058,
+       0.3765
+      ],
+      [
+       0.4207,
+       0.3415
+      ],
+      [
+       0.4283,
+       0.313
+      ],
+      [
+       0.4349,
+       0.2849
+      ]
+     ],
+     [
+      [
+       0.5184,
+       0.2729
+      ],
+      [
+       0.5127,
+       0.2976
+      ],
+      [
+       0.5061,
+       0.3192
+      ],
+      [
+       0.5118,
+       0.3226
+      ],
+      [
+       0.5185,
+       0.3007
+      ],
+      [
+       0.5242,
+       0.2756
+      ]
+     ],
+     [
+      [
+       0.6977,
+       0.289
+      ],
+      [
+       0.7088,
+       0.3139
+      ],
+      [
+       0.7221,
+       0.3422
+      ],
+      [
+       0.7419,
+       0.3764
+      ],
+      [
+       0.7574,
+       0.4077
+      ],
+      [
+       0.7758,
+       0.4336
+      ],
+      [
+       0.8058,
+       0.4478
+      ],
+      [
+       0.8316,
+       0.4368
+      ],
+      [
+       0.8475,
+       0.4176
+      ],
+      [
+       0.8435,
+       0.4109
+      ],
+      [
+       0.8287,
+       0.4291
+      ],
+      [
+       0.8061,
+       0.4391
+      ],
+      [
+       0.7789,
+       0.4261
+      ],
+      [
+       0.7621,
+       0.4021
+      ],
+      [
+       0.7468,
+       0.3712
+      ],
+      [
+       0.727,
+       0.337
+      ],
+      [
+       0.7139,
+       0.3092
+      ],
+      [
+       0.703,
+       0.2844
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B9",
+   "nama": "Sulcus Interventricularis anterior",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    9
+   ],
+   "keterangan": "Alur di antara kedua ventrikel pada permukaan depan (garis merah putus-putus).",
+   "posisi_2d": {
+    "9": [
+     0.531,
+     0.3738
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "9": [
+     [
+      [
+       0.5112,
+       0.3199
+      ],
+      [
+       0.5169,
+       0.3622
+      ],
+      [
+       0.5235,
+       0.4119
+      ],
+      [
+       0.5302,
+       0.462
+      ],
+      [
+       0.5434,
+       0.5183
+      ],
+      [
+       0.5493,
+       0.5155
+      ],
+      [
+       0.5361,
+       0.4598
+      ],
+      [
+       0.5296,
+       0.4103
+      ],
+      [
+       0.523,
+       0.3605
+      ],
+      [
+       0.5173,
+       0.3182
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B10",
+   "nama": "Sulcus Interventricularis posterior",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    9
+   ],
+   "keterangan": "Alur di antara kedua ventrikel pada permukaan bawah-belakang (tabel: inferior (posterior)).",
+   "posisi_2d": {
+    "9": [
+     0.6982,
+     0.4871
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "9": [
+     [
+      [
+       0.7573,
+       0.4035
+      ],
+      [
+       0.7376,
+       0.4394
+      ],
+      [
+       0.718,
+       0.469
+      ],
+      [
+       0.6985,
+       0.4948
+      ],
+      [
+       0.6803,
+       0.5107
+      ],
+      [
+       0.6835,
+       0.5181
+      ],
+      [
+       0.7022,
+       0.5017
+      ],
+      [
+       0.7223,
+       0.4752
+      ],
+      [
+       0.7423,
+       0.4451
+      ],
+      [
+       0.7622,
+       0.4088
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B11",
+   "nama": "Sulcus terminalis",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    9
+   ],
+   "keterangan": "Alur di sisi luar atrium kanan, ditunjuk pada tampak posterior.",
+   "posisi_2d": {
+    "9": [
+     0.8455,
+     0.3396
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "9": [
+     [
+      [
+       0.8491,
+       0.3013
+      ],
+      [
+       0.8427,
+       0.3409
+      ],
+      [
+       0.8257,
+       0.377
+      ],
+      [
+       0.8046,
+       0.3979
+      ],
+      [
+       0.7832,
+       0.405
+      ],
+      [
+       0.7847,
+       0.4135
+      ],
+      [
+       0.8072,
+       0.4057
+      ],
+      [
+       0.8302,
+       0.383
+      ],
+      [
+       0.8484,
+       0.3444
+      ],
+      [
+       0.8551,
+       0.3032
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B12",
+   "nama": "Atrium dextrum",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    10
+   ],
+   "keterangan": "Ruang jantung kanan atas yang dibuka dan dilingkari pada foto.",
+   "posisi_2d": {
+    "10": [
+     0.6344,
+     0.2182
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "10": [
+     [
+      [
+       0.7782,
+       0.3116
+      ],
+      [
+       0.7762,
+       0.3393
+      ],
+      [
+       0.7702,
+       0.3656
+      ],
+      [
+       0.7605,
+       0.3892
+      ],
+      [
+       0.7476,
+       0.4089
+      ],
+      [
+       0.7321,
+       0.4237
+      ],
+      [
+       0.7149,
+       0.4329
+      ],
+      [
+       0.6968,
+       0.436
+      ],
+      [
+       0.6787,
+       0.4329
+      ],
+      [
+       0.6615,
+       0.4237
+      ],
+      [
+       0.6461,
+       0.4089
+      ],
+      [
+       0.6332,
+       0.3892
+      ],
+      [
+       0.6235,
+       0.3656
+      ],
+      [
+       0.6175,
+       0.3393
+      ],
+      [
+       0.6154,
+       0.3116
+      ],
+      [
+       0.6175,
+       0.2839
+      ],
+      [
+       0.6235,
+       0.2576
+      ],
+      [
+       0.6332,
+       0.234
+      ],
+      [
+       0.6461,
+       0.2143
+      ],
+      [
+       0.6615,
+       0.1994
+      ],
+      [
+       0.6787,
+       0.1902
+      ],
+      [
+       0.6968,
+       0.1871
+      ],
+      [
+       0.7149,
+       0.1902
+      ],
+      [
+       0.7321,
+       0.1994
+      ],
+      [
+       0.7476,
+       0.2143
+      ],
+      [
+       0.7605,
+       0.234
+      ],
+      [
+       0.7702,
+       0.2576
+      ],
+      [
+       0.7762,
+       0.2839
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B12a",
+   "nama": "Auricula dextra",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    8
+   ],
+   "keterangan": "Tonjolan kantung atrium kanan, ditunjuk pada tampak anterior.",
+   "posisi_2d": {
+    "8": [
+     0.4122,
+     0.3676
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "8": [
+     [
+      [
+       0.366,
+       0.3302
+      ],
+      [
+       0.388,
+       0.324
+      ],
+      [
+       0.4144,
+       0.3427
+      ],
+      [
+       0.4188,
+       0.38
+      ],
+      [
+       0.41,
+       0.4236
+      ],
+      [
+       0.388,
+       0.436
+      ],
+      [
+       0.3704,
+       0.4236
+      ],
+      [
+       0.3616,
+       0.3862
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B12b",
+   "nama": "Mm. Pectinati atrii dextri",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    10
+   ],
+   "keterangan": "Rigi otot pada dinding atrium kanan yang dibuka.",
+   "posisi_2d": {
+    "10": [
+     0.454,
+     0.4298
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "10": [
+     [
+      [
+       0.4373,
+       0.3925
+      ],
+      [
+       0.454,
+       0.3813
+      ],
+      [
+       0.4725,
+       0.3925
+      ],
+      [
+       0.4672,
+       0.4236
+      ],
+      [
+       0.4584,
+       0.4454
+      ],
+      [
+       0.443,
+       0.4547
+      ],
+      [
+       0.4333,
+       0.436
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B12c",
+   "nama": "Crista terminalis",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    10
+   ],
+   "keterangan": "Rigi otot di atrium kanan, ditunjuk pada kedua foto.",
+   "posisi_2d": {
+    "10": [
+     0.6704,
+     0.2338
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "10": [
+     [
+      [
+       0.6403,
+       0.2531
+      ],
+      [
+       0.6575,
+       0.2391
+      ],
+      [
+       0.6789,
+       0.2319
+      ],
+      [
+       0.7007,
+       0.2288
+      ],
+      [
+       0.7,
+       0.2201
+      ],
+      [
+       0.6778,
+       0.2233
+      ],
+      [
+       0.6552,
+       0.231
+      ],
+      [
+       0.6372,
+       0.2456
+      ]
+     ],
+     [
+      [
+       0.4673,
+       0.4501
+      ],
+      [
+       0.474,
+       0.4313
+      ],
+      [
+       0.4793,
+       0.4125
+      ],
+      [
+       0.4744,
+       0.4098
+      ],
+      [
+       0.4692,
+       0.4283
+      ],
+      [
+       0.4626,
+       0.4468
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B12d",
+   "nama": "Fossa ovalis",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    10
+   ],
+   "keterangan": "Cekungan pada dinding atrium kanan (tabel: Fossa ovalis atrii dextri), ditandai titik jingga.",
+   "posisi_2d": {
+    "10": [
+     0.7048,
+     0.2773
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "10": [
+     [
+      [
+       0.7158,
+       0.2773
+      ],
+      [
+       0.7151,
+       0.2827
+      ],
+      [
+       0.7132,
+       0.2873
+      ],
+      [
+       0.7103,
+       0.2908
+      ],
+      [
+       0.7067,
+       0.2927
+      ],
+      [
+       0.7028,
+       0.2927
+      ],
+      [
+       0.6993,
+       0.2908
+      ],
+      [
+       0.6963,
+       0.2873
+      ],
+      [
+       0.6944,
+       0.2827
+      ],
+      [
+       0.6938,
+       0.2773
+      ],
+      [
+       0.6944,
+       0.272
+      ],
+      [
+       0.6963,
+       0.2673
+      ],
+      [
+       0.6993,
+       0.2639
+      ],
+      [
+       0.7028,
+       0.262
+      ],
+      [
+       0.7067,
+       0.262
+      ],
+      [
+       0.7103,
+       0.2639
+      ],
+      [
+       0.7132,
+       0.2673
+      ],
+      [
+       0.7151,
+       0.272
+      ]
+     ],
+     [
+      [
+       0.5103,
+       0.4485
+      ],
+      [
+       0.5099,
+       0.4519
+      ],
+      [
+       0.5086,
+       0.4549
+      ],
+      [
+       0.5068,
+       0.4571
+      ],
+      [
+       0.5045,
+       0.4583
+      ],
+      [
+       0.502,
+       0.4583
+      ],
+      [
+       0.4997,
+       0.4571
+      ],
+      [
+       0.4979,
+       0.4549
+      ],
+      [
+       0.4966,
+       0.4519
+      ],
+      [
+       0.4962,
+       0.4485
+      ],
+      [
+       0.4966,
+       0.4451
+      ],
+      [
+       0.4979,
+       0.4421
+      ],
+      [
+       0.4997,
+       0.4399
+      ],
+      [
+       0.502,
+       0.4387
+      ],
+      [
+       0.5045,
+       0.4387
+      ],
+      [
+       0.5068,
+       0.4399
+      ],
+      [
+       0.5086,
+       0.4421
+      ],
+      [
+       0.5099,
+       0.4451
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B12e",
+   "nama": "Ostium sinus coronarii",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    10
+   ],
+   "keterangan": "Lubang muara sinus coronarius di atrium kanan.",
+   "posisi_2d": {
+    "10": [
+     0.6982,
+     0.3396
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "10": [
+     [
+      [
+       0.7158,
+       0.3396
+      ],
+      [
+       0.7149,
+       0.3427
+      ],
+      [
+       0.7124,
+       0.3454
+      ],
+      [
+       0.7085,
+       0.3476
+      ],
+      [
+       0.7036,
+       0.349
+      ],
+      [
+       0.6982,
+       0.3495
+      ],
+      [
+       0.6927,
+       0.349
+      ],
+      [
+       0.6878,
+       0.3476
+      ],
+      [
+       0.6839,
+       0.3454
+      ],
+      [
+       0.6814,
+       0.3427
+      ],
+      [
+       0.6806,
+       0.3396
+      ],
+      [
+       0.6814,
+       0.3365
+      ],
+      [
+       0.6839,
+       0.3337
+      ],
+      [
+       0.6878,
+       0.3315
+      ],
+      [
+       0.6927,
+       0.3301
+      ],
+      [
+       0.6982,
+       0.3296
+      ],
+      [
+       0.7036,
+       0.3301
+      ],
+      [
+       0.7085,
+       0.3315
+      ],
+      [
+       0.7124,
+       0.3337
+      ],
+      [
+       0.7149,
+       0.3365
+      ]
+     ],
+     [
+      [
+       0.5288,
+       0.4684
+      ],
+      [
+       0.5285,
+       0.4709
+      ],
+      [
+       0.5275,
+       0.4732
+      ],
+      [
+       0.5261,
+       0.4749
+      ],
+      [
+       0.5244,
+       0.4757
+      ],
+      [
+       0.5226,
+       0.4757
+      ],
+      [
+       0.5209,
+       0.4749
+      ],
+      [
+       0.5194,
+       0.4732
+      ],
+      [
+       0.5185,
+       0.4709
+      ],
+      [
+       0.5182,
+       0.4684
+      ],
+      [
+       0.5185,
+       0.4658
+      ],
+      [
+       0.5194,
+       0.4636
+      ],
+      [
+       0.5209,
+       0.4619
+      ],
+      [
+       0.5226,
+       0.461
+      ],
+      [
+       0.5244,
+       0.461
+      ],
+      [
+       0.5261,
+       0.4619
+      ],
+      [
+       0.5275,
+       0.4636
+      ],
+      [
+       0.5285,
+       0.4658
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B12f",
+   "nama": "Ostium atrioventriculare dextra",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    10
+   ],
+   "keterangan": "Lubang antara atrium kanan dan ventrikel kanan.",
+   "posisi_2d": {
+    "10": [
+     0.5442,
+     0.492
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "10": [
+     [
+      [
+       0.5354,
+       0.4808
+      ],
+      [
+       0.5596,
+       0.4622
+      ],
+      [
+       0.5706,
+       0.4858
+      ],
+      [
+       0.564,
+       0.52
+      ],
+      [
+       0.5442,
+       0.5294
+      ],
+      [
+       0.5332,
+       0.5107
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B13",
+   "nama": "Ventriculus dexter",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    11
+   ],
+   "keterangan": "Ruang jantung kanan bawah yang dibuka dan dilingkari pada foto.",
+   "posisi_2d": {
+    "11": [
+     0.515,
+     0.288
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "11": [
+     [
+      [
+       0.512,
+       0.289
+      ],
+      [
+       0.537,
+       0.282
+      ],
+      [
+       0.559,
+       0.288
+      ],
+      [
+       0.577,
+       0.302
+      ],
+      [
+       0.58,
+       0.325
+      ],
+      [
+       0.58,
+       0.357
+      ],
+      [
+       0.58,
+       0.4
+      ],
+      [
+       0.578,
+       0.45
+      ],
+      [
+       0.571,
+       0.488
+      ],
+      [
+       0.553,
+       0.522
+      ],
+      [
+       0.532,
+       0.552
+      ],
+      [
+       0.502,
+       0.578
+      ],
+      [
+       0.471,
+       0.593
+      ],
+      [
+       0.441,
+       0.597
+      ],
+      [
+       0.411,
+       0.589
+      ],
+      [
+       0.393,
+       0.561
+      ],
+      [
+       0.38,
+       0.518
+      ],
+      [
+       0.379,
+       0.475
+      ],
+      [
+       0.385,
+       0.443
+      ],
+      [
+       0.396,
+       0.407
+      ],
+      [
+       0.408,
+       0.372
+      ],
+      [
+       0.426,
+       0.34
+      ],
+      [
+       0.45,
+       0.312
+      ],
+      [
+       0.479,
+       0.295
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B13-out",
+   "nama": "Passage to truncus pulmonalis",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    10
+   ],
+   "keterangan": "Jalan keluar ventrikel kanan menuju truncus pulmonalis.",
+   "posisi_2d": {
+    "10": [
+     0.6344,
+     0.6651
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "10": [
+     [
+      [
+       0.608,
+       0.6527
+      ],
+      [
+       0.6344,
+       0.6433
+      ],
+      [
+       0.652,
+       0.6465
+      ],
+      [
+       0.6498,
+       0.6745
+      ],
+      [
+       0.6256,
+       0.6838
+      ],
+      [
+       0.6102,
+       0.6776
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B13a",
+   "nama": "Valva tricuspidalis",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    10,
+    11
+   ],
+   "keterangan": "Katup atrioventrikular kanan; tabel: cuspis anterior, posterior, dan inferior.",
+   "posisi_2d": {
+    "10": [
+     0.5706,
+     0.7398
+    ],
+    "11": [
+     0.428,
+     0.462
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "10": [
+     [
+      [
+       0.5574,
+       0.718
+      ],
+      [
+       0.5816,
+       0.7087
+      ],
+      [
+       0.6036,
+       0.7242
+      ],
+      [
+       0.5992,
+       0.7566
+      ],
+      [
+       0.5772,
+       0.7628
+      ],
+      [
+       0.5596,
+       0.7522
+      ]
+     ]
+    ],
+    "11": [
+     [
+      [
+       0.405,
+       0.425
+      ],
+      [
+       0.43,
+       0.405
+      ],
+      [
+       0.455,
+       0.4
+      ],
+      [
+       0.47,
+       0.405
+      ],
+      [
+       0.465,
+       0.43
+      ],
+      [
+       0.45,
+       0.45
+      ],
+      [
+       0.435,
+       0.468
+      ],
+      [
+       0.415,
+       0.473
+      ],
+      [
+       0.4,
+       0.46
+      ]
+     ],
+     [
+      [
+       0.73,
+       0.37
+      ],
+      [
+       0.745,
+       0.358
+      ],
+      [
+       0.765,
+       0.36
+      ],
+      [
+       0.78,
+       0.37
+      ],
+      [
+       0.79,
+       0.39
+      ],
+      [
+       0.785,
+       0.405
+      ],
+      [
+       0.765,
+       0.405
+      ],
+      [
+       0.745,
+       0.398
+      ],
+      [
+       0.73,
+       0.39
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B13b",
+   "nama": "Chordae tendinae tricuspidalis",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    10,
+    11
+   ],
+   "keterangan": "Tali yang menambatkan cuspis valva tricuspidalis (slide 11: \"Chorda tendinae\").",
+   "posisi_2d": {
+    "10": [
+     0.6036,
+     0.7678
+    ],
+    "11": [
+     0.445,
+     0.492
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "Chorda tendinae"
+   ],
+   "potong": {
+    "10": [
+     [
+      [
+       0.5882,
+       0.7653
+      ],
+      [
+       0.608,
+       0.7616
+      ],
+      [
+       0.6278,
+       0.7678
+      ],
+      [
+       0.6234,
+       0.7852
+      ],
+      [
+       0.5992,
+       0.7852
+      ],
+      [
+       0.5868,
+       0.7771
+      ]
+     ]
+    ],
+    "11": [
+     [
+      [
+       0.43,
+       0.476
+      ],
+      [
+       0.455,
+       0.476
+      ],
+      [
+       0.47,
+       0.49
+      ],
+      [
+       0.476,
+       0.508
+      ],
+      [
+       0.465,
+       0.522
+      ],
+      [
+       0.448,
+       0.522
+      ],
+      [
+       0.435,
+       0.505
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B13c",
+   "nama": "Crista supraventricularis",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    11
+   ],
+   "keterangan": "Rigi otot di ventrikel kanan, ditunjuk pada ilustrasi.",
+   "posisi_2d": {
+    "11": [
+     0.765,
+     0.318
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "11": [
+     [
+      [
+       0.766,
+       0.314
+      ],
+      [
+       0.78,
+       0.311
+      ],
+      [
+       0.795,
+       0.316
+      ],
+      [
+       0.81,
+       0.328
+      ],
+      [
+       0.807,
+       0.338
+      ],
+      [
+       0.793,
+       0.328
+      ],
+      [
+       0.78,
+       0.324
+      ],
+      [
+       0.767,
+       0.325
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B13d",
+   "nama": "Trabecula carneae ventriculi dextri",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    10,
+    11
+   ],
+   "keterangan": "Rigi-rigi otot di dinding dalam ventrikel kanan.",
+   "posisi_2d": {
+    "10": [
+     0.6454,
+     0.8145
+    ],
+    "11": [
+     0.822,
+     0.418
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "Trabecula carneae"
+   ],
+   "potong": {
+    "10": [
+     [
+      [
+       0.6396,
+       0.8051
+      ],
+      [
+       0.6608,
+       0.802
+      ],
+      [
+       0.6696,
+       0.8207
+      ],
+      [
+       0.652,
+       0.83
+      ],
+      [
+       0.6388,
+       0.8238
+      ]
+     ]
+    ],
+    "11": [
+     [
+      [
+       0.812,
+       0.415
+      ],
+      [
+       0.818,
+       0.4
+      ],
+      [
+       0.824,
+       0.385
+      ],
+      [
+       0.832,
+       0.392
+      ],
+      [
+       0.837,
+       0.414
+      ],
+      [
+       0.834,
+       0.43
+      ],
+      [
+       0.822,
+       0.435
+      ],
+      [
+       0.81,
+       0.43
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B13e",
+   "nama": "Trabecula septomarginalis (moderator band)",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    10,
+    11
+   ],
+   "keterangan": "Berkas otot di ventrikel kanan (garis kuning); tabel: membawa cabang kanan berkas atrioventrikular ke m. papillaris anterior.",
+   "posisi_2d": {
+    "10": [
+     0.6586,
+     0.7491
+    ],
+    "11": [
+     0.507,
+     0.473
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "10": [
+     [
+      [
+       0.6476,
+       0.7398
+      ],
+      [
+       0.6674,
+       0.7379
+      ],
+      [
+       0.6718,
+       0.7554
+      ],
+      [
+       0.652,
+       0.7616
+      ]
+     ]
+    ],
+    "11": [
+     [
+      [
+       0.502,
+       0.463
+      ],
+      [
+       0.511,
+       0.466
+      ],
+      [
+       0.5,
+       0.495
+      ],
+      [
+       0.482,
+       0.522
+      ],
+      [
+       0.472,
+       0.53
+      ],
+      [
+       0.466,
+       0.525
+      ],
+      [
+       0.488,
+       0.493
+      ]
+     ],
+     [
+      [
+       0.807,
+       0.366
+      ],
+      [
+       0.814,
+       0.38
+      ],
+      [
+       0.813,
+       0.394
+      ],
+      [
+       0.803,
+       0.41
+      ],
+      [
+       0.796,
+       0.414
+      ],
+      [
+       0.798,
+       0.406
+      ],
+      [
+       0.807,
+       0.392
+      ],
+      [
+       0.808,
+       0.38
+      ],
+      [
+       0.803,
+       0.368
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B13f",
+   "nama": "Mm.papillares ventriculi dextri",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    10,
+    11
+   ],
+   "keterangan": "Otot papillaris di ventrikel kanan tempat melekatnya chordae.",
+   "posisi_2d": {
+    "10": [
+     0.6388,
+     0.7802
+    ],
+    "11": [
+     0.452,
+     0.533
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "Mm. Papillares ventriculi dextri"
+   ],
+   "potong": {
+    "10": [
+     [
+      [
+       0.6291,
+       0.7728
+      ],
+      [
+       0.6476,
+       0.7709
+      ],
+      [
+       0.652,
+       0.7896
+      ],
+      [
+       0.6388,
+       0.7958
+      ],
+      [
+       0.6291,
+       0.7896
+      ]
+     ],
+     [
+      [
+       0.6102,
+       0.7958
+      ],
+      [
+       0.6278,
+       0.7946
+      ],
+      [
+       0.6322,
+       0.8082
+      ],
+      [
+       0.6168,
+       0.8145
+      ],
+      [
+       0.608,
+       0.8082
+      ]
+     ]
+    ],
+    "11": [
+     [
+      [
+       0.44,
+       0.53
+      ],
+      [
+       0.46,
+       0.526
+      ],
+      [
+       0.475,
+       0.538
+      ],
+      [
+       0.472,
+       0.558
+      ],
+      [
+       0.456,
+       0.57
+      ],
+      [
+       0.442,
+       0.556
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B13g",
+   "nama": "Septum interventriculare",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    10,
+    11
+   ],
+   "keterangan": "Dinding pemisah ventrikel kanan dan kiri.",
+   "posisi_2d": {
+    "10": [
+     0.652,
+     0.7118
+    ],
+    "11": [
+     0.514,
+     0.388
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "10": [
+     [
+      [
+       0.6344,
+       0.6881
+      ],
+      [
+       0.6652,
+       0.6838
+      ],
+      [
+       0.6872,
+       0.7056
+      ],
+      [
+       0.6828,
+       0.7367
+      ],
+      [
+       0.652,
+       0.7367
+      ],
+      [
+       0.633,
+       0.718
+      ]
+     ]
+    ],
+    "11": [
+     [
+      [
+       0.488,
+       0.345
+      ],
+      [
+       0.515,
+       0.336
+      ],
+      [
+       0.545,
+       0.338
+      ],
+      [
+       0.56,
+       0.36
+      ],
+      [
+       0.565,
+       0.4
+      ],
+      [
+       0.555,
+       0.44
+      ],
+      [
+       0.53,
+       0.455
+      ],
+      [
+       0.512,
+       0.46
+      ],
+      [
+       0.488,
+       0.445
+      ],
+      [
+       0.48,
+       0.4
+      ],
+      [
+       0.482,
+       0.37
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B13h",
+   "nama": "Valva semilunar trunci pulmonalis",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    11,
+    14
+   ],
+   "keterangan": "Katup di pangkal truncus pulmonalis (slide 14: \"Valva trunci pulmonales\"); di slide 14 tampak di sisi atas = dinding anterior jantung.",
+   "posisi_2d": {
+    "11": [
+     0.528,
+     0.322
+    ],
+    "14": [
+     0.4782,
+     0.2089
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "Valva trunci pulmonales"
+   ],
+   "potong": {
+    "11": [
+     [
+      [
+       0.506,
+       0.308
+      ],
+      [
+       0.514,
+       0.293
+      ],
+      [
+       0.532,
+       0.288
+      ],
+      [
+       0.552,
+       0.291
+      ],
+      [
+       0.561,
+       0.302
+      ],
+      [
+       0.559,
+       0.317
+      ],
+      [
+       0.547,
+       0.325
+      ],
+      [
+       0.526,
+       0.331
+      ],
+      [
+       0.511,
+       0.323
+      ]
+     ],
+     [
+      [
+       0.755,
+       0.258
+      ],
+      [
+       0.775,
+       0.25
+      ],
+      [
+       0.8,
+       0.25
+      ],
+      [
+       0.815,
+       0.262
+      ],
+      [
+       0.82,
+       0.28
+      ],
+      [
+       0.81,
+       0.29
+      ],
+      [
+       0.79,
+       0.295
+      ],
+      [
+       0.77,
+       0.29
+      ],
+      [
+       0.758,
+       0.275
+      ]
+     ]
+    ],
+    "14": [
+     [
+      [
+       0.5037,
+       0.1996
+      ],
+      [
+       0.5025,
+       0.2104
+      ],
+      [
+       0.4989,
+       0.2204
+      ],
+      [
+       0.4934,
+       0.2287
+      ],
+      [
+       0.4862,
+       0.2347
+      ],
+      [
+       0.478,
+       0.2378
+      ],
+      [
+       0.4695,
+       0.2378
+      ],
+      [
+       0.4614,
+       0.2347
+      ],
+      [
+       0.4542,
+       0.2287
+      ],
+      [
+       0.4486,
+       0.2204
+      ],
+      [
+       0.4451,
+       0.2104
+      ],
+      [
+       0.4439,
+       0.1996
+      ],
+      [
+       0.4451,
+       0.1887
+      ],
+      [
+       0.4486,
+       0.1787
+      ],
+      [
+       0.4542,
+       0.1704
+      ],
+      [
+       0.4614,
+       0.1645
+      ],
+      [
+       0.4695,
+       0.1614
+      ],
+      [
+       0.478,
+       0.1614
+      ],
+      [
+       0.4862,
+       0.1645
+      ],
+      [
+       0.4934,
+       0.1704
+      ],
+      [
+       0.4989,
+       0.1787
+      ],
+      [
+       0.5025,
+       0.1887
+      ]
+     ],
+     [
+      [
+       0.8301,
+       0.2058
+      ],
+      [
+       0.8283,
+       0.2212
+      ],
+      [
+       0.8228,
+       0.2354
+      ],
+      [
+       0.8142,
+       0.2472
+      ],
+      [
+       0.8031,
+       0.2556
+      ],
+      [
+       0.7905,
+       0.26
+      ],
+      [
+       0.7774,
+       0.26
+      ],
+      [
+       0.7648,
+       0.2556
+      ],
+      [
+       0.7537,
+       0.2472
+      ],
+      [
+       0.7451,
+       0.2354
+      ],
+      [
+       0.7396,
+       0.2212
+      ],
+      [
+       0.7377,
+       0.2058
+      ],
+      [
+       0.7396,
+       0.1904
+      ],
+      [
+       0.7451,
+       0.1762
+      ],
+      [
+       0.7537,
+       0.1644
+      ],
+      [
+       0.7648,
+       0.156
+      ],
+      [
+       0.7774,
+       0.1516
+      ],
+      [
+       0.7905,
+       0.1516
+      ],
+      [
+       0.8031,
+       0.156
+      ],
+      [
+       0.8142,
+       0.1644
+      ],
+      [
+       0.8228,
+       0.1762
+      ],
+      [
+       0.8283,
+       0.1904
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B14",
+   "nama": "Atrium sinistrum",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    12
+   ],
+   "keterangan": "Dilabeli di tabel slide 12; gambar slide adalah atrium kiri yang dibuka.",
+   "posisi_2d": {
+    "12": [
+     0.64,
+     0.32
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "12": [
+     [
+      [
+       0.5596,
+       0.2431
+      ],
+      [
+       0.608,
+       0.2338
+      ],
+      [
+       0.674,
+       0.2493
+      ],
+      [
+       0.6982,
+       0.2867
+      ],
+      [
+       0.7245,
+       0.3054
+      ],
+      [
+       0.6872,
+       0.3489
+      ],
+      [
+       0.6344,
+       0.3645
+      ],
+      [
+       0.586,
+       0.3614
+      ],
+      [
+       0.564,
+       0.3178
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B14a",
+   "nama": "Auricula sinistra cordis",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    12
+   ],
+   "keterangan": "Tonjolan atrium kiri.",
+   "posisi_2d": {
+    "12": [
+     0.7026,
+     0.3041
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "12": [
+     [
+      [
+       0.6784,
+       0.2867
+      ],
+      [
+       0.7048,
+       0.2817
+      ],
+      [
+       0.7215,
+       0.2991
+      ],
+      [
+       0.7136,
+       0.324
+      ],
+      [
+       0.6872,
+       0.3253
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B14b",
+   "nama": "Vv. pulmonales",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "B14",
+   "slide": [
+    12
+   ],
+   "keterangan": "Vena paru yang bermuara di atrium kiri (dua panah pada foto).",
+   "posisi_2d": {
+    "12": [
+     0.5992,
+     0.296
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "12": [
+     [
+      [
+       0.6115,
+       0.2942
+      ],
+      [
+       0.611,
+       0.2984
+      ],
+      [
+       0.6094,
+       0.3022
+      ],
+      [
+       0.6071,
+       0.3049
+      ],
+      [
+       0.6042,
+       0.3064
+      ],
+      [
+       0.6012,
+       0.3064
+      ],
+      [
+       0.5983,
+       0.3049
+      ],
+      [
+       0.5959,
+       0.3022
+      ],
+      [
+       0.5944,
+       0.2984
+      ],
+      [
+       0.5939,
+       0.2942
+      ],
+      [
+       0.5944,
+       0.2899
+      ],
+      [
+       0.5959,
+       0.2862
+      ],
+      [
+       0.5983,
+       0.2834
+      ],
+      [
+       0.6012,
+       0.2819
+      ],
+      [
+       0.6042,
+       0.2819
+      ],
+      [
+       0.6071,
+       0.2834
+      ],
+      [
+       0.6094,
+       0.2862
+      ],
+      [
+       0.611,
+       0.2899
+      ]
+     ],
+     [
+      [
+       0.6062,
+       0.3228
+      ],
+      [
+       0.6057,
+       0.3266
+      ],
+      [
+       0.6044,
+       0.33
+      ],
+      [
+       0.6022,
+       0.3325
+      ],
+      [
+       0.5997,
+       0.3338
+      ],
+      [
+       0.5969,
+       0.3338
+      ],
+      [
+       0.5943,
+       0.3325
+      ],
+      [
+       0.5922,
+       0.33
+      ],
+      [
+       0.5908,
+       0.3266
+      ],
+      [
+       0.5904,
+       0.3228
+      ],
+      [
+       0.5908,
+       0.3189
+      ],
+      [
+       0.5922,
+       0.3156
+      ],
+      [
+       0.5943,
+       0.3131
+      ],
+      [
+       0.5969,
+       0.3117
+      ],
+      [
+       0.5997,
+       0.3117
+      ],
+      [
+       0.6022,
+       0.3131
+      ],
+      [
+       0.6044,
+       0.3156
+      ],
+      [
+       0.6057,
+       0.3189
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B14c",
+   "nama": "Mm. Pectinati atrii sinistri",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    12
+   ],
+   "keterangan": "Rigi otot di atrium kiri.",
+   "posisi_2d": {
+    "12": [
+     0.6203,
+     0.2817
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "12": [
+     [
+      [
+       0.6115,
+       0.2587
+      ],
+      [
+       0.6264,
+       0.2568
+      ],
+      [
+       0.6278,
+       0.2817
+      ],
+      [
+       0.6176,
+       0.2879
+      ],
+      [
+       0.6106,
+       0.2773
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B14d",
+   "nama": "smooth wall & septum interatriae",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    12
+   ],
+   "keterangan": "Dinding halus atrium kiri dan septum interatriale (tabel: Septum interatriale).",
+   "posisi_2d": {
+    "12": [
+     0.6388,
+     0.2898
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "Septum interatriale"
+   ],
+   "potong": {
+    "12": [
+     [
+      [
+       0.6291,
+       0.268
+      ],
+      [
+       0.6542,
+       0.2668
+      ],
+      [
+       0.6616,
+       0.2929
+      ],
+      [
+       0.6484,
+       0.3091
+      ],
+      [
+       0.6278,
+       0.3066
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B14e",
+   "nama": "ostium atrioventriculare sinistra",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    12
+   ],
+   "keterangan": "Lubang antara atrium kiri dan ventrikel kiri (garis biru).",
+   "posisi_2d": {
+    "12": [
+     0.6124,
+     0.3489
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "12": [
+     [
+      [
+       0.612,
+       0.3547
+      ],
+      [
+       0.627,
+       0.3346
+      ],
+      [
+       0.6483,
+       0.3201
+      ],
+      [
+       0.6721,
+       0.3153
+      ],
+      [
+       0.6714,
+       0.3079
+      ],
+      [
+       0.6468,
+       0.313
+      ],
+      [
+       0.6241,
+       0.3284
+      ],
+      [
+       0.6084,
+       0.3493
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B15",
+   "nama": "Ventriculus Sinister",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    13
+   ],
+   "keterangan": "Dilabeli di tabel slide 13; gambar slide adalah ventrikel kiri yang dibuka.",
+   "posisi_2d": {
+    "13": [
+     0.62,
+     0.35
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "13": [
+     [
+      [
+       0.5288,
+       0.2493
+      ],
+      [
+       0.564,
+       0.2182
+      ],
+      [
+       0.6168,
+       0.2058
+      ],
+      [
+       0.6652,
+       0.212
+      ],
+      [
+       0.6916,
+       0.2556
+      ],
+      [
+       0.7092,
+       0.3178
+      ],
+      [
+       0.7136,
+       0.3676
+      ],
+      [
+       0.6872,
+       0.3925
+      ],
+      [
+       0.6432,
+       0.3925
+      ],
+      [
+       0.5992,
+       0.3738
+      ],
+      [
+       0.564,
+       0.3489
+      ],
+      [
+       0.5332,
+       0.3054
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B15a",
+   "nama": "Valva bicuspidalis (mitralis)",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    13
+   ],
+   "keterangan": "Katup atrioventrikular kiri.",
+   "posisi_2d": {
+    "13": [
+     0.5692,
+     0.2338
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "13": [
+     [
+      [
+       0.5574,
+       0.2182
+      ],
+      [
+       0.5794,
+       0.212
+      ],
+      [
+       0.5868,
+       0.2319
+      ],
+      [
+       0.5838,
+       0.2543
+      ],
+      [
+       0.5662,
+       0.2556
+      ],
+      [
+       0.5574,
+       0.24
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B15b",
+   "nama": "Mm.papillares ventriculi sinistri",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    13
+   ],
+   "keterangan": "Otot papillaris ventrikel kiri (dua panah).",
+   "posisi_2d": {
+    "13": [
+     0.6586,
+     0.2525
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "13": [
+     [
+      [
+       0.6476,
+       0.2462
+      ],
+      [
+       0.6652,
+       0.2431
+      ],
+      [
+       0.6784,
+       0.2742
+      ],
+      [
+       0.6696,
+       0.2867
+      ],
+      [
+       0.652,
+       0.2711
+      ]
+     ],
+     [
+      [
+       0.6036,
+       0.2991
+      ],
+      [
+       0.6256,
+       0.2929
+      ],
+      [
+       0.6344,
+       0.3116
+      ],
+      [
+       0.6212,
+       0.324
+      ],
+      [
+       0.6058,
+       0.3209
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B15c",
+   "nama": "Chordae tendinae bicuspidalis",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    13
+   ],
+   "keterangan": "Tali yang menghubungkan mm. papillares dengan cuspis valva mitralis (tabel: Chordae tendinae mitralis).",
+   "posisi_2d": {
+    "13": [
+     0.6146,
+     0.2182
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "13": [
+     [
+      [
+       0.5904,
+       0.2525
+      ],
+      [
+       0.6071,
+       0.222
+      ],
+      [
+       0.6256,
+       0.2145
+      ],
+      [
+       0.6352,
+       0.2245
+      ],
+      [
+       0.6176,
+       0.2444
+      ],
+      [
+       0.6,
+       0.263
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "B15d",
+   "nama": "Trabecula carneae ventriculi sinistri",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    13
+   ],
+   "keterangan": "Rigi-rigi otot di dinding dalam ventrikel kiri.",
+   "posisi_2d": {
+    "13": [
+     0.6938,
+     0.3334
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "potong": {
+    "13": [
+     [
+      [
+       0.6608,
+       0.3178
+      ],
+      [
+       0.6872,
+       0.3116
+      ],
+      [
+       0.707,
+       0.3365
+      ],
+      [
+       0.7004,
+       0.3738
+      ],
+      [
+       0.6784,
+       0.3862
+      ],
+      [
+       0.6608,
+       0.3614
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "C",
+   "nama": "Valva aortae",
+   "sistem": "jantung",
+   "induk": null,
+   "muara": null,
+   "slide": [
+    14
+   ],
+   "keterangan": "Katup di pangkal aorta (tabel: Valvulae semilunaris aorta), di belakang valva trunci pulmonalis pada foto yang sisi atasnya dinding anterior.",
+   "posisi_2d": {
+    "14": [
+     0.5134,
+     0.3054
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "14": [
+     [
+      [
+       0.5305,
+       0.296
+      ],
+      [
+       0.5292,
+       0.3097
+      ],
+      [
+       0.5255,
+       0.3223
+      ],
+      [
+       0.5196,
+       0.3327
+      ],
+      [
+       0.512,
+       0.3402
+      ],
+      [
+       0.5034,
+       0.3441
+      ],
+      [
+       0.4943,
+       0.3441
+      ],
+      [
+       0.4857,
+       0.3402
+      ],
+      [
+       0.4781,
+       0.3327
+      ],
+      [
+       0.4722,
+       0.3223
+      ],
+      [
+       0.4685,
+       0.3097
+      ],
+      [
+       0.4672,
+       0.296
+      ],
+      [
+       0.4685,
+       0.2823
+      ],
+      [
+       0.4722,
+       0.2698
+      ],
+      [
+       0.4781,
+       0.2593
+      ],
+      [
+       0.4857,
+       0.2519
+      ],
+      [
+       0.4943,
+       0.248
+      ],
+      [
+       0.5034,
+       0.248
+      ],
+      [
+       0.512,
+       0.2519
+      ],
+      [
+       0.5196,
+       0.2593
+      ],
+      [
+       0.5255,
+       0.2698
+      ],
+      [
+       0.5292,
+       0.2823
+      ]
+     ],
+     [
+      [
+       0.8359,
+       0.3396
+      ],
+      [
+       0.8339,
+       0.3557
+      ],
+      [
+       0.8283,
+       0.3705
+      ],
+      [
+       0.8195,
+       0.3828
+      ],
+      [
+       0.8081,
+       0.3917
+      ],
+      [
+       0.7951,
+       0.3962
+      ],
+      [
+       0.7816,
+       0.3962
+      ],
+      [
+       0.7686,
+       0.3917
+      ],
+      [
+       0.7572,
+       0.3828
+      ],
+      [
+       0.7484,
+       0.3705
+      ],
+      [
+       0.7428,
+       0.3557
+      ],
+      [
+       0.7408,
+       0.3396
+      ],
+      [
+       0.7428,
+       0.3234
+      ],
+      [
+       0.7484,
+       0.3086
+      ],
+      [
+       0.7572,
+       0.2963
+      ],
+      [
+       0.7686,
+       0.2875
+      ],
+      [
+       0.7816,
+       0.2829
+      ],
+      [
+       0.7951,
+       0.2829
+      ],
+      [
+       0.8081,
+       0.2875
+      ],
+      [
+       0.8195,
+       0.2963
+      ],
+      [
+       0.8283,
+       0.3086
+      ],
+      [
+       0.8339,
+       0.3234
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "E1",
+   "nama": "A. Coronaria sinistra (LCA)",
+   "sistem": "arteri",
+   "induk": "A6",
+   "muara": null,
+   "slide": [
+    14,
+    15
+   ],
+   "keterangan": "Arteri koroner kiri dari pangkal aorta yang bercabang menjadi a. interventricularis anterior dan a. circumflexa.",
+   "posisi_2d": {
+    "14": [
+     0.608,
+     0.632
+    ],
+    "15": [
+     0.5631,
+     0.2979
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "LCA"
+   ],
+   "potong": {
+    "14": [
+     [
+      [
+       0.5992,
+       0.6165
+      ],
+      [
+       0.6168,
+       0.6072
+      ],
+      [
+       0.6278,
+       0.6227
+      ],
+      [
+       0.6168,
+       0.6414
+      ],
+      [
+       0.6036,
+       0.6383
+      ]
+     ]
+    ],
+    "15": [
+     [
+      [
+       0.5574,
+       0.2867
+      ],
+      [
+       0.5706,
+       0.2836
+      ],
+      [
+       0.575,
+       0.3085
+      ],
+      [
+       0.5653,
+       0.3166
+      ],
+      [
+       0.5574,
+       0.3054
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "E1a",
+   "nama": "A. Interventricularis anterior (RIVA)",
+   "sistem": "arteri",
+   "induk": "E1",
+   "muara": null,
+   "slide": [
+    14,
+    15
+   ],
+   "keterangan": "Cabang a. coronaria sinistra; tabel: berjalan di sulcus interventricularis anterior bersama v. cardiaca magna.",
+   "posisi_2d": {
+    "14": [
+     0.6256,
+     0.7721
+    ],
+    "15": [
+     0.5631,
+     0.4223
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "A. Interventricular anterior (RIVA)",
+    "RIVA"
+   ],
+   "potong": {
+    "14": [
+     [
+      [
+       0.6203,
+       0.7488
+      ],
+      [
+       0.6216,
+       0.7727
+      ],
+      [
+       0.6248,
+       0.7929
+      ],
+      [
+       0.6308,
+       0.791
+      ],
+      [
+       0.6277,
+       0.7714
+      ],
+      [
+       0.6264,
+       0.7481
+      ]
+     ]
+    ],
+    "15": [
+     [
+      [
+       0.5627,
+       0.3442
+      ],
+      [
+       0.564,
+       0.3743
+      ],
+      [
+       0.5671,
+       0.4123
+      ],
+      [
+       0.5761,
+       0.4471
+      ],
+      [
+       0.5827,
+       0.4437
+      ],
+      [
+       0.574,
+       0.41
+      ],
+      [
+       0.571,
+       0.3733
+      ],
+      [
+       0.5697,
+       0.3436
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "E1b",
+   "nama": "A. Circumflexa cordis (RCX)",
+   "sistem": "arteri",
+   "induk": "E1",
+   "muara": null,
+   "slide": [
+    15
+   ],
+   "keterangan": "Cabang a. coronaria sinistra; tabel: berjalan di sulcus coronarius bersama v. cardiaca magna.",
+   "posisi_2d": {
+    "15": [
+     0.5816,
+     0.3271
+    ]
+   },
+   "kedalaman": {
+    "nilai": "tengah",
+    "sumber": "estimasi"
+   },
+   "alias": [
+    "RCX"
+   ],
+   "potong": {
+    "15": [
+     [
+      [
+       0.5728,
+       0.319
+      ],
+      [
+       0.5904,
+       0.3209
+      ],
+      [
+       0.6,
+       0.3302
+      ],
+      [
+       0.5868,
+       0.339
+      ],
+      [
+       0.5728,
+       0.3352
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "E2",
+   "nama": "A. Coronaria dextra (RCA)",
+   "sistem": "arteri",
+   "induk": "A6",
+   "muara": null,
+   "slide": [
+    14,
+    16
+   ],
+   "keterangan": "Arteri koroner kanan dari pangkal aorta yang memberi ramus marginalis dexter dan a. interventricularis posterior.",
+   "posisi_2d": {
+    "14": [
+     0.509,
+     0.6849
+    ],
+    "16": [
+     0.619,
+     0.3271
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "RCA"
+   ],
+   "potong": {
+    "14": [
+     [
+      [
+       0.4873,
+       0.6666
+      ],
+      [
+       0.506,
+       0.6861
+      ],
+      [
+       0.5214,
+       0.6776
+      ],
+      [
+       0.5347,
+       0.667
+      ],
+      [
+       0.5317,
+       0.6594
+      ],
+      [
+       0.5186,
+       0.6698
+      ],
+      [
+       0.5075,
+       0.6776
+      ],
+      [
+       0.491,
+       0.6597
+      ]
+     ]
+    ],
+    "16": [
+     [
+      [
+       0.5821,
+       0.3451
+      ],
+      [
+       0.6043,
+       0.3407
+      ],
+      [
+       0.6221,
+       0.332
+      ],
+      [
+       0.6305,
+       0.3178
+      ],
+      [
+       0.625,
+       0.3116
+      ],
+      [
+       0.6184,
+       0.3235
+      ],
+      [
+       0.6028,
+       0.331
+      ],
+      [
+       0.5811,
+       0.3353
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "E2a",
+   "nama": "A. interventricular posterior (RIVP)",
+   "sistem": "arteri",
+   "induk": "E2",
+   "muara": null,
+   "slide": [
+    16
+   ],
+   "keterangan": "Cabang a. coronaria dextra; tabel slide 15: berjalan di sulcus interventricularis posterior bersama v. cardiaca media.",
+   "posisi_2d": {
+    "16": [
+     0.553,
+     0.38
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "RIVP"
+   ],
+   "potong": {
+    "16": [
+     [
+      [
+       0.5579,
+       0.3689
+      ],
+      [
+       0.536,
+       0.3887
+      ],
+      [
+       0.5162,
+       0.4043
+      ],
+      [
+       0.4999,
+       0.4186
+      ],
+      [
+       0.5031,
+       0.426
+      ],
+      [
+       0.5193,
+       0.4118
+      ],
+      [
+       0.5392,
+       0.3962
+      ],
+      [
+       0.5612,
+       0.3762
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "E2b",
+   "nama": "Ramus marginalis dexter A. coronariae dextrae (RMD)",
+   "sistem": "arteri",
+   "induk": "E2",
+   "muara": null,
+   "slide": [
+    14
+   ],
+   "keterangan": "Cabang a. coronaria dextra di tepi kanan jantung.",
+   "posisi_2d": {
+    "14": [
+     0.5002,
+     0.7254
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "RMD"
+   ],
+   "potong": {
+    "14": [
+     [
+      [
+       0.5003,
+       0.6932
+      ],
+      [
+       0.4958,
+       0.7191
+      ],
+      [
+       0.4994,
+       0.7431
+      ],
+      [
+       0.5054,
+       0.7413
+      ],
+      [
+       0.5019,
+       0.7193
+      ],
+      [
+       0.5062,
+       0.6953
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "E3",
+   "nama": "Sinus coronarius",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "B12",
+   "slide": [
+    15,
+    16
+   ],
+   "keterangan": "Penampung vena jantung di permukaan posterior yang bermuara ke atrium kanan.",
+   "posisi_2d": {
+    "15": [
+     0.7026,
+     0.3103
+    ],
+    "16": [
+     0.4936,
+     0.3315
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "dari slide"
+   },
+   "potong": {
+    "15": [
+     [
+      [
+       0.6784,
+       0.2991
+      ],
+      [
+       0.7026,
+       0.3022
+      ],
+      [
+       0.7114,
+       0.3147
+      ],
+      [
+       0.696,
+       0.324
+      ],
+      [
+       0.6784,
+       0.3209
+      ]
+     ]
+    ],
+    "16": [
+     [
+      [
+       0.4804,
+       0.3209
+      ],
+      [
+       0.5068,
+       0.3178
+      ],
+      [
+       0.52,
+       0.3334
+      ],
+      [
+       0.5068,
+       0.3458
+      ],
+      [
+       0.4848,
+       0.3439
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "E4",
+   "nama": "V. Cardiaca magna",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "E3",
+   "slide": [
+    14,
+    15
+   ],
+   "keterangan": "Vena besar jantung yang mendampingi a. interventricularis anterior lalu bermuara ke sinus coronarius.",
+   "posisi_2d": {
+    "14": [
+     0.6212,
+     0.7161
+    ],
+    "15": [
+     0.6322,
+     0.3315
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "V. magna cordis"
+   ],
+   "potong": {
+    "14": [
+     [
+      [
+       0.6247,
+       0.6471
+      ],
+      [
+       0.6216,
+       0.6845
+      ],
+      [
+       0.619,
+       0.719
+      ],
+      [
+       0.6203,
+       0.7413
+      ],
+      [
+       0.6264,
+       0.7406
+      ],
+      [
+       0.6251,
+       0.7193
+      ],
+      [
+       0.6277,
+       0.6854
+      ],
+      [
+       0.6308,
+       0.6481
+      ]
+     ]
+    ],
+    "15": [
+     [
+      [
+       0.6055,
+       0.3506
+      ],
+      [
+       0.6264,
+       0.3413
+      ],
+      [
+       0.6396,
+       0.3373
+      ],
+      [
+       0.6533,
+       0.3576
+      ],
+      [
+       0.6617,
+       0.3932
+      ],
+      [
+       0.6616,
+       0.436
+      ],
+      [
+       0.6687,
+       0.436
+      ],
+      [
+       0.6686,
+       0.3917
+      ],
+      [
+       0.6594,
+       0.3527
+      ],
+      [
+       0.6423,
+       0.3282
+      ],
+      [
+       0.6247,
+       0.3316
+      ],
+      [
+       0.6034,
+       0.341
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "E5",
+   "nama": "V. Cardiaca media",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "E3",
+   "slide": [
+    16
+   ],
+   "keterangan": "Vena yang mendampingi a. interventricularis posterior dan bermuara ke sinus coronarius.",
+   "posisi_2d": {
+    "16": [
+     0.5354,
+     0.4223
+    ]
+   },
+   "kedalaman": {
+    "nilai": "posterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "V. media cordis"
+   ],
+   "potong": {
+    "16": [
+     [
+      [
+       0.5382,
+       0.3961
+      ],
+      [
+       0.5328,
+       0.4193
+      ],
+      [
+       0.5284,
+       0.4477
+      ],
+      [
+       0.5257,
+       0.4727
+      ],
+      [
+       0.5318,
+       0.474
+      ],
+      [
+       0.5344,
+       0.4493
+      ],
+      [
+       0.5388,
+       0.4216
+      ],
+      [
+       0.544,
+       0.3988
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "E6",
+   "nama": "V. Cardiaca parva",
+   "sistem": "vena",
+   "induk": null,
+   "muara": "E3",
+   "slide": [
+    14
+   ],
+   "keterangan": "Vena kecil di tepi kanan jantung dekat ramus marginalis dexter.",
+   "posisi_2d": {
+    "14": [
+     0.5103,
+     0.7534
+    ]
+   },
+   "kedalaman": {
+    "nilai": "anterior",
+    "sumber": "dari slide"
+   },
+   "alias": [
+    "V. parva cordis"
+   ],
+   "potong": {
+    "14": [
+     [
+      [
+       0.5104,
+       0.7588
+      ],
+      [
+       0.5245,
+       0.764
+      ],
+      [
+       0.5407,
+       0.7576
+      ],
+      [
+       0.5539,
+       0.7513
+      ],
+      [
+       0.552,
+       0.743
+      ],
+      [
+       0.5389,
+       0.7492
+      ],
+      [
+       0.5243,
+       0.7553
+      ],
+      [
+       0.512,
+       0.7504
+      ]
+     ]
+    ]
+   }
+  }
+ ],
+ "tampilan": {
+  "4": "anterior",
+  "5": "anterior",
+  "6": {
+   "arah": "anterior",
+   "area": [
+    0.33,
+    0.12,
+    0.66,
+    0.6
+   ]
+  },
+  "7": {
+   "arah": "anterior",
+   "area": [
+    0.45,
+    0.5,
+    0.85,
+    0.8
+   ]
+  },
+  "8": {
+   "arah": "anterior",
+   "area": [
+    0.3,
+    0.2,
+    0.62,
+    0.62
+   ]
+  },
+  "9": {
+   "arah": "anterior",
+   "area": [
+    0.3,
+    0.2,
+    0.62,
+    0.62
+   ]
+  },
+  "10": {
+   "arah": "lateral kanan",
+   "area": [
+    0.62,
+    0.12,
+    0.9,
+    0.56
+   ]
+  },
+  "11": {
+   "arah": "anterior",
+   "area": [
+    0.34,
+    0.15,
+    0.6,
+    0.6
+   ]
+  },
+  "12": "anterior",
+  "13": "lateral kiri",
+  "14": {
+   "arah": "anterior",
+   "area": [
+    0.35,
+    0.55,
+    0.8,
+    0.85
+   ]
+  },
+  "15": "lateral kiri",
+  "16": "posterior"
+ },
+ "foto": {
+  "4": {
+   "area": [
+    0.345,
+    0.155,
+    0.885,
+    0.61
+   ],
+   "tutup": [
+    [
+     0.418,
+     0.358,
+     0.515,
+     0.381
+    ],
+    [
+     0.343,
+     0.381,
+     0.532,
+     0.416
+    ],
+    [
+     0.362,
+     0.443,
+     0.527,
+     0.485
+    ],
+    [
+     0.61,
+     0.305,
+     0.656,
+     0.33
+    ],
+    [
+     0.774,
+     0.301,
+     0.818,
+     0.326
+    ]
+   ]
+  },
+  "5": {
+   "area": [
+    0.343,
+    0.128,
+    0.88,
+    0.508
+   ],
+   "tutup": [
+    [
+     0.347,
+     0.232,
+     0.482,
+     0.259
+    ],
+    [
+     0.754,
+     0.208,
+     0.875,
+     0.252
+    ],
+    [
+     0.361,
+     0.283,
+     0.479,
+     0.31
+    ],
+    [
+     0.353,
+     0.309,
+     0.438,
+     0.338
+    ],
+    [
+     0.797,
+     0.271,
+     0.88,
+     0.315
+    ],
+    [
+     0.802,
+     0.318,
+     0.875,
+     0.358
+    ],
+    [
+     0.386,
+     0.356,
+     0.459,
+     0.394
+    ],
+    [
+     0.805,
+     0.39,
+     0.875,
+     0.426
+    ],
+    [
+     0.409,
+     0.455,
+     0.488,
+     0.492
+    ],
+    [
+     0.81,
+     0.461,
+     0.865,
+     0.482
+    ]
+   ]
+  },
+  "6": {
+   "area": [
+    0.35,
+    0.14,
+    0.875,
+    0.54
+   ],
+   "tutup": [
+    [
+     0.443,
+     0.142,
+     0.628,
+     0.172
+    ],
+    [
+     0.636,
+     0.18,
+     0.757,
+     0.21
+    ],
+    [
+     0.696,
+     0.307,
+     0.857,
+     0.336
+    ]
+   ]
+  },
+  "7": {
+   "area": [
+    0.345,
+    0.125,
+    0.83,
+    0.85
+   ],
+   "tutup": [
+    [
+     0.71,
+     0.22,
+     0.79,
+     0.252
+    ],
+    [
+     0.371,
+     0.262,
+     0.474,
+     0.291
+    ],
+    [
+     0.719,
+     0.265,
+     0.832,
+     0.293
+    ],
+    [
+     0.382,
+     0.356,
+     0.456,
+     0.384
+    ],
+    [
+     0.356,
+     0.408,
+     0.456,
+     0.437
+    ],
+    [
+     0.36,
+     0.541,
+     0.478,
+     0.569
+    ],
+    [
+     0.364,
+     0.62,
+     0.482,
+     0.664
+    ],
+    [
+     0.725,
+     0.61,
+     0.825,
+     0.654
+    ],
+    [
+     0.383,
+     0.674,
+     0.52,
+     0.708
+    ],
+    [
+     0.725,
+     0.658,
+     0.825,
+     0.7
+    ],
+    [
+     0.402,
+     0.715,
+     0.52,
+     0.762
+    ],
+    [
+     0.729,
+     0.707,
+     0.83,
+     0.751
+    ]
+   ]
+  },
+  "8": {
+   "area": [
+    0.345,
+    0.16,
+    0.88,
+    0.575
+   ],
+   "tutup": [
+    [
+     0.469,
+     0.175,
+     0.55,
+     0.203
+    ],
+    [
+     0.588,
+     0.185,
+     0.645,
+     0.23
+    ],
+    [
+     0.547,
+     0.27,
+     0.62,
+     0.31
+    ],
+    [
+     0.58,
+     0.328,
+     0.652,
+     0.37
+    ],
+    [
+     0.588,
+     0.475,
+     0.646,
+     0.517
+    ],
+    [
+     0.35,
+     0.488,
+     0.418,
+     0.53
+    ],
+    [
+     0.364,
+     0.542,
+     0.443,
+     0.57
+    ],
+    [
+     0.787,
+     0.514,
+     0.856,
+     0.555
+    ]
+   ]
+  },
+  "9": {
+   "area": [
+    0.345,
+    0.13,
+    0.88,
+    0.54
+   ],
+   "tutup": [
+    [
+     0.612,
+     0.155,
+     0.693,
+     0.199
+    ],
+    [
+     0.574,
+     0.228,
+     0.658,
+     0.27
+    ],
+    [
+     0.58,
+     0.29,
+     0.662,
+     0.364
+    ],
+    [
+     0.579,
+     0.432,
+     0.661,
+     0.507
+    ],
+    [
+     0.355,
+     0.479,
+     0.438,
+     0.522
+    ]
+   ]
+  },
+  "10": {
+   "area": [
+    0.345,
+    0.13,
+    0.88,
+    0.865
+   ],
+   "tutup": [
+    [
+     0.744,
+     0.14,
+     0.845,
+     0.166
+    ],
+    [
+     0.541,
+     0.16,
+     0.617,
+     0.2
+    ],
+    [
+     0.448,
+     0.2,
+     0.507,
+     0.239
+    ],
+    [
+     0.513,
+     0.255,
+     0.578,
+     0.313
+    ],
+    [
+     0.347,
+     0.282,
+     0.462,
+     0.322
+    ],
+    [
+     0.348,
+     0.465,
+     0.428,
+     0.505
+    ],
+    [
+     0.354,
+     0.512,
+     0.495,
+     0.552
+    ],
+    [
+     0.695,
+     0.658,
+     0.82,
+     0.678
+    ],
+    [
+     0.705,
+     0.686,
+     0.826,
+     0.711
+    ],
+    [
+     0.727,
+     0.712,
+     0.845,
+     0.762
+    ],
+    [
+     0.392,
+     0.695,
+     0.471,
+     0.756
+    ],
+    [
+     0.378,
+     0.759,
+     0.46,
+     0.814
+    ],
+    [
+     0.738,
+     0.765,
+     0.808,
+     0.804
+    ],
+    [
+     0.738,
+     0.803,
+     0.82,
+     0.857
+    ]
+   ]
+  },
+  "11": {
+   "area": [
+    0.345,
+    0.155,
+    0.88,
+    0.6
+   ],
+   "tutup": [
+    [
+     0.445,
+     0.168,
+     0.56,
+     0.2
+    ],
+    [
+     0.595,
+     0.165,
+     0.685,
+     0.23
+    ],
+    [
+     0.605,
+     0.235,
+     0.692,
+     0.3
+    ],
+    [
+     0.605,
+     0.312,
+     0.697,
+     0.377
+    ],
+    [
+     0.597,
+     0.383,
+     0.688,
+     0.43
+    ],
+    [
+     0.609,
+     0.438,
+     0.737,
+     0.484
+    ],
+    [
+     0.617,
+     0.5,
+     0.728,
+     0.53
+    ],
+    [
+     0.615,
+     0.545,
+     0.763,
+     0.59
+    ],
+    [
+     0.774,
+     0.485,
+     0.867,
+     0.53
+    ]
+   ]
+  },
+  "12": {
+   "area": [
+    0.345,
+    0.13,
+    0.88,
+    0.505
+   ],
+   "tutup": [
+    [
+     0.557,
+     0.14,
+     0.695,
+     0.186
+    ],
+    [
+     0.405,
+     0.196,
+     0.505,
+     0.263
+    ],
+    [
+     0.35,
+     0.258,
+     0.438,
+     0.306
+    ],
+    [
+     0.367,
+     0.322,
+     0.463,
+     0.407
+    ],
+    [
+     0.786,
+     0.265,
+     0.877,
+     0.333
+    ]
+   ]
+  },
+  "13": {
+   "area": [
+    0.345,
+    0.13,
+    0.88,
+    0.49
+   ],
+   "tutup": [
+    [
+     0.693,
+     0.158,
+     0.792,
+     0.223
+    ],
+    [
+     0.355,
+     0.2,
+     0.455,
+     0.267
+    ],
+    [
+     0.714,
+     0.258,
+     0.808,
+     0.322
+    ],
+    [
+     0.763,
+     0.338,
+     0.872,
+     0.408
+    ]
+   ]
+  },
+  "14": {
+   "area": [
+    0.343,
+    0.135,
+    0.87,
+    0.86
+   ],
+   "tutup": [
+    [
+     0.623,
+     0.217,
+     0.701,
+     0.276
+    ],
+    [
+     0.623,
+     0.319,
+     0.701,
+     0.349
+    ],
+    [
+     0.677,
+     0.488,
+     0.755,
+     0.565
+    ],
+    [
+     0.381,
+     0.59,
+     0.46,
+     0.669
+    ],
+    [
+     0.35,
+     0.686,
+     0.464,
+     0.756
+    ],
+    [
+     0.38,
+     0.773,
+     0.464,
+     0.843
+    ],
+    [
+     0.674,
+     0.661,
+     0.758,
+     0.732
+    ],
+    [
+     0.674,
+     0.745,
+     0.758,
+     0.814
+    ]
+   ]
+  },
+  "15": {
+   "area": [
+    0.355,
+    0.135,
+    0.86,
+    0.645
+   ],
+   "tutup": [
+    [
+     0.362,
+     0.148,
+     0.49,
+     0.24
+    ],
+    [
+     0.362,
+     0.295,
+     0.49,
+     0.387
+    ],
+    [
+     0.362,
+     0.478,
+     0.49,
+     0.575
+    ],
+    [
+     0.751,
+     0.248,
+     0.856,
+     0.338
+    ],
+    [
+     0.751,
+     0.364,
+     0.856,
+     0.462
+    ]
+   ]
+  },
+  "16": {
+   "area": [
+    0.343,
+    0.145,
+    0.878,
+    0.565
+   ],
+   "tutup": [
+    [
+     0.6,
+     0.148,
+     0.693,
+     0.247
+    ],
+    [
+     0.358,
+     0.266,
+     0.456,
+     0.341
+    ],
+    [
+     0.355,
+     0.395,
+     0.454,
+     0.483
+    ],
+    [
+     0.642,
+     0.362,
+     0.74,
+     0.448
+    ]
+   ]
+  }
+ }
+}
