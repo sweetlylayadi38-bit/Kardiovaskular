@@ -262,6 +262,7 @@
   .peta .ps{text-align:justify;hyphens:auto;-webkit-hyphens:auto;font-size:.95rem}
   .peta .pq{padding:0 .8rem .8rem;display:grid;gap:1rem}
   .peta .none{padding:0 1rem 1rem;color:var(--mist);font-size:.88rem;text-align:justify}
+  .peta .pf{border:1px solid var(--smoke);background:rgba(23,23,26,.7);padding:.8rem 1rem;display:grid;gap:.35rem}
   .peta-h{font-family:var(--serif);font-weight:400;font-size:1.4rem;margin:1.8rem 0 .6rem}
   .q .res[hidden]{display:none}
   .q .res{margin-top:1rem;padding:1rem 1.1rem;border-left:2px solid var(--moon);background:rgba(13,13,14,.55);color:#d6d5ce;font-size:.94rem;line-height:1.7;display:grid;gap:.45rem;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
@@ -355,7 +356,9 @@
     </details>
     <details class="group" id="grp-ujian-sumatif-1-formatif">
       <summary class="eyebrow">Ujian Sumatif 1 + Formatif <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
-      <p class="empty">Belum ada isi.</p>
+      <h2>Formatif 1 <em>2026</em></h2>
+      <p class="sub">Daftar 100 soal Ujian Formatif 1 Modul Kardiovaskular tahun 2026 sesuai nomornya. Semua soal berbentuk pernyataan Benar/Salah. Kunci jawaban belum ada, jadi soal di sini belum bisa dikoreksi otomatis.</p>
+      <div id="peta-1f" class="peta"></div>
     </details>
   </section>
   <section class="page" id="p-sumatif-2">
@@ -1004,6 +1007,12 @@ if (!('popover' in HTMLElement.prototype)) {
       });
     }));
   }).catch(() => { document.getElementById('peta-2f').innerHTML = '<p class="empty">Daftar gagal dimuat. Coba muat ulang halaman.</p>'; });
+  // Formatif 1 2026: daftar soal saja (belum ada kunci)
+  fetch('formatif1.json').then(r => r.json()).then(F => {
+    document.getElementById('peta-1f').innerHTML = F.map(f => `
+      <div class="pf"><span class="ph"><b>Formatif 1 2026 no. ${f.n}</b><span>Benar/Salah</span>${f.dup ? `<span class="cnt zero">sama dengan no. ${f.dup}</span>` : ''}</span>
+        <span class="ps">${esc(f.s)}</span></div>`).join('');
+  }).catch(() => { document.getElementById('peta-1f').innerHTML = '<p class="empty">Daftar gagal dimuat. Coba muat ulang halaman.</p>'; });
   window.addEventListener('hashchange', show);
   // Skip link: pindahkan fokus tanpa mengubah hash (hash dipakai sebagai router halaman)
   document.querySelector('.skip').addEventListener('click', e => { e.preventDefault(); pageTitle.focus(); });
