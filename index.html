@@ -247,6 +247,11 @@
   .q .res .self button[data-g="E1"]:hover{border-color:#6fbf8a;color:#9fdcb2}
   .q .res .self button[data-g="E0"]:hover{border-color:#d7837b;color:#f0aaa3}
   .bar select.sec{background:rgba(26,26,28,.95);border:1px solid var(--field);color:var(--moon);padding:.55rem .8rem;font:inherit;font-size:.9rem}
+  .q .qreset{margin-left:auto;min-height:24px;background:none;border:1px solid var(--smoke);color:var(--mist);font:inherit;font-size:.72rem;letter-spacing:.08em;padding:.15rem .6rem;cursor:pointer}
+  .q .qreset:hover{color:var(--moon);border-color:var(--moon)}
+  .set-reset{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:1rem 0}
+  .set-reset button{background:none;border:1px solid var(--smoke);color:var(--moon);padding:.55rem .9rem;font:inherit;font-size:.82rem;letter-spacing:.06em;cursor:pointer}
+  .set-reset button:hover{border-color:#d7837b;color:#f0aaa3}
   .q .peek{margin-top:.7rem;min-height:24px;background:none;border:none;color:var(--mist);font:inherit;font-size:.8rem;letter-spacing:.06em;text-decoration:underline;cursor:pointer;padding:0}
   .peta-bar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:1rem 0;color:var(--mist);font-size:.85rem}
   .peta-bar select{background:var(--ash);color:var(--moon);border:1px solid var(--field);padding:.4rem .5rem;font:inherit}
@@ -774,8 +779,34 @@ if (!('popover' in HTMLElement.prototype)) {
         <div class="acc-body"></div>
       </details>`).join('');
     list.forEach(x => { x._set = set; EXAMS.push(x); updateMeta(x); });
+    box.insertAdjacentHTML('beforebegin', `<div class="set-reset"><button type="button">Reset semua soal ${esc(set.code)}</button></div>`);
+    box.previousElementSibling.querySelector('button').addEventListener('click', async () => {
+      if (!await ask(`Semua jawabanmu di ${set.code} (${list.map(x => x.year).join(', ')}) akan dihapus dari perangkat ini.`)) return;
+      list.forEach(x => { store.set('lm-' + x.id, {}); store.set('lm-' + x.id + '-txt', {}); x.q.forEach(q => repaintQ(x, q.n)); updateMeta(x); });
+      document.querySelectorAll('.acc-body .flt').forEach(f => f.dispatchEvent(new Event('change')));
+      say('Semua jawaban ' + set.code + ' dihapus');
+    });
     box.querySelectorAll('details.acc').forEach(det => det.addEventListener('toggle', () => { if (det.open) fillExam(det); }));
   }
+  // gambar ulang satu soal di semua tempat ia tampil (daftar ujian & peta formatif)
+  function repaintQ(x, n){
+    const q = x.q.find(z => z.n === n), c = store.get('lm-' + x.id)[n];
+    document.querySelectorAll(`[id="${x.id}-q-${n}"], article.q[data-x="${x.id}"][data-n="${n}"]`).forEach(art => {
+      if (!c) { const ta = art.querySelector('.esai textarea'); if (ta) ta.value = ''; }
+      paintQ(x, art, q, c);
+    });
+  }
+  document.addEventListener('click', e => {
+    const b = e.target.closest('.qreset'); if (!b) return;
+    const art = b.closest('article.q'), id = art.dataset.x || art.closest('[data-exam]').dataset.exam;
+    const x = EXAMS.find(z => z.id === id), n = +art.dataset.n, k = 'lm-' + id;
+    const st = store.get(k); delete st[n]; store.set(k, st);
+    const t = store.get(k + '-txt'); if (n in t) { delete t[n]; store.set(k + '-txt', t); }
+    repaintQ(x, n); updateMeta(x);
+    const f = art.closest('.acc-body') && art.closest('.acc-body').querySelector('.flt'); if (f) f.dispatchEvent(new Event('change'));
+    const fc = art.querySelector('.opts button, .isi input, .esai textarea'); if (fc) fc.focus({preventScroll:true});
+    say('Soal ' + n + ' dikosongkan, silakan jawab lagi');
+  });
   function scoreOf(x){
     const st = store.get('lm-' + x.id); let ok = 0, done = 0;
     x.q.forEach(q => { const c = st[q.n]; if (c && c !== 'peek' && c !== 'R' && q.ans !== '-') { done++; if (isRight(q, c)) ok++; } });
@@ -848,6 +879,7 @@ if (!('popover' in HTMLElement.prototype)) {
   }
   function paintQ(x, art, q, chosen){
     const btns = art.querySelectorAll('.opts button'), res = art.querySelector('.res'), st = art.querySelector('.st');
+    const rb = art.querySelector('.qreset'); if (rb) rb.hidden = !chosen;
     if (q.type === 'esai'){
       const rv = art.querySelector('.esai .reveal');
       if (!chosen){ rv.hidden = false; res.hidden = true; res.innerHTML = ''; st.textContent = 'belum dijawab'; st.className = 'st'; return; }
@@ -889,7 +921,7 @@ if (!('popover' in HTMLElement.prototype)) {
     const x = EXAMS.find(e => e.id === det.dataset.exam), P = x.id + '-q-';
     const qs = x.q.map(q => `
       <article class="q" id="${P}${q.n}" data-n="${q.n}">
-        <div class="qh"><span class="qn">Soal ${q.n}${q.sec ? ' · ' + esc(q.sec) : ''}</span><span class="st">belum dijawab</span></div>
+        <div class="qh"><span class="qn">Soal ${q.n}${q.sec ? ' · ' + esc(q.sec) : ''}</span><span class="st">belum dijawab</span><button type="button" class="qreset" hidden>Ulangi soal<span class="sr-only"> ini</span></button></div>
         <div class="qs">${q.s.includes('<table') ? q.s : esc(q.s)}</div>
         ${q.img.map(src => qimg(src, q.n)).join('')}
         ${q.type === 'esai' ? `<div class="esai"><textarea rows="2" placeholder="Tulis jawabanmu dulu (opsional), lalu buka pembahasan…" aria-label="Jawabanmu"></textarea><button class="reveal" type="button">Lihat jawaban &amp; pembahasan</button></div>` : q.type === 'isian' ? `<form class="isi"><input type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Ketik nama struktur…" aria-label="Jawaban"><button type="submit">Periksa</button></form>` : `<ol class="opts" role="list">${Object.entries(q.o).map(([k, t]) => `<li><button type="button" data-k="${k}"><span class="k">${k}</span><span>${esc(t)}</span></button></li>`).join('')}</ol>`}
@@ -916,30 +948,31 @@ if (!('popover' in HTMLElement.prototype)) {
       <details class="keytbl"><summary>Perlu dicek ulang ke sumber (${check.length} soal)</summary><div class="kwrap"><ul>${check.map(q => `<li><a href="#${P}${q.n}" data-jump="${q.n}">No. ${q.n}</a> — keyakinan ${CONF[q.conf].toLowerCase()}${q.key && q.key !== q.ans ? '; berbeda dengan kunci file' : ''}</li>`).join('')}</ul></div></details>
       <button class="close-acc bottom" type="button">Tutup ${esc(x.label)} <span aria-hidden="true">▲</span></button>`;
     const key = 'lm-' + x.id; let st = store.get(key);
+    const put = (n, v) => { st = store.get(key); st[n] = v; store.set(key, st); };
     body.querySelectorAll('.q').forEach(art => {
       const q = x.q.find(z => z.n === +art.dataset.n);
       paintQ(x, art, q, st[q.n]);
       art.querySelectorAll('.opts button').forEach(b => b.addEventListener('click', () => {
         if (b.getAttribute('aria-disabled') === 'true') return;
-        st[q.n] = b.dataset.k; store.set(key, st); paintQ(x, art, q, st[q.n]); sayResult(art); updateMeta(x); applyFilter();
+        put(q.n, b.dataset.k); paintQ(x, art, q, st[q.n]); sayResult(art); updateMeta(x); applyFilter();
       }));
-      const pk = art.querySelector('.peek'); if (pk) pk.addEventListener('click', () => { st[q.n] = 'peek'; store.set(key, st); paintQ(x, art, q, 'peek'); sayResult(art); applyFilter(); });
+      const pk = art.querySelector('.peek'); if (pk) pk.addEventListener('click', () => { put(q.n, 'peek'); paintQ(x, art, q, 'peek'); sayResult(art); applyFilter(); });
       const es = art.querySelector('.esai');
       if (es){
         const ta = es.querySelector('textarea'), tk = key + '-txt', tx = store.get(tk);
         if (tx[q.n]) ta.value = tx[q.n];
         ta.addEventListener('input', () => { const t = store.get(tk); t[q.n] = ta.value; store.set(tk, t); });
-        es.querySelector('.reveal').addEventListener('click', () => { st[q.n] = 'R'; store.set(key, st); paintQ(x, art, q, 'R'); applyFilter(); });
+        es.querySelector('.reveal').addEventListener('click', () => { put(q.n, 'R'); paintQ(x, art, q, 'R'); applyFilter(); });
         art.querySelector('.res').addEventListener('click', ev => { const g = ev.target.closest('[data-g]'); if (!g) return;
-          st[q.n] = g.dataset.g; store.set(key, st); paintQ(x, art, q, st[q.n]); sayResult(art); updateMeta(x); applyFilter(); });
+          put(q.n, g.dataset.g); paintQ(x, art, q, st[q.n]); sayResult(art); updateMeta(x); applyFilter(); });
       }
       const fm = art.querySelector('.isi'); if (fm) fm.addEventListener('submit', ev => { ev.preventDefault(); if (fm.querySelector('input').readOnly) return; const v = fm.querySelector('input').value.trim(); if (!v) return;
-        st[q.n] = 'T:' + v; store.set(key, st); paintQ(x, art, q, st[q.n]); sayResult(art); updateMeta(x); applyFilter(); });
+        put(q.n, 'T:' + v); paintQ(x, art, q, st[q.n]); sayResult(art); updateMeta(x); applyFilter(); });
     });
     const flt = body.querySelector('.flt'), secSel = body.querySelector('.sec');
     if (secSel) secSel.addEventListener('change', () => applyFilter());
     function applyFilter(){
-      const v = flt.value;
+      const v = flt.value; st = store.get(key);
       body.querySelectorAll('.q').forEach(art => {
         const q = x.q.find(z => z.n === +art.dataset.n), c = st[q.n];
         const sv = secSel ? secSel.value : '';
@@ -996,7 +1029,7 @@ if (!('popover' in HTMLElement.prototype)) {
         const x = EXAMS.find(e => e.id === 's2-' + m.y), q = x && x.q.find(z => z.n === m.n);
         if (!q) return '';
         return `<article class="q" data-x="${x.id}" data-n="${q.n}">
-          <div class="qh"><span class="qn">${i + 1}/${f.m.length} · Sumatif 2 ${m.y} no. ${q.n}</span><span class="st">belum dijawab</span></div>
+          <div class="qh"><span class="qn">${i + 1}/${f.m.length} · Sumatif 2 ${m.y} no. ${q.n}</span><span class="st">belum dijawab</span><button type="button" class="qreset" hidden>Ulangi soal<span class="sr-only"> ini</span></button></div>
           <div class="qs">${q.s.includes('<table') ? q.s : esc(q.s)}</div>
           ${q.img.map(src => qimg(src, q.n)).join('')}
           ${q.type === 'isian' ? `<form class="isi"><input type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Ketik nama struktur…" aria-label="Jawaban"><button type="submit">Periksa</button></form>` : `<ol class="opts" role="list">${Object.entries(q.o).map(([k, t]) => `<li><button type="button" data-k="${k}"><span class="k">${k}</span><span>${esc(t)}</span></button></li>`).join('')}</ol>`}
@@ -1044,7 +1077,7 @@ if (!('popover' in HTMLElement.prototype)) {
         const x = EXAMS.find(e => e.id === m.x), q = x && x.q.find(z => z.n === m.n);
         if (!q) return '';
         return `<article class="q" data-x="${x.id}" data-n="${q.n}">
-          <div class="qh"><span class="qn">${i + 1}/${f.m.length} · ${lbl(x.id)} no. ${q.n}</span><span class="st">belum dijawab</span></div>
+          <div class="qh"><span class="qn">${i + 1}/${f.m.length} · ${lbl(x.id)} no. ${q.n}</span><span class="st">belum dijawab</span><button type="button" class="qreset" hidden>Ulangi soal<span class="sr-only"> ini</span></button></div>
           <div class="qs">${q.s.includes('<table') ? q.s : esc(q.s)}</div>
           ${q.img.map(src => qimg(src, q.n)).join('')}
           ${q.type === 'isian' ? `<form class="isi"><input type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Ketik nama struktur…" aria-label="Jawaban"><button type="submit">Periksa</button></form>` : `<ol class="opts" role="list">${Object.entries(q.o).map(([k, t]) => `<li><button type="button" data-k="${k}"><span class="k">${k}</span><span>${esc(t)}</span></button></li>`).join('')}</ol>`}
