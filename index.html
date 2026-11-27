@@ -1008,7 +1008,7 @@ if (!('popover' in HTMLElement.prototype)) {
     }));
   }).catch(() => { document.getElementById('peta-2f').innerHTML = '<p class="empty">Daftar gagal dimuat. Coba muat ulang halaman.</p>'; });
   // Formatif 1 2026 -> soal sumatif yang sama/satu konsep (belum ada kunci formatif)
-  fetch('formatif1.json').then(r => r.json()).then(F => {
+  fetch('formatif1.json?v=2').then(r => r.json()).then(F => {
     const box = document.getElementById('peta-1f'), flt = document.getElementById('peta1-flt');
     const tot = F.reduce((a, f) => a + f.m.length, 0), ada = F.filter(f => f.m.length).length;
     document.getElementById('peta1-sum').textContent = `${ada} dari ${F.length} soal formatif 1 2026 keluar di sumatif · total ${tot} soal sumatif`;
