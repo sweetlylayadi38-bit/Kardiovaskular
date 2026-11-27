@@ -10,7 +10,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Karla:wght@300;400;600&display=swap" rel="stylesheet">
-<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
 <style>
   :root{
     --ink:#0d0d0e; --ash:#17171a; --smoke:#2a2a2d; --mist:#9a9aa0;
@@ -315,85 +314,6 @@
     .acc strong{font-size:1.1rem}
     .acc-body{padding:0 .6rem 1rem}
   }
-
-  /* Anatomi 3D (anat3d.js) */
-  .a3{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:1rem;align-items:start}
-  .a3 [hidden],#an3d-list .bar [hidden]{display:none!important}
-  .a3-stage{position:relative;height:min(68vh,620px);min-height:320px;background:radial-gradient(ellipse at 50% 40%,#1d1d21,#0d0d0e 75%);border:1px solid rgba(236,235,228,.1);overflow:hidden;touch-action:none}
-  .a3-stage canvas{display:block;width:100%;height:100%;cursor:grab}
-  .a3-stage canvas:active{cursor:grabbing}
-  .a3-lbl{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-  .a3-tag{font:600 .7rem/1.2 var(--sans);color:#fff;background:rgba(13,13,14,.82);border:1px solid rgba(236,235,228,.28);padding:.12rem .4rem;white-space:nowrap}
-  .a3-tag.on{background:#ffe27a;color:var(--ink);border-color:#ffe27a}
-  .a3-hint{position:absolute;left:.6rem;right:.6rem;bottom:.5rem;font-size:.72rem;color:var(--mist);pointer-events:none;text-align:justify;text-justify:inter-word}
-  .a3-side{display:flex;flex-direction:column;gap:1rem;min-width:0}
-  .a3-info,.a3-quiz{border-left:2px solid var(--moon);padding:.8rem 1rem;background:rgba(13,13,14,.6);display:grid;gap:.45rem}
-  .a3-info h4{font-family:var(--serif);font-size:1.35rem;font-weight:600;line-height:1.15;color:#fff}
-  .a3-info p,.a3-quiz p,.a3-note,.a3-fb{text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word;font-size:.92rem;line-height:1.6;color:#d6d5ce}
-  .a3 .a3-k{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mist)}
-  .a3-sl{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.3rem}
-  .a3-btn{background:none;border:1px solid var(--field);color:var(--moon);padding:.45rem .75rem;font:inherit;font-size:.82rem;cursor:pointer}
-  .a3-btn:hover{border-color:var(--moon)}
-  .a3-leg{border:0;display:flex;flex-wrap:wrap;gap:.35rem 1rem;font-size:.82rem;color:#d6d5ce}
-  .a3-leg legend{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mist);margin-bottom:.4rem}
-  .a3-leg label{display:flex;align-items:center;gap:.25rem;cursor:pointer;min-height:1.8rem}
-  .a3 i{display:inline-block;flex:0 0 .75rem;width:.75rem;height:.75rem;margin-right:.4rem;vertical-align:-1px;border-radius:50%}
-  .a3-bar{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;justify-content:space-between}
-  .a3-tabs{display:flex;border:1px solid var(--field)}
-  .a3-tabs button{background:none;border:0;color:#d6d5ce;font:inherit;font-size:.88rem;padding:.5rem 1rem;cursor:pointer}
-  .a3-tabs button+button{border-left:1px solid var(--field)}
-  .a3-tabs button[aria-selected="true"]{background:var(--moon);color:var(--ink);font-weight:600}
-  .a3-pane,.a3-tg{display:grid;gap:.6rem}
-  .a3-row{display:flex;flex-wrap:wrap;gap:.45rem;align-items:center}
-  .a3-btn[aria-pressed="true"]{background:var(--moon);color:var(--ink);border-color:var(--moon)}
-  .a3-btn:disabled{opacity:.45;cursor:not-allowed}
-  .a3-go{border-color:var(--moon);font-weight:600}
-  .a3-sel{display:flex;align-items:center;gap:.4rem;font-size:.82rem;color:#d6d5ce}
-  .a3-sel select{background:var(--ash);color:var(--moon);border:1px solid var(--field);font:inherit;font-size:.85rem;padding:.4rem .5rem}
-  .a3-range{display:grid;gap:.3rem;font-size:.85rem;color:#d6d5ce}
-  .a3-range input{width:100%;accent-color:var(--moon);min-height:1.8rem}
-  .a3-time{font-size:.85rem;color:var(--mist);font-variant-numeric:tabular-nums}
-  .a3-rel{display:flex;flex-wrap:wrap;gap:.3rem;align-items:baseline;text-align:left!important}
-  .a3-rel>span{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mist);min-width:5.2rem}
-  .a3-link{background:none;border:0;border-bottom:1px dotted var(--mist);color:#fff;font:inherit;font-size:.88rem;padding:0;cursor:pointer;text-align:left}
-  .a3-link:hover{border-bottom-color:#fff}
-  .a3-alias,.a3-flow{font-size:.82rem!important;color:var(--mist)!important}
-  .a3-flow{color:#ffe9a3!important}
-  .a3-treebox{display:grid;gap:.5rem}
-  .a3-treebox .find{background:var(--ash);color:var(--moon);border:1px solid var(--field);padding:.55rem .7rem;font:inherit;font-size:.9rem}
-  .a3-tree{max-height:340px;overflow:auto;border:1px solid rgba(236,235,228,.09)}
-  .a3-grp>summary{cursor:pointer;padding:.45rem .7rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mist);background:rgba(236,235,228,.04)}
-  .a3-tree ul{list-style:none}
-  .a3-tree ul ul{padding-left:.9rem;border-left:1px solid rgba(236,235,228,.1);margin-left:.75rem}
-  .a3-tree button{width:100%;display:flex;align-items:center;text-align:left;background:none;border:0;color:#e6e5de;font:inherit;font-size:.86rem;padding:.4rem .7rem;cursor:pointer}
-  .a3-tree button:hover,.a3-tree button[aria-current="true"]{background:rgba(236,235,228,.1);color:#fff}
-  .a3-pend{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem}
-  .a3-pend button{background:none;border:1px dashed var(--field);color:#e6e5de;font:inherit;font-size:.82rem;padding:.35rem .6rem;cursor:pointer}
-  .a3-pend button[aria-pressed="true"]{border-style:solid;border-color:#ffe27a;color:#ffe27a}
-  .a3-wrong{list-style:none;display:grid;gap:.4rem}
-  .a3-wrong li{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;font-size:.88rem;color:#f0aaa3}
-  .a3-wrong li span{flex:1 1 100%}
-  .a3-ref{position:absolute;top:.5rem;left:.5rem;width:min(220px,46%);background:rgba(13,13,14,.88);border:1px solid rgba(236,235,228,.25);padding:.35rem;display:grid;gap:.3rem}
-  .a3-ref .zoom{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
-  .a3-ref figcaption{font-size:.7rem;line-height:1.35;color:#d6d5ce;padding-right:1.2rem}
-  .a3-x{position:absolute;right:.2rem;bottom:.15rem;background:none;border:0;color:var(--moon);font-size:1.1rem;line-height:1;cursor:pointer;padding:.15rem .3rem}
-  .a3-isi{display:flex;gap:.5rem}
-  .a3-isi input{flex:1;min-width:0;background:var(--ash);color:var(--moon);border:1px solid var(--field);padding:.65rem .8rem;font:inherit;font-size:1rem}
-  .a3-isi input.right{border-color:#5fbf72;background:rgba(95,191,114,.12)}
-  .a3-isi input.wrong{border-color:#d46a6a;background:rgba(212,106,106,.12)}
-  .a3-isi button{background:var(--moon);color:var(--ink);border:0;padding:0 1rem;font:inherit;font-weight:600;cursor:pointer}
-  .a3-quiz .verdict{font-weight:600;color:#fff}
-  .a3-quiz .verdict.ok{color:#9fdcb2}.a3-quiz .verdict.no{color:#f0aaa3}
-  .a3-sum{font-size:.82rem!important;color:var(--mist)!important}
-  .a3-note{margin-top:1rem;max-width:none}
-  .a3-fb{padding:1rem}
-  .a3-stage:has(.a3-fb){height:auto;touch-action:auto}
-  .a3-thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.5rem;padding:0 1rem 1rem}
-  @media (max-width:860px){
-    .a3{grid-template-columns:1fr}
-    .a3-stage{height:min(62vh,480px)}
-    .a3-tree{max-height:260px}
-  }
 </style>
 </head>
 <body>
@@ -470,16 +390,6 @@
       <h2>Latihan <em>spot anatomi</em></h2>
       <p class="sub">Gambar dari Cardiovascular Anatomy Pocket Book dengan label struktur yang ditutup. Ketik nama struktur yang ditunjuk kotak kuning bertanda "?", lalu tekan Periksa. Singkatan (a./v./n.), huruf besar/kecil, dan salah ketik kecil tetap dianggap benar. Jawabanmu langsung dikoreksi, lalu halaman buku saku dengan label aslinya muncul sebagai pembahasan. Ketuk gambar untuk memperbesar.</p>
       <div class="acc-list" id="exam-list-an"></div>
-    </details>
-    <details class="group" id="grp-anatomi-3d">
-      <summary class="eyebrow">Anatomi 3D <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
-      <h2>Anatomi <em>3D interaktif</em></h2>
-      <p class="sub">Tiga model 3D yang dibuat langsung dari gambar slide Cardiovascular Anatomy Pocket Book: setiap struktur yang dilabeli dipotong dari gambarnya menjadi keping timbul. Mode Jelajah: miringkan gambar, ketuk keping untuk melihat asal, cabang, muara, dan slide sumbernya, telusuri aliran darah, atau kembali ke sudut pandang slide. Mode Bongkar: angkat keping lapis demi lapis lalu pasang kembali. Mode Pasang: seret keping kembali ke lubangnya atau sebut namanya; skor dan waktu tersimpan di perangkat ini. Model baru dimuat saat dibuka.</p>
-      <div class="acc-list" id="an3d-list">
-        <details class="acc" data-model="A"><summary><span class="mini yr">A</span><span class="info"><span class="code">Model A · 3D</span><strong>Jantung dan pembuluh besar</strong><span class="meta">Slide 4–16 · perikardium, ruang jantung, aorta, vena kava, vaskularisasi jantung</span></span><span class="chev" aria-hidden="true"></span></summary><div class="acc-body"></div></details>
-        <details class="acc" data-model="B"><summary><span class="mini yr">B</span><span class="info"><span class="code">Model B · 3D</span><strong>Leher dan ekstremitas atas</strong><span class="meta">Slide 18–32 · karotis, subklavia, aksila, lengan, tangan, vena superfisial</span></span><span class="chev" aria-hidden="true"></span></summary><div class="acc-body"></div></details>
-        <details class="acc" data-model="C"><summary><span class="mini yr">C</span><span class="info"><span class="code">Model C · 3D</span><strong>Ekstremitas bawah</strong><span class="meta">Slide 33–43 · glutea, femoral, poplitea, tungkai, kaki, vena saphena</span></span><span class="chev" aria-hidden="true"></span></summary><div class="acc-body"></div></details>
-      </div>
     </details>
   </section>
   <section class="page" id="p-sumatif-integrasi">
@@ -1093,12 +1003,6 @@ if (!('popover' in HTMLElement.prototype)) {
       });
     }));
   }).catch(() => { document.getElementById('peta-2f').innerHTML = '<p class="empty">Daftar gagal dimuat. Coba muat ulang halaman.</p>'; });
-  // Anatomi 3D: modul dimuat hanya saat kartu model dibuka; pencocokan jawaban kuis memakai isRight yang sama
-  window.LM = {isRight, slide: n => sl(DATA.find(d => d.id === 'an1'), n, 'Slide ' + n)};
-  document.querySelectorAll('#an3d-list details.acc').forEach(det => det.addEventListener('toggle', () => {
-    if (det.open) import('./anat3d.js').then(m => m.open(det)).catch(() => {
-      det.querySelector('.acc-body').innerHTML = '<p class="empty">Penampil 3D gagal dimuat. Periksa koneksi internet lalu buka ulang.</p>'; });
-  }));
   window.addEventListener('hashchange', show);
   // Skip link: pindahkan fokus tanpa mengubah hash (hash dipakai sebagai router halaman)
   document.querySelector('.skip').addEventListener('click', e => { e.preventDefault(); pageTitle.focus(); });
