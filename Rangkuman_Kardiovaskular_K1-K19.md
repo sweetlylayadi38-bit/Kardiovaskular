@@ -1,5 +1,5 @@
 # Rangkuman Kardiovaskular K1–K19
-*Modul Kardiovaskular — bahan belajar Ujian Sumatif 1 (K1–K8) dan Sumatif 2 (K9–K19)*
+*Modul Kardiovaskular — bahan belajar Ujian Sumatif 1 (K1–K10) dan Sumatif 2 (K11–K20; K20 belum ada di web)*
 
 **Sumber.** Semua isi diambil dari web belajar "Langit Malam" (repo `sweetlylayadi38-bit/Kardiovaskular`):
 - teks setiap slide kuliah: `kuliah.json` (K1–K8) dan `kuliah2.json` (K9–K19);
@@ -20,8 +20,8 @@ Setiap soal dipetakan ke kuliah lewat slide pendukungnya, lalu ke subtopik setel
 
 **Daftar isi.**
 1. Peta Soal Ujian: tabel per kuliah, Top 20 topik, konsep Formatif 2023
-2. Sumatif 1: K1–K8 (K5 dalam dua bagian, K5a dan K5b)
-3. Sumatif 2: K9–K19 (K10 dalam dua bagian, K10a dan K10b)
+2. Sumatif 1: K1–K10 (K5 dan K10 masing-masing dua bagian: K5a–K5b, K10a–K10b)
+3. Sumatif 2: K11–K19 (K20 belum ada di web)
 4. Hubungan Antarkuliah
 5. Checklist H-1
 6. Catatan untuk dicek
@@ -55,8 +55,12 @@ Banyak soal adalah sitasi (ingatan mahasiswa), jadi soal yang sama bisa muncul d
 | K17 – Kegawatdaruratan pada Penyakit Jantung Bawaan | 0 | 1 | 2 | 0 | 1 | 1 | **5** | 21 |
 | K18 – Infeksi Kardiovaskular | 5 | 12 | 7 | 13 | 1 | 5 | **43** | 8 |
 | K19 – Bantuan Hidup Dasar | 0 | 0 | 1 | 0 | 10 | 3 | **14** | 20 |
+| *Subtotal Sumatif 1 (K1–K10)* | 75 | 99 | 93 | 104 | 108 | 106 | 585 | — |
+| *Subtotal Sumatif 2 (K11–K19)* | 42 | 58 | 48 | 55 | 49 | 48 | 300 | — |
 | *Tidak terpetakan* | 3 | 2 | 1 | 3 | 2 | 1 | 12 | — |
 | **Jumlah** | 120 | 159 | 142 | 162 | 159 | 155 | **897** | |
+
+**Catatan pembagian.** Mulai sekarang Ujian Sumatif 1 = K1–K10 dan Sumatif 2 = K11–K20. Di naskah 2018–2023, soal K9 dan K10 (farmakologi) masih keluar di Sumatif 2, dan Sumatif 1 hanya berisi K1–K8. Jadi angka K9–K10 di tabel ini berasal dari naskah Sumatif 2 lama; frekuensi konsepnya tetap berlaku, hanya ujiannya yang pindah. K20 belum ada di web, jadi belum dirangkum.
 
 ## Top 20 topik paling sering keluar
 
@@ -166,7 +170,7 @@ Formatif 2023 berisi 85 pernyataan Benar/Salah. **55 di antaranya punya soal Sum
 
 ---
 
-# Sumatif 1 (K1–K8)
+# Sumatif 1 (K1–K10)
 
 ## K1 – Anatomi Jantung dan Pembuluh Darah (Ria Margiana — Departemen Anatomi FKUI)
 *61 soal ujian 2018–2023 dipetakan ke kuliah ini.*
@@ -2404,10 +2408,6 @@ Kebalikannya sering dijadikan pengecoh: epinefrin pada reseptor β₂ di otot ju
 - Pemeriksaan lab untuk pasien ortopnea dengan edema (2018).
 
 
----
-
-# Sumatif 2 (K9–K19)
-
 ## K9 – Farmakologi 1: Obat PJK dan Dislipidemia (Dr. Frans Suyatna — Departemen Farmakologi & Terapeutik FKUI)
 *77 soal ujian 2018–2023 dipetakan ke kuliah ini.*
 
@@ -3202,6 +3202,12 @@ Soal paling sering menanyakan furosemid, ACE-inhibitor (preload/afterload), digo
 - **Indikasi:** mengurangi rawat inap akibat perburukan gagal jantung. Syaratnya gagal jantung kronik stabil dan simtomatik dengan **LVEF ≤35%**, **irama sinus** dengan HR istirahat **≥70 x/menit**, dan sudah mendapat penyekat β dosis maksimal yang dapat ditoleransi (atau penyekat β dikontraindikasikan).
 - **Tidak berguna pada fibrilasi atrium**, karena kerjanya di nodus SA.
 
+
+---
+
+# Sumatif 2 (K11–K19)
+
+*K20 belum ada di web (repo hanya berisi K1–K19), jadi belum dirangkum.*
 
 ## K11 – Kegawatdaruratan Kardiovaskular (Bambang Widyantoro — Departemen Kardiologi & Kedokteran Vaskular FKUI)
 *30 soal ujian 2018–2023 dipetakan ke kuliah ini.*
@@ -5564,6 +5570,8 @@ Soal sumatif jarang menguji satu kuliah secara terpisah. Kasusnya hampir selalu 
 
 Ringkasan semua poin ⭐⭐⭐ (≥5 soal). Baca satu kali, tutup, lalu coba sebutkan ulang. Detail tiap poin ada di subtopik kuliahnya.
 
+## Sumatif 1 (K1–K10)
+
 **K1 Anatomi**
 - **Pendarahan jantung:**
   - LAD → anterior VKi + 2/3 anterior septum.
@@ -5700,6 +5708,8 @@ Ringkasan semua poin ⭐⭐⭐ (≥5 soal). Baca satu kali, tutup, lalu coba seb
 - **ACE-I:** menurunkan afterload dan preload serta mencegah remodeling. Efek samping: batuk, angioedema, hiperkalemia.
 - **ARNI:** tidak boleh bersama ACE-I (beri jeda 36 jam).
 - **Digoksin:** menghambat Na⁺/K⁺-ATPase → inotropik positif. Toksisitas dipermudah hipokalemia; hati-hati pada gangguan ginjal.
+
+## Sumatif 2 (K11–K19)
 
 **K11 Kegawatdaruratan**
 - **STEMI:**
