@@ -262,6 +262,9 @@
   .peta .ps{text-align:justify;hyphens:auto;-webkit-hyphens:auto;font-size:.95rem}
   .peta .pq{padding:0 .8rem .8rem;display:grid;gap:1rem}
   .peta .none{padding:0 1rem 1rem;color:var(--mist);font-size:.88rem;text-align:justify}
+  #peta-1f details:not([data-c="0"]) .cnt::after{content:"▾";content:"▾" / "";display:inline-block;margin-left:.4em;transition:rotate .2s}
+  #peta-1f details[open] .cnt::after{rotate:180deg}
+  @media (prefers-reduced-motion:reduce){#peta-1f .cnt::after{transition:none}}
   .peta-h{font-family:var(--serif);font-weight:400;font-size:1.4rem;margin:1.8rem 0 .6rem}
   .q .res[hidden]{display:none}
   .q .res{margin-top:1rem;padding:1rem 1.1rem;border-left:2px solid var(--moon);background:rgba(13,13,14,.55);color:#d6d5ce;font-size:.94rem;line-height:1.7;display:grid;gap:.45rem;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
@@ -357,7 +360,7 @@
       <summary class="eyebrow">Ujian Sumatif 1 + Formatif <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
       <h2>Formatif 1 <em>2026</em></h2>
       <p class="sub">Daftar 100 soal Ujian Formatif 1 Modul Kardiovaskular tahun 2026 sesuai nomornya, semuanya pernyataan Benar/Salah. Di bawah setiap soal formatif tertulis berapa soal Sumatif 1 tahun 2023–2018 yang sama atau satu konsep dengannya. Ketuk satu soal formatif untuk membuka soal-soal sumatifnya dan langsung kerjakan di situ: jawabanmu dikoreksi otomatis dan pembahasannya muncul di bawah soal. Kunci soal formatifnya sendiri belum ada.</p>
-      <div class="peta-bar"><select id="peta1-flt" aria-label="Saring"><option value="all">Semua soal Formatif 1 2026</option><option value="ada">Formatif 1 2026 yang keluar di sumatif</option><option value="tidak">Formatif 1 2026 yang belum pernah keluar</option></select><span id="peta1-sum"></span></div>
+      <div class="peta-bar"><select id="peta1-flt" aria-label="Saring"><option value="all">Semua soal Formatif 1 2026</option><option value="ada">Formatif 1 2026 yang keluar di sumatif</option><option value="tidak">Formatif 1 2026 yang belum pernah keluar</option></select><span id="peta1-sum" role="status"></span></div>
       <div id="peta-1f" class="peta"></div>
     </details>
   </section>
@@ -1011,7 +1014,8 @@ if (!('popover' in HTMLElement.prototype)) {
   fetch('formatif1.json?v=2').then(r => r.json()).then(F => {
     const box = document.getElementById('peta-1f'), flt = document.getElementById('peta1-flt');
     const tot = F.reduce((a, f) => a + f.m.length, 0), ada = F.filter(f => f.m.length).length;
-    document.getElementById('peta1-sum').textContent = `${ada} dari ${F.length} soal formatif 1 2026 keluar di sumatif · total ${tot} soal sumatif`;
+    const sum = document.getElementById('peta1-sum'), base = `${ada} dari ${F.length} soal formatif 1 2026 keluar di sumatif · total ${tot} soal sumatif`;
+    sum.textContent = base;
     const lbl = id => `Sumatif ${id[1]} ${id.slice(3)}`;
     box.innerHTML = F.map(f => `
       <details data-c="${f.m.length}">
@@ -1022,8 +1026,12 @@ if (!('popover' in HTMLElement.prototype)) {
         ${f.m.length ? `<div class="pq" data-f="${f.n}"></div>`
           : `<p class="none">Belum ada soal sumatif tahun 2018–2023 yang sama atau satu konsep.</p>`}
       </details>`).join('');
-    flt.addEventListener('change', () => box.querySelectorAll('details').forEach(d => {
-      const c = +d.dataset.c; d.hidden = flt.value === 'ada' ? !c : flt.value === 'tidak' ? !!c : false; }));
+    flt.addEventListener('change', () => {
+      let n = 0;
+      box.querySelectorAll('details').forEach(d => {
+        const c = +d.dataset.c; d.hidden = flt.value === 'ada' ? !c : flt.value === 'tidak' ? !!c : false; n += !d.hidden; });
+      sum.textContent = flt.value === 'all' ? base : `Menampilkan ${n} soal · ${base}`;
+    });
     box.querySelectorAll('details').forEach(d => d.addEventListener('toggle', () => {
       const w = d.querySelector('.pq'); if (!d.open || !w || w.dataset.ready) return;
       const f = F.find(z => z.n === +w.dataset.f); w.dataset.ready = '1';
