@@ -262,7 +262,6 @@
   .peta .ps{text-align:justify;hyphens:auto;-webkit-hyphens:auto;font-size:.95rem}
   .peta .pq{padding:0 .8rem .8rem;display:grid;gap:1rem}
   .peta .none{padding:0 1rem 1rem;color:var(--mist);font-size:.88rem;text-align:justify}
-  .peta .pf{border:1px solid var(--smoke);background:rgba(23,23,26,.7);padding:.8rem 1rem;display:grid;gap:.35rem}
   .peta-h{font-family:var(--serif);font-weight:400;font-size:1.4rem;margin:1.8rem 0 .6rem}
   .q .res[hidden]{display:none}
   .q .res{margin-top:1rem;padding:1rem 1.1rem;border-left:2px solid var(--moon);background:rgba(13,13,14,.55);color:#d6d5ce;font-size:.94rem;line-height:1.7;display:grid;gap:.45rem;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
@@ -357,7 +356,8 @@
     <details class="group" id="grp-ujian-sumatif-1-formatif">
       <summary class="eyebrow">Ujian Sumatif 1 + Formatif <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
       <h2>Formatif 1 <em>2026</em></h2>
-      <p class="sub">Daftar 100 soal Ujian Formatif 1 Modul Kardiovaskular tahun 2026 sesuai nomornya. Semua soal berbentuk pernyataan Benar/Salah. Kunci jawaban belum ada, jadi soal di sini belum bisa dikoreksi otomatis.</p>
+      <p class="sub">Daftar 100 soal Ujian Formatif 1 Modul Kardiovaskular tahun 2026 sesuai nomornya, semuanya pernyataan Benar/Salah. Di bawah setiap soal formatif tertulis berapa soal Sumatif 1 tahun 2023–2018 yang sama atau satu konsep dengannya. Ketuk satu soal formatif untuk membuka soal-soal sumatifnya dan langsung kerjakan di situ: jawabanmu dikoreksi otomatis dan pembahasannya muncul di bawah soal. Kunci soal formatifnya sendiri belum ada.</p>
+      <div class="peta-bar"><select id="peta1-flt" aria-label="Saring"><option value="all">Semua soal Formatif 1 2026</option><option value="ada">Formatif 1 2026 yang keluar di sumatif</option><option value="tidak">Formatif 1 2026 yang belum pernah keluar</option></select><span id="peta1-sum"></span></div>
       <div id="peta-1f" class="peta"></div>
     </details>
   </section>
@@ -1007,11 +1007,48 @@ if (!('popover' in HTMLElement.prototype)) {
       });
     }));
   }).catch(() => { document.getElementById('peta-2f').innerHTML = '<p class="empty">Daftar gagal dimuat. Coba muat ulang halaman.</p>'; });
-  // Formatif 1 2026: daftar soal saja (belum ada kunci)
+  // Formatif 1 2026 -> soal sumatif yang sama/satu konsep (belum ada kunci formatif)
   fetch('formatif1.json').then(r => r.json()).then(F => {
-    document.getElementById('peta-1f').innerHTML = F.map(f => `
-      <div class="pf"><span class="ph"><b>Formatif 1 2026 no. ${f.n}</b><span>Benar/Salah</span>${f.dup ? `<span class="cnt zero">sama dengan no. ${f.dup}</span>` : ''}</span>
-        <span class="ps">${esc(f.s)}</span></div>`).join('');
+    const box = document.getElementById('peta-1f'), flt = document.getElementById('peta1-flt');
+    const tot = F.reduce((a, f) => a + f.m.length, 0), ada = F.filter(f => f.m.length).length;
+    document.getElementById('peta1-sum').textContent = `${ada} dari ${F.length} soal formatif 1 2026 keluar di sumatif · total ${tot} soal sumatif`;
+    const lbl = id => `Sumatif ${id[1]} ${id.slice(3)}`;
+    box.innerHTML = F.map(f => `
+      <details data-c="${f.m.length}">
+        <summary>
+          <span class="ph"><b>Formatif 1 2026 no. ${f.n}</b><span>Benar/Salah</span>${f.dup ? `<span>sama dengan no. ${f.dup}</span>` : ''}<span class="cnt ${f.m.length ? '' : 'zero'}">${f.m.length} soal sumatif sama/1 konsep</span></span>
+          <span class="ps">${esc(f.s)}</span>
+        </summary>
+        ${f.m.length ? `<div class="pq" data-f="${f.n}"></div>`
+          : `<p class="none">Belum ada soal sumatif tahun 2018–2023 yang sama atau satu konsep.</p>`}
+      </details>`).join('');
+    flt.addEventListener('change', () => box.querySelectorAll('details').forEach(d => {
+      const c = +d.dataset.c; d.hidden = flt.value === 'ada' ? !c : flt.value === 'tidak' ? !!c : false; }));
+    box.querySelectorAll('details').forEach(d => d.addEventListener('toggle', () => {
+      const w = d.querySelector('.pq'); if (!d.open || !w || w.dataset.ready) return;
+      const f = F.find(z => z.n === +w.dataset.f); w.dataset.ready = '1';
+      w.innerHTML = f.m.map((m, i) => {
+        const x = EXAMS.find(e => e.id === m.x), q = x && x.q.find(z => z.n === m.n);
+        if (!q) return '';
+        return `<article class="q" data-x="${x.id}" data-n="${q.n}">
+          <div class="qh"><span class="qn">${i + 1}/${f.m.length} · ${lbl(x.id)} no. ${q.n}</span><span class="st">belum dijawab</span></div>
+          <div class="qs">${q.s.includes('<table') ? q.s : esc(q.s)}</div>
+          ${q.img.map(src => qimg(src, q.n)).join('')}
+          ${q.type === 'isian' ? `<form class="isi"><input type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Ketik nama struktur…" aria-label="Jawaban"><button type="submit">Periksa</button></form>` : `<ol class="opts" role="list">${Object.entries(q.o).map(([k, t]) => `<li><button type="button" data-k="${k}"><span class="k">${k}</span><span>${esc(t)}</span></button></li>`).join('')}</ol>`}
+          <button class="peek" type="button">Lihat jawaban &amp; pembahasan tanpa menjawab</button>
+          <div class="res" hidden></div>
+        </article>`;
+      }).join('');
+      lazy(w);
+      w.querySelectorAll('article.q').forEach(art => {
+        const x = EXAMS.find(e => e.id === art.dataset.x), q = x.q.find(z => z.n === +art.dataset.n), key = 'lm-' + x.id;
+        paintQ(x, art, q, store.get(key)[q.n]);
+        const pick = k => { const st = store.get(key); st[q.n] = k; store.set(key, st); paintQ(x, art, q, k); sayResult(art); if (k !== 'peek') updateMeta(x); };
+        art.querySelectorAll('.opts button').forEach(b => b.addEventListener('click', () => { if (b.getAttribute('aria-disabled') !== 'true') pick(b.dataset.k); }));
+        const fm = art.querySelector('.isi'); if (fm) fm.addEventListener('submit', ev => { ev.preventDefault(); const inp = fm.querySelector('input'); if (inp.readOnly) return; const v = inp.value.trim(); if (v) pick('T:' + v); });
+        art.querySelector('.peek').addEventListener('click', () => pick('peek'));
+      });
+    }));
   }).catch(() => { document.getElementById('peta-1f').innerHTML = '<p class="empty">Daftar gagal dimuat. Coba muat ulang halaman.</p>'; });
   window.addEventListener('hashchange', show);
   // Skip link: pindahkan fokus tanpa mengubah hash (hash dipakai sebagai router halaman)

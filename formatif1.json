@@ -1,406 +1,1676 @@
 [
 {
 "n": 1,
-"s": "Diskus interkalaris menghubungkan otot jantung yang satu dengan otot jantung di sebelahnya."
+"s": "Diskus interkalaris menghubungkan otot jantung yang satu dengan otot jantung di sebelahnya.",
+"m": [
+{
+"x": "s1-2023",
+"n": 40
+}
+]
 },
 {
 "n": 2,
-"s": "Penyakit jantung reumatik dapat disebabkan oleh komplikasi pasca demam reumatik akibat infeksi Streptococcus pyogenes."
+"s": "Penyakit jantung reumatik dapat disebabkan oleh komplikasi pasca demam reumatik akibat infeksi Streptococcus pyogenes.",
+"m": [
+{
+"x": "s1-2023",
+"n": 49
+},
+{
+"x": "s1-2022",
+"n": 16
+},
+{
+"x": "s1-2022",
+"n": 18
+},
+{
+"x": "s1-2021",
+"n": 30
+},
+{
+"x": "s1-2020",
+"n": 40
+},
+{
+"x": "s1-2018",
+"n": 14
+}
+]
 },
 {
 "n": 3,
-"s": "Tekanan darah rata-rata (MAP) lebih tinggi di arteriol daripada di arteri"
+"s": "Tekanan darah rata-rata (MAP) lebih tinggi di arteriol daripada di arteri",
+"m": [
+{
+"x": "s1-2019",
+"n": 51
+}
+]
 },
 {
 "n": 4,
-"s": "Siklus asam sitrat adalah jalur metabolisme bersama yang digunakan oleh karbohidrat, lemak dan protein"
+"s": "Siklus asam sitrat adalah jalur metabolisme bersama yang digunakan oleh karbohidrat, lemak dan protein",
+"m": [
+{
+"x": "s1-2023",
+"n": 75
+},
+{
+"x": "s1-2021",
+"n": 1
+},
+{
+"x": "s1-2018",
+"n": 41
+}
+]
 },
 {
 "n": 5,
-"s": "Sumber energi terbesar pada otot jantung adalah glukosa karena lebih cepat dalam menghasilkan ATP."
+"s": "Sumber energi terbesar pada otot jantung adalah glukosa karena lebih cepat dalam menghasilkan ATP.",
+"m": [
+{
+"x": "s1-2023",
+"n": 44
+},
+{
+"x": "s1-2022",
+"n": 12
+},
+{
+"x": "s1-2022",
+"n": 61
+},
+{
+"x": "s1-2021",
+"n": 6
+},
+{
+"x": "s1-2021",
+"n": 73
+},
+{
+"x": "s1-2020",
+"n": 42
+},
+{
+"x": "s1-2019",
+"n": 10
+},
+{
+"x": "s1-2018",
+"n": 49
+}
+]
 },
 {
 "n": 6,
-"s": "Fase plateau pada potensial aksi jantung terutama disebabkan oleh masuknya ion kalsium secara lambat."
+"s": "Fase plateau pada potensial aksi jantung terutama disebabkan oleh masuknya ion kalsium secara lambat.",
+"m": [
+{
+"x": "s1-2019",
+"n": 5
+},
+{
+"x": "s1-2018",
+"n": 59
+}
+]
 },
 {
 "n": 7,
-"s": "Pada tindakan penusukan pembuluh darah dengan abocath untuk pemasangan infus, pembuluh darah yang ditusuk adalah vena kecil."
+"s": "Pada tindakan penusukan pembuluh darah dengan abocath untuk pemasangan infus, pembuluh darah yang ditusuk adalah vena kecil.",
+"m": [
+{
+"x": "s1-2021",
+"n": 15
+},
+{
+"x": "s1-2020",
+"n": 73
+},
+{
+"x": "s1-2018",
+"n": 38
+}
+]
 },
 {
 "n": 8,
-"s": "Gejala pusing yang terjadi setelah olahraga berat merupakan respon cepat berkurangnya aliran darah ke otak yang biasa dilakukan oleh a. carotis eksterna."
+"s": "Gejala pusing yang terjadi setelah olahraga berat merupakan respon cepat berkurangnya aliran darah ke otak yang biasa dilakukan oleh a. carotis eksterna.",
+"m": [
+{
+"x": "s1-2021",
+"n": 24
+},
+{
+"x": "s1-2019",
+"n": 66
+}
+]
 },
 {
 "n": 9,
-"s": "Penurunan tekanan arteri menyebabkan penurunan aktivitas simpatis"
+"s": "Penurunan tekanan arteri menyebabkan penurunan aktivitas simpatis",
+"m": [
+{
+"x": "s1-2023",
+"n": 76
+},
+{
+"x": "s1-2020",
+"n": 2
+}
+]
 },
 {
 "n": 10,
-"s": "Pada frekuensi denyut jantung istirahat yang normal, tekanan arteri rata-rata diperkirakan sebesar tekanan diastolik ditambah setengah tekanan nadi."
+"s": "Pada frekuensi denyut jantung istirahat yang normal, tekanan arteri rata-rata diperkirakan sebesar tekanan diastolik ditambah setengah tekanan nadi.",
+"m": [
+{
+"x": "s1-2022",
+"n": 10
+}
+]
 },
 {
 "n": 11,
-"s": "Arteri besar memiliki lembaran elastin yang mendominasi tunika medianya karena arteri besar harus menahan tekanan ventrikel kiri."
+"s": "Arteri besar memiliki lembaran elastin yang mendominasi tunika medianya karena arteri besar harus menahan tekanan ventrikel kiri.",
+"m": [
+{
+"x": "s1-2019",
+"n": 12
+}
+]
 },
 {
 "n": 12,
-"s": "Kapiler berpori dibutuhkan agar molekul-molekul kecil dapat langsung menembus dinding kapiler"
+"s": "Kapiler berpori dibutuhkan agar molekul-molekul kecil dapat langsung menembus dinding kapiler",
+"m": [
+{
+"x": "s1-2023",
+"n": 22
+},
+{
+"x": "s1-2023",
+"n": 48
+},
+{
+"x": "s1-2021",
+"n": 41
+},
+{
+"x": "s1-2021",
+"n": 79
+}
+]
 },
 {
 "n": 13,
-"s": "Stimulasi simpatis menyebabkan vasokonstriksi arteriol."
+"s": "Stimulasi simpatis menyebabkan vasokonstriksi arteriol.",
+"m": [
+{
+"x": "s1-2021",
+"n": 9
+},
+{
+"x": "s1-2019",
+"n": 14
+}
+]
 },
 {
 "n": 14,
-"s": "Serat Purkinje memiliki diskus interkalaris"
+"s": "Serat Purkinje memiliki diskus interkalaris",
+"m": [
+{
+"x": "s1-2021",
+"n": 75
+},
+{
+"x": "s1-2021",
+"n": 81
+},
+{
+"x": "s1-2020",
+"n": 8
+},
+{
+"x": "s1-2019",
+"n": 29
+},
+{
+"x": "s1-2019",
+"n": 78
+},
+{
+"x": "s1-2018",
+"n": 53
+}
+]
 },
 {
 "n": 15,
-"s": "Kilomikron merupakan lipoprotein yang paling besar"
+"s": "Kilomikron merupakan lipoprotein yang paling besar",
+"m": [
+{
+"x": "s1-2023",
+"n": 10
+},
+{
+"x": "s1-2020",
+"n": 35
+},
+{
+"x": "s1-2019",
+"n": 18
+},
+{
+"x": "s1-2018",
+"n": 3
+}
+]
 },
 {
 "n": 16,
-"s": "Arteria circumfexa scapulae yang merupakan cabang dari arteria subscapularis, berjalan ke arah posterior melalui spatium triangulare untuk mencapai permukaan dorsal scapula, tempat arteri ini berperan dalam pembentukan anastomosis scapularis."
+"s": "Arteria circumfexa scapulae yang merupakan cabang dari arteria subscapularis, berjalan ke arah posterior melalui spatium triangulare untuk mencapai permukaan dorsal scapula, tempat arteri ini berperan dalam pembentukan anastomosis scapularis.",
+"m": [
+{
+"x": "s1-2023",
+"n": 31
+},
+{
+"x": "s1-2020",
+"n": 58
+}
+]
 },
 {
 "n": 17,
 "s": "Tekanan darah rata-rata (MAP) lebih tinggi di arteriol daripada di arteri",
-"dup": 3
+"dup": 3,
+"m": [
+{
+"x": "s1-2019",
+"n": 51
+}
+]
 },
 {
 "n": 18,
-"s": "Arteriae metatarsalis plantares berasal dari arcus plantaris dan berjalan ke arah distal untuk berkontribusi dalam suplai darah ke jari-jari kaki melalui arteriae digitalis plantares communes."
+"s": "Arteriae metatarsalis plantares berasal dari arcus plantaris dan berjalan ke arah distal untuk berkontribusi dalam suplai darah ke jari-jari kaki melalui arteriae digitalis plantares communes.",
+"m": []
 },
 {
 "n": 19,
-"s": "Vasa vasorum adalah jajejaring pembuluh darah kecil yang menyuplai darah ke dinding pembuluh darah besar tempatnya berada"
+"s": "Vasa vasorum adalah jajejaring pembuluh darah kecil yang menyuplai darah ke dinding pembuluh darah besar tempatnya berada",
+"m": [
+{
+"x": "s1-2023",
+"n": 38
+},
+{
+"x": "s1-2022",
+"n": 66
+},
+{
+"x": "s1-2021",
+"n": 27
+},
+{
+"x": "s1-2021",
+"n": 40
+},
+{
+"x": "s1-2020",
+"n": 26
+},
+{
+"x": "s1-2018",
+"n": 4
+}
+]
 },
 {
 "n": 20,
-"s": "Konduksi potensial aksi antar sel otot jantung melalui diskus interkalaris difasilitasi oleh desmosom."
+"s": "Konduksi potensial aksi antar sel otot jantung melalui diskus interkalaris difasilitasi oleh desmosom.",
+"m": [
+{
+"x": "s1-2023",
+"n": 40
+},
+{
+"x": "s1-2023",
+"n": 43
+}
+]
 },
 {
 "n": 21,
-"s": "Klik mid-sistol pada katup mitral yang mengalami degenerasi miksomatosa terjadi akibat tensi mendadak pada katup yang berlebih dan korda tendinei ketika katup mencoba menutup"
+"s": "Klik mid-sistol pada katup mitral yang mengalami degenerasi miksomatosa terjadi akibat tensi mendadak pada katup yang berlebih dan korda tendinei ketika katup mencoba menutup",
+"m": []
 },
 {
 "n": 22,
-"s": "Untuk menegakkan diagnosis strep throat dapat dilakukan usap tenggorok"
+"s": "Untuk menegakkan diagnosis strep throat dapat dilakukan usap tenggorok",
+"m": [
+{
+"x": "s1-2021",
+"n": 78
+},
+{
+"x": "s1-2020",
+"n": 66
+},
+{
+"x": "s1-2018",
+"n": 15
+}
+]
 },
 {
 "n": 23,
-"s": "Pada saat kontraksi isovolumetrik ventrikel terjadi, katup atrioventrikular (AV) dan katup semilunar dalam keadaan tertutup."
+"s": "Pada saat kontraksi isovolumetrik ventrikel terjadi, katup atrioventrikular (AV) dan katup semilunar dalam keadaan tertutup.",
+"m": [
+{
+"x": "s1-2023",
+"n": 35
+},
+{
+"x": "s1-2022",
+"n": 70
+},
+{
+"x": "s1-2020",
+"n": 27
+},
+{
+"x": "s1-2019",
+"n": 8
+}
+]
 },
 {
 "n": 24,
-"s": "Pada keadaan kurang oksigen jalur siklus asam sitrat tetap berjalan karena dalam reaksi tidak membutuhkan oksigen."
+"s": "Pada keadaan kurang oksigen jalur siklus asam sitrat tetap berjalan karena dalam reaksi tidak membutuhkan oksigen.",
+"m": [
+{
+"x": "s1-2023",
+"n": 20
+},
+{
+"x": "s1-2022",
+"n": 41
+},
+{
+"x": "s1-2021",
+"n": 32
+},
+{
+"x": "s1-2021",
+"n": 65
+},
+{
+"x": "s1-2020",
+"n": 19
+},
+{
+"x": "s1-2019",
+"n": 32
+}
+]
 },
 {
 "n": 25,
-"s": "Sistem portal pada glomerulus ginjal, darah dari arteriol kembali ke arteriol tanpa melalui venul dan jantung"
+"s": "Sistem portal pada glomerulus ginjal, darah dari arteriol kembali ke arteriol tanpa melalui venul dan jantung",
+"m": [
+{
+"x": "s1-2018",
+"n": 16
+}
+]
 },
 {
 "n": 26,
-"s": "Vena azygos berjalan naik melalui mediastinum posterior, melengkung di atas radix pulmonis dextra, dan bermuara ke dalam vena cava superior."
+"s": "Vena azygos berjalan naik melalui mediastinum posterior, melengkung di atas radix pulmonis dextra, dan bermuara ke dalam vena cava superior.",
+"m": []
 },
 {
 "n": 27,
-"s": "Secara Histologi, arteri koronaria termasuk dalam kategori arteri sedang khusus"
+"s": "Secara Histologi, arteri koronaria termasuk dalam kategori arteri sedang khusus",
+"m": [
+{
+"x": "s1-2023",
+"n": 34
+},
+{
+"x": "s1-2021",
+"n": 2
+}
+]
 },
 {
 "n": 28,
-"s": "Sel otot jantung banyak mengandung mitokondria karena membutuhkan jumlah ATP yang besar."
+"s": "Sel otot jantung banyak mengandung mitokondria karena membutuhkan jumlah ATP yang besar.",
+"m": [
+{
+"x": "s1-2023",
+"n": 13
+},
+{
+"x": "s1-2023",
+"n": 73
+},
+{
+"x": "s1-2022",
+"n": 58
+},
+{
+"x": "s1-2021",
+"n": 72
+},
+{
+"x": "s1-2020",
+"n": 30
+},
+{
+"x": "s1-2019",
+"n": 61
+}
+]
 },
 {
 "n": 29,
-"s": "Pada atherosklerosis otot polos yang direkrut masuk ke dalam lesi plak atherom dapat berfungsi menyerupai makrofag"
+"s": "Pada atherosklerosis otot polos yang direkrut masuk ke dalam lesi plak atherom dapat berfungsi menyerupai makrofag",
+"m": []
 },
 {
 "n": 30,
-"s": "Pemeriksaan biakan dianjurkan untuk mengidentifikasi Coxiella, Chlamydia, dan Bartonella."
+"s": "Pemeriksaan biakan dianjurkan untuk mengidentifikasi Coxiella, Chlamydia, dan Bartonella.",
+"m": []
 },
 {
 "n": 31,
-"s": "Aneurisma adalah dilatasi lokal pembuluh darah vena"
+"s": "Aneurisma adalah dilatasi lokal pembuluh darah vena",
+"m": [
+{
+"x": "s1-2023",
+"n": 56
+},
+{
+"x": "s1-2022",
+"n": 13
+},
+{
+"x": "s1-2021",
+"n": 64
+},
+{
+"x": "s1-2019",
+"n": 31
+},
+{
+"x": "s1-2018",
+"n": 32
+}
+]
 },
 {
 "n": 32,
-"s": "Diagnosis laboratorium endokarditis dapat ditegakkan menggunakan dua set biakan darah dalam 1-2 jam atau tiga set dalam 24 jam yang diambil sebelum pemberian antibiotik."
+"s": "Diagnosis laboratorium endokarditis dapat ditegakkan menggunakan dua set biakan darah dalam 1-2 jam atau tiga set dalam 24 jam yang diambil sebelum pemberian antibiotik.",
+"m": [
+{
+"x": "s1-2023",
+"n": 55
+},
+{
+"x": "s1-2023",
+"n": 69
+},
+{
+"x": "s1-2022",
+"n": 6
+},
+{
+"x": "s1-2021",
+"n": 11
+},
+{
+"x": "s1-2020",
+"n": 69
+},
+{
+"x": "s1-2019",
+"n": 72
+}
+]
 },
 {
 "n": 33,
-"s": "Lumen pembuluh arteri, vena dan limf selalu dilapisi oleh epitel selapis gepeng"
+"s": "Lumen pembuluh arteri, vena dan limf selalu dilapisi oleh epitel selapis gepeng",
+"m": []
 },
 {
 "n": 34,
-"s": "Peningkatan luas permukaan tubuh menurunkan resistensi vaskular"
+"s": "Peningkatan luas permukaan tubuh menurunkan resistensi vaskular",
+"m": [
+{
+"x": "s1-2023",
+"n": 72
+}
+]
 },
 {
 "n": 35,
-"s": "Sel Otot jantung memiliki inti yang terletak di bagian tepi sel"
+"s": "Sel Otot jantung memiliki inti yang terletak di bagian tepi sel",
+"m": [
+{
+"x": "s1-2020",
+"n": 59
+}
+]
 },
 {
 "n": 36,
-"s": "Tekanan osmotik koloid plasma terutama dihasilkan oleh protein plasma."
+"s": "Tekanan osmotik koloid plasma terutama dihasilkan oleh protein plasma.",
+"m": [
+{
+"x": "s1-2023",
+"n": 74
+},
+{
+"x": "s1-2022",
+"n": 38
+},
+{
+"x": "s1-2018",
+"n": 56
+}
+]
 },
 {
 "n": 37,
-"s": "Epinefrin meningkatkan denyut dan kontraktilitas jantung melalui aktivasi reseptor beta-adrenergik."
+"s": "Epinefrin meningkatkan denyut dan kontraktilitas jantung melalui aktivasi reseptor beta-adrenergik.",
+"m": [
+{
+"x": "s1-2023",
+"n": 1
+}
+]
 },
 {
 "n": 38,
-"s": "Kreatin kinase adalah cadangan energi yang terdapat pada sel otot jantung"
+"s": "Kreatin kinase adalah cadangan energi yang terdapat pada sel otot jantung",
+"m": [
+{
+"x": "s1-2022",
+"n": 14
+}
+]
 },
 {
 "n": 39,
-"s": "Pada aneurisma yang terjadi pada aorta abdominalis terdapat penipisan tunika media"
+"s": "Pada aneurisma yang terjadi pada aorta abdominalis terdapat penipisan tunika media",
+"m": [
+{
+"x": "s1-2023",
+"n": 56
+},
+{
+"x": "s1-2022",
+"n": 13
+},
+{
+"x": "s1-2021",
+"n": 64
+},
+{
+"x": "s1-2019",
+"n": 31
+},
+{
+"x": "s1-2018",
+"n": 32
+}
+]
 },
 {
 "n": 40,
-"s": "Sel otoritimik jantung memulai potensial aksi tanpa stimulasi saraf eksternal."
+"s": "Sel otoritimik jantung memulai potensial aksi tanpa stimulasi saraf eksternal.",
+"m": [
+{
+"x": "s1-2022",
+"n": 62
+},
+{
+"x": "s1-2020",
+"n": 31
+},
+{
+"x": "s1-2020",
+"n": 71
+},
+{
+"x": "s1-2019",
+"n": 56
+}
+]
 },
 {
 "n": 41,
-"s": "Miokarditis dapat mengakibatkan aritmia dan henti jantung mendadak"
+"s": "Miokarditis dapat mengakibatkan aritmia dan henti jantung mendadak",
+"m": [
+{
+"x": "s1-2023",
+"n": 37
+},
+{
+"x": "s1-2020",
+"n": 32
+},
+{
+"x": "s1-2019",
+"n": 24
+}
+]
 },
 {
 "n": 42,
-"s": "Proses aterosklerosis dimulai dari disfungsi endotel"
+"s": "Proses aterosklerosis dimulai dari disfungsi endotel",
+"m": [
+{
+"x": "s1-2023",
+"n": 47
+},
+{
+"x": "s1-2019",
+"n": 70
+},
+{
+"x": "s1-2018",
+"n": 22
+}
+]
 },
 {
 "n": 43,
-"s": "Pada dominansi koroner kiri, arteria interventricularis posterior berasal dari arteria interventricularis anterior yang berlanjut ke dalam sulcus interventricularis posterior."
+"s": "Pada dominansi koroner kiri, arteria interventricularis posterior berasal dari arteria interventricularis anterior yang berlanjut ke dalam sulcus interventricularis posterior.",
+"m": [
+{
+"x": "s1-2020",
+"n": 41
+},
+{
+"x": "s1-2018",
+"n": 44
+}
+]
 },
 {
 "n": 44,
-"s": "Berdiri dalam waktu lama, terutama di lingkungan panas, dapat menurunkan aliran balik vena akibat penumpukan darah di tungkai dan vasodilatasi kulit."
+"s": "Berdiri dalam waktu lama, terutama di lingkungan panas, dapat menurunkan aliran balik vena akibat penumpukan darah di tungkai dan vasodilatasi kulit.",
+"m": [
+{
+"x": "s1-2022",
+"n": 9
+}
+]
 },
 {
 "n": 45,
-"s": "LDL teroksidasi dikenali oleh makrofag sebagai materi rusak dan akan difagositosis."
+"s": "LDL teroksidasi dikenali oleh makrofag sebagai materi rusak dan akan difagositosis.",
+"m": []
 },
 {
 "n": 46,
 "s": "Secara Histologi, arteri koronaria termasuk dalam kategori arteri sedang khusus",
-"dup": 27
+"dup": 27,
+"m": [
+{
+"x": "s1-2023",
+"n": 34
+},
+{
+"x": "s1-2021",
+"n": 2
+}
+]
 },
 {
 "n": 47,
-"s": "Laju Endap Darah yang cepat spesifik untuk penyakit jantung reumatik"
+"s": "Laju Endap Darah yang cepat spesifik untuk penyakit jantung reumatik",
+"m": [
+{
+"x": "s1-2019",
+"n": 23
+},
+{
+"x": "s1-2019",
+"n": 57
+},
+{
+"x": "s1-2018",
+"n": 5
+}
+]
 },
 {
 "n": 48,
-"s": "Stimulasi parasimpatis meningkatkan permeabilitas kalsium pada sel pacu jantung (pacemaker cells)."
+"s": "Stimulasi parasimpatis meningkatkan permeabilitas kalsium pada sel pacu jantung (pacemaker cells).",
+"m": [
+{
+"x": "s1-2023",
+"n": 80
+},
+{
+"x": "s1-2021",
+"n": 45
+},
+{
+"x": "s1-2020",
+"n": 15
+},
+{
+"x": "s1-2018",
+"n": 51
+}
+]
 },
 {
 "n": 49,
-"s": "Gambar C bukan merupakan bentuk vasa vasorum"
+"s": "Gambar C bukan merupakan bentuk vasa vasorum",
+"m": [
+{
+"x": "s1-2023",
+"n": 38
+},
+{
+"x": "s1-2022",
+"n": 66
+},
+{
+"x": "s1-2021",
+"n": 27
+},
+{
+"x": "s1-2021",
+"n": 40
+},
+{
+"x": "s1-2020",
+"n": 26
+},
+{
+"x": "s1-2018",
+"n": 4
+}
+]
 },
 {
 "n": 50,
-"s": "Perlambatan normal antara aktivasi atrium dan ventrikel memungkinkan atrium membantu pengisian ventrikel sebelum kontraksi ventrikel dimulai."
+"s": "Perlambatan normal antara aktivasi atrium dan ventrikel memungkinkan atrium membantu pengisian ventrikel sebelum kontraksi ventrikel dimulai.",
+"m": [
+{
+"x": "s1-2023",
+"n": 66
+},
+{
+"x": "s1-2022",
+"n": 25
+},
+{
+"x": "s1-2022",
+"n": 47
+},
+{
+"x": "s1-2021",
+"n": 59
+},
+{
+"x": "s1-2019",
+"n": 2
+}
+]
 },
 {
 "n": 51,
-"s": "Tunika media Aorta didominasi oleh lembaran-lembaran elastin"
+"s": "Tunika media Aorta didominasi oleh lembaran-lembaran elastin",
+"m": [
+{
+"x": "s1-2023",
+"n": 68
+},
+{
+"x": "s1-2019",
+"n": 12
+}
+]
 },
 {
 "n": 52,
-"s": "Stress merupakan faktor risiko mayor aterosklerosis"
+"s": "Stress merupakan faktor risiko mayor aterosklerosis",
+"m": [
+{
+"x": "s1-2022",
+"n": 30
+},
+{
+"x": "s1-2021",
+"n": 54
+},
+{
+"x": "s1-2019",
+"n": 1
+},
+{
+"x": "s1-2019",
+"n": 53
+}
+]
 },
 {
 "n": 53,
-"s": "Pathogenesis thromboangitis obliteras adalah karena adanya autoantibodi yang merusak endotel"
+"s": "Pathogenesis thromboangitis obliteras adalah karena adanya autoantibodi yang merusak endotel",
+"m": [
+{
+"x": "s1-2021",
+"n": 51
+},
+{
+"x": "s1-2019",
+"n": 22
+}
+]
 },
 {
 "n": 54,
-"s": "Hukum Frank-Starling menunjukkan bahwa peningkatan volume akhir diastolik akan meningkatkan volume sekuncup (stroke volume)."
+"s": "Hukum Frank-Starling menunjukkan bahwa peningkatan volume akhir diastolik akan meningkatkan volume sekuncup (stroke volume).",
+"m": [
+{
+"x": "s1-2023",
+"n": 21
+},
+{
+"x": "s1-2023",
+"n": 30
+},
+{
+"x": "s1-2022",
+"n": 69
+}
+]
 },
 {
 "n": 55,
-"s": "Obesitas adalah factor risiko mayor untuk aterosklerosis"
+"s": "Obesitas adalah factor risiko mayor untuk aterosklerosis",
+"m": [
+{
+"x": "s1-2022",
+"n": 30
+},
+{
+"x": "s1-2021",
+"n": 54
+},
+{
+"x": "s1-2019",
+"n": 1
+},
+{
+"x": "s1-2019",
+"n": 53
+}
+]
 },
 {
 "n": 56,
-"s": "Titer antibody terhadap Chlamydia pneumoniae yang tinggi dapat ditemukan pada pasien penyakit jantung koroner"
+"s": "Titer antibody terhadap Chlamydia pneumoniae yang tinggi dapat ditemukan pada pasien penyakit jantung koroner",
+"m": [
+{
+"x": "s1-2022",
+"n": 19
+},
+{
+"x": "s1-2022",
+"n": 44
+},
+{
+"x": "s1-2022",
+"n": 54
+},
+{
+"x": "s1-2020",
+"n": 64
+}
+]
 },
 {
 "n": 57,
-"s": "Pada biopsi kardiomiopati restriktif dapat ditemukan serat otot yang membesar dengan arah bersilangan dan ireguler"
+"s": "Pada biopsi kardiomiopati restriktif dapat ditemukan serat otot yang membesar dengan arah bersilangan dan ireguler",
+"m": [
+{
+"x": "s1-2018",
+"n": 35
+}
+]
 },
 {
 "n": 58,
-"s": "Nyeri alih yang dirasakan di area spraventrikuar dan lateral leher disebabkan karena myocard infark di area anterior jantung"
+"s": "Nyeri alih yang dirasakan di area spraventrikuar dan lateral leher disebabkan karena myocard infark di area anterior jantung",
+"m": [
+{
+"x": "s1-2023",
+"n": 32
+},
+{
+"x": "s1-2018",
+"n": 19
+}
+]
 },
 {
 "n": 59,
-"s": "Apo-B100 adalah apoprotein yang menyebabkan LDL dapat melekat pada jaringan perifer."
+"s": "Apo-B100 adalah apoprotein yang menyebabkan LDL dapat melekat pada jaringan perifer.",
+"m": [
+{
+"x": "s1-2019",
+"n": 67
+}
+]
 },
 {
 "n": 60,
-"s": "Glikolisis akan meningkat secara nyata untuk memenuhi kebutuhan energi dalam kondisi iskemia/hipoksia"
+"s": "Glikolisis akan meningkat secara nyata untuk memenuhi kebutuhan energi dalam kondisi iskemia/hipoksia",
+"m": [
+{
+"x": "s1-2023",
+"n": 20
+},
+{
+"x": "s1-2022",
+"n": 41
+},
+{
+"x": "s1-2021",
+"n": 32
+},
+{
+"x": "s1-2021",
+"n": 65
+},
+{
+"x": "s1-2020",
+"n": 19
+},
+{
+"x": "s1-2019",
+"n": 32
+}
+]
 },
 {
 "n": 61,
-"s": "Vena saphena magna berjalan naik sepanjang aspek lateral tungkai, melewati posterior malleolus medialis dan bermuara ke dalam vena poplitea."
+"s": "Vena saphena magna berjalan naik sepanjang aspek lateral tungkai, melewati posterior malleolus medialis dan bermuara ke dalam vena poplitea.",
+"m": [
+{
+"x": "s1-2022",
+"n": 35
+},
+{
+"x": "s1-2022",
+"n": 72
+},
+{
+"x": "s1-2021",
+"n": 82
+}
+]
 },
 {
 "n": 62,
-"s": "Arteria radialis merupakan pembuluh darah utama yang membentuk arcus palmaris superficialis, sedangkan arteria ulnaris terutama membentuk arcus palmaris profundus."
+"s": "Arteria radialis merupakan pembuluh darah utama yang membentuk arcus palmaris superficialis, sedangkan arteria ulnaris terutama membentuk arcus palmaris profundus.",
+"m": [
+{
+"x": "s1-2023",
+"n": 70
+}
+]
 },
 {
 "n": 63,
-"s": "Enterococcus faecalis dapat menyebabkan endokarditis. Sebagian besar bakteri ini peka terhadap penisilin."
+"s": "Enterococcus faecalis dapat menyebabkan endokarditis. Sebagian besar bakteri ini peka terhadap penisilin.",
+"m": []
 },
 {
 "n": 64,
-"s": "Nodul sinoatrial (SA) terletak di atrium kiri dan memulai siklus jantung."
+"s": "Nodul sinoatrial (SA) terletak di atrium kiri dan memulai siklus jantung.",
+"m": [
+{
+"x": "s1-2023",
+"n": 5
+},
+{
+"x": "s1-2022",
+"n": 73
+},
+{
+"x": "s1-2021",
+"n": 58
+},
+{
+"x": "s1-2019",
+"n": 68
+}
+]
 },
 {
 "n": 65,
-"s": "Gradien tekanan yang lebih besar menyebabkan peningkatan aliran darah."
+"s": "Gradien tekanan yang lebih besar menyebabkan peningkatan aliran darah.",
+"m": [
+{
+"x": "s1-2019",
+"n": 80
+}
+]
 },
 {
 "n": 66,
-"s": "Sel endotel hanya berfungsi sebagai pelapis/barrier pada pembuluh darah agar sel dan plasma darah tidak merembes ke interstisium"
+"s": "Sel endotel hanya berfungsi sebagai pelapis/barrier pada pembuluh darah agar sel dan plasma darah tidak merembes ke interstisium",
+"m": [
+{
+"x": "s1-2023",
+"n": 27
+},
+{
+"x": "s1-2023",
+"n": 65
+},
+{
+"x": "s1-2020",
+"n": 47
+},
+{
+"x": "s1-2019",
+"n": 16
+},
+{
+"x": "s1-2019",
+"n": 49
+},
+{
+"x": "s1-2018",
+"n": 34
+}
+]
 },
 {
 "n": 67,
-"s": "Enzim kunci yang mengatur jalur sintesis metabolisme kolesterol adalah HMG-koA reductase."
+"s": "Enzim kunci yang mengatur jalur sintesis metabolisme kolesterol adalah HMG-koA reductase.",
+"m": [
+{
+"x": "s1-2023",
+"n": 42
+},
+{
+"x": "s1-2021",
+"n": 46
+}
+]
 },
 {
 "n": 68,
-"s": "Nodus sinoatrialis, yang terletak dekat muara vena cava superior pada ujung superior crista terminalis, berfungsi sebagai pemacu irama normal jantung dengan menginisiasi impuls listrik."
+"s": "Nodus sinoatrialis, yang terletak dekat muara vena cava superior pada ujung superior crista terminalis, berfungsi sebagai pemacu irama normal jantung dengan menginisiasi impuls listrik.",
+"m": [
+{
+"x": "s1-2023",
+"n": 5
+},
+{
+"x": "s1-2022",
+"n": 73
+},
+{
+"x": "s1-2021",
+"n": 58
+},
+{
+"x": "s1-2019",
+"n": 68
+}
+]
 },
 {
 "n": 69,
-"s": "Peningkatan preload menyebabkan penurunan curah jantung (cardiac output)."
+"s": "Peningkatan preload menyebabkan penurunan curah jantung (cardiac output).",
+"m": [
+{
+"x": "s1-2023",
+"n": 21
+},
+{
+"x": "s1-2023",
+"n": 30
+},
+{
+"x": "s1-2022",
+"n": 69
+}
+]
 },
 {
 "n": 70,
-"s": "Bakteri yang dapat menyebabkan endokarditis pada pasien tanpa bukti kelainan jantung antara lain Streptococcus pyogenes."
+"s": "Bakteri yang dapat menyebabkan endokarditis pada pasien tanpa bukti kelainan jantung antara lain Streptococcus pyogenes.",
+"m": [
+{
+"x": "s1-2022",
+"n": 50
+},
+{
+"x": "s1-2021",
+"n": 43
+},
+{
+"x": "s1-2019",
+"n": 25
+},
+{
+"x": "s1-2019",
+"n": 44
+}
+]
 },
 {
 "n": 71,
-"s": "Pada Tetralogy of Fallot, penyempitan infundibulum ventrikel kanan menyebabkan hambatan aliran darah menuju truncus pulmonalis sehingga meningkatkan tekanan ventrikel kanan, sedangkan aorta seluruhnya berasal dari ventrikel kiri tanpa hubungan anatomis dengan ventrikel kanan karena septum interventrikular tetap utuh"
+"s": "Pada Tetralogy of Fallot, penyempitan infundibulum ventrikel kanan menyebabkan hambatan aliran darah menuju truncus pulmonalis sehingga meningkatkan tekanan ventrikel kanan, sedangkan aorta seluruhnya berasal dari ventrikel kiri tanpa hubungan anatomis dengan ventrikel kanan karena septum interventrikular tetap utuh",
+"m": []
 },
 {
 "n": 72,
-"s": "Kompleks QRS merepresentasikan depolarisasi ventrikel dan mendahului kontraksi ventrikel."
+"s": "Kompleks QRS merepresentasikan depolarisasi ventrikel dan mendahului kontraksi ventrikel.",
+"m": [
+{
+"x": "s1-2023",
+"n": 51
+},
+{
+"x": "s1-2018",
+"n": 13
+}
+]
 },
 {
 "n": 73,
-"s": "Infeksi maupun Inflamasi tidak berperan dalam Penyakit Jantung Koroner"
+"s": "Infeksi maupun Inflamasi tidak berperan dalam Penyakit Jantung Koroner",
+"m": [
+{
+"x": "s1-2022",
+"n": 19
+},
+{
+"x": "s1-2022",
+"n": 44
+},
+{
+"x": "s1-2022",
+"n": 54
+},
+{
+"x": "s1-2020",
+"n": 64
+}
+]
 },
 {
 "n": 74,
-"s": "Penyaluran oksigen dan nutrisi, serta pengambilan zat sisa pada jaringan terjadi pada mikrosirkulasi"
+"s": "Penyaluran oksigen dan nutrisi, serta pengambilan zat sisa pada jaringan terjadi pada mikrosirkulasi",
+"m": [
+{
+"x": "s1-2023",
+"n": 22
+},
+{
+"x": "s1-2019",
+"n": 11
+},
+{
+"x": "s1-2018",
+"n": 20
+},
+{
+"x": "s1-2018",
+"n": 60
+}
+]
 },
 {
 "n": 75,
-"s": "Lipoprotein yang mendistribusikan lipid endogen ke jaringan perifer adalah HDL"
+"s": "Lipoprotein yang mendistribusikan lipid endogen ke jaringan perifer adalah HDL",
+"m": [
+{
+"x": "s1-2020",
+"n": 14
+},
+{
+"x": "s1-2019",
+"n": 20
+},
+{
+"x": "s1-2018",
+"n": 2
+},
+{
+"x": "s1-2018",
+"n": 23
+}
+]
 },
 {
 "n": 76,
-"s": "Kalsium ekstraseluler berperan sebagai penghambat dalam proses kopling eksitasi-kontraksi jantung."
+"s": "Kalsium ekstraseluler berperan sebagai penghambat dalam proses kopling eksitasi-kontraksi jantung.",
+"m": [
+{
+"x": "s1-2023",
+"n": 4
+},
+{
+"x": "s1-2019",
+"n": 41
+}
+]
 },
 {
 "n": 77,
 "s": "LDL teroksidasi dikenali oleh makrofag sebagai materi rusak dan akan difagositosis.",
-"dup": 45
+"dup": 45,
+"m": []
 },
 {
 "n": 78,
-"s": "Pada endokarditis bakterialis akut, ulserasi seringkali disertai oleh pembentukan jaringan granulasi"
+"s": "Pada endokarditis bakterialis akut, ulserasi seringkali disertai oleh pembentukan jaringan granulasi",
+"m": [
+{
+"x": "s1-2023",
+"n": 18
+},
+{
+"x": "s1-2021",
+"n": 80
+},
+{
+"x": "s1-2020",
+"n": 53
+},
+{
+"x": "s1-2019",
+"n": 63
+}
+]
 },
 {
 "n": 79,
 "s": "Vasa vasorum adalah jajejaring pembuluh darah kecil yang menyuplai darah ke dinding pembuluh darah besar tempatnya berada",
-"dup": 19
+"dup": 19,
+"m": [
+{
+"x": "s1-2023",
+"n": 38
+},
+{
+"x": "s1-2022",
+"n": 66
+},
+{
+"x": "s1-2021",
+"n": 27
+},
+{
+"x": "s1-2021",
+"n": 40
+},
+{
+"x": "s1-2020",
+"n": 26
+},
+{
+"x": "s1-2018",
+"n": 4
+}
+]
 },
 {
 "n": 80,
-"s": "Kalsifikasi katup aorta terjadi karena proses degenerasi dan umumnya tidak memengaruhi katup yang lain."
+"s": "Kalsifikasi katup aorta terjadi karena proses degenerasi dan umumnya tidak memengaruhi katup yang lain.",
+"m": []
 },
 {
 "n": 81,
-"s": "Kompleks II pada membran mitokondria bagian dalam akan menghasilkan gradien proton di antara ruang antar-membran dan matriks mitokondria"
+"s": "Kompleks II pada membran mitokondria bagian dalam akan menghasilkan gradien proton di antara ruang antar-membran dan matriks mitokondria",
+"m": []
 },
 {
 "n": 82,
-"s": "Pada auskultasi, Valva atrioventricularis dextran terletak di antara atrium kanan dan ventrikel kanan. Valva atrioventricularis dextra terletak posterior ke sisi kanan sternum pada tingkat tulang rawan kosta keempat kanan."
+"s": "Pada auskultasi, Valva atrioventricularis dextran terletak di antara atrium kanan dan ventrikel kanan. Valva atrioventricularis dextra terletak posterior ke sisi kanan sternum pada tingkat tulang rawan kosta keempat kanan.",
+"m": [
+{
+"x": "s1-2021",
+"n": 35
+}
+]
 },
 {
 "n": 83,
-"s": "Periode refrakter (refractory period) pada otot jantung lebih pendek dibandingkan otot rangka, memungkinkan terjadinya kontraksi tetanik."
+"s": "Periode refrakter (refractory period) pada otot jantung lebih pendek dibandingkan otot rangka, memungkinkan terjadinya kontraksi tetanik.",
+"m": [
+{
+"x": "s1-2021",
+"n": 63
+},
+{
+"x": "s1-2020",
+"n": 37
+},
+{
+"x": "s1-2019",
+"n": 15
+},
+{
+"x": "s1-2019",
+"n": 26
+},
+{
+"x": "s1-2018",
+"n": 59
+}
+]
 },
 {
 "n": 84,
-"s": "Berdasarkan studi akhir-akhir ini, bakteri yang paling sering menyebabkan endokarditis pada pasien dengan katup asli ialah Streptococcus viridans group."
+"s": "Berdasarkan studi akhir-akhir ini, bakteri yang paling sering menyebabkan endokarditis pada pasien dengan katup asli ialah Streptococcus viridans group.",
+"m": [
+{
+"x": "s1-2022",
+"n": 50
+},
+{
+"x": "s1-2021",
+"n": 43
+},
+{
+"x": "s1-2020",
+"n": 61
+},
+{
+"x": "s1-2019",
+"n": 25
+},
+{
+"x": "s1-2018",
+"n": 9
+}
+]
 },
 {
 "n": 85,
-"s": "Pada kondisi basal, dinding pembuluh darah yang dilapisi endotel bersifat non-trombogenik"
+"s": "Pada kondisi basal, dinding pembuluh darah yang dilapisi endotel bersifat non-trombogenik",
+"m": [
+{
+"x": "s1-2023",
+"n": 27
+},
+{
+"x": "s1-2022",
+"n": 34
+},
+{
+"x": "s1-2020",
+"n": 47
+},
+{
+"x": "s1-2020",
+"n": 56
+},
+{
+"x": "s1-2019",
+"n": 16
+},
+{
+"x": "s1-2018",
+"n": 34
+}
+]
 },
 {
 "n": 86,
-"s": "Serabut parasimpatis yang mempersarafi jantung berasal dari truncus symphaticus dan mencapai jantung melalui nervi cardiaci."
+"s": "Serabut parasimpatis yang mempersarafi jantung berasal dari truncus symphaticus dan mencapai jantung melalui nervi cardiaci.",
+"m": [
+{
+"x": "s1-2020",
+"n": 15
+},
+{
+"x": "s1-2018",
+"n": 51
+}
+]
 },
 {
 "n": 87,
-"s": "Pada dissecting aorta darah ditemukan pada tunika media"
+"s": "Pada dissecting aorta darah ditemukan pada tunika media",
+"m": [
+{
+"x": "s1-2023",
+"n": 68
+}
+]
 },
 {
 "n": 88,
-"s": "Serat Purkinje memiliki gambaran histologi dan fungsi yang sama dengan otot jantung."
+"s": "Serat Purkinje memiliki gambaran histologi dan fungsi yang sama dengan otot jantung.",
+"m": [
+{
+"x": "s1-2021",
+"n": 75
+},
+{
+"x": "s1-2021",
+"n": 81
+},
+{
+"x": "s1-2020",
+"n": 8
+},
+{
+"x": "s1-2019",
+"n": 29
+},
+{
+"x": "s1-2019",
+"n": 78
+},
+{
+"x": "s1-2018",
+"n": 53
+}
+]
 },
 {
 "n": 89,
-"s": "Pada penyakit Kawasaki, gejala klinis sering muncul akibat keterlibatan arteri koronaria"
+"s": "Pada penyakit Kawasaki, gejala klinis sering muncul akibat keterlibatan arteri koronaria",
+"m": []
 },
 {
 "n": 90,
-"s": "Bila terdapat deposisi kalsium pada sinus Valsava aorta, biasanya katup mitral tidak menunjukkan kelainan bermakna."
+"s": "Bila terdapat deposisi kalsium pada sinus Valsava aorta, biasanya katup mitral tidak menunjukkan kelainan bermakna.",
+"m": []
 },
 {
 "n": 91,
-"s": "Endokarditis antara lain disebabkan oleh invasi dan kolonisasi bakteri pada pasien dengan kelainan katup jantung bawaan."
+"s": "Endokarditis antara lain disebabkan oleh invasi dan kolonisasi bakteri pada pasien dengan kelainan katup jantung bawaan.",
+"m": [
+{
+"x": "s1-2022",
+"n": 51
+},
+{
+"x": "s1-2021",
+"n": 5
+}
+]
 },
 {
 "n": 92,
-"s": "Arteria transversa colli (juga dikenal sebagai arteria transversa cervicis) adalah cabang dari arteria subclavia, khususnya dari truncus thyrocervicalis, yang merupakan salah satu cabang dari bagian pertama arteri subclavia. Arteri ini menyediakan suplai darah ke otot-otot leher dan punggung bagian atas, termasuk m. trapezius."
+"s": "Arteria transversa colli (juga dikenal sebagai arteria transversa cervicis) adalah cabang dari arteria subclavia, khususnya dari truncus thyrocervicalis, yang merupakan salah satu cabang dari bagian pertama arteri subclavia. Arteri ini menyediakan suplai darah ke otot-otot leher dan punggung bagian atas, termasuk m. trapezius.",
+"m": [
+{
+"x": "s1-2021",
+"n": 18
+},
+{
+"x": "s1-2020",
+"n": 24
+},
+{
+"x": "s1-2020",
+"n": 58
+},
+{
+"x": "s1-2019",
+"n": 62
+}
+]
 },
 {
 "n": 93,
-"s": "Glikolisis adalah reaksi oksidasi glukosa membentuk asetil-koA."
+"s": "Glikolisis adalah reaksi oksidasi glukosa membentuk asetil-koA.",
+"m": [
+{
+"x": "s1-2023",
+"n": 9
+},
+{
+"x": "s1-2021",
+"n": 44
+},
+{
+"x": "s1-2020",
+"n": 67
+}
+]
 },
 {
 "n": 94,
-"s": "Stimulasi simpatis menurunkan frekuensi pembentukan impuls oleh sel pacemaker jantung selama berolahraga."
+"s": "Stimulasi simpatis menurunkan frekuensi pembentukan impuls oleh sel pacemaker jantung selama berolahraga.",
+"m": [
+{
+"x": "s1-2023",
+"n": 1
+}
+]
 },
 {
 "n": 95,
-"s": "Pada Eisenmenger syndrome, seorang anak telah mengalami right to left shunt sejak lahir"
+"s": "Pada Eisenmenger syndrome, seorang anak telah mengalami right to left shunt sejak lahir",
+"m": [
+{
+"x": "s1-2020",
+"n": 23
+}
+]
 },
 {
 "n": 96,
-"s": "Gagal jantung kanan tanpa disertai oleh gagal jantung kiri, paling sering disebabkan oleh penyakit paru kronis"
+"s": "Gagal jantung kanan tanpa disertai oleh gagal jantung kiri, paling sering disebabkan oleh penyakit paru kronis",
+"m": [
+{
+"x": "s1-2021",
+"n": 34
+},
+{
+"x": "s1-2020",
+"n": 46
+}
+]
 },
 {
 "n": 97,
-"s": "Kerangka fibrosa jantung berfungsi memberikan dukungan struktural bagi katup-katup jantung dan mengisolasi secara elektris miokardium atrium dari miokardium ventrikel, kecuali pada berkas atrioventricular, sehingga kontraksi atrium dan ventrikel dapat berlangsung secara terkoordinasi."
+"s": "Kerangka fibrosa jantung berfungsi memberikan dukungan struktural bagi katup-katup jantung dan mengisolasi secara elektris miokardium atrium dari miokardium ventrikel, kecuali pada berkas atrioventricular, sehingga kontraksi atrium dan ventrikel dapat berlangsung secara terkoordinasi.",
+"m": [
+{
+"x": "s1-2023",
+"n": 46
+},
+{
+"x": "s1-2022",
+"n": 75
+}
+]
 },
 {
 "n": 98,
-"s": "Arteria transversa colli atau arteria transversa cervicis merupakan cabang a. subclavia bagian pertama"
+"s": "Arteria transversa colli atau arteria transversa cervicis merupakan cabang a. subclavia bagian pertama",
+"m": [
+{
+"x": "s1-2021",
+"n": 18
+},
+{
+"x": "s1-2020",
+"n": 24
+},
+{
+"x": "s1-2020",
+"n": 58
+},
+{
+"x": "s1-2019",
+"n": 62
+}
+]
 },
 {
 "n": 99,
-"s": "Masuknya kalsium melalui kanal kalsium tipe L berkontribusi terhadap fase plateau potensial aksi sel kontraktil ventrikel."
+"s": "Masuknya kalsium melalui kanal kalsium tipe L berkontribusi terhadap fase plateau potensial aksi sel kontraktil ventrikel.",
+"m": [
+{
+"x": "s1-2019",
+"n": 5
+},
+{
+"x": "s1-2018",
+"n": 59
+}
+]
 },
 {
 "n": 100,
-"s": "Homosistein adalah factor risiko yang modifiable untuk aterosklerosis"
+"s": "Homosistein adalah factor risiko yang modifiable untuk aterosklerosis",
+"m": [
+{
+"x": "s1-2022",
+"n": 8
+},
+{
+"x": "s1-2021",
+"n": 20
+},
+{
+"x": "s1-2021",
+"n": 76
+},
+{
+"x": "s1-2019",
+"n": 1
+},
+{
+"x": "s1-2019",
+"n": 9
+},
+{
+"x": "s1-2018",
+"n": 50
+}
+]
 }
 ]
