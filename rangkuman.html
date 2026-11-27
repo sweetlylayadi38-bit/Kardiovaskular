@@ -13,17 +13,38 @@
   :root{--ink:#0d0d0e;--ash:#17171a;--smoke:#2a2a2d;--mist:#9a9aa0;--moon:#ecebe4;
     --serif:'Cormorant Garamond',Georgia,serif;--sans:'Karla',system-ui,sans-serif;color-scheme:dark;scrollbar-color:#6b6b72 var(--ink)}
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-padding-top:5rem}
+  html{scroll-padding-top:calc(var(--hdr,69px) + 1rem)}
   html,body{background:var(--ink);color:var(--moon);font-family:var(--sans);font-weight:300;line-height:1.7}
   ::selection{background:rgba(236,235,228,.85);color:var(--ink)}
   :where(a,summary):focus-visible{outline:2px solid var(--moon);outline-offset:2px}
-  header{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:1rem;
-    padding:1rem clamp(1rem,4vw,3rem);background:rgba(13,13,14,.94);border-bottom:1px solid var(--smoke)}
-  .logo{font-family:var(--serif);font-size:1.5rem;color:var(--moon);text-decoration:none;display:flex;align-items:center;gap:.55rem}
-  .logo svg{width:20px;height:20px}
-  .back{color:var(--mist);text-decoration:none;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase}
-  .back:hover{color:var(--moon)}
-  main{max-width:52rem;margin:0 auto;padding:2rem clamp(1rem,4vw,3rem) 5rem}
+  /* Latar dan header sama dengan halaman utama (index.html) */
+  .sky{position:fixed;inset:0;background:url(bg.jpg) center/cover;opacity:.32;z-index:0;pointer-events:none;transform:scale(1.05)}
+  .sky::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,transparent 0,rgba(13,13,14,.55) 55%,rgba(13,13,14,.92) 100%)}
+  header{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:1rem;
+    padding:1.1rem clamp(1.2rem,4vw,3rem);backdrop-filter:blur(10px);background:rgba(13,13,14,.7);border-bottom:1px solid rgba(236,235,228,.08)}
+  header>*{flex-shrink:0;white-space:nowrap}
+  .logo{font-family:var(--serif);font-size:1.5rem;letter-spacing:.04em;color:var(--moon);text-decoration:none;display:flex;align-items:center;gap:.55rem}
+  .logo svg{width:22px;height:22px}
+  .site-menu{list-style:none;margin:0}
+  .site-menu li{margin:0;text-align:start}
+  .site-menu a{display:block;color:var(--mist);text-decoration:none;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;padding:.3rem 0;border-bottom:1px solid transparent;transition:color .25s,border-color .25s}
+  .site-menu a:hover,.site-menu a:focus-visible{color:var(--moon)}
+  .site-menu a[aria-current="page"]{color:var(--moon);border-color:var(--moon)}
+  .menu-btn{background:none;border:1px solid var(--smoke);color:var(--moon);padding:.4rem .7rem;font:inherit;font-size:.8rem;letter-spacing:.15em;cursor:pointer}
+  .menu-btn:hover{border-color:var(--moon)}
+  header .menu-btn{anchor-name:--menu-btn}
+  header .site-menu[popover]{position:fixed;inset:auto;right:clamp(1.2rem,4vw,3rem);
+    top:var(--hdr,69px);top:anchor(--menu-btn bottom);margin:0;margin-top:.5rem;
+    width:min(80dvw,20rem);max-width:calc(100dvw - 2rem);max-height:calc(100dvh - var(--hdr,69px) - 2rem);overflow:auto;
+    padding:.3rem 0;background:rgba(13,13,14,.97);border:1px solid var(--smoke);color:var(--moon)}
+  @supports not selector(:popover-open){header .site-menu[popover]:not(.\:popover-open){display:none}}
+  header .site-menu[popover] a{padding:.9rem 1.2rem;border-bottom:1px solid rgba(236,235,228,.06)}
+  header .site-menu[popover] li:last-child a{border-bottom:0}
+  header .site-menu[popover] a[aria-current="page"]{background:rgba(236,235,228,.06);box-shadow:inset 2px 0 0 var(--moon)}
+  header.is-wide .menu-btn{display:none}
+  header.is-wide .site-menu{display:flex;gap:clamp(.8rem,2.5vw,2rem)}
+  header.is-measuring *{transition:none!important}
+  main{position:relative;z-index:1;max-width:52rem;margin:0 auto;padding:2rem clamp(1rem,4vw,3rem) 5rem}
   h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.25;text-wrap:balance}
   h1{font-size:clamp(2rem,6vw,2.8rem);margin:3rem 0 1rem}
   h2{font-size:1.7rem;margin:2.6rem 0 .8rem;padding-top:1.2rem;border-top:1px solid var(--smoke)}
@@ -84,9 +105,19 @@
 </style>
 </head>
 <body>
+<div class="sky" aria-hidden="true"></div>
 <header>
   <a class="logo" href="./#sumatif-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3a9 9 0 1 0 6 15.5A8 8 0 0 1 15 3z" fill="#ecebe4"/></svg>Langit Malam</a>
-  <a class="back" href="./#sumatif-1">Kembali</a>
+  <nav aria-label="Utama">
+    <button class="menu-btn" type="button" popovertarget="nav" aria-controls="nav">Menu</button>
+    <ul id="nav" class="site-menu" popover="auto">
+      <li><a href="./#sumatif-1">Sumatif 1</a></li>
+      <li><a href="./#sumatif-2">Sumatif 2</a></li>
+      <li><a href="./#sumatif-anatomi">Sumatif Anatomi</a></li>
+      <li><a href="./#sumatif-integrasi">Sumatif Integrasi</a></li>
+      <li><a href="rangkuman.html" aria-current="page">Rangkuman</a></li>
+    </ul>
+  </nav>
 </header>
 <main>
 <nav class="tabs" aria-label="Pilih ujian"><a href="rangkuman.html" aria-current="page"><b>Sumatif 1</b><span>K1–K10</span></a><a href="rangkuman-2.html"><b>Sumatif 2</b><span>K11–K20</span></a></nav>
@@ -4559,5 +4590,37 @@ K9: beberapa soal EKG atau biomarker SKA dipetakan ke slide farmakologi.
 <p>Dalam peta ini, soal-soal tersebut tetap dihitung di kuliah tempat web memetakannya.</p>
 <p><strong>Poin pedoman yang ditulis dari pengetahuan umum, bukan dari slide:</strong> AHA 2025 (BHD) dan ESC 2023–2025 (endokarditis, miokarditis/perikarditis, SKA). Cocokkan dengan dokumen pedomannya sebelum dipakai sebagai rujukan resmi.</p>
 </main>
+<script>
+// Sama dengan index.html: polyfill popover hanya bila perlu; menu sebaris bila muat, selain itu popover.
+if (!Object.hasOwn(HTMLElement.prototype, 'popover')) {
+  const s = document.createElement('script');
+  s.src = 'https://cdn.jsdelivr.net/npm/@oddbird/popover-polyfill@0.7.3/dist/popover.min.js';
+  document.head.append(s);
+}
+(() => {
+  const header = document.querySelector('header'), menu = document.getElementById('nav');
+  const menuOpen = () => { try { return menu.matches(':popover-open'); } catch (e) { return menu.classList.contains(':popover-open'); } };
+  const setHdr = () => document.documentElement.style.setProperty('--hdr', header.offsetHeight + 'px');
+  let lastW = 0;
+  const layoutNav = () => {
+    const w = header.clientWidth, wide = header.classList.contains('is-wide');
+    if (!wide && w <= lastW) { lastW = w; return; }
+    lastW = w;
+    const wasOpen = menu.hasAttribute('popover') && menuOpen();
+    header.classList.add('is-measuring', 'is-wide');
+    menu.removeAttribute('popover');
+    if (header.scrollWidth > header.clientWidth) {
+      header.classList.remove('is-wide');
+      menu.setAttribute('popover', 'auto');
+      if (wasOpen) menu.showPopover();
+    }
+    requestAnimationFrame(() => header.classList.remove('is-measuring'));
+  };
+  const onResize = () => { setHdr(); layoutNav(); };
+  if ('ResizeObserver' in window) { const ro = new ResizeObserver(onResize); ro.observe(header); ro.observe(menu); }
+  onResize();
+  if (document.fonts) document.fonts.ready.then(() => { lastW = 0; onResize(); });
+})();
+</script>
 </body>
 </html>
