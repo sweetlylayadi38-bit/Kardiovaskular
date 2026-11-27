@@ -262,9 +262,9 @@
   .peta .ps{text-align:justify;hyphens:auto;-webkit-hyphens:auto;font-size:.95rem}
   .peta .pq{padding:0 .8rem .8rem;display:grid;gap:1rem}
   .peta .none{padding:0 1rem 1rem;color:var(--mist);font-size:.88rem;text-align:justify}
-  #peta-1f details:not([data-c="0"]) .cnt::after{content:"▾";content:"▾" / "";display:inline-block;margin-left:.4em;transition:rotate .2s}
-  #peta-1f details[open] .cnt::after{rotate:180deg}
-  @media (prefers-reduced-motion:reduce){#peta-1f .cnt::after{transition:none}}
+  .peta details:not([data-c="0"]) .cnt::after{content:"▾";content:"▾" / "";display:inline-block;margin-left:.4em;transition:rotate .2s}
+  .peta details[open] .cnt::after{rotate:180deg}
+  @media (prefers-reduced-motion:reduce){.peta .cnt::after{transition:none}}
   .peta-h{font-family:var(--serif);font-weight:400;font-size:1.4rem;margin:1.8rem 0 .6rem}
   .q .res[hidden]{display:none}
   .q .res{margin-top:1rem;padding:1rem 1.1rem;border-left:2px solid var(--moon);background:rgba(13,13,14,.55);color:#d6d5ce;font-size:.94rem;line-height:1.7;display:grid;gap:.45rem;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
@@ -381,7 +381,7 @@
       <summary class="eyebrow">Ujian Sumatif 2 + Formatif <span class="gchev" aria-hidden="true"></span><span class="ghint">buka</span></summary>
       <h2>Formatif 2023 &amp; <em>soal sumatif sekonsep</em></h2>
       <p class="sub">Daftar 85 soal formatif Sumatif 2 tahun 2023 sesuai nomornya. Di bawah setiap soal formatif tertulis berapa soal Sumatif 2 (2023–2018) yang sama atau satu konsep dengannya, beserta soal-soalnya. Ketuk satu soal formatif untuk membuka soal-soal sumatifnya dan langsung kerjakan di situ: jawabanmu dikoreksi otomatis dan pembahasannya muncul di bawah soal.</p>
-      <div class="peta-bar"><select id="peta-flt" aria-label="Saring"><option value="all">Semua soal Formatif 2023</option><option value="ada">Formatif 2023 yang keluar di sumatif</option><option value="tidak">Formatif 2023 yang belum pernah keluar</option></select><span id="peta-sum"></span></div>
+      <div class="peta-bar"><select id="peta-flt" aria-label="Saring"><option value="all">Semua soal Formatif 2023</option><option value="ada">Formatif 2023 yang keluar di sumatif</option><option value="tidak">Formatif 2023 yang belum pernah keluar</option></select><span id="peta-sum" role="status"></span></div>
       <div id="peta-2f" class="peta"></div>
     </details>
   </section>
@@ -972,7 +972,8 @@ if (!('popover' in HTMLElement.prototype)) {
   fetch('peta2f.json').then(r => r.json()).then(P => {
     const box = document.getElementById('peta-2f'), flt = document.getElementById('peta-flt');
     const tot = P.reduce((a, f) => a + f.m.length, 0), ada = P.filter(f => f.m.length).length;
-    document.getElementById('peta-sum').textContent = `${ada} dari ${P.length} soal formatif 2023 keluar di sumatif · total ${tot} soal sumatif`;
+    const sum = document.getElementById('peta-sum'), base = `${ada} dari ${P.length} soal formatif 2023 keluar di sumatif · total ${tot} soal sumatif`;
+    sum.textContent = base;
     box.innerHTML = P.map(f => `
       <details data-c="${f.m.length}">
         <summary>
@@ -982,8 +983,12 @@ if (!('popover' in HTMLElement.prototype)) {
         ${f.m.length ? `<div class="pq" data-f="${f.n}"></div>`
           : `<p class="none">Belum ada soal Sumatif 2 tahun 2018–2023 yang sama atau satu konsep.</p>`}
       </details>`).join('');
-    flt.addEventListener('change', () => box.querySelectorAll('details').forEach(d => {
-      const c = +d.dataset.c; d.hidden = flt.value === 'ada' ? !c : flt.value === 'tidak' ? !!c : false; }));
+    flt.addEventListener('change', () => {
+      let n = 0;
+      box.querySelectorAll('details').forEach(d => {
+        const c = +d.dataset.c; d.hidden = flt.value === 'ada' ? !c : flt.value === 'tidak' ? !!c : false; n += !d.hidden; });
+      sum.textContent = flt.value === 'all' ? base : `Menampilkan ${n} soal · ${base}`;
+    });
     box.querySelectorAll('details').forEach(d => d.addEventListener('toggle', () => {
       const w = d.querySelector('.pq'); if (!d.open || !w || w.dataset.ready) return;
       const f = P.find(z => z.n === +w.dataset.f); w.dataset.ready = '1';
