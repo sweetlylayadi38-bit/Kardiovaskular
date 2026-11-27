@@ -254,6 +254,9 @@
   .set-reset button:hover{border-color:#d7837b;color:#f0aaa3}
   .q .peek{margin-top:.7rem;min-height:24px;background:none;border:none;color:var(--mist);font:inherit;font-size:.8rem;letter-spacing:.06em;text-decoration:underline;cursor:pointer;padding:0}
   .peta-bar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:1rem 0;color:var(--mist);font-size:.85rem}
+  .peta-bar .peta-reset{margin-left:auto;background:none;border:1px solid var(--smoke);color:var(--moon);padding:.45rem .8rem;font:inherit;font-size:.8rem;letter-spacing:.06em;cursor:pointer}
+  .peta-bar .peta-reset:hover,.pq-reset:hover{border-color:#d7837b;color:#f0aaa3}
+  .pq-reset{display:block;margin:.8rem 0 .2rem;background:none;border:1px solid var(--smoke);color:var(--mist);padding:.45rem .8rem;font:inherit;font-size:.78rem;letter-spacing:.06em;cursor:pointer}
   .peta-bar select{background:var(--ash);color:var(--moon);border:1px solid var(--field);padding:.4rem .5rem;font:inherit}
   .peta{display:grid;gap:.5rem}
   .peta details{border:1px solid var(--smoke);background:rgba(23,23,26,.7)}
@@ -796,6 +799,31 @@ if (!('popover' in HTMLElement.prototype)) {
       paintQ(x, art, q, c);
     });
   }
+  // kosongkan sekumpulan soal [[idUjian, no], ...]
+  function resetPairs(pairs){
+    const by = {};
+    pairs.forEach(([id, n]) => (by[id] = by[id] || []).push(n));
+    Object.entries(by).forEach(([id, ns]) => {
+      const x = EXAMS.find(z => z.id === id); if (!x) return;
+      const k = 'lm-' + id, st = store.get(k), t = store.get(k + '-txt');
+      ns.forEach(n => { delete st[n]; delete t[n]; });
+      store.set(k, st); store.set(k + '-txt', t);
+      ns.forEach(n => repaintQ(x, n)); updateMeta(x);
+    });
+    document.querySelectorAll('.acc-body .flt').forEach(f => f.dispatchEvent(new Event('change')));
+  }
+  function petaReset(box, bar, all, pairsOf, name){
+    bar.insertAdjacentHTML('beforeend', `<button type="button" class="peta-reset">Reset semua soal ${name}</button>`);
+    bar.querySelector('.peta-reset').addEventListener('click', async () => {
+      const pr = all.flatMap(pairsOf);
+      if (!await ask(`Jawabanmu untuk ${pr.length} soal sumatif yang terhubung ke ${name} akan dihapus dari perangkat ini. Jawaban soal yang sama di daftar Ujian Sumatif ikut terhapus.`)) return;
+      resetPairs(pr); say('Semua soal ' + name + ' dikosongkan');
+    });
+    box.addEventListener('click', e => {
+      const b = e.target.closest('.pq-reset'); if (!b) return;
+      const f = all.find(z => z.n === +b.dataset.f); resetPairs(pairsOf(f)); say('Soal-soal formatif no. ' + f.n + ' dikosongkan');
+    });
+  }
   document.addEventListener('click', e => {
     const b = e.target.closest('.qreset'); if (!b) return;
     const art = b.closest('article.q'), id = art.dataset.x || art.closest('[data-exam]').dataset.exam;
@@ -1007,6 +1035,7 @@ if (!('popover' in HTMLElement.prototype)) {
     const tot = P.reduce((a, f) => a + f.m.length, 0), ada = P.filter(f => f.m.length).length;
     const sum = document.getElementById('peta-sum'), base = `${ada} dari ${P.length} soal formatif 2023 keluar di sumatif · total ${tot} soal sumatif`;
     sum.textContent = base;
+    petaReset(box, flt.parentElement, P, f => f.m.map(m => ['s2-' + m.y, m.n]), 'Formatif 2023');
     box.innerHTML = P.map(f => `
       <details data-c="${f.m.length}">
         <summary>
@@ -1036,7 +1065,7 @@ if (!('popover' in HTMLElement.prototype)) {
           <button class="peek" type="button">Lihat jawaban &amp; pembahasan tanpa menjawab</button>
           <div class="res" hidden></div>
         </article>`;
-      }).join('');
+      }).join('') + `<button type="button" class="pq-reset" data-f="${f.n}">Ulangi semua soal formatif no. ${f.n}</button>`;
       lazy(w);
       w.querySelectorAll('article.q').forEach(art => {
         const x = EXAMS.find(e => e.id === art.dataset.x), q = x.q.find(z => z.n === +art.dataset.n), key = 'lm-' + x.id;
@@ -1054,6 +1083,7 @@ if (!('popover' in HTMLElement.prototype)) {
     const tot = F.reduce((a, f) => a + f.m.length, 0), ada = F.filter(f => f.m.length).length;
     const sum = document.getElementById('peta1-sum'), base = `${ada} dari ${F.length} soal formatif 1 2026 keluar di sumatif · total ${tot} soal sumatif`;
     sum.textContent = base;
+    petaReset(box, flt.parentElement, F, f => f.m.map(m => [m.x, m.n]), 'Formatif 1 2026');
     const lbl = id => `Sumatif ${id[1]} ${id.slice(3)}`;
     box.innerHTML = F.map(f => `
       <details data-c="${f.m.length}">
@@ -1084,7 +1114,7 @@ if (!('popover' in HTMLElement.prototype)) {
           <button class="peek" type="button">Lihat jawaban &amp; pembahasan tanpa menjawab</button>
           <div class="res" hidden></div>
         </article>`;
-      }).join('');
+      }).join('') + `<button type="button" class="pq-reset" data-f="${f.n}">Ulangi semua soal formatif no. ${f.n}</button>`;
       lazy(w);
       w.querySelectorAll('article.q').forEach(art => {
         const x = EXAMS.find(e => e.id === art.dataset.x), q = x.q.find(z => z.n === +art.dataset.n), key = 'lm-' + x.id;
